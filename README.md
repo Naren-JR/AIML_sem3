@@ -8,7 +8,11 @@ GitHub privacy: supplied datasets, imported references, internal PDFs, reports a
 
 Working local pipeline for Kimi Antonelli's supplied 2026 Australian GP Race telemetry: continuous conditional ERS estimation, constrained gradient-based deployment experiments, FastAPI and a React engineering dashboard.
 
-**Research scenario, not measured battery SoC.** Initial state is imposed at 100% of a configurable usable window at Lap 1, t=0. Energy never resets between laps. No trained ML or lap-time improvement is claimed. Regulatory event compliance and physical battery capacity remain unverified. Read [model equations and limitations](docs/MODEL.md).
+**Research scenario, not measured battery SoC.** Initial state is imposed at 100% of a configurable usable window at Lap 1, t=0. Energy never resets between laps. The original ERS/optimizer remains physics-based; the separate hybrid experiment adds trained dynamics. No lap-time improvement is claimed. Regulatory event compliance and physical battery capacity remain unverified. Read [model equations and limitations](docs/MODEL.md).
+
+## Hybrid ML experiment on readings
+
+The **Hybrid ERS research** tab (`/hybrid`) trains an acceleration regressor using TracingInsights Australia, Austria, Italy and Britain telemetry and tests on an entirely held-out Belgium dataset (278 recorded laps across five circuits). Predicted dynamics feed a conditional physics energy calculation. These are real learned motion predictions, not measured battery SoC predictions. The test-track selector lets you rotate which of the five tracks is held out. Restore datasets with `.\.venv\Scripts\python -m scripts.fetch_hybrid_data`; train with `.\.venv\Scripts\python -m scripts.train_hybrid`. See [exact training target, split, assumptions and commands](docs/HYBRID_TRAINING.md).
 
 ## Run locally (Windows PowerShell)
 
@@ -50,7 +54,7 @@ Open http://127.0.0.1:5173. The Python API must be running. Vite proxies /api to
 ## Tests, production build, and experiments
 
 ```powershell
-.\.venv\Scripts\python -m pytest -q
+.\.venv\Scripts\python -m pytest tests -q
 .\.venv\Scripts\python -m scripts.audit
 .\.venv\Scripts\python -m scripts.reproduce --lap 2
 cd frontend

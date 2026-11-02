@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:46+00:00",
+  "event_name": "United States Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-10-24T20:47:08.000000000",
+        "last_utc": "2026-10-24T22:06:55.000000000",
+        "utc_dates": [
+          "2026-10-24"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/United States Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3502,
+      "sha256": "6f9ba05ce8e636b05a0844499ddd0a1f7e6d386a4ebb820c1b50cbd351e3997d"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 5183,
+      "sha256": "e203f5d45a61916267dee410586acc8d17905f278e2f146d68cce25a0d3c739a"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/United States Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 16692,
+      "sha256": "7b9da2f49f57d7e007c7a9afb849352b06b9b98655eaca4d2460327a101f9982"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 5183,
+      "sha256": "e203f5d45a61916267dee410586acc8d17905f278e2f146d68cce25a0d3c739a"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3502,
+      "sha256": "6f9ba05ce8e636b05a0844499ddd0a1f7e6d386a4ebb820c1b50cbd351e3997d"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/United States Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/united-states-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 77,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/United States Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/united-states-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 33,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

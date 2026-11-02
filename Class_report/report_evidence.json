@@ -1,0 +1,2251 @@
+{
+  "cutoff": "2026-11-02",
+  "energy_summary": {
+    "status": "ready",
+    "kind": "conditional_physics_estimation",
+    "trained_ml": false,
+    "parameters": {
+      "energy_window_mj": 4.0,
+      "max_deployment_kw": 350.0,
+      "max_recovery_kw": 350.0,
+      "recovery_budget_mj_per_lap": null,
+      "deployment_budget_mj_per_lap": null,
+      "eta_discharge": 0.95,
+      "eta_recovery": 0.8,
+      "mass_kg": 800.0,
+      "air_density_kg_m3": 1.2,
+      "drag_area_m2": 1.0,
+      "rolling_coefficient": 0.015,
+      "electric_share": 0.3,
+      "regen_fraction": 0.35,
+      "max_gap_s": 0.5,
+      "reserve_fraction": 0.2,
+      "deployment_taper_fraction": 0.4,
+      "regulation_status": "provisional_research_scenario_not_event_compliance",
+      "regulation_source": "Supplied handbook section 3.4 cites FIA Section C issue 16 (27 Feb 2026): 350 kW and 4 MJ swing. Event applicability and interface conversion unverified. No lap budget invented.",
+      "parameter_provenance": "Mass, aero, rolling resistance, efficiencies, electric share and regen fraction are illustrative configurable assumptions, not measurements. Window is not total battery capacity."
+    },
+    "samples": 37569,
+    "initial_soc_pct": 100.0,
+    "final_soc_pct": 29.483590143184575,
+    "max_conservation_residual_mj": 8.553158181712206e-13,
+    "unknown_duration_s": 3.4360000000003277,
+    "validation": "constraint-only; no independent electrical reference",
+    "uncertainty": "Three illustrative parameter scenarios, not statistical confidence bounds",
+    "regulatory_compliance": "unverified; speed/mode/event restrictions unavailable"
+  },
+  "optimizer": {
+    "run_id": "5621b1851aaadff3",
+    "metadata": {
+      "dataset_sha256": "9f12948c5da1f8386f4b6ba4c36c0795d82ddbc39a954b4879375b6095171b21",
+      "model": {
+        "energy_window_mj": 4.0,
+        "max_deployment_kw": 350.0,
+        "max_recovery_kw": 350.0,
+        "recovery_budget_mj_per_lap": null,
+        "deployment_budget_mj_per_lap": null,
+        "eta_discharge": 0.95,
+        "eta_recovery": 0.8,
+        "mass_kg": 800.0,
+        "air_density_kg_m3": 1.2,
+        "drag_area_m2": 1.0,
+        "rolling_coefficient": 0.015,
+        "electric_share": 0.3,
+        "regen_fraction": 0.35,
+        "max_gap_s": 0.5,
+        "reserve_fraction": 0.2,
+        "deployment_taper_fraction": 0.4,
+        "regulation_status": "provisional_research_scenario_not_event_compliance",
+        "regulation_source": "Supplied handbook section 3.4 cites FIA Section C issue 16 (27 Feb 2026): 350 kW and 4 MJ swing. Event applicability and interface conversion unverified. No lap budget invented.",
+        "parameter_provenance": "Mass, aero, rolling resistance, efficiencies, electric share and regen fraction are illustrative configurable assumptions, not measurements. Window is not total battery capacity."
+      },
+      "optimizer": {
+        "lap": 2,
+        "max_iterations": 150,
+        "tolerance": 1e-08,
+        "regularization": 0.02,
+        "bins": 40
+      },
+      "algorithm_version": "slsqp-analytic-v1",
+      "source_sha256": {
+        "data.py": "d983e3f3217783dc7c6da37de22d5964282a746598e5ada7457706c8a41f16b1",
+        "model.py": "7c62ce5de76d8497968530be1eb936b67fd8daa7b432a5cf19e1d2c23be14ecd",
+        "optimizer.py": "0dac3b90796512eb46b1ca0a527c0bd907251600fb5077193dae14ba57ee79fb"
+      }
+    },
+    "status": "converged",
+    "solver_message": "Optimization terminated successfully",
+    "iterations": 79,
+    "objective": "Maximize speed-weighted delivered MJ minus squared adjacent-bin multiplier changes; a strategy proxy, not lap time.",
+    "gradient": "Analytic: -w + 2 lambda D^T D x for minimization",
+    "horizon": "Selected lap only, initialized from continuous baseline race. Later laps are not counterfactually recomputed.",
+    "baseline_objective": 1.313130063523654,
+    "optimized_objective": 1.5298841947364472,
+    "baseline_deployed_mj": 1.9304242741286621,
+    "optimized_deployed_mj": 1.9304242741286626,
+    "initial_energy_mj": 1.391385137045167,
+    "baseline_final_energy_mj": 1.3918043024243851,
+    "optimized_final_energy_mj": 1.3918043024243856,
+    "feasible": true,
+    "objective_not_worse": true,
+    "max_constraint_violation": 2.220446049250313e-16,
+    "regulatory_compliance": "unverified"
+  },
+  "ml": [
+    {
+      "experiment_id": "7da9078e4e8c612b38c1",
+      "evaluation_mode": "within_track",
+      "train_event": "Australian Grand Prix",
+      "test_event": "Australian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ],
+        "purged_laps": [
+          41
+        ],
+        "test_laps": [
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "train_samples": 26259,
+        "test_samples": 10570,
+        "excluded_or_purged_samples": 740
+      },
+      "metrics": {
+        "accuracy": 0.879848628192999,
+        "balanced_accuracy": 0.7265423317274604,
+        "macro_precision": 0.8018331608479887,
+        "macro_recall": 0.7265423317274604,
+        "macro_f1": 0.7458831769867533,
+        "weighted_f1": 0.87128143244598,
+        "per_class": {
+          "braking": {
+            "precision": 0.8233585124927367,
+            "recall": 0.85207456404089,
+            "f1-score": 0.8374704491725768,
+            "support": 1663.0
+          },
+          "coasting": {
+            "precision": 0.6116071428571429,
+            "recall": 0.2580037664783427,
+            "f1-score": 0.3629139072847682,
+            "support": 531.0
+          },
+          "partial_throttle": {
+            "precision": 0.8573686290003951,
+            "recall": 0.8263518659558263,
+            "f1-score": 0.8415745588520458,
+            "support": 2626.0
+          },
+          "high_throttle": {
+            "precision": 0.9149983590416804,
+            "recall": 0.9697391304347827,
+            "f1-score": 0.9415737926376224,
+            "support": 5750.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            1417,
+            50,
+            129,
+            67
+          ],
+          [
+            208,
+            137,
+            71,
+            115
+          ],
+          [
+            86,
+            34,
+            2170,
+            336
+          ],
+          [
+            10,
+            3,
+            161,
+            5576
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.5439924314096499,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.13599810785241248,
+        "macro_recall": 0.25,
+        "macro_f1": 0.17616421568627452,
+        "weighted_f1": 0.38332800007420187,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1663.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 531.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 2626.0
+          },
+          "high_throttle": {
+            "precision": 0.5439924314096499,
+            "recall": 1.0,
+            "f1-score": 0.7046568627450981,
+            "support": 5750.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1663
+          ],
+          [
+            0,
+            0,
+            0,
+            531
+          ],
+          [
+            0,
+            0,
+            0,
+            2626
+          ],
+          [
+            0,
+            0,
+            0,
+            5750
+          ]
+        ]
+      },
+      "dataset_sha256": "c514214e8aa13dd5eb86beaec54ad3748e628d339868eba0c7fd99cd3fe41cbe",
+      "test_dataset_sha256": "c514214e8aa13dd5eb86beaec54ad3748e628d339868eba0c7fd99cd3fe41cbe"
+    },
+    {
+      "experiment_id": "b9ccc0f4a9d9d0cb185a",
+      "evaluation_mode": "within_track",
+      "train_event": "Austrian Grand Prix",
+      "test_event": "Austrian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "purged_laps": [
+          50
+        ],
+        "test_laps": [
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "train_samples": 27152,
+        "test_samples": 11468,
+        "excluded_or_purged_samples": 796
+      },
+      "metrics": {
+        "accuracy": 0.9072200906871294,
+        "balanced_accuracy": 0.7812123673340461,
+        "macro_precision": 0.8291096945499129,
+        "macro_recall": 0.7812123673340461,
+        "macro_f1": 0.7973170623676967,
+        "weighted_f1": 0.9029323785860447,
+        "per_class": {
+          "braking": {
+            "precision": 0.8607491856677525,
+            "recall": 0.9325099250110278,
+            "f1-score": 0.8951937327969511,
+            "support": 2267.0
+          },
+          "coasting": {
+            "precision": 0.6120401337792643,
+            "recall": 0.373469387755102,
+            "f1-score": 0.46387832699619774,
+            "support": 490.0
+          },
+          "partial_throttle": {
+            "precision": 0.8982621288921072,
+            "recall": 0.8441646818645798,
+            "f1-score": 0.8703736186633924,
+            "support": 2939.0
+          },
+          "high_throttle": {
+            "precision": 0.9453873298605276,
+            "recall": 0.9747054747054748,
+            "f1-score": 0.9598225710142455,
+            "support": 5772.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            2114,
+            59,
+            62,
+            32
+          ],
+          [
+            200,
+            183,
+            105,
+            2
+          ],
+          [
+            110,
+            57,
+            2481,
+            291
+          ],
+          [
+            32,
+            0,
+            114,
+            5626
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.5033135681897454,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.12582839204743634,
+        "macro_recall": 0.25,
+        "macro_f1": 0.1674013921113689,
+        "weighted_f1": 0.3370215679340151,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 2267.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 490.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 2939.0
+          },
+          "high_throttle": {
+            "precision": 0.5033135681897454,
+            "recall": 1.0,
+            "f1-score": 0.6696055684454756,
+            "support": 5772.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            2267
+          ],
+          [
+            0,
+            0,
+            0,
+            490
+          ],
+          [
+            0,
+            0,
+            0,
+            2939
+          ],
+          [
+            0,
+            0,
+            0,
+            5772
+          ]
+        ]
+      },
+      "dataset_sha256": "06a777f636f0356ea7ecdd829e9995bb4e75bea962da0bc31a083691e76be9a9",
+      "test_dataset_sha256": "06a777f636f0356ea7ecdd829e9995bb4e75bea962da0bc31a083691e76be9a9"
+    },
+    {
+      "experiment_id": "8c5993a97a47609c54a6",
+      "evaluation_mode": "within_track",
+      "train_event": "Italian Grand Prix",
+      "test_event": "Italian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ],
+        "purged_laps": [
+          38
+        ],
+        "test_laps": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "train_samples": 26207,
+        "test_samples": 9368,
+        "excluded_or_purged_samples": 878
+      },
+      "metrics": {
+        "accuracy": 0.9064901793339026,
+        "balanced_accuracy": 0.6938519665434264,
+        "macro_precision": 0.7522267134195079,
+        "macro_recall": 0.6938519665434264,
+        "macro_f1": 0.7091072735695014,
+        "weighted_f1": 0.9003321093121778,
+        "per_class": {
+          "braking": {
+            "precision": 0.7691699604743083,
+            "recall": 0.9136150234741784,
+            "f1-score": 0.8351931330472103,
+            "support": 1065.0
+          },
+          "coasting": {
+            "precision": 0.4158415841584158,
+            "recall": 0.2048780487804878,
+            "f1-score": 0.27450980392156865,
+            "support": 205.0
+          },
+          "partial_throttle": {
+            "precision": 0.8802395209580839,
+            "recall": 0.6765285996055227,
+            "f1-score": 0.7650557620817844,
+            "support": 1521.0
+          },
+          "high_throttle": {
+            "precision": 0.9436557880872237,
+            "recall": 0.9803861943135168,
+            "f1-score": 0.9616703952274422,
+            "support": 6577.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            973,
+            18,
+            22,
+            52
+          ],
+          [
+            110,
+            42,
+            24,
+            29
+          ],
+          [
+            159,
+            29,
+            1029,
+            304
+          ],
+          [
+            23,
+            12,
+            94,
+            6448
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.702070879590094,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.1755177198975235,
+        "macro_recall": 0.25,
+        "macro_f1": 0.20624020068987142,
+        "weighted_f1": 0.5791809564207021,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1065.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 205.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1521.0
+          },
+          "high_throttle": {
+            "precision": 0.702070879590094,
+            "recall": 1.0,
+            "f1-score": 0.8249608027594857,
+            "support": 6577.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1065
+          ],
+          [
+            0,
+            0,
+            0,
+            205
+          ],
+          [
+            0,
+            0,
+            0,
+            1521
+          ],
+          [
+            0,
+            0,
+            0,
+            6577
+          ]
+        ]
+      },
+      "dataset_sha256": "f7d95a1e46095576f1c4e9a3933ddbe20e3e121d25a53a1d40423b07caa2ff6e",
+      "test_dataset_sha256": "f7d95a1e46095576f1c4e9a3933ddbe20e3e121d25a53a1d40423b07caa2ff6e"
+    },
+    {
+      "experiment_id": "fdce47a28c70377371da",
+      "evaluation_mode": "cross_track",
+      "train_event": "Australian Grand Prix",
+      "test_event": "Austrian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "purged_laps": [],
+        "test_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "train_samples": 37462,
+        "test_samples": 39156,
+        "excluded_or_purged_samples": 367
+      },
+      "metrics": {
+        "accuracy": 0.8591275921953213,
+        "balanced_accuracy": 0.673241786233829,
+        "macro_precision": 0.6782355110571376,
+        "macro_recall": 0.673241786233829,
+        "macro_f1": 0.6670537657741485,
+        "weighted_f1": 0.8485851794247663,
+        "per_class": {
+          "braking": {
+            "precision": 0.7711561382598331,
+            "recall": 0.8879600748596381,
+            "f1-score": 0.8254465321271167,
+            "support": 8015.0
+          },
+          "coasting": {
+            "precision": 0.17836812144212524,
+            "recall": 0.058421379738968306,
+            "f1-score": 0.08801498127340825,
+            "support": 1609.0
+          },
+          "partial_throttle": {
+            "precision": 0.8272772523643603,
+            "recall": 0.8004238104411482,
+            "f1-score": 0.8136290204141577,
+            "support": 10382.0
+          },
+          "high_throttle": {
+            "precision": 0.936140532162232,
+            "recall": 0.9461618798955613,
+            "f1-score": 0.9411245292819115,
+            "support": 19150.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            7117,
+            95,
+            680,
+            123
+          ],
+          [
+            1102,
+            94,
+            390,
+            23
+          ],
+          [
+            846,
+            136,
+            8310,
+            1090
+          ],
+          [
+            164,
+            202,
+            665,
+            18119
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.4890693635713556,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.1222673408928389,
+        "macro_recall": 0.25,
+        "macro_f1": 0.1642198058518849,
+        "weighted_f1": 0.3212595037351717,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 8015.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1609.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 10382.0
+          },
+          "high_throttle": {
+            "precision": 0.4890693635713556,
+            "recall": 1.0,
+            "f1-score": 0.6568792234075396,
+            "support": 19150.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            8015
+          ],
+          [
+            0,
+            0,
+            0,
+            1609
+          ],
+          [
+            0,
+            0,
+            0,
+            10382
+          ],
+          [
+            0,
+            0,
+            0,
+            19150
+          ]
+        ]
+      },
+      "dataset_sha256": "c514214e8aa13dd5eb86beaec54ad3748e628d339868eba0c7fd99cd3fe41cbe",
+      "test_dataset_sha256": "06a777f636f0356ea7ecdd829e9995bb4e75bea962da0bc31a083691e76be9a9"
+    },
+    {
+      "experiment_id": "d6bfe08cf30f51802bdf",
+      "evaluation_mode": "cross_track",
+      "train_event": "Australian Grand Prix",
+      "test_event": "Italian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "purged_laps": [],
+        "test_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "train_samples": 37462,
+        "test_samples": 36211,
+        "excluded_or_purged_samples": 349
+      },
+      "metrics": {
+        "accuracy": 0.8276490569164067,
+        "balanced_accuracy": 0.6437926770607587,
+        "macro_precision": 0.6347919229210928,
+        "macro_recall": 0.6437926770607587,
+        "macro_f1": 0.6206872542327542,
+        "weighted_f1": 0.8156708664000123,
+        "per_class": {
+          "braking": {
+            "precision": 0.6436083543178789,
+            "recall": 0.873015873015873,
+            "f1-score": 0.7409618008185539,
+            "support": 4977.0
+          },
+          "coasting": {
+            "precision": 0.2379862700228833,
+            "recall": 0.055201698513800426,
+            "f1-score": 0.08961654459284792,
+            "support": 1884.0
+          },
+          "partial_throttle": {
+            "precision": 0.7209966260057098,
+            "recall": 0.7274155538098979,
+            "f1-score": 0.7241918665276329,
+            "support": 7638.0
+          },
+          "high_throttle": {
+            "precision": 0.9365764413378993,
+            "recall": 0.9195375829034635,
+            "f1-score": 0.9279788049919822,
+            "support": 21712.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            4345,
+            55,
+            500,
+            77
+          ],
+          [
+            1277,
+            104,
+            404,
+            99
+          ],
+          [
+            830,
+            76,
+            5556,
+            1176
+          ],
+          [
+            299,
+            202,
+            1246,
+            19965
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.5995968075999005,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.14989920189997513,
+        "macro_recall": 0.25,
+        "macro_f1": 0.18742123163510177,
+        "weighted_f1": 0.4495086886593941,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 4977.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1884.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 7638.0
+          },
+          "high_throttle": {
+            "precision": 0.5995968075999005,
+            "recall": 1.0,
+            "f1-score": 0.7496849265404071,
+            "support": 21712.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            4977
+          ],
+          [
+            0,
+            0,
+            0,
+            1884
+          ],
+          [
+            0,
+            0,
+            0,
+            7638
+          ],
+          [
+            0,
+            0,
+            0,
+            21712
+          ]
+        ]
+      },
+      "dataset_sha256": "c514214e8aa13dd5eb86beaec54ad3748e628d339868eba0c7fd99cd3fe41cbe",
+      "test_dataset_sha256": "f7d95a1e46095576f1c4e9a3933ddbe20e3e121d25a53a1d40423b07caa2ff6e"
+    },
+    {
+      "experiment_id": "b56a338cb255ed635f82",
+      "evaluation_mode": "cross_track",
+      "train_event": "Austrian Grand Prix",
+      "test_event": "Australian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "purged_laps": [],
+        "test_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "train_samples": 39156,
+        "test_samples": 37462,
+        "excluded_or_purged_samples": 367
+      },
+      "metrics": {
+        "accuracy": 0.819150072073034,
+        "balanced_accuracy": 0.6536900632217538,
+        "macro_precision": 0.676309931206842,
+        "macro_recall": 0.6536900632217538,
+        "macro_f1": 0.6579205840173036,
+        "weighted_f1": 0.8096828335536143,
+        "per_class": {
+          "braking": {
+            "precision": 0.723602033405955,
+            "recall": 0.793059535179879,
+            "f1-score": 0.7567403356877042,
+            "support": 6282.0
+          },
+          "coasting": {
+            "precision": 0.2918502202643172,
+            "recall": 0.1498868778280543,
+            "f1-score": 0.19805680119581465,
+            "support": 1768.0
+          },
+          "partial_throttle": {
+            "precision": 0.8075828420410652,
+            "recall": 0.7191346850108616,
+            "f1-score": 0.7607967059274154,
+            "support": 11048.0
+          },
+          "high_throttle": {
+            "precision": 0.8822046291160305,
+            "recall": 0.9526791548682204,
+            "f1-score": 0.9160884932582799,
+            "support": 18364.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            4982,
+            341,
+            631,
+            328
+          ],
+          [
+            567,
+            265,
+            484,
+            452
+          ],
+          [
+            1245,
+            302,
+            7945,
+            1556
+          ],
+          [
+            91,
+            0,
+            778,
+            17495
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.4902034061181998,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.12255085152954995,
+        "macro_recall": 0.25,
+        "macro_f1": 0.16447533407372908,
+        "weighted_f1": 0.3225054759414832,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 6282.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1768.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 11048.0
+          },
+          "high_throttle": {
+            "precision": 0.4902034061181998,
+            "recall": 1.0,
+            "f1-score": 0.6579013362949163,
+            "support": 18364.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            6282
+          ],
+          [
+            0,
+            0,
+            0,
+            1768
+          ],
+          [
+            0,
+            0,
+            0,
+            11048
+          ],
+          [
+            0,
+            0,
+            0,
+            18364
+          ]
+        ]
+      },
+      "dataset_sha256": "06a777f636f0356ea7ecdd829e9995bb4e75bea962da0bc31a083691e76be9a9",
+      "test_dataset_sha256": "c514214e8aa13dd5eb86beaec54ad3748e628d339868eba0c7fd99cd3fe41cbe"
+    },
+    {
+      "experiment_id": "ba03542c333f760b7a0c",
+      "evaluation_mode": "cross_track",
+      "train_event": "Austrian Grand Prix",
+      "test_event": "Italian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "purged_laps": [],
+        "test_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "train_samples": 39156,
+        "test_samples": 36211,
+        "excluded_or_purged_samples": 502
+      },
+      "metrics": {
+        "accuracy": 0.8316809809174008,
+        "balanced_accuracy": 0.6490757056487252,
+        "macro_precision": 0.6626344800217575,
+        "macro_recall": 0.6490757056487252,
+        "macro_f1": 0.6399493171907364,
+        "weighted_f1": 0.8204181030696704,
+        "per_class": {
+          "braking": {
+            "precision": 0.6734085920351207,
+            "recall": 0.8629696604380148,
+            "f1-score": 0.7564949361514751,
+            "support": 4977.0
+          },
+          "coasting": {
+            "precision": 0.32,
+            "recall": 0.11040339702760085,
+            "f1-score": 0.16416732438831885,
+            "support": 1884.0
+          },
+          "partial_throttle": {
+            "precision": 0.732538569424965,
+            "recall": 0.6838177533385703,
+            "f1-score": 0.7073401950162513,
+            "support": 7638.0
+          },
+          "high_throttle": {
+            "precision": 0.9245907586269442,
+            "recall": 0.9391120117907148,
+            "f1-score": 0.9317948132069005,
+            "support": 21712.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            4295,
+            231,
+            310,
+            141
+          ],
+          [
+            1056,
+            208,
+            477,
+            143
+          ],
+          [
+            829,
+            207,
+            5223,
+            1379
+          ],
+          [
+            198,
+            4,
+            1120,
+            20390
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.5995968075999005,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.14989920189997513,
+        "macro_recall": 0.25,
+        "macro_f1": 0.18742123163510177,
+        "weighted_f1": 0.4495086886593941,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 4977.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1884.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 7638.0
+          },
+          "high_throttle": {
+            "precision": 0.5995968075999005,
+            "recall": 1.0,
+            "f1-score": 0.7496849265404071,
+            "support": 21712.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            4977
+          ],
+          [
+            0,
+            0,
+            0,
+            1884
+          ],
+          [
+            0,
+            0,
+            0,
+            7638
+          ],
+          [
+            0,
+            0,
+            0,
+            21712
+          ]
+        ]
+      },
+      "dataset_sha256": "06a777f636f0356ea7ecdd829e9995bb4e75bea962da0bc31a083691e76be9a9",
+      "test_dataset_sha256": "f7d95a1e46095576f1c4e9a3933ddbe20e3e121d25a53a1d40423b07caa2ff6e"
+    },
+    {
+      "experiment_id": "6d253be5ae7dc11e1b62",
+      "evaluation_mode": "cross_track",
+      "train_event": "Italian Grand Prix",
+      "test_event": "Australian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "purged_laps": [],
+        "test_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58
+        ],
+        "train_samples": 36211,
+        "test_samples": 37462,
+        "excluded_or_purged_samples": 349
+      },
+      "metrics": {
+        "accuracy": 0.8004377769473066,
+        "balanced_accuracy": 0.6270293733817395,
+        "macro_precision": 0.6696257245574835,
+        "macro_recall": 0.6270293733817395,
+        "macro_f1": 0.6291775806979814,
+        "weighted_f1": 0.7840438504799234,
+        "per_class": {
+          "braking": {
+            "precision": 0.7523739956172388,
+            "recall": 0.8198026106335562,
+            "f1-score": 0.7846423402148244,
+            "support": 6282.0
+          },
+          "coasting": {
+            "precision": 0.3051948051948052,
+            "recall": 0.07975113122171945,
+            "f1-score": 0.12645739910313902,
+            "support": 1768.0
+          },
+          "partial_throttle": {
+            "precision": 0.7884470309300571,
+            "recall": 0.6622013034033309,
+            "f1-score": 0.7198307669602008,
+            "support": 11048.0
+          },
+          "high_throttle": {
+            "precision": 0.8324870664878329,
+            "recall": 0.9463624482683511,
+            "f1-score": 0.8857798165137615,
+            "support": 18364.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            5150,
+            103,
+            618,
+            411
+          ],
+          [
+            697,
+            141,
+            416,
+            514
+          ],
+          [
+            955,
+            205,
+            7316,
+            2572
+          ],
+          [
+            43,
+            13,
+            929,
+            17379
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.4902034061181998,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.12255085152954995,
+        "macro_recall": 0.25,
+        "macro_f1": 0.16447533407372908,
+        "weighted_f1": 0.3225054759414832,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 6282.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1768.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 11048.0
+          },
+          "high_throttle": {
+            "precision": 0.4902034061181998,
+            "recall": 1.0,
+            "f1-score": 0.6579013362949163,
+            "support": 18364.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            6282
+          ],
+          [
+            0,
+            0,
+            0,
+            1768
+          ],
+          [
+            0,
+            0,
+            0,
+            11048
+          ],
+          [
+            0,
+            0,
+            0,
+            18364
+          ]
+        ]
+      },
+      "dataset_sha256": "f7d95a1e46095576f1c4e9a3933ddbe20e3e121d25a53a1d40423b07caa2ff6e",
+      "test_dataset_sha256": "c514214e8aa13dd5eb86beaec54ad3748e628d339868eba0c7fd99cd3fe41cbe"
+    },
+    {
+      "experiment_id": "1f1a8f26cacf24f71184",
+      "evaluation_mode": "cross_track",
+      "train_event": "Italian Grand Prix",
+      "test_event": "Austrian Grand Prix",
+      "split": {
+        "train_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53
+        ],
+        "purged_laps": [],
+        "test_laps": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          51,
+          52,
+          53,
+          54,
+          55,
+          56,
+          57,
+          58,
+          59,
+          60,
+          61,
+          62,
+          63,
+          64,
+          65,
+          66,
+          67,
+          68,
+          69,
+          70,
+          71
+        ],
+        "train_samples": 36211,
+        "test_samples": 39156,
+        "excluded_or_purged_samples": 502
+      },
+      "metrics": {
+        "accuracy": 0.8522320972520175,
+        "balanced_accuracy": 0.6727453750451651,
+        "macro_precision": 0.7176058956465539,
+        "macro_recall": 0.6727453750451651,
+        "macro_f1": 0.6788067844984675,
+        "weighted_f1": 0.8405385083901876,
+        "per_class": {
+          "braking": {
+            "precision": 0.8135929121007228,
+            "recall": 0.8707423580786027,
+            "f1-score": 0.8411980955824745,
+            "support": 8015.0
+          },
+          "coasting": {
+            "precision": 0.34592445328031807,
+            "recall": 0.10814170292106899,
+            "f1-score": 0.16477272727272727,
+            "support": 1609.0
+          },
+          "partial_throttle": {
+            "precision": 0.8104813502813086,
+            "recall": 0.749277595838952,
+            "f1-score": 0.7786786786786787,
+            "support": 10382.0
+          },
+          "high_throttle": {
+            "precision": 0.9004248669238658,
+            "recall": 0.9628198433420365,
+            "f1-score": 0.9305776364599894,
+            "support": 19150.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            6979,
+            69,
+            696,
+            271
+          ],
+          [
+            936,
+            174,
+            457,
+            42
+          ],
+          [
+            626,
+            251,
+            7779,
+            1726
+          ],
+          [
+            37,
+            9,
+            666,
+            18438
+          ]
+        ]
+      },
+      "baseline": {
+        "accuracy": 0.4890693635713556,
+        "balanced_accuracy": 0.25,
+        "macro_precision": 0.1222673408928389,
+        "macro_recall": 0.25,
+        "macro_f1": 0.1642198058518849,
+        "weighted_f1": 0.3212595037351717,
+        "per_class": {
+          "braking": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 8015.0
+          },
+          "coasting": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 1609.0
+          },
+          "partial_throttle": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1-score": 0.0,
+            "support": 10382.0
+          },
+          "high_throttle": {
+            "precision": 0.4890693635713556,
+            "recall": 1.0,
+            "f1-score": 0.6568792234075396,
+            "support": 19150.0
+          }
+        },
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            8015
+          ],
+          [
+            0,
+            0,
+            0,
+            1609
+          ],
+          [
+            0,
+            0,
+            0,
+            10382
+          ],
+          [
+            0,
+            0,
+            0,
+            19150
+          ]
+        ]
+      },
+      "dataset_sha256": "f7d95a1e46095576f1c4e9a3933ddbe20e3e121d25a53a1d40423b07caa2ff6e",
+      "test_dataset_sha256": "06a777f636f0356ea7ecdd829e9995bb4e75bea962da0bc31a083691e76be9a9"
+    }
+  ]
+}

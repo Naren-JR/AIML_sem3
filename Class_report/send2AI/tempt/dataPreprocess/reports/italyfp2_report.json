@@ -1,0 +1,180 @@
+{
+  "file": "italyfp2.csv",
+  "event": "italy",
+  "session": "fp2",
+  "rows_original": 29710,
+  "rows_output": 29710,
+  "flagged_row_count": 0,
+  "columns_missing_in_source": [],
+  "optional_columns_missing": [
+    "DriverAhead"
+  ],
+  "numeric_conversion_failures": {
+    "time": 0,
+    "rpm": 0,
+    "speed": 0,
+    "gear": 0,
+    "throttle": 0,
+    "brake": 0,
+    "distance": 0,
+    "rel_distance": 0,
+    "DistanceToDriverAhead": 0,
+    "acc_x": 0,
+    "acc_y": 0,
+    "acc_z": 0,
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "missing_values_by_column": {
+    "time": 0,
+    "rpm": 0,
+    "speed": 0,
+    "gear": 0,
+    "throttle": 0,
+    "brake": 0,
+    "distance": 0,
+    "rel_distance": 0,
+    "DistanceToDriverAhead": 0,
+    "acc_x": 0,
+    "acc_y": 0,
+    "acc_z": 0,
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+  "timestamp": {
+    "first_s": 0.0,
+    "last_s": 3963.472,
+    "median_positive_dt_s": 0.1269999999999527,
+    "min_positive_dt_s": 0.0009999999997489795,
+    "max_positive_dt_s": 1.2600000000002183,
+    "nonpositive_dt_count": 31
+  },
+  "numeric_summaries": {
+    "time": {
+      "min": 0.0,
+      "median": 1980.87,
+      "max": 3963.472,
+      "mean": 1980.9817264220799
+    },
+    "rpm": {
+      "min": 0.0,
+      "median": 10591.0,
+      "max": 12936.0,
+      "mean": 8539.267745146783
+    },
+    "speed": {
+      "min": 0.0,
+      "median": 191.99772741818182,
+      "max": 338.0,
+      "mean": 167.16784307338958
+    },
+    "gear": {
+      "min": 0.0,
+      "median": 4.0,
+      "max": 8.0,
+      "mean": 3.9202288791652644
+    },
+    "throttle": {
+      "min": 0.0,
+      "median": 100.0,
+      "max": 104.0,
+      "mean": 65.78105922798797
+    },
+    "brake": {
+      "min": 0.0,
+      "median": 0.0,
+      "max": 1.0,
+      "mean": 0.253584651632447
+    },
+    "distance": {
+      "min": -0.32780025911839006,
+      "median": 1947.5442319702859,
+      "max": 5804.27390024544,
+      "mean": 2139.611934001291
+    },
+    "rel_distance": {
+      "min": -5.993790010318282e-05,
+      "median": 0.3386849793428284,
+      "max": 0.9999129294898763,
+      "mean": 0.3710742321965439
+    },
+    "DistanceToDriverAhead": {
+      "min": 0.029444444444607143,
+      "median": 1338.146395119998,
+      "max": 9545.518611111102,
+      "mean": 2072.2066811835507
+    },
+    "acc_x": {
+      "min": -48.233256752993384,
+      "median": 0.0,
+      "max": 21.464648237679047,
+      "mean": -0.008296620228751956
+    },
+    "acc_y": {
+      "min": -53.269686708262725,
+      "median": 0.0,
+      "max": 45.4380790218273,
+      "mean": -3.3352284899084497
+    },
+    "acc_z": {
+      "min": -65.35822907349741,
+      "median": 0.0,
+      "max": 35.25073114592874,
+      "mean": -0.8021214199202232
+    },
+    "x": {
+      "min": -1500.0,
+      "median": -150.0,
+      "max": 11068.053214990958,
+      "mean": 2028.2044246493501
+    },
+    "y": {
+      "min": -5807.8166104293705,
+      "median": 4390.430708815056,
+      "max": 15889.48708144288,
+      "mean": 5295.631721617094
+    },
+    "z": {
+      "min": -26.527962876370623,
+      "median": 1891.0,
+      "max": 2020.2439975560785,
+      "mean": 1882.2036053780885
+    }
+  },
+  "quality_flag_counts": {},
+  "distance_diagnostics": {
+    "supplied_distance_increment_m": {
+      "min": -5804.0115004553,
+      "median": 4.457086422004068,
+      "max": 100.79410416714973,
+      "mean": 0.1944174986803396
+    },
+    "integrated_distance_increment_m": {
+      "min": 0.0,
+      "median": 4.46809563983445,
+      "max": 100.0660294776644,
+      "mean": 6.202894461711424
+    },
+    "distance_increment_error_m": {
+      "min": -16.134079099799436,
+      "median": 1.7053025658242404e-13,
+      "max": 5.992684839850668,
+      "mean": 0.0005004739160370713
+    },
+    "total_supplied_distance_change_m": 5775.949468294207,
+    "total_integrated_distance_m": 184089.5018346729
+  },
+  "interpretation_notes": [
+    "Raw CSV was not modified.",
+    "Flagged rows were retained.",
+    "Source row order and timestamps were preserved.",
+    "Speed is assumed to be in km/h for derived calculations.",
+    "Throttle and brake are assumed to be percentages for range checks.",
+    "Acceleration comparison requires compatible units and sign convention.",
+    "Integrated distance is diagnostic and does not replace source distance.",
+    "Missing DriverAhead values do not prove there was no car ahead.",
+    "Row counts alone do not establish complete session coverage."
+  ]
+}

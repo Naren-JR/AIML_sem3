@@ -1,0 +1,2163 @@
+{
+  "source_repository": "https://github.com/TracingInsights/2026",
+  "source_branch": "main",
+  "mapping_source": "https://raw.githubusercontent.com/TracingInsights/2026/main/SQ.py (EVENT_SECTIONS_FILE)",
+  "sections_source": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/",
+  "fetched_at_utc": "2026-10-26T14:59:43.444682+00:00",
+  "scope_note": "Fetch-only. Session files fetched only under mapped Grand Prix folders. Bahrain, China, Japan, Spain remain excluded when unmapped; no substitute circuits used.",
+  "events": [
+    {
+      "event_name": "Abu Dhabi Grand Prix",
+      "section_file_stem": "yas-marina-circuit",
+      "section_file": "yas-marina-circuit.json",
+      "local_path": "raw/sections/yas-marina-circuit.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/yas-marina-circuit.json"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "section_file_stem": "albert-park-circuit",
+      "section_file": "albert-park-circuit.json",
+      "local_path": "raw/sections/albert-park-circuit.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/albert-park-circuit.json"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "section_file_stem": "red-bull-ring",
+      "section_file": "red-bull-ring.json",
+      "local_path": "raw/sections/red-bull-ring.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/red-bull-ring.json"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "section_file_stem": "baku-city-circuit",
+      "section_file": "baku-city-circuit.json",
+      "local_path": "raw/sections/baku-city-circuit.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/baku-city-circuit.json"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "section_file_stem": "circuit-de-barcelona-catalunya",
+      "section_file": "circuit-de-barcelona-catalunya.json",
+      "local_path": "raw/sections/circuit-de-barcelona-catalunya.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/circuit-de-barcelona-catalunya.json"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "section_file_stem": "circuit-de-spa-francorchamps",
+      "section_file": "circuit-de-spa-francorchamps.json",
+      "local_path": "raw/sections/circuit-de-spa-francorchamps.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/circuit-de-spa-francorchamps.json"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "section_file_stem": "silverstone",
+      "section_file": "silverstone.json",
+      "local_path": "raw/sections/silverstone.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/silverstone.json"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "section_file_stem": "canada",
+      "section_file": "canada.json",
+      "local_path": "raw/sections/canada.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/canada.json"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "section_file_stem": "circuit-zandvoort",
+      "section_file": "circuit-zandvoort.json",
+      "local_path": "raw/sections/circuit-zandvoort.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/circuit-zandvoort.json"
+    },
+    {
+      "event_name": "Emilia Romagna Grand Prix",
+      "section_file_stem": "emilia",
+      "section_file": "emilia.json",
+      "local_path": "raw/sections/emilia.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/emilia.json"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "section_file_stem": "hungary",
+      "section_file": "hungary.json",
+      "local_path": "raw/sections/hungary.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/hungary.json"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "section_file_stem": "monza",
+      "section_file": "monza.json",
+      "local_path": "raw/sections/monza.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/monza.json"
+    },
+    {
+      "event_name": "Mexico City Grand Prix",
+      "section_file_stem": "autodrome-hermanos-rodriguez",
+      "section_file": "autodrome-hermanos-rodriguez.json",
+      "local_path": "raw/sections/autodrome-hermanos-rodriguez.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/autodrome-hermanos-rodriguez.json"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "section_file_stem": "miami-international-autodrome",
+      "section_file": "miami-international-autodrome.json",
+      "local_path": "raw/sections/miami-international-autodrome.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/miami-international-autodrome.json"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "section_file_stem": "circuit-de-monaco",
+      "section_file": "circuit-de-monaco.json",
+      "local_path": "raw/sections/circuit-de-monaco.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/circuit-de-monaco.json"
+    },
+    {
+      "event_name": "Qatar Grand Prix",
+      "section_file_stem": "lusail-international-circuit",
+      "section_file": "lusail-international-circuit.json",
+      "local_path": "raw/sections/lusail-international-circuit.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/lusail-international-circuit.json"
+    },
+    {
+      "event_name": "Saudi Arabian Grand Prix",
+      "section_file_stem": "jeddah-corniche-circuit",
+      "section_file": "jeddah-corniche-circuit.json",
+      "local_path": "raw/sections/jeddah-corniche-circuit.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/jeddah-corniche-circuit.json"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "section_file_stem": "marina-bay-street-circuit",
+      "section_file": "marina-bay-street-circuit.json",
+      "local_path": "raw/sections/marina-bay-street-circuit.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/marina-bay-street-circuit.json"
+    },
+    {
+      "event_name": "São Paulo Grand Prix",
+      "section_file_stem": "interlagos-circuit",
+      "section_file": "interlagos-circuit.json",
+      "local_path": "raw/sections/interlagos-circuit.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/interlagos-circuit.json"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "section_file_stem": "circuit-of-the-americas",
+      "section_file": "circuit-of-the-americas.json",
+      "local_path": "raw/sections/circuit-of-the-americas.json",
+      "repository_file_available": true,
+      "status": "downloaded",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/sections/circuit-of-the-americas.json"
+    },
+    {
+      "event_name": "Bahrain Grand Prix",
+      "section_file_stem": null,
+      "section_file": null,
+      "local_path": null,
+      "repository_file_available": false,
+      "status": "no_mapping_excluded",
+      "source_url": null
+    },
+    {
+      "event_name": "Chinese Grand Prix",
+      "section_file_stem": null,
+      "section_file": null,
+      "local_path": null,
+      "repository_file_available": false,
+      "status": "no_mapping_excluded",
+      "source_url": null
+    },
+    {
+      "event_name": "Japanese Grand Prix",
+      "section_file_stem": null,
+      "section_file": null,
+      "local_path": null,
+      "repository_file_available": false,
+      "status": "no_mapping_excluded",
+      "source_url": null
+    },
+    {
+      "event_name": "Spanish Grand Prix",
+      "section_file_stem": null,
+      "section_file": null,
+      "local_path": null,
+      "repository_file_available": false,
+      "status": "no_mapping_excluded",
+      "source_url": null
+    }
+  ],
+  "session_files": [
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Australian Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Australian Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Australian Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Race",
+      "file_name": "cor.json",
+      "repository_path": "Australian Grand Prix/Race/cor.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Race\\cor.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Race/cor.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Australian Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Australian Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Australian Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "cor.json",
+      "repository_path": "Australian Grand Prix/Qualifying/cor.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Qualifying\\cor.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Qualifying/cor.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "Australian Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "Australian Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "Australian Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "cor.json",
+      "repository_path": "Australian Grand Prix/Practice 3/cor.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 3\\cor.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%203/cor.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "Australian Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "Australian Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "Australian Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "cor.json",
+      "repository_path": "Australian Grand Prix/Practice 2/cor.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 2\\cor.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%202/cor.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Australian Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Australian Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Australian Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "cor.json",
+      "repository_path": "Australian Grand Prix/Practice 1/cor.json",
+      "local_path": "raw\\sessions\\Australian Grand Prix\\Practice 1\\cor.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Australian%20Grand%20Prix/Practice%201/cor.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Austrian Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Austrian Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Austrian Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Austrian Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Austrian Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Austrian Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "Austrian Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "Austrian Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "Austrian Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "Austrian Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "Austrian Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "Austrian Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Austrian Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Austrian Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Austrian Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Austrian Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Austrian%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Azerbaijan Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Azerbaijan Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Azerbaijan Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Azerbaijan Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Azerbaijan Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Azerbaijan Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Azerbaijan Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Azerbaijan Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Azerbaijan%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Barcelona Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Barcelona Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Barcelona Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Barcelona Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Barcelona Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Barcelona Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "Barcelona Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "Barcelona Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "Barcelona Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "Barcelona Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "Barcelona Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "Barcelona Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Barcelona Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Barcelona Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Barcelona Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Barcelona Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Barcelona%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Belgian Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Belgian Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Belgian Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Belgian Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Belgian Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Belgian Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "Belgian Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "Belgian Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "Belgian Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "Belgian Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "Belgian Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "Belgian Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Belgian Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Belgian Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Belgian Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Belgian Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Belgian%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "British Grand Prix/Sprint Qualifying/weather.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Sprint Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Sprint%20Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "British Grand Prix/Sprint Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Sprint Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Sprint%20Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "British Grand Prix/Sprint Qualifying/corners.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Sprint Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Sprint%20Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "weather.json",
+      "repository_path": "British Grand Prix/Sprint/weather.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Sprint\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Sprint/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "rcm.json",
+      "repository_path": "British Grand Prix/Sprint/rcm.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Sprint\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Sprint/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "corners.json",
+      "repository_path": "British Grand Prix/Sprint/corners.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Sprint\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Sprint/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "British Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "British Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "British Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "British Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "British Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "British Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "British Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "British Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "British Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "British Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\British Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/British%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Canadian Grand Prix/Sprint Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Sprint Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Sprint%20Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Canadian Grand Prix/Sprint Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Sprint Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Sprint%20Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Canadian Grand Prix/Sprint Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Sprint Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Sprint%20Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "weather.json",
+      "repository_path": "Canadian Grand Prix/Sprint/weather.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Sprint\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Sprint/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "rcm.json",
+      "repository_path": "Canadian Grand Prix/Sprint/rcm.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Sprint\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Sprint/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "corners.json",
+      "repository_path": "Canadian Grand Prix/Sprint/corners.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Sprint\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Sprint/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Canadian Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Canadian Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Canadian Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Canadian Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Canadian Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Canadian Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Canadian Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Canadian Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Canadian Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Canadian Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Canadian%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Dutch Grand Prix/Sprint Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Sprint Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Sprint%20Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Dutch Grand Prix/Sprint Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Sprint Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Sprint%20Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Dutch Grand Prix/Sprint Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Sprint Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Sprint%20Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "weather.json",
+      "repository_path": "Dutch Grand Prix/Sprint/weather.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Sprint\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Sprint/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "rcm.json",
+      "repository_path": "Dutch Grand Prix/Sprint/rcm.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Sprint\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Sprint/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "corners.json",
+      "repository_path": "Dutch Grand Prix/Sprint/corners.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Sprint\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Sprint/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Dutch Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Dutch Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Dutch Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Dutch Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Dutch Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Dutch Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Dutch Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Dutch Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Dutch Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Dutch Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Dutch%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Hungarian Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Hungarian Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Hungarian Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Hungarian Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Hungarian Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Hungarian Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "Hungarian Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "Hungarian Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "Hungarian Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "Hungarian Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "Hungarian Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "Hungarian Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Hungarian Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Hungarian Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Hungarian Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Hungarian Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Hungarian%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Italian Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Italian Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Italian Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Italian Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Italian Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Italian Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "Italian Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "Italian Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "Italian Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "Italian Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "Italian Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "Italian Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Italian Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Italian Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Italian Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Italian Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Italian%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Miami Grand Prix/Sprint Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Sprint Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Sprint%20Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Miami Grand Prix/Sprint Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Sprint Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Sprint%20Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Miami Grand Prix/Sprint Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Sprint Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Sprint%20Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "weather.json",
+      "repository_path": "Miami Grand Prix/Sprint/weather.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Sprint\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Sprint/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "rcm.json",
+      "repository_path": "Miami Grand Prix/Sprint/rcm.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Sprint\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Sprint/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "corners.json",
+      "repository_path": "Miami Grand Prix/Sprint/corners.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Sprint\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Sprint/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Miami Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Miami Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Miami Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Miami Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Miami Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Miami Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Miami Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Miami Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Miami Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Miami Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Miami%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Monaco Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Monaco Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Monaco Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Monaco Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Monaco Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Monaco Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "Monaco Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "Monaco Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "Monaco Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "Monaco Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "Monaco Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "Monaco Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Monaco Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Monaco Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Monaco Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Monaco Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Monaco%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Singapore Grand Prix/Sprint Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Sprint Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Sprint%20Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Singapore Grand Prix/Sprint Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Sprint Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Sprint%20Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Sprint Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Singapore Grand Prix/Sprint Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Sprint Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Sprint%20Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "weather.json",
+      "repository_path": "Singapore Grand Prix/Sprint/weather.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Sprint\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Sprint/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "rcm.json",
+      "repository_path": "Singapore Grand Prix/Sprint/rcm.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Sprint\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Sprint/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Sprint",
+      "file_name": "corners.json",
+      "repository_path": "Singapore Grand Prix/Sprint/corners.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Sprint\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Sprint/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "Singapore Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "Singapore Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "Singapore Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "Singapore Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "Singapore Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "Singapore Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "Singapore Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "Singapore Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "Singapore Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\Singapore Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/Singapore%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Race",
+      "file_name": "weather.json",
+      "repository_path": "United States Grand Prix/Race/weather.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Race\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Race/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Race",
+      "file_name": "rcm.json",
+      "repository_path": "United States Grand Prix/Race/rcm.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Race\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Race/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Race",
+      "file_name": "corners.json",
+      "repository_path": "United States Grand Prix/Race/corners.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Race\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Race/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "weather.json",
+      "repository_path": "United States Grand Prix/Qualifying/weather.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Qualifying\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Qualifying/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "rcm.json",
+      "repository_path": "United States Grand Prix/Qualifying/rcm.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Qualifying\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Qualifying/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Qualifying",
+      "file_name": "corners.json",
+      "repository_path": "United States Grand Prix/Qualifying/corners.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Qualifying\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Qualifying/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "weather.json",
+      "repository_path": "United States Grand Prix/Practice 3/weather.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 3\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%203/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "rcm.json",
+      "repository_path": "United States Grand Prix/Practice 3/rcm.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 3\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%203/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 3",
+      "file_name": "corners.json",
+      "repository_path": "United States Grand Prix/Practice 3/corners.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 3\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%203/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "weather.json",
+      "repository_path": "United States Grand Prix/Practice 2/weather.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 2\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%202/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "rcm.json",
+      "repository_path": "United States Grand Prix/Practice 2/rcm.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 2\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%202/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 2",
+      "file_name": "corners.json",
+      "repository_path": "United States Grand Prix/Practice 2/corners.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 2\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%202/corners.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "weather.json",
+      "repository_path": "United States Grand Prix/Practice 1/weather.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 1\\weather.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%201/weather.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "rcm.json",
+      "repository_path": "United States Grand Prix/Practice 1/rcm.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 1\\rcm.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%201/rcm.json",
+      "status": "downloaded"
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "session_name": "Practice 1",
+      "file_name": "corners.json",
+      "repository_path": "United States Grand Prix/Practice 1/corners.json",
+      "local_path": "raw\\sessions\\United States Grand Prix\\Practice 1\\corners.json",
+      "source_url": "https://raw.githubusercontent.com/TracingInsights/2026/main/United%20States%20Grand%20Prix/Practice%201/corners.json",
+      "status": "downloaded"
+    }
+  ]
+}

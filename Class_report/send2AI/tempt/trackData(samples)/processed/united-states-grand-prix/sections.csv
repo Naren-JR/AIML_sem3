@@ -1,0 +1,13 @@
+section_index,section_label,start_percent,end_percent,source_file,source_format,source_fields_json
+0,Straight,0.0,9.21,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Straight"",0.0,9.21]"
+1,Low,9.21,14.3,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Low"",9.21,14.3]"
+2,Straight,14.3,25.43,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Straight"",14.3,25.43]"
+3,High,25.43,32.51,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""High"",25.43,32.51]"
+4,Medium,32.51,37.25,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Medium"",32.51,37.25]"
+5,Straight,37.25,44.16,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Straight"",37.25,44.16]"
+6,Low,44.16,49.35,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Low"",44.16,49.35]"
+7,Straight,49.35,65.91,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Straight"",49.35,65.91]"
+8,Low,65.91,80.34,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Low"",65.91,80.34]"
+9,Straight,80.34,90.0,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Straight"",80.34,90.0]"
+10,High,90.0,94.64,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""High"",90.0,94.64]"
+11,Low,94.64,100.0,raw/sections/circuit-of-the-americas.json,array_tuple_label_start_end,"[""Low"",94.64,100.0]"

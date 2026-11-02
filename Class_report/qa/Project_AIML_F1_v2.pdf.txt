@@ -1,0 +1,380 @@
+PROJECT AIML - F1
+ Version 2 | Research Concept and Technical Plan
+ Temporary working title:
+Physics-Informed, Uncertainty-Aware Estimation and Optimisation of 2026 Formula 1 ERS Energy
+ State
+A working research document. The proposed methods and contributions are not yet experimentally validated.
+ Version date: 25 October 2026
+
+PROJECT AIML - F1 | Version 2
+Page 2
+Document purpose and project summary
+This document consolidates the agreed research direction, states a defensible novelty claim relative to the sources
+reviewed so far, and lays out a practical technical plan. It is a project specification—not a claim that the estimator or
+optimiser has already been validated.
+Project AIML - F1 will use public 2026 Formula 1 telemetry, circuit context, and event-applicable regulations to construct
+plausible estimates of one driver's ERS usable-energy state over a race. The initial case study is Kimi Antonelli. The model
+starts at Lap 1, time 0.00 s, with an imposed initial condition of 100% of the modelled permitted usable-energy window.
+State must be carried continuously across laps; it must not reset to 100% each lap.
+Three linked outputs
+ State estimation: produce a physically feasible range or ensemble of normalised usable-energy trajectories, not a
+claimed direct measurement of battery state.
+ Track-position analysis: compare inferred energy behaviour at straights, braking zones, corners, hairpins, and selected
+circuit markers.
+ Constrained optimisation: use gradient-based optimisation to explore hypothetical deployment schedules under energy,
+power, and regulatory constraints, compared against a transparent baseline.
+Critical limitation
+Public telemetry does not directly provide battery current, voltage, true SoC, or the exact ICE/MGU-K power split. The
+hidden energy state is therefore not uniquely identifiable from speed and driver inputs alone. Results must be labelled
+estimated/plausible, with assumptions and uncertainty made explicit.
+Research question and objectives
+Primary question: Given public 2026 F1 telemetry and published vehicle/regulatory constraints, how far can a
+physics-informed model estimate a feasible ERS usable-energy trajectory, and how does uncertainty affect track-position
+analysis and hypothetical deployment optimisation?
+ Audit and preprocess telemetry while preserving irregular timestamps and provenance.
+ Build a longitudinal energy model with explicit assumptions for mass, drag, rolling resistance, efficiencies, regeneration,
+and power limits.
+ Estimate feasible energy trajectories and quantify sensitivity to uncertain parameters.
+ Apply gradient descent to a well-defined differentiable objective; report convergence and constraint handling.
+ Evaluate using consistency checks, sensitivity, ablations, and baselines—not unsupported ground-truth accuracy.
+ Explain commercial transfer potential and what extra data would be required.
+
+PROJECT AIML - F1 | Version 2
+Page 3
+1. Novelty: defensible claim
+We should not claim this is the first work to estimate battery SoC, use physics-informed models, optimise hybrid energy
+management, or study F1 energy strategy. These are established areas. The defensible contribution is a specific integration
+and evaluation designed for the limitations of public 2026 F1 telemetry.
+Proposed contribution statement
+We propose a public-data, physics-informed framework for reconstructing feasible ranges of 2026 F1 ERS
+usable-energy state from telemetry that does not expose true battery state or the internal power split. The
+framework combines continuous cross-lap energy accounting, event-versioned regulatory constraints,
+track-position analysis, uncertainty/sensitivity reporting, and gradient-based optimisation of a hypothetical
+deployment policy. The contribution is the integrated, transparent methodology and its evaluation—not direct
+measurement of actual car SoC.
+Area
+What the reviewed work covers
+Proposed distinction
+F1 energy strategy
+The reviewed arXiv preprint infers hidden rival
+ERS/tyre states with HMM/POMDP and selects
+strategies with DQN; its reported metrics are from
+synthetic races.
+We focus on one driver's continuous feasible energy trajectory
+and constrained deployment analysis, not opponent-state
+inference.
+Commercial HEV
+energy management
+A 2021 review covers driving-condition-aware,
+learning-based, and data-driven HEV
+energy-management methods.
+We study a different data/regulation setting; commercial transfer
+remains a future validation pathway, not a proven result.
+Battery SoC estimation
+A mature field commonly uses current, voltage,
+temperature, battery models, or test data.
+Our explicit problem is estimating feasible ranges when these
+key internal measurements are absent.
+Vehicle dynamics and
+telemetry
+Longitudinal dynamics and telemetry analysis are
+established.
+We connect road-load estimates to continuous usable-energy
+accounting, track landmarks, regulation constraints, and
+uncertainty.
+Gradient-based
+optimisation
+Gradient methods are widely used in numerical
+optimisation and energy management.
+The method itself is not novel; the study applies it to a carefully
+defined constrained problem and tests whether observations
+constrain the result.
+Novelty boundaries
+ Claim: an integrated public-data framework with continuous energy accounting, explicit uncertainty, track-position
+analysis, and regulation-aware hypothetical optimisation.
+ Do not claim: exact recovery of real SoC, first-ever F1 energy estimator, first use of gradient descent in hybrid control, or
+proven commercial transfer.
+ Potential finding: if different energy trajectories fit telemetry similarly, report the non-identifiability and range instead of
+selecting one trajectory as ground truth.
+
+PROJECT AIML - F1 | Version 2
+Page 4
+2. Cross-referenced literature and evidence
+Kleisarchaki (2026), “Opponent State Inference Under Partial Observability: An HMM-POMDP Framework for 2026
+Formula 1 Energy Strategy.” The arXiv abstract describes an HMM for hidden rival ERS/tyre states and a DQN policy for
+strategic decisions. It reports 92.3% ERS inference accuracy and 95.7% trap recall on synthetic races generated from its
+own assumptions; empirical validation is described as planned. This is adjacent F1 strategy work, but it does not establish
+real-world battery SoC estimation accuracy. Our target is a single driver's continuous feasible energy trajectory from public
+telemetry.
+“Driving conditions-driven energy management strategies for hybrid electric vehicles: A review” (Renewable and
+Sustainable Energy Reviews, 2021). This review covers energy-management methods driven by on-road driving
+conditions, including learning-based and data-driven approaches. It contradicts the blanket claim that commercial hybrid
+research ignores real-world conditions. Our proposed distinction is the F1/public-telemetry context and explicit handling of
+hidden powertrain variables, rules, and uncertainty.
+FIA regulations. The official FIA index lists 2026 Section C Technical Regulations, Issue 21, dated 19 October 2026. For
+each analysed race, use the rules applicable to that event and record exact clauses and limits. Do not assume every power
+or energy limit is constant across every segment or regulatory update.
+Public telemetry and circuit graphics. Available fields include time, speed, throttle, brake, gear, RPM, distance, and
+acceleration estimates. Circuit graphics can identify landmarks and certain mode/detection/activation lines, but they do not
+prove actual activation or reveal battery power/SoC. The current comparison is based on sources reviewed so far, not a
+systematic literature review.
+Review conclusion
+Position this as a constrained, uncertainty-aware reconstruction and optimisation study under partial observability. Expand
+the literature review before submission to include peer-reviewed battery SoC estimation, physics-informed state estimation,
+hybrid energy-management optimisation, and F1 telemetry research. For each source, record method, data, ground truth,
+validation setting, limitations, and overlap.
+3. Commercial-field application
+The transferable idea is not the F1 vehicle model or FIA limits. It is the workflow: combine imperfect operating data with a
+physics-based energy model, enforce feasible energy/power constraints, quantify uncertainty, and optimise energy use
+against a stated objective.
+Potential use
+Transferable component
+Required changes / validation
+HEV/PHEV energy
+management
+Energy balance, uncertainty analysis, constrained
+optimisation.
+Use vehicle-specific battery/motor/engine models, drive cycles,
+thermal limits, and measured battery signals.
+Regenerative-braking
+analysis
+Estimate recoverable energy during deceleration
+and compare with measurements.
+Separate friction braking from regeneration; validate with
+inverter/motor power and battery current.
+Fleet energy analytics
+Segment-by-segment energy accounting and
+operating-condition comparisons.
+Use CAN/OBD or fleet telemetry, route grade, payload,
+weather, and calibration.
+Predictive energy
+management
+Optimise energy allocation over a known or
+forecast route.
+Validate in simulation, hardware-in-the-loop, or an
+instrumented vehicle with driver/traffic variability.
+Commercial pathway: (1) F1 research demonstrator; (2) calibrated simulation using a public or lab-recorded hybrid drive
+cycle; (3) validation against measured battery and powertrain signals. Until stages 2–3 are complete, commercial
+applicability is a plausible transfer path, not a demonstrated outcome.
+
+PROJECT AIML - F1 | Version 2
+Page 5
+4. Data and preprocessing plan
+Use the public TracingInsights F1 data source discussed in project planning, not FastF1. Preserve original files and create a
+reproducible processed dataset with source/version metadata.
+Required checks
+ Load the complete session/lap sequence from Lap 1 onward. A single-lap JSON cannot initialise Lap 10's state correctly.
+ Validate array lengths, finite values, timestamp order, duplicates, missing values, and units.
+ Keep actual irregular time steps. Do not silently resample or assume uniform sampling.
+ Convert speed from km/h to m/s. Check distance progression against speed-integrated distance.
+ Recompute diagnostic acceleration from speed/time and compare it with provided smoothed acceleration; do not remove
+strong braking events blindly.
+ Treat 'None' in DriverAhead as missing categorical data.
+ Align circuit landmarks by distance/lap position, allowing for alignment uncertainty.
+ Record session, pit/neutralisation, weather, tyres, track status, and regulation version where available; mark missing
+metadata explicitly.
+Expected fields and cautions
+Field
+Use
+Caution
+time, distance, rel_distance
+Time alignment, lap continuity, circuit position.
+Check units, resets, monotonicity, and cross-lap continuity.
+speed, throttle, brake, gear,
+rpm
+Longitudinal dynamics and driver-input context.
+Not direct ICE/MGU-K power split measurements.
+acc_x/y/z
+Dynamics context and quality checks.
+May be derived/smoothed, not raw sensors.
+drs / circuit mode zones
+Aero-state context if definitions align.
+A marked zone is not proof of activation.
+DriverAhead / distance
+ahead
+Traffic context and confounding.
+Handle missing values and other-car behaviour.
+Outputs: raw files, validated time-series table, session/lap metadata, circuit landmark table, QC report, and a manifest
+containing source URL, retrieval date, units, and processing choices.
+5. Physics model and energy state
+Start with a longitudinal road-load model. It is approximate: actual F1 behaviour also includes cornering, aero/downforce
+effects on tyres, gear shifts, transients, traffic, and elevation.
+v = speed(km/h) / 3.6
+a■ ≈ (v■■■ − v■■■) / (t■■■ − t■■■) (diagnostic centred difference using actual timestamps)
+F_req = m·a + 0.5·ρ·C_DA·v² + C_rr·m·g (initial level-track model)
+P_wheel ≈ v·F_req
+Use separate effective aero parameters only if the mode state is supportable. If activation is unknown, treat mode as a
+scenario/latent variable. Do not reuse a generation-to-generation drag-reduction figure as the Corner-to-Straight Mode
+difference.
+Discrete energy balance at a consistently defined electrical interface
+E■■■ = E■ − (P_dis,■ / η_d)·Δt■ + η_r·P_rec,■·Δt■
+SOC*■ = 100·(E■ − E_min)/(E_max − E_min)
+Initial condition: SOC* = 100% at Lap 1, t=0.00 s. This is the top of the modelled permitted usable window, not necessarily
+100% of physical electrochemical capacity. The permitted energy swing and other limits must be taken from the
+event-applicable FIA rules.
+Negative wheel power is not equal to recovered electrical power. Braking energy is divided among drag, rolling resistance,
+friction braking, and regeneration. Wheel power also does not reveal the exact ICE/MGU-K contributions. These quantities
+
+PROJECT AIML - F1 | Version 2
+Page 6
+must be estimated, bounded, or scenario-tested.
+
+PROJECT AIML - F1 | Version 2
+Page 7
+6. Estimation and gradient-based optimisation
+Separate (A) estimation of feasible latent energy trajectories from (B) optimisation of a hypothetical deployment policy. A low
+speed-prediction error does not prove that the inferred battery state is correct.
+A. Candidate estimation objective
+Let θ contain uncertain physical parameters and latent deployment/recovery variables. A candidate objective may combine
+telemetry fit, consistency, smoothness, constraints, and prior assumptions:
+J(θ) = λ■·L_speed + λ■·L_accel + λ■·L_smooth + λ■·L_constraints + λ■·L_priors
+Define each term only after specifying which quantities the model can predict. Telemetry fit must not dominate latent energy
+state without an identifiable link. Priors and smoothness are assumptions; test their influence. Use bounded
+parameterisations or projected gradient descent to preserve constraints.
+θ■■■ = θ■ − α·∇J(θ■)
+If hard mode switches/constraints make the objective non-differentiable, use a differentiable approximation for optimisation
+and independently verify the final solution against hard constraints.
+B. Hypothetical deployment optimisation
+A defensible decision variable is a low-dimensional deployment schedule by track segment rather than a free power value at
+every sample. Minimise a stated cost over a chosen horizon, with a terminal energy reserve requirement. Example to refine
+after the baseline model works:
+min■ J = w■·T_pred(u) + w■·E_used(u) + w■·R_reserve(u) + w■·Σ(u■■■ − u■)²
+Subject to E_min ≤ E■ ≤ E_max; 0 ≤ P_deploy,■ ≤ P_max,■; 0 ≤ P_rec,■ ≤ P_rec,max,■; and event-specific
+energy, power, and deployment rules.
+Here u is a hypothetical policy, T_pred is predicted time or a justified proxy, E_used is energy use, R_reserve penalises
+failure to meet the target finish reserve, and the smoothness term discourages unrealistic oscillation. If there is no credible
+lap-time model, do not claim to optimise lap time; optimise a transparent proxy and name it accurately.
+Evaluation plan
+ Compare a fixed/heuristic baseline and the optimised policy under identical assumptions.
+ Vary mass, C_DA, rolling resistance, efficiencies, initial state, and power limits across defensible ranges.
+ Ablate track segmentation, uncertainty treatment, and selected constraints.
+ Test additional laps/sessions/circuits if available; reserve held-out data.
+ Audit every constraint violation. A good objective with infeasible controls is not a valid solution.
+ Use multiple initialisations; if distinct trajectories fit similarly, report a range.
+
+PROJECT AIML - F1 | Version 2
+Page 8
+7. Risks, deliverables, and next steps
+Risk
+Why it matters
+Mitigation
+No ground-truth
+SoC/power
+Conventional state-estimation accuracy cannot be
+measured.
+Report feasible ranges, uncertainty, consistency and sensitivity.
+Power split
+underdetermined
+Different ICE/MGU-K splits may yield similar
+speed.
+Bound latent variables, use scenarios/priors, discuss
+identifiability.
+Regulatory changes
+Limits may change by date/context.
+Pin each event to exact FIA issue and clauses.
+Irregular/noisy sampling
+Derivatives and power amplify timing/noise error.
+Use actual Δt; compare derivative methods and sensitivities.
+Simplified vehicle model
+Road-load error can be mistaken for ERS effects.
+Calibrate ranges and report model discrepancy.
+Optimiser exploits model
+flaws
+Numerically attractive policies may be implausible.
+Hard constraint checks, baselines, robustness tests.
+Expected deliverables
+ Reproducible cleaned telemetry and preprocessing audit.
+ Documented longitudinal model and assumptions.
+ Continuous cross-lap energy estimates with uncertainty/sensitivity plots.
+ Track-position comparisons for corners, hairpins, straights, and selected landmarks.
+ Gradient descent implementation with convergence diagnostics.
+ Constraint-checked hypothetical optimiser and baseline comparison.
+ Research report with literature comparison, limitations, and bounded commercial-transfer discussion.
+Success criteria
+Success is not recovering exact real SoC from data that do not contain it. Success is a reproducible model that respects
+explicit constraints, produces transparent feasible ranges, demonstrates sensitivity to assumptions, implements
+gradient-based optimisation, and clearly states what cannot be inferred.
+Immediate sequence
+Step
+Action
+Decision/output
+1
+Freeze event/session, driver, lap coverage, source version, and
+applicable FIA rules.
+Reproducible manifest.
+2
+Audit timestamps and cross-lap time/distance continuity.
+QC report and cleaned data.
+3
+Implement speed, acceleration, distance-consistency, road-load
+diagnostics.
+Sanity-check plots.
+4
+Set parameter bounds and energy-balance interface, including
+recovery assumptions.
+Model specification with units.
+5
+Run scenario/uncertainty trajectories before optimisation.
+Assess how constrained the state is.
+6
+Freeze objective/constraints; implement gradient descent and
+gradient checks.
+Convergence plots and constraint audit.
+7
+Compare baseline vs optimiser; run sensitivity and ablation tests.
+Results and limitations.
+8
+Then develop commercial-transfer validation plan.
+Data and measurement requirements.
+
+PROJECT AIML - F1 | Version 2
+Page 9
+Appendix A. Assumptions register
+Item
+Working assumption
+Required treatment
+Case study
+Kimi Antonelli; 2026 race telemetry.
+Freeze exact event/session and verify coverage.
+Initial state
+100% of permitted modelled usable window at Lap 1,
+t=0.00 s.
+Label as imposed, not measured.
+Sampling
+Irregular time intervals.
+Use actual timestamps and Δt.
+Mass / drag / rolling
+resistance
+Not fixed yet.
+Use defensible ranges and sensitivity.
+Aero mode
+May be latent/scenario-based.
+Zone markings alone do not prove activation.
+ICE/MGU-K split
+Not directly observed.
+Estimate or bound; never label measured.
+Regeneration
+Not directly observed.
+Do not equate negative wheel power with recovered energy.
+Ground truth
+True SoC/electrical power absent from current data.
+No ground-truth accuracy claim without independent
+reference.
+Commercial transfer
+Future pathway.
+Requires vehicle-specific model and measured validation.
+Appendix B. References
+[1] FIA, 2026 Formula 1 Regulations index. Lists Section C Technical Regulations, Issue 21, dated 19 October 2026. Select
+the exact event-applicable document. https://www.fia.com/regulation/category/2182
+[2] Kleisarchaki, K. (2026). “Opponent State Inference Under Partial Observability: An HMM-POMDP Framework for 2026
+Formula 1 Energy Strategy.” arXiv:2603.01290. Preprint; reported results are from synthetic races and empirical validation
+is described as planned. https://arxiv.org/abs/2603.01290
+[3] “Driving conditions-driven energy management strategies for hybrid electric vehicles: A review.” Renewable and
+Sustainable Energy Reviews, 151 (2021), 111521. DOI: 10.1016/j.rser.2021.111521.
+https://www.sciencedirect.com/science/article/pii/S1364032121007991
+[4] TracingInsights public F1 data library/GitHub source discussed during planning. Before submission, add the exact
+repository URL, commit/release, file paths, and retrieval date used in experiments.
+[5] Official circuit graphics and event documents. Record exact URL and version for every event; treat markings as context,
+not proof of activation.
+This bibliography reflects sources cross-referenced so far. It is not a complete systematic review. Verify bibliographic
+metadata and expand the review before making priority claims.

@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:37+00:00",
+  "event_name": "Azerbaijan Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-09-25T11:56:20.000000000",
+        "last_utc": "2026-09-25T13:11:03.000000000",
+        "utc_dates": [
+          "2026-09-25"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3646,
+      "sha256": "dcd2e5552676849784001c055fbb8a1e50ff748728a0409a5a895614af927281"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 15904,
+      "sha256": "885dc761f25c265e6be6ad9bbdd0f0c1750015c1d5d3297d525837b8bfc3bb43"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 25405,
+      "sha256": "e195d06df26a43bef1a19c9863ec447236261ab45a53d329c90822c7ee3960fa"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 15904,
+      "sha256": "885dc761f25c265e6be6ad9bbdd0f0c1750015c1d5d3297d525837b8bfc3bb43"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3646,
+      "sha256": "dcd2e5552676849784001c055fbb8a1e50ff748728a0409a5a895614af927281"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 81,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 128,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

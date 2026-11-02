@@ -1,0 +1,1 @@
+time,rpm,speed,gear,throttle,brake,distance,rel_distance,DistanceToDriverAhead,acc_x,acc_y,acc_z,x,y,z,source_row,quality_flags,speed_ms,accel_from_speed_ms2,acc_x_minus_speed_accel,integrated_distance_increment_m,integrated_distance_m,distance_increment_m,distance_increment_error_m

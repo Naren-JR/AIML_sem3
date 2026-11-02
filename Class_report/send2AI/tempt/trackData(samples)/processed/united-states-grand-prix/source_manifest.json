@@ -1,0 +1,580 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:46+00:00",
+  "event_name": "United States Grand Prix",
+  "event_slug": "united-states-grand-prix",
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 16681,
+      "sha256": "92a8fddd031cea19240578315c35523e2df972749b504325dce64f6e82304659",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 853,
+          "geometry_fingerprint": "b88a1ce7fdbbbf8c",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/United States Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 853,
+          "geometry_fingerprint": "b88a1ce7fdbbbf8c",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/United States Grand Prix/Practice 3/corners.json",
+          "result": "valid_geometry",
+          "point_count": 853,
+          "geometry_fingerprint": "b88a1ce7fdbbbf8c",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/United States Grand Prix/Practice 2/corners.json",
+          "result": "valid_geometry",
+          "point_count": 853,
+          "geometry_fingerprint": "b88a1ce7fdbbbf8c",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/United States Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 853,
+          "geometry_fingerprint": "b88a1ce7fdbbbf8c",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16681,
+      "sha256": "92a8fddd031cea19240578315c35523e2df972749b504325dce64f6e82304659",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/United States Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/United States Grand Prix/Practice 3/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/United States Grand Prix/Practice 2/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/United States Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 16681,
+      "sha256": "92a8fddd031cea19240578315c35523e2df972749b504325dce64f6e82304659",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 16681,
+      "sha256": "92a8fddd031cea19240578315c35523e2df972749b504325dce64f6e82304659",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 16681,
+      "sha256": "92a8fddd031cea19240578315c35523e2df972749b504325dce64f6e82304659",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/circuit-of-the-americas.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 356,
+      "sha256": "780ad1712fd8711abfd30412b52b152ca3c547f72e47155cafe74a76de293e3d"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "b88a1ce7fdbbbf8c": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Practice 3/corners.json",
+          "Practice 2/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 23.319,
+              "Practice 3/corners.json": 31.128,
+              "Practice 2/corners.json": 28.465,
+              "Practice 1/corners.json": 48.021
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 14.954,
+              "Practice 3/corners.json": 23.774,
+              "Practice 2/corners.json": 22.349,
+              "Practice 1/corners.json": 20.201
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 15.801,
+              "Practice 3/corners.json": 25.12,
+              "Practice 2/corners.json": 23.615,
+              "Practice 1/corners.json": 21.345
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 18.723,
+              "Practice 3/corners.json": 35.051,
+              "Practice 2/corners.json": 19.576,
+              "Practice 1/corners.json": 30.754
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 31.433,
+              "Practice 3/corners.json": 42.717,
+              "Practice 2/corners.json": 27.662,
+              "Practice 1/corners.json": 33.863
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "straight_mode_zone_source": null,
+  "image_map_source": {
+    "file": "raw/images/eventMap.json",
+    "kind": "event_map",
+    "folder_label": null,
+    "bytes": 792,
+    "sha256": "9d55bb03e415b4b1dfe0a0d3f5ead5a3696126dc98782906be74773f556e88d2"
+  },
+  "session_resolutions": {
+    "Race": {
+      "raw_folder_session": "Race",
+      "raw_folder_canonical": "Race",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-10-25T19:20:01.000000000",
+          "last_utc": "2026-10-25T21:43:10.000000000",
+          "utc_dates": [
+            "2026-10-25"
+          ]
+        }
+      },
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Qualifying": {
+      "raw_folder_session": "Qualifying",
+      "raw_folder_canonical": "Qualifying",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-10-24T20:47:08.000000000",
+          "last_utc": "2026-10-24T22:06:55.000000000",
+          "utc_dates": [
+            "2026-10-24"
+          ]
+        }
+      },
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 3": {
+      "raw_folder_session": "Practice 3",
+      "raw_folder_canonical": "Practice 3",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-10-24T17:16:12.000000000",
+          "last_utc": "2026-10-24T18:38:41.000000000",
+          "utc_dates": [
+            "2026-10-24"
+          ]
+        }
+      },
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 2": {
+      "raw_folder_session": "Practice 2",
+      "raw_folder_canonical": "Practice 2",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-10-23T20:46:15.000000000",
+          "last_utc": "2026-10-23T22:11:14.000000000",
+          "utc_dates": [
+            "2026-10-23"
+          ]
+        }
+      },
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 1": {
+      "raw_folder_session": "Practice 1",
+      "raw_folder_canonical": "Practice 1",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-10-23T17:21:33.000000000",
+          "last_utc": "2026-10-23T18:37:30.000000000",
+          "utc_dates": [
+            "2026-10-23"
+          ]
+        }
+      },
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    }
+  },
+  "session_source_inventory": [
+    {
+      "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16681,
+      "sha256": "92a8fddd031cea19240578315c35523e2df972749b504325dce64f6e82304659"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 22088,
+      "sha256": "1e7868f2f2c0dc8337dcb9ecd25f60b88876cf67da863cb4eff4b4bd91949f67"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7171,
+      "sha256": "7dca5d102c9ae60a9e268e5e2ed4fa6bdac1ab169fff1b2eec8cb68ac36d8c05"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 16692,
+      "sha256": "7b9da2f49f57d7e007c7a9afb849352b06b9b98655eaca4d2460327a101f9982"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 5183,
+      "sha256": "e203f5d45a61916267dee410586acc8d17905f278e2f146d68cce25a0d3c739a"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3502,
+      "sha256": "6f9ba05ce8e636b05a0844499ddd0a1f7e6d386a4ebb820c1b50cbd351e3997d"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 3/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 3",
+      "bytes": 16686,
+      "sha256": "43ff468f437a27fd32fe10004b69abba17013536c97cf4b3e7128ecee08bb004"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 8430,
+      "sha256": "81da9df06180b8014f75f9b21248106e2608fd3062fe35023a292fba0f7c769a"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3715,
+      "sha256": "67676fa20bbf6a3866973ccf7713354a9bd886d5e8aeb412c141e1054584142e"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 16686,
+      "sha256": "fd9ebe4c4a4a06c0c7910fc5bf96ca66dae12f5bb0a3d60f69354358b9c8ce5f"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 22087,
+      "sha256": "584dc152553b4870bc80ca066200595b838a61ad005fbb712990fc21753cc8de"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3772,
+      "sha256": "0fef4ff5494605367c61123547ce601ca15d89e8d5cd77e0a05e5713e9c64821"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 16690,
+      "sha256": "f5798f147e4b04f29a414c86746a08f6ac834a711526a089214dbcab8a730ac8"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 14807,
+      "sha256": "924a35a8bcb455b0ce4e101d1d12fa9de7cfd30566f1881c160eccb9f61b1db2"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3666,
+      "sha256": "cc9a6709aeac5fa40c48b302272f97145de6ee4648b996584ba52ffd52b3aca5"
+    }
+  ],
+  "session_exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/United States Grand Prix/Race/rcm.json",
+      "output_file": "processed/united-states-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/race/race_control.json",
+      "row_count": 171,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/United States Grand Prix/Race/weather.json",
+      "output_file": "processed/united-states-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/race/weather.json",
+      "row_count": 159,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/United States Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/united-states-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 33,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/United States Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/united-states-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 77,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 3",
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-3",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/United States Grand Prix/Practice 3/rcm.json",
+      "output_file": "processed/united-states-grand-prix/sessions/practice-3/race_control.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/practice-3/race_control.json",
+      "row_count": 53,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 3",
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-3",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/United States Grand Prix/Practice 3/weather.json",
+      "output_file": "processed/united-states-grand-prix/sessions/practice-3/weather.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/practice-3/weather.json",
+      "row_count": 82,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/United States Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/united-states-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 139,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/United States Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/united-states-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 85,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/United States Grand Prix/Practice 1/rcm.json",
+      "output_file": "processed/united-states-grand-prix/sessions/practice-1/race_control.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/practice-1/race_control.json",
+      "row_count": 98,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/United States Grand Prix/Practice 1/weather.json",
+      "output_file": "processed/united-states-grand-prix/sessions/practice-1/weather.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/practice-1/weather.json",
+      "row_count": 81,
+      "status": "exported"
+    }
+  ],
+  "outputs": [
+    "master_track.json",
+    "source_manifest.json",
+    "track_geometry.csv",
+    "corners.csv",
+    "sections.csv",
+    "layout_section_metadata.csv",
+    "marshal_lights.csv",
+    "marshal_sectors.csv",
+    "mini_sector_markers.csv",
+    "active_aero_zones.csv",
+    "straight_mode_map_annotations.csv",
+    "straight_mode_map_review.png",
+    "sessions/<resolved-session-slug>/{weather,race_control}.{csv,json}",
+    "sessions/<resolved-session-slug>/session_manifest.json"
+  ],
+  "exclusions": [
+    "Bahrain Grand Prix",
+    "Chinese Grand Prix",
+    "Japanese Grand Prix",
+    "Spanish Grand Prix"
+  ],
+  "warnings": [
+    "Layout array 'Section' has 20 values versus 12 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+    "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified.",
+    "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 48.021); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 23.774; end_distance_source: max |delta| 25.12); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 35.051); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 42.717); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+  ]
+}

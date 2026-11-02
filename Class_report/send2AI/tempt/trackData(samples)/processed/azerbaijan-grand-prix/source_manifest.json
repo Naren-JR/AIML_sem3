@@ -1,0 +1,581 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:37+00:00",
+  "event_name": "Azerbaijan Grand Prix",
+  "event_slug": "azerbaijan-grand-prix",
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 25407,
+      "sha256": "5c40ea910df77e80b7cc77a517383e8dad8d5d98b92f3abdc5ab216d7582a896",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 837,
+          "geometry_fingerprint": "ac0fb06d84f820e6",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 837,
+          "geometry_fingerprint": "ac0fb06d84f820e6",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Practice 3/corners.json",
+          "result": "valid_geometry",
+          "point_count": 837,
+          "geometry_fingerprint": "ac0fb06d84f820e6",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/corners.json",
+          "result": "valid_geometry",
+          "point_count": 837,
+          "geometry_fingerprint": "ac0fb06d84f820e6",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 837,
+          "geometry_fingerprint": "ac0fb06d84f820e6",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 25407,
+      "sha256": "5c40ea910df77e80b7cc77a517383e8dad8d5d98b92f3abdc5ab216d7582a896",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Practice 3/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Azerbaijan Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 20
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 25407,
+      "sha256": "5c40ea910df77e80b7cc77a517383e8dad8d5d98b92f3abdc5ab216d7582a896",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 25407,
+      "sha256": "5c40ea910df77e80b7cc77a517383e8dad8d5d98b92f3abdc5ab216d7582a896",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 25407,
+      "sha256": "5c40ea910df77e80b7cc77a517383e8dad8d5d98b92f3abdc5ab216d7582a896",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/baku-city-circuit.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 241,
+      "sha256": "90e260073ea28269ac3892edb1a8125462f1a9c07eca369f420b5c02f0b594f0"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "ac0fb06d84f820e6": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Practice 3/corners.json",
+          "Practice 2/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 17.631,
+              "Practice 3/corners.json": 30.825,
+              "Practice 2/corners.json": 13.352,
+              "Practice 1/corners.json": 17.105
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 1.361,
+              "Practice 3/corners.json": 1.135,
+              "Practice 2/corners.json": 1.413,
+              "Practice 1/corners.json": 9.831
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 1.932,
+              "Practice 3/corners.json": 1.612,
+              "Practice 2/corners.json": 2.006,
+              "Practice 1/corners.json": 13.961
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 26.372,
+              "Practice 3/corners.json": 5939.045,
+              "Practice 2/corners.json": 37.853,
+              "Practice 1/corners.json": 37.04
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 24.058,
+              "Practice 3/corners.json": 20.035,
+              "Practice 2/corners.json": 37.853,
+              "Practice 1/corners.json": 37.04
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "straight_mode_zone_source": null,
+  "image_map_source": {
+    "file": "raw/images/eventMap.json",
+    "kind": "event_map",
+    "folder_label": null,
+    "bytes": 792,
+    "sha256": "9d55bb03e415b4b1dfe0a0d3f5ead5a3696126dc98782906be74773f556e88d2"
+  },
+  "session_resolutions": {
+    "Race": {
+      "raw_folder_session": "Race",
+      "raw_folder_canonical": "Race",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-09-26T10:11:25.000000000",
+          "last_utc": "2026-09-26T13:11:57.000000000",
+          "utc_dates": [
+            "2026-09-26"
+          ]
+        }
+      },
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Qualifying": {
+      "raw_folder_session": "Qualifying",
+      "raw_folder_canonical": "Qualifying",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-09-25T11:56:20.000000000",
+          "last_utc": "2026-09-25T13:11:03.000000000",
+          "utc_dates": [
+            "2026-09-25"
+          ]
+        }
+      },
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 3": {
+      "raw_folder_session": "Practice 3",
+      "raw_folder_canonical": "Practice 3",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-09-25T08:30:00.000000000",
+          "last_utc": "2026-09-25T09:47:32.000000000",
+          "utc_dates": [
+            "2026-09-25"
+          ]
+        }
+      },
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 2": {
+      "raw_folder_session": "Practice 2",
+      "raw_folder_canonical": "Practice 2",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-09-24T12:00:00.000000000",
+          "last_utc": "2026-09-24T13:15:58.000000000",
+          "utc_dates": [
+            "2026-09-24"
+          ]
+        }
+      },
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 1": {
+      "raw_folder_session": "Practice 1",
+      "raw_folder_canonical": "Practice 1",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-09-24T08:17:40.000000000",
+          "last_utc": "2026-09-24T09:45:34.000000000",
+          "utc_dates": [
+            "2026-09-24"
+          ]
+        }
+      },
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    }
+  },
+  "session_source_inventory": [
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 25407,
+      "sha256": "5c40ea910df77e80b7cc77a517383e8dad8d5d98b92f3abdc5ab216d7582a896"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 17290,
+      "sha256": "f984b866d8439813bae36403bbaf6ddebc3f82152eda9d38b319319e456e67ce"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7499,
+      "sha256": "50ab084c2c96c2439fa112b68724dff80d13e514222dc2a187bfc879441061a4"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 25405,
+      "sha256": "e195d06df26a43bef1a19c9863ec447236261ab45a53d329c90822c7ee3960fa"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 15904,
+      "sha256": "885dc761f25c265e6be6ad9bbdd0f0c1750015c1d5d3297d525837b8bfc3bb43"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3646,
+      "sha256": "dcd2e5552676849784001c055fbb8a1e50ff748728a0409a5a895614af927281"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 3/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 3",
+      "bytes": 25407,
+      "sha256": "5a90db3b02a02566ab1298de020d008d53760fb2c3d86277adbc3a8dc181781b"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 18209,
+      "sha256": "9d989e0eecc599a4cd1ba182e08c472f43ba145eaf691e9093b49274978d4f10"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3649,
+      "sha256": "9d7f83063e30d4489c879399dcccbd251d9397b45f1cd905c903758427befb5e"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 25398,
+      "sha256": "d76cc8dac394c8fcc6d9a7fefe769d04861b363b7a50b64755393663c5eb9604"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 10653,
+      "sha256": "e7aad406448ebc770257d1bad08f05fecf0f93d9676436ed1da2d379c274cd9d"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3857,
+      "sha256": "1d631615a284138d14eb956b201c2c716cd533ee6b5128308d15b79178a8c2c7"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 25395,
+      "sha256": "aa08108ac9e7ff8a26d6e3283f5eabb340c4493bbdff0de66245dd8e1e0b4f62"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 10788,
+      "sha256": "971476124722a92231429662983a08cc17ee42b2c1004a5ba395862eb0eb774f"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3438,
+      "sha256": "a897f5dd111b7cfd797b6247bd8a22bde8a53d249b10386b72df9419234cf67f"
+    }
+  ],
+  "session_exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Race/rcm.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/race/race_control.json",
+      "row_count": 139,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Race/weather.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/race/weather.json",
+      "row_count": 168,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 128,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 81,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 3",
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-3",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Practice 3/rcm.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/practice-3/race_control.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/practice-3/race_control.json",
+      "row_count": 147,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 3",
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-3",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Practice 3/weather.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/practice-3/weather.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/practice-3/weather.json",
+      "row_count": 81,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 86,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 85,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Practice 1/rcm.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/practice-1/race_control.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/practice-1/race_control.json",
+      "row_count": 86,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Practice 1/weather.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/practice-1/weather.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/practice-1/weather.json",
+      "row_count": 76,
+      "status": "exported"
+    }
+  ],
+  "outputs": [
+    "master_track.json",
+    "source_manifest.json",
+    "track_geometry.csv",
+    "corners.csv",
+    "sections.csv",
+    "layout_section_metadata.csv",
+    "marshal_lights.csv",
+    "marshal_sectors.csv",
+    "mini_sector_markers.csv",
+    "active_aero_zones.csv",
+    "straight_mode_map_annotations.csv",
+    "straight_mode_map_review.png",
+    "sessions/<resolved-session-slug>/{weather,race_control}.{csv,json}",
+    "sessions/<resolved-session-slug>/session_manifest.json"
+  ],
+  "exclusions": [
+    "Bahrain Grand Prix",
+    "Chinese Grand Prix",
+    "Japanese Grand Prix",
+    "Spanish Grand Prix"
+  ],
+  "warnings": [
+    "Geometry contains 4 consecutive duplicate coordinate pairs; retained as source data.",
+    "Layout array 'Section' has 20 values versus 8 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+    "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+    "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 30.825); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 9.831; end_distance_source: max |delta| 13.961); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 5939.045); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.853); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+  ]
+}
