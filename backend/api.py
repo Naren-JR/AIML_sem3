@@ -14,6 +14,8 @@ from .optimizer import optimize
 from .track_reference import load_reference
 from .track_quality import track_quality
 from fastapi.responses import FileResponse
+from .ml_validation import saved_validation, run_validation
+from .circuits import catalog, definition
 
 RESULTS = Path(os.getenv('AIML_RESULTS_DIR', str(ROOT / 'results/optimization')))
 
@@ -65,6 +67,22 @@ def create_app(dataset=None):
     def dataset_info():
         return ready()[0].metadata()
 
+    @app.get('/api/circuits')
+    def circuits():
+        return {'circuits': catalog(), 'scope': 'Local circuit references intersected with verified F1 race participation; not every session Kimi has ever driven.'}
+
+    @app.get('/api/circuits/{circuit_id}')
+    def circuit(circuit_id: str):
+        if definition(circuit_id) is None:
+            raise HTTPException(404, 'Circuit unavailable or excluded')
+        entry = next((c for c in catalog() if c['id']==circuit_id), None)
+        if entry is None:
+            raise HTTPException(404, 'No local reference data')
+        reference = load_reference(circuit_id)
+        section_file=ROOT / ('trackData/raw/sections/'+definition(circuit_id)[3]+'.json')
+        sections=json.loads(section_file.read_text(encoding='utf-8-sig')) if section_file.exists() else []
+        return {'circuit':entry,'reference':reference,'section_percentages':sections}
+
     @app.get('/api/laps')
     def laps():
         return ready()[0].laps
@@ -95,6 +113,21 @@ def create_app(dataset=None):
     @app.get('/api/model/status')
     def model_status():
         return ready()[1].status
+
+    @app.get('/api/ml/validation')
+    def ml_validation():
+        return saved_validation(ready()[0])
+
+    @app.post('/api/ml/validation/run')
+    def ml_run():
+        if not lock.acquire(blocking=False):
+            raise HTTPException(409, 'A model operation is in progress')
+        try:
+            return {'status': 'ready', 'result': run_validation(ready()[0])}
+        except (ValueError, ImportError) as e:
+            raise HTTPException(422, str(e)) from e
+        finally:
+            lock.release()
 
     @app.get('/api/methodology')
     def methodology():

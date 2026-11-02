@@ -42,3 +42,17 @@ describe('one selection state',()=>{
     expect(screen.queryByRole('slider')).not.toBeInTheDocument()
   })
 })
+
+const circuitFixture=(id:string,name:string)=>({id,event:name,name,participation_years:[2025],participation_source:'https://www.formula1.com/',verified_on:'2026-11-02',race_telemetry_available:id==='australian-grand-prix',geometry_points:0})
+it('clears Australian readings on a reference-only track and restores them on return',async()=>{
+ data['/circuits']={circuits:[circuitFixture('australian-grand-prix','Albert Park'),circuitFixture('italian-grand-prix','Monza')]}
+ data['/circuits/italian-grand-prix']={circuit:circuitFixture('italian-grand-prix','Monza'),reference:{available:true,geometry:[]},section_percentages:[['Straight',0,100]]}
+ setup();await screen.findByRole('slider');
+ fireEvent.change(screen.getByRole('combobox',{name:'Track'}),{target:{value:'italian-grand-prix'}})
+ await screen.findByRole('heading',{name:'Monza'});
+ expect(screen.queryByRole('slider')).not.toBeInTheDocument();
+ expect(screen.queryByRole('button',{name:'Vehicle speed'})).not.toBeInTheDocument();
+ expect(screen.getByText(/No local GP Race telemetry/)).toBeInTheDocument();
+ fireEvent.change(screen.getByRole('combobox',{name:'Track'}),{target:{value:'australian-grand-prix'}})
+ await screen.findByRole('slider');
+})
