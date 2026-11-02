@@ -1,0 +1,100 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:35+00:00",
+  "event_name": "Australian Grand Prix",
+  "raw_folder_session": "Practice 2",
+  "resolved_session": "Practice 2",
+  "session_resolution": {
+    "raw_folder_session": "Practice 2",
+    "raw_folder_canonical": "Practice 2",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-03-06T04:11:40.000000000",
+        "last_utc": "2026-03-06T06:05:33.000000000",
+        "utc_dates": [
+          "2026-03-06"
+        ]
+      }
+    },
+    "resolved_session": "Practice 2",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 6,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Australian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3564,
+      "sha256": "ed0245e578d75bbb82142b5550f6a1995d75c33d52e5ddd1bda31bea6c6400dc"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 6452,
+      "sha256": "b55481aba11c40f8438b000baff0dcc7632649cc84366498d269ac3b83323b32"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Australian Grand Prix/Practice 2/cor.json",
+      "kind": "cor",
+      "folder_label": "Practice 2",
+      "bytes": 10302,
+      "sha256": "4573240c0253358a9364f57f7a0a42cfe139dbcc4d45e5f21006240c783c7abb"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 13775,
+      "sha256": "17864da6af863cedc7b51aa90d18d39ac7c399603e810c14a71ab00da6c4e57f"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 6452,
+      "sha256": "b55481aba11c40f8438b000baff0dcc7632649cc84366498d269ac3b83323b32"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3564,
+      "sha256": "ed0245e578d75bbb82142b5550f6a1995d75c33d52e5ddd1bda31bea6c6400dc"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Australian Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/australian-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/australian-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 79,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Australian Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/australian-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/australian-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 46,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

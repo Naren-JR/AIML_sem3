@@ -1,0 +1,1932 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:47+00:00",
+  "script": {
+    "name": "processTracks.py",
+    "path": "D:/codes/RVU/AIML/capProject/trackData/processTracks.py",
+    "sha256": "8d9aacfddf5a80de2ab6224339b5a5c92a51d317d9e31bcdc5b9feb9f3541698",
+    "schema_version": "4.0"
+  },
+  "run": {
+    "clean": false,
+    "input_root": "D:\\codes\\RVU\\AIML\\capProject\\trackData",
+    "output_root": "D:\\codes\\RVU\\AIML\\capProject\\trackData"
+  },
+  "input_root": "D:\\codes\\RVU\\AIML\\capProject\\trackData",
+  "raw_root_found": true,
+  "circuit_map_file": "circuitMap.json",
+  "image_map_file": "raw/images/eventMap.json",
+  "catalog_file": "processed/track_catalog.json",
+  "mapped_events_in_scope": 20,
+  "events_successfully_catalogued": 20,
+  "excluded_events": [
+    "Bahrain Grand Prix",
+    "Chinese Grand Prix",
+    "Japanese Grand Prix",
+    "Spanish Grand Prix"
+  ],
+  "image_map_coverage": {
+    "catalogued": [
+      {
+        "event_key": "australian grand prix",
+        "svg": "albert_park.svg"
+      },
+      {
+        "event_key": "austrian grand prix",
+        "svg": "red_bull_ring.svg"
+      },
+      {
+        "event_key": "azerbaijan grand prix",
+        "svg": "baku.svg"
+      },
+      {
+        "event_key": "barcelona grand prix",
+        "svg": "catalunya.svg"
+      },
+      {
+        "event_key": "belgian grand prix",
+        "svg": "spa.svg"
+      },
+      {
+        "event_key": "british grand prix",
+        "svg": "silverstone.svg"
+      },
+      {
+        "event_key": "canadian grand prix",
+        "svg": "villeneuve.svg"
+      },
+      {
+        "event_key": "dutch grand prix",
+        "svg": "zandvoort.svg"
+      },
+      {
+        "event_key": "hungarian grand prix",
+        "svg": "hungaroring.svg"
+      },
+      {
+        "event_key": "italian grand prix",
+        "svg": "monza.svg"
+      },
+      {
+        "event_key": "miami grand prix",
+        "svg": "miami.svg"
+      },
+      {
+        "event_key": "monaco grand prix",
+        "svg": "monaco.svg"
+      },
+      {
+        "event_key": "singapore grand prix",
+        "svg": "marina_bay.svg"
+      },
+      {
+        "event_key": "united states grand prix",
+        "svg": "americas.svg"
+      }
+    ],
+    "excluded_by_rule": [
+      {
+        "event_key": "chinese grand prix",
+        "svg": "shanghai.svg"
+      },
+      {
+        "event_key": "japanese grand prix",
+        "svg": "suzuka.svg"
+      },
+      {
+        "event_key": "spanish grand prix",
+        "svg": "madrid.svg"
+      }
+    ],
+    "image_entry_without_circuit_reference": [
+      {
+        "event_key": "malaysian grand prix",
+        "svg": "sepang.svg",
+        "note": "eventMap.json names this event but circuitMap.json has no entry for it; it was not processed and nothing was substituted."
+      }
+    ]
+  },
+  "geometry_unavailable_events": [
+    {
+      "event_name": "Abu Dhabi Grand Prix",
+      "geometry_status": "unavailable_no_valid_source",
+      "session_folders": 0,
+      "evidence": {
+        "raw_session_directory": null,
+        "raw_session_directory_found": false,
+        "session_folders_found": [],
+        "circuit_map_session_file_entries": 0,
+        "section_file": "raw/sections/yas-marina-circuit.json"
+      },
+      "reason": [
+        "No valid geometry. Checked: no raw session directory matching 'Abu Dhabi Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/yas-marina-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Emilia Romagna Grand Prix",
+      "geometry_status": "unavailable_no_valid_source",
+      "session_folders": 0,
+      "evidence": {
+        "raw_session_directory": null,
+        "raw_session_directory_found": false,
+        "session_folders_found": [],
+        "circuit_map_session_file_entries": 0,
+        "section_file": "raw/sections/emilia.json"
+      },
+      "reason": [
+        "No valid geometry. Checked: no raw session directory matching 'Emilia Romagna Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/emilia.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Mexico City Grand Prix",
+      "geometry_status": "unavailable_no_valid_source",
+      "session_folders": 0,
+      "evidence": {
+        "raw_session_directory": null,
+        "raw_session_directory_found": false,
+        "session_folders_found": [],
+        "circuit_map_session_file_entries": 0,
+        "section_file": "raw/sections/autodrome-hermanos-rodriguez.json"
+      },
+      "reason": [
+        "No valid geometry. Checked: no raw session directory matching 'Mexico City Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/autodrome-hermanos-rodriguez.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Qatar Grand Prix",
+      "geometry_status": "unavailable_no_valid_source",
+      "session_folders": 0,
+      "evidence": {
+        "raw_session_directory": null,
+        "raw_session_directory_found": false,
+        "session_folders_found": [],
+        "circuit_map_session_file_entries": 0,
+        "section_file": "raw/sections/lusail-international-circuit.json"
+      },
+      "reason": [
+        "No valid geometry. Checked: no raw session directory matching 'Qatar Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/lusail-international-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Saudi Arabian Grand Prix",
+      "geometry_status": "unavailable_no_valid_source",
+      "session_folders": 0,
+      "evidence": {
+        "raw_session_directory": null,
+        "raw_session_directory_found": false,
+        "session_folders_found": [],
+        "circuit_map_session_file_entries": 0,
+        "section_file": "raw/sections/jeddah-corniche-circuit.json"
+      },
+      "reason": [
+        "No valid geometry. Checked: no raw session directory matching 'Saudi Arabian Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/jeddah-corniche-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "São Paulo Grand Prix",
+      "geometry_status": "unavailable_no_valid_source",
+      "session_folders": 0,
+      "evidence": {
+        "raw_session_directory": null,
+        "raw_session_directory_found": false,
+        "session_folders_found": [],
+        "circuit_map_session_file_entries": 0,
+        "section_file": "raw/sections/interlagos-circuit.json"
+      },
+      "reason": [
+        "No valid geometry. Checked: no raw session directory matching 'São Paulo Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/interlagos-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    }
+  ],
+  "events": [
+    {
+      "event_name": "Abu Dhabi Grand Prix",
+      "event_slug": "abu-dhabi-grand-prix",
+      "output_directory": "processed/abu-dhabi-grand-prix",
+      "geometry_source_folder_label": null,
+      "corner_source_folder_label": null,
+      "geometry_status": "unavailable_no_valid_source",
+      "geometry_points": 0,
+      "corner_rows": 0,
+      "section_rows": 13,
+      "layout_section_metadata_rows": 0,
+      "marshal_light_rows": 0,
+      "marshal_sector_rows": 0,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 0,
+      "map_annotation_zone_like_candidates": 0,
+      "map_annotation_status": "webp_asset_unavailable",
+      "session_folders": 0,
+      "sessions": [],
+      "weather_session_exports": 0,
+      "race_control_session_exports": 0,
+      "image_status": "no_event_map_entry",
+      "layout_status": "requires_verification",
+      "warnings": [
+        "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files).",
+        "No eventMap.json entry exists for this event; image links are omitted rather than guessed.",
+        "No valid geometry. Checked: no raw session directory matching 'Abu Dhabi Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/yas-marina-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Australian Grand Prix",
+      "event_slug": "australian-grand-prix",
+      "output_directory": "processed/australian-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 618,
+      "corner_rows": 14,
+      "section_rows": 14,
+      "layout_section_metadata_rows": 14,
+      "marshal_light_rows": 20,
+      "marshal_sector_rows": 20,
+      "mini_sector_marker_rows": 22,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 6,
+      "map_annotation_zone_like_candidates": 6,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source', 'mv_distance_source'] differ between the selected source (Race/cor.json) and 9 other source file(s) (distance_source: max |delta| 37.878; mv_distance_source: max |delta| non-numeric); identical fields: ['angle_deg_source', 'corner_number', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 9.623; end_distance_source: max |delta| 10.424); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source', 'mv_distance_source'] differ between the selected source (Race/cor.json) and 9 other source file(s) (distance_source: max |delta| 34.59; mv_distance_source: max |delta| non-numeric); identical fields: ['angle_deg_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source', 'mv_distance_source'] differ between the selected source (Race/cor.json) and 9 other source file(s) (distance_source: max |delta| 48.359; mv_distance_source: max |delta| non-numeric); identical fields: ['angle_deg_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Austrian Grand Prix",
+      "event_slug": "austrian-grand-prix",
+      "output_directory": "processed/austrian-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 539,
+      "corner_rows": 10,
+      "section_rows": 11,
+      "layout_section_metadata_rows": 11,
+      "marshal_light_rows": 16,
+      "marshal_sector_rows": 16,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 4,
+      "map_annotation_zone_like_candidates": 4,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Geometry contains 1 consecutive duplicate coordinate pairs; retained as source data.",
+        "Layout array 'Section' has 10 values versus 11 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 196.644); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 11.649; end_distance_source: max |delta| 12.416); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 191.411); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 197.69); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Azerbaijan Grand Prix",
+      "event_slug": "azerbaijan-grand-prix",
+      "output_directory": "processed/azerbaijan-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 837,
+      "corner_rows": 20,
+      "section_rows": 8,
+      "layout_section_metadata_rows": 8,
+      "marshal_light_rows": 21,
+      "marshal_sector_rows": 21,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 2,
+      "map_annotation_zone_like_candidates": 2,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Geometry contains 4 consecutive duplicate coordinate pairs; retained as source data.",
+        "Layout array 'Section' has 20 values versus 8 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 30.825); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 9.831; end_distance_source: max |delta| 13.961); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 5939.045); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.853); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Barcelona Grand Prix",
+      "event_slug": "barcelona-grand-prix",
+      "output_directory": "processed/barcelona-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 442,
+      "corner_rows": 14,
+      "section_rows": 16,
+      "layout_section_metadata_rows": 16,
+      "marshal_light_rows": 16,
+      "marshal_sector_rows": 16,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 4,
+      "map_annotation_zone_like_candidates": 4,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 14 values versus 16 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2023']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 33.147); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 16.413; end_distance_source: max |delta| 17.088); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.705); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.663); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Belgian Grand Prix",
+      "event_slug": "belgian-grand-prix",
+      "output_directory": "processed/belgian-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 1005,
+      "corner_rows": 19,
+      "section_rows": 15,
+      "layout_section_metadata_rows": 15,
+      "marshal_light_rows": 21,
+      "marshal_sector_rows": 21,
+      "mini_sector_marker_rows": 27,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 5,
+      "map_annotation_zone_like_candidates": 5,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 19 values versus 15 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 44.013); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 31.447; end_distance_source: max |delta| 31.707); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 39.761); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 44.394); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "British Grand Prix",
+      "event_slug": "british-grand-prix",
+      "output_directory": "processed/british-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 916,
+      "corner_rows": 18,
+      "section_rows": 13,
+      "layout_section_metadata_rows": 13,
+      "marshal_light_rows": 17,
+      "marshal_sector_rows": 16,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 4,
+      "map_annotation_zone_like_candidates": 4,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Sprint",
+          "resolved_session": "Sprint",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint"
+        },
+        {
+          "raw_folder_session": "Sprint Qualifying",
+          "resolved_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint-qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 18 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 50.233); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 24.09; end_distance_source: max |delta| 24.736); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 5826.079); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 23.496); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Canadian Grand Prix",
+      "event_slug": "canadian-grand-prix",
+      "output_directory": "processed/canadian-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 614,
+      "corner_rows": 14,
+      "section_rows": 13,
+      "layout_section_metadata_rows": 13,
+      "marshal_light_rows": 15,
+      "marshal_sector_rows": 15,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 3,
+      "map_annotation_zone_like_candidates": 3,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Sprint",
+          "resolved_session": "Sprint",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint"
+        },
+        {
+          "raw_folder_session": "Sprint Qualifying",
+          "resolved_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint-qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 14 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 39.172); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 32.935; end_distance_source: max |delta| 35.706); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4315.807); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4315.807); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Dutch Grand Prix",
+      "event_slug": "dutch-grand-prix",
+      "output_directory": "processed/dutch-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 664,
+      "corner_rows": 14,
+      "section_rows": 14,
+      "layout_section_metadata_rows": 14,
+      "marshal_light_rows": 19,
+      "marshal_sector_rows": 19,
+      "mini_sector_marker_rows": 23,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 2,
+      "map_annotation_zone_like_candidates": 2,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Sprint",
+          "resolved_session": "Sprint",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint"
+        },
+        {
+          "raw_folder_session": "Sprint Qualifying",
+          "resolved_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint-qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 163.751); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 12.462; end_distance_source: max |delta| 14.739); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4105.557); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4105.557); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Emilia Romagna Grand Prix",
+      "event_slug": "emilia-romagna-grand-prix",
+      "output_directory": "processed/emilia-romagna-grand-prix",
+      "geometry_source_folder_label": null,
+      "corner_source_folder_label": null,
+      "geometry_status": "unavailable_no_valid_source",
+      "geometry_points": 0,
+      "corner_rows": 0,
+      "section_rows": 14,
+      "layout_section_metadata_rows": 0,
+      "marshal_light_rows": 0,
+      "marshal_sector_rows": 0,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 0,
+      "map_annotation_zone_like_candidates": 0,
+      "map_annotation_status": "webp_asset_unavailable",
+      "session_folders": 0,
+      "sessions": [],
+      "weather_session_exports": 0,
+      "race_control_session_exports": 0,
+      "image_status": "no_event_map_entry",
+      "layout_status": "requires_verification",
+      "warnings": [
+        "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files).",
+        "No eventMap.json entry exists for this event; image links are omitted rather than guessed.",
+        "No valid geometry. Checked: no raw session directory matching 'Emilia Romagna Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/emilia.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Hungarian Grand Prix",
+      "event_slug": "hungarian-grand-prix",
+      "output_directory": "processed/hungarian-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 711,
+      "corner_rows": 16,
+      "section_rows": 13,
+      "layout_section_metadata_rows": 13,
+      "marshal_light_rows": 19,
+      "marshal_sector_rows": 19,
+      "mini_sector_marker_rows": 20,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 4,
+      "map_annotation_zone_like_candidates": 3,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 16 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 550.548); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 248.76; end_distance_source: max |delta| 260.947); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 500.03); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4344.071); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Italian Grand Prix",
+      "event_slug": "italian-grand-prix",
+      "output_directory": "processed/italian-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 752,
+      "corner_rows": 11,
+      "section_rows": 11,
+      "layout_section_metadata_rows": 11,
+      "marshal_light_rows": 17,
+      "marshal_sector_rows": 17,
+      "mini_sector_marker_rows": 25,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 5,
+      "map_annotation_zone_like_candidates": 5,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 116.801); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 108.316; end_distance_source: max |delta| 115.5); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 118.525); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 124.155); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Mexico City Grand Prix",
+      "event_slug": "mexico-city-grand-prix",
+      "output_directory": "processed/mexico-city-grand-prix",
+      "geometry_source_folder_label": null,
+      "corner_source_folder_label": null,
+      "geometry_status": "unavailable_no_valid_source",
+      "geometry_points": 0,
+      "corner_rows": 0,
+      "section_rows": 9,
+      "layout_section_metadata_rows": 0,
+      "marshal_light_rows": 0,
+      "marshal_sector_rows": 0,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 0,
+      "map_annotation_zone_like_candidates": 0,
+      "map_annotation_status": "webp_asset_unavailable",
+      "session_folders": 0,
+      "sessions": [],
+      "weather_session_exports": 0,
+      "race_control_session_exports": 0,
+      "image_status": "no_event_map_entry",
+      "layout_status": "requires_verification",
+      "warnings": [
+        "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files).",
+        "No eventMap.json entry exists for this event; image links are omitted rather than guessed.",
+        "No valid geometry. Checked: no raw session directory matching 'Mexico City Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/autodrome-hermanos-rodriguez.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Miami Grand Prix",
+      "event_slug": "miami-grand-prix",
+      "output_directory": "processed/miami-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 757,
+      "corner_rows": 19,
+      "section_rows": 9,
+      "layout_section_metadata_rows": 9,
+      "marshal_light_rows": 19,
+      "marshal_sector_rows": 20,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 3,
+      "map_annotation_zone_like_candidates": 3,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Sprint",
+          "resolved_session": "Sprint",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint"
+        },
+        {
+          "raw_folder_session": "Sprint Qualifying",
+          "resolved_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint-qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 19 values versus 9 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.371); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 13.056; end_distance_source: max |delta| 14.348); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.371); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 31.587); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Monaco Grand Prix",
+      "event_slug": "monaco-grand-prix",
+      "output_directory": "processed/monaco-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 683,
+      "corner_rows": 19,
+      "section_rows": 13,
+      "layout_section_metadata_rows": 13,
+      "marshal_light_rows": 19,
+      "marshal_sector_rows": 19,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 0,
+      "map_annotation_zone_like_candidates": 0,
+      "map_annotation_status": "red_pixels_found_no_qualifying_regions",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 19 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "No sufficiently large red image regions were extracted; this does not prove the circuit has no 2026 Straight Mode zones.",
+        "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 24.344); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Qualifying/corners.json) and 3 other source file(s) (start_distance_source: max |delta| 19.209; end_distance_source: max |delta| 20.872); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 27.56); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 22.449); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "Qatar Grand Prix",
+      "event_slug": "qatar-grand-prix",
+      "output_directory": "processed/qatar-grand-prix",
+      "geometry_source_folder_label": null,
+      "corner_source_folder_label": null,
+      "geometry_status": "unavailable_no_valid_source",
+      "geometry_points": 0,
+      "corner_rows": 0,
+      "section_rows": 14,
+      "layout_section_metadata_rows": 0,
+      "marshal_light_rows": 0,
+      "marshal_sector_rows": 0,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 0,
+      "map_annotation_zone_like_candidates": 0,
+      "map_annotation_status": "webp_asset_unavailable",
+      "session_folders": 0,
+      "sessions": [],
+      "weather_session_exports": 0,
+      "race_control_session_exports": 0,
+      "image_status": "no_event_map_entry",
+      "layout_status": "requires_verification",
+      "warnings": [
+        "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files).",
+        "No eventMap.json entry exists for this event; image links are omitted rather than guessed.",
+        "No valid geometry. Checked: no raw session directory matching 'Qatar Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/lusail-international-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Saudi Arabian Grand Prix",
+      "event_slug": "saudi-arabian-grand-prix",
+      "output_directory": "processed/saudi-arabian-grand-prix",
+      "geometry_source_folder_label": null,
+      "corner_source_folder_label": null,
+      "geometry_status": "unavailable_no_valid_source",
+      "geometry_points": 0,
+      "corner_rows": 0,
+      "section_rows": 15,
+      "layout_section_metadata_rows": 0,
+      "marshal_light_rows": 0,
+      "marshal_sector_rows": 0,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 0,
+      "map_annotation_zone_like_candidates": 0,
+      "map_annotation_status": "webp_asset_unavailable",
+      "session_folders": 0,
+      "sessions": [],
+      "weather_session_exports": 0,
+      "race_control_session_exports": 0,
+      "image_status": "no_event_map_entry",
+      "layout_status": "requires_verification",
+      "warnings": [
+        "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files).",
+        "No eventMap.json entry exists for this event; image links are omitted rather than guessed.",
+        "No valid geometry. Checked: no raw session directory matching 'Saudi Arabian Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/jeddah-corniche-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "Singapore Grand Prix",
+      "event_slug": "singapore-grand-prix",
+      "output_directory": "processed/singapore-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 544,
+      "corner_rows": 19,
+      "section_rows": 17,
+      "layout_section_metadata_rows": 17,
+      "marshal_light_rows": 16,
+      "marshal_sector_rows": 16,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 5,
+      "map_annotation_zone_like_candidates": 5,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Sprint",
+          "resolved_session": "Sprint",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint"
+        },
+        {
+          "raw_folder_session": "Sprint Qualifying",
+          "resolved_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "sprint-qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 19 values versus 17 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2023']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.281); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 18.68; end_distance_source: max |delta| 19.267); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4858.449); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 40.651); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    },
+    {
+      "event_name": "São Paulo Grand Prix",
+      "event_slug": "são-paulo-grand-prix",
+      "output_directory": "processed/são-paulo-grand-prix",
+      "geometry_source_folder_label": null,
+      "corner_source_folder_label": null,
+      "geometry_status": "unavailable_no_valid_source",
+      "geometry_points": 0,
+      "corner_rows": 0,
+      "section_rows": 10,
+      "layout_section_metadata_rows": 0,
+      "marshal_light_rows": 0,
+      "marshal_sector_rows": 0,
+      "mini_sector_marker_rows": 0,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 0,
+      "map_annotation_zone_like_candidates": 0,
+      "map_annotation_status": "webp_asset_unavailable",
+      "session_folders": 0,
+      "sessions": [],
+      "weather_session_exports": 0,
+      "race_control_session_exports": 0,
+      "image_status": "no_event_map_entry",
+      "layout_status": "requires_verification",
+      "warnings": [
+        "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files).",
+        "No eventMap.json entry exists for this event; image links are omitted rather than guessed.",
+        "No valid geometry. Checked: no raw session directory matching 'São Paulo Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/interlagos-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+      ]
+    },
+    {
+      "event_name": "United States Grand Prix",
+      "event_slug": "united-states-grand-prix",
+      "output_directory": "processed/united-states-grand-prix",
+      "geometry_source_folder_label": "Race",
+      "corner_source_folder_label": "Race",
+      "geometry_status": "extracted_source_coordinates_unscaled",
+      "geometry_points": 853,
+      "corner_rows": 20,
+      "section_rows": 12,
+      "layout_section_metadata_rows": 12,
+      "marshal_light_rows": 20,
+      "marshal_sector_rows": 20,
+      "mini_sector_marker_rows": 21,
+      "straight_mode_zone_rows": 0,
+      "map_annotation_rows": 2,
+      "map_annotation_zone_like_candidates": 2,
+      "map_annotation_status": "visual_candidates_need_review",
+      "session_folders": 5,
+      "sessions": [
+        {
+          "raw_folder_session": "Race",
+          "resolved_session": "Race",
+          "session_verification": "unverified_session",
+          "output_slug": "race"
+        },
+        {
+          "raw_folder_session": "Qualifying",
+          "resolved_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "output_slug": "qualifying"
+        },
+        {
+          "raw_folder_session": "Practice 3",
+          "resolved_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-3"
+        },
+        {
+          "raw_folder_session": "Practice 2",
+          "resolved_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-2"
+        },
+        {
+          "raw_folder_session": "Practice 1",
+          "resolved_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "output_slug": "practice-1"
+        }
+      ],
+      "weather_session_exports": 5,
+      "race_control_session_exports": 5,
+      "image_status": "assets_found",
+      "layout_status": "historical_source_year_requires_compatibility_check",
+      "warnings": [
+        "Layout array 'Section' has 20 values versus 12 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+        "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified.",
+        "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 48.021); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 23.774; end_distance_source: max |delta| 25.12); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 35.051); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+        "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 42.717); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+      ]
+    }
+  ],
+  "map_review": {
+    "candidates_csv": "reports/straight_mode_map_candidates.csv",
+    "contact_sheet": "reports/straight_mode_map_review_sheet.png",
+    "candidate_rows": 49,
+    "all_unverified": true
+  },
+  "summary": {
+    "events_with_geometry": 14,
+    "events_with_corners": 14,
+    "events_with_sections": 20,
+    "events_with_straight_mode_zones": 0,
+    "events_with_map_annotation_candidates": 13,
+    "total_map_annotation_components": 49,
+    "total_zone_like_map_candidates": 48,
+    "events_with_image_map_entry": 14,
+    "events_with_image_assets": 14,
+    "sessions_with_weather_rows": 70,
+    "sessions_with_race_control_rows": 70,
+    "sessions_unverified": 70,
+    "sessions_confirmed_by_payload": 0,
+    "sessions_relabelled_by_payload": 0,
+    "warnings": 103,
+    "errors": 0
+  },
+  "warnings": [
+    {
+      "severity": "warning",
+      "event": "Abu Dhabi Grand Prix",
+      "stage": "event_validation",
+      "warning": "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files)."
+    },
+    {
+      "severity": "warning",
+      "event": "Abu Dhabi Grand Prix",
+      "stage": "event_validation",
+      "warning": "No eventMap.json entry exists for this event; image links are omitted rather than guessed."
+    },
+    {
+      "severity": "warning",
+      "event": "Abu Dhabi Grand Prix",
+      "stage": "event_validation",
+      "warning": "No valid geometry. Checked: no raw session directory matching 'Abu Dhabi Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/yas-marina-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+    },
+    {
+      "severity": "warning",
+      "event": "Australian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Australian Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source', 'mv_distance_source'] differ between the selected source (Race/cor.json) and 9 other source file(s) (distance_source: max |delta| 37.878; mv_distance_source: max |delta| non-numeric); identical fields: ['angle_deg_source', 'corner_number', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Australian Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 9.623; end_distance_source: max |delta| 10.424); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Australian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source', 'mv_distance_source'] differ between the selected source (Race/cor.json) and 9 other source file(s) (distance_source: max |delta| 34.59; mv_distance_source: max |delta| non-numeric); identical fields: ['angle_deg_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Australian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source', 'mv_distance_source'] differ between the selected source (Race/cor.json) and 9 other source file(s) (distance_source: max |delta| 48.359; mv_distance_source: max |delta| non-numeric); identical fields: ['angle_deg_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Austrian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Geometry contains 1 consecutive duplicate coordinate pairs; retained as source data."
+    },
+    {
+      "severity": "warning",
+      "event": "Austrian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 10 values versus 11 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Austrian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Austrian Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 196.644); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Austrian Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 11.649; end_distance_source: max |delta| 12.416); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Austrian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 191.411); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Austrian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 197.69); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Azerbaijan Grand Prix",
+      "stage": "event_validation",
+      "warning": "Geometry contains 4 consecutive duplicate coordinate pairs; retained as source data."
+    },
+    {
+      "severity": "warning",
+      "event": "Azerbaijan Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 20 values versus 8 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Azerbaijan Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Azerbaijan Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 30.825); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Azerbaijan Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 9.831; end_distance_source: max |delta| 13.961); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Azerbaijan Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 5939.045); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Azerbaijan Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.853); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Barcelona Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 14 values versus 16 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Barcelona Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2023']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Barcelona Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 33.147); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Barcelona Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 16.413; end_distance_source: max |delta| 17.088); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Barcelona Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.705); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Barcelona Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.663); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Belgian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 19 values versus 15 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Belgian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Belgian Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 44.013); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Belgian Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 31.447; end_distance_source: max |delta| 31.707); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Belgian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 39.761); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Belgian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 44.394); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "British Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 18 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "British Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "British Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 50.233); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "British Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 24.09; end_distance_source: max |delta| 24.736); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "British Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 5826.079); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "British Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 23.496); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Canadian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 14 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Canadian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Canadian Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 39.172); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Canadian Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 32.935; end_distance_source: max |delta| 35.706); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Canadian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4315.807); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Canadian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4315.807); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Dutch Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Dutch Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 163.751); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Dutch Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 12.462; end_distance_source: max |delta| 14.739); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Dutch Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4105.557); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Dutch Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4105.557); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Emilia Romagna Grand Prix",
+      "stage": "event_validation",
+      "warning": "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files)."
+    },
+    {
+      "severity": "warning",
+      "event": "Emilia Romagna Grand Prix",
+      "stage": "event_validation",
+      "warning": "No eventMap.json entry exists for this event; image links are omitted rather than guessed."
+    },
+    {
+      "severity": "warning",
+      "event": "Emilia Romagna Grand Prix",
+      "stage": "event_validation",
+      "warning": "No valid geometry. Checked: no raw session directory matching 'Emilia Romagna Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/emilia.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+    },
+    {
+      "severity": "warning",
+      "event": "Hungarian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 16 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Hungarian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Hungarian Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 550.548); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Hungarian Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 248.76; end_distance_source: max |delta| 260.947); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Hungarian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 500.03); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Hungarian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4344.071); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Italian Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Italian Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 116.801); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Italian Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 108.316; end_distance_source: max |delta| 115.5); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Italian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 118.525); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Italian Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 124.155); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Mexico City Grand Prix",
+      "stage": "event_validation",
+      "warning": "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files)."
+    },
+    {
+      "severity": "warning",
+      "event": "Mexico City Grand Prix",
+      "stage": "event_validation",
+      "warning": "No eventMap.json entry exists for this event; image links are omitted rather than guessed."
+    },
+    {
+      "severity": "warning",
+      "event": "Mexico City Grand Prix",
+      "stage": "event_validation",
+      "warning": "No valid geometry. Checked: no raw session directory matching 'Mexico City Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/autodrome-hermanos-rodriguez.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+    },
+    {
+      "severity": "warning",
+      "event": "Miami Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 19 values versus 9 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Miami Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Miami Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.371); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Miami Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 13.056; end_distance_source: max |delta| 14.348); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Miami Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.371); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Miami Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 31.587); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Monaco Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 19 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Monaco Grand Prix",
+      "stage": "event_validation",
+      "warning": "No sufficiently large red image regions were extracted; this does not prove the circuit has no 2026 Straight Mode zones."
+    },
+    {
+      "severity": "warning",
+      "event": "Monaco Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Monaco Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 24.344); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Monaco Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Qualifying/corners.json) and 3 other source file(s) (start_distance_source: max |delta| 19.209; end_distance_source: max |delta| 20.872); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Monaco Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 27.56); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Monaco Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 22.449); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Qatar Grand Prix",
+      "stage": "event_validation",
+      "warning": "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files)."
+    },
+    {
+      "severity": "warning",
+      "event": "Qatar Grand Prix",
+      "stage": "event_validation",
+      "warning": "No eventMap.json entry exists for this event; image links are omitted rather than guessed."
+    },
+    {
+      "severity": "warning",
+      "event": "Qatar Grand Prix",
+      "stage": "event_validation",
+      "warning": "No valid geometry. Checked: no raw session directory matching 'Qatar Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/lusail-international-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+    },
+    {
+      "severity": "warning",
+      "event": "Saudi Arabian Grand Prix",
+      "stage": "event_validation",
+      "warning": "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files)."
+    },
+    {
+      "severity": "warning",
+      "event": "Saudi Arabian Grand Prix",
+      "stage": "event_validation",
+      "warning": "No eventMap.json entry exists for this event; image links are omitted rather than guessed."
+    },
+    {
+      "severity": "warning",
+      "event": "Saudi Arabian Grand Prix",
+      "stage": "event_validation",
+      "warning": "No valid geometry. Checked: no raw session directory matching 'Saudi Arabian Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/jeddah-corniche-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+    },
+    {
+      "severity": "warning",
+      "event": "Singapore Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 19 values versus 17 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "Singapore Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2023']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "Singapore Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.281); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Singapore Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 18.68; end_distance_source: max |delta| 19.267); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Singapore Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4858.449); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "Singapore Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 40.651); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "São Paulo Grand Prix",
+      "stage": "event_validation",
+      "warning": "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files)."
+    },
+    {
+      "severity": "warning",
+      "event": "São Paulo Grand Prix",
+      "stage": "event_validation",
+      "warning": "No eventMap.json entry exists for this event; image links are omitted rather than guessed."
+    },
+    {
+      "severity": "warning",
+      "event": "São Paulo Grand Prix",
+      "stage": "event_validation",
+      "warning": "No valid geometry. Checked: no raw session directory matching 'São Paulo Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/interlagos-circuit.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+    },
+    {
+      "severity": "warning",
+      "event": "United States Grand Prix",
+      "stage": "event_validation",
+      "warning": "Layout array 'Section' has 20 values versus 12 section records (SectionType/percent arrays); preserved raw and not paired by index."
+    },
+    {
+      "severity": "warning",
+      "event": "United States Grand Prix",
+      "stage": "event_validation",
+      "warning": "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified."
+    },
+    {
+      "severity": "warning",
+      "event": "United States Grand Prix",
+      "stage": "event_validation",
+      "warning": "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 48.021); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "United States Grand Prix",
+      "stage": "event_validation",
+      "warning": "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 23.774; end_distance_source: max |delta| 25.12); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "United States Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 35.051); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "event": "United States Grand Prix",
+      "stage": "event_validation",
+      "warning": "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 42.717); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    },
+    {
+      "severity": "warning",
+      "stage": "image_mapping",
+      "event": "malaysian grand prix",
+      "warning": "eventMap.json maps 'sepang.svg' to 'malaysian grand prix', which has no circuitMap.json entry; not processed."
+    }
+  ],
+  "scope_limits": [
+    "Source completeness and factual correctness are not guaranteed by successful parsing.",
+    "Track layout year/compatibility, coordinate axes/units, total length and telemetry alignment remain unverified unless independently validated.",
+    "Weather records are exported as observations, not used for a counterfactual weather/ERS simulation.",
+    "Red regions detected in WebP images are unverified image-space candidates; zone identity, exact bounds, corner anchors and distances require human validation.",
+    "Structured Straight Mode offsets come only from explicit CSV references; image candidates never fill or alter those fields.",
+    "Overtake detection/activation callouts are a separate feature, are not detected here, and are never Straight Mode zones.",
+    "Excluded events are not processed and no substitute circuit data is used."
+  ]
+}

@@ -1,4 +1,4 @@
-"""Compute all three temporal and six directed cross-track comparisons."""
+"""Compute temporal and directed cross-track comparisons for all installed races."""
 from backend.races import available_races
 from backend.ml_experiments import experiment
 

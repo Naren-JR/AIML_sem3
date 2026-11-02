@@ -16,6 +16,8 @@ from .track_quality import track_quality
 from fastapi.responses import FileResponse
 from .ml_validation import saved_validation, run_validation
 from .circuits import catalog, definition
+from . import hybrid
+
 from .races import load_race, available_races
 from .ml_experiments import experiment, experiment_status, GUARD as ML_GUARD
 
@@ -31,6 +33,10 @@ class RunRequest(BaseModel):
     regularization: float = Field(default=.02, ge=0, le=10)
     bins: int = Field(default=40, ge=4, le=100)
 
+
+class HybridRequest(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    test_track: str = hybrid.DEFAULT_TEST
 
 class MLRequest(BaseModel):
     model_config = ConfigDict(extra='forbid')
@@ -156,6 +162,40 @@ def create_app(dataset=None):
             raise HTTPException(422, str(e)) from e
         finally:
             ML_GUARD.release()
+
+    @app.get('/api/hybrid/tracks')
+    def hybrid_tracks():
+        return {'tracks':hybrid.catalog()}
+
+    @app.get('/api/hybrid')
+    def hybrid_result():
+        try:
+            response=hybrid.saved()
+            if 'result' in response:
+                response['result']={k:v for k,v in response['result'].items() if k not in ('hybrid_energy','heldout_manifest')}
+            return response
+        except (ValueError, OSError) as e:
+            raise HTTPException(503, str(e)) from e
+
+    @app.post('/api/hybrid/train')
+    def train_hybrid(request: HybridRequest):
+        if request.test_track not in hybrid.TRACKS:
+            raise HTTPException(422, 'Choose a supported race from the dataset catalogue')
+        available=[t['id'] for t in hybrid.catalog() if t['available']]
+        if request.test_track not in available:
+            raise HTTPException(422, 'Download the selected test dataset first')
+        training=[t for t in available if t!=request.test_track]
+        if not training:
+            raise HTTPException(422, 'Download at least one separate training circuit first')
+        if not hybrid.LOCK.acquire(blocking=False):
+            raise HTTPException(409, 'Hybrid training is already running')
+        try:
+            result=hybrid.run(training,request.test_track)
+            return {'status':'ready','result':{k:v for k,v in result.items() if k not in ('hybrid_energy','heldout_manifest')}}
+        except (ValueError, OSError) as e:
+            raise HTTPException(422, str(e)) from e
+        finally:
+            hybrid.LOCK.release()
 
     @app.get('/api/ml/validation')
     def ml_validation():

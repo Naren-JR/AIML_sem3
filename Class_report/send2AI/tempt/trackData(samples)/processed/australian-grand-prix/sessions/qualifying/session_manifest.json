@@ -1,0 +1,100 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:35+00:00",
+  "event_name": "Australian Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-03-07T05:00:00.000000000",
+        "last_utc": "2026-03-07T06:24:25.000000000",
+        "utc_dates": [
+          "2026-03-07"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Australian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 4255,
+      "sha256": "1333a211e0e7706ae6826a183de16b32fbbe572d9bfb93aa1bd20af341202fe7"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 13038,
+      "sha256": "75f5e20633ab54a496aacd0d3a05b75c4e8b0d985c243e30c287033888657286"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Australian Grand Prix/Qualifying/cor.json",
+      "kind": "cor",
+      "folder_label": "Qualifying",
+      "bytes": 10304,
+      "sha256": "1a4442bef39d1eb9ebbabd6a447046dcda87cfbe6589347343eb68b96fc7e093"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 13775,
+      "sha256": "f8ece6dff78e811b4f2f5d50c121f4778e32d87ebf2206e7ef63047d486048ea"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 13038,
+      "sha256": "75f5e20633ab54a496aacd0d3a05b75c4e8b0d985c243e30c287033888657286"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 4255,
+      "sha256": "1333a211e0e7706ae6826a183de16b32fbbe572d9bfb93aa1bd20af341202fe7"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Australian Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/australian-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/australian-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 95,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Australian Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/australian-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/australian-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 99,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

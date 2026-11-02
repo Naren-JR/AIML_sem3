@@ -1,0 +1,422 @@
+F1 2026 ERS • Research team handbook • Internal working draft
+F1 2026 ERS STATE ESTIMATION
+SIX-WEEK TEAM HANDBOOK  |  Mathematical model + AI/ML plan + research workflow + IEEE paper
+Version 1.0  •  14 October 2026  •  Four-person team  •  3–4 hours per person per week
+PROJECT DECISION: Deliver a working, evaluated latent-ERS estimator (Target B). Deployment optimization 
+(Target C) is a stretch goal only after validation.
+Executive operating brief
+Research question: To what extent can the latent electrical energy state of a 2026 Formula 1 power unit be inferred 
+from publicly available car telemetry, with a transparent physical model, learned corrections and uncertainty 
+bounds?
+Core contribution to aim for: (1) explicit energy-flow model, (2) identifiability limits, (3) constrained physics/ML 
+estimation, (4) comparison with meaningful baselines, (5) transparent limitations. Do not claim ground-truth 
+battery SoC unless independent reference measurements support it.
+Non-negotiable outcome Stretch / deferred
+Runnable telemetry-to-energy pipeline; reproducible 
+equations; parameter provenance
+Deployment optimization if and only if estimator is credible
+Physics-only baseline + ML-assisted model + validation 
+protocol
+Tyre-state, pit-stop strategy and extensive lap-time optimization
+IEEE-format draft with actual figures, citations and 
+limitations
+Submission/publication decision with supervisor
+1 | Team structure: Option 2 (paired ownership)
+Person Primary lead Secondary overlap Final accountable output
+P1 Longitudinal physics, power 
+balance, constraints
+Estimation with P3 vehicle.py, equations, 
+parameter sensitivity
+P2 2026 telemetry, data quality, 
+preprocessing
+Physics with P1; validation 
+with P4
+data.py, clean lap dataset, data 
+dictionary
+P3 Identifiability, state-space, 
+estimator, ML
+Physics with P1; validation 
+with P4
+estimator.py, model 
+comparisons, uncertainty
+P4 Regulations, reference 
+evidence, experiments, IEEE 
+draft
+Data with P2 validation.py, provenance 
+ledger, figures and paper 
+integration
+Common ownership: every person runs the shared notebook, checks one equation and one assumption, reads at 
+least one technical source, reviews a teammate’s pull request, performs one failure-case test, and writes/reviews 
+the paper. P3 is NOT the only person who needs to understand state estimation.
+2 | Exact scope and notation
+Use a single lap first, then repeat across 2026 sessions. Historical laps may be used for debugging the software and 
+testing robustness, but must not be labelled as 2026 validation. The proposed first-pass model is deliberately low-
+order and is not a manufacturer-accurate power-unit digital twin.
+Symbol Meaning Units / status
+t, Δt Time, sample interval s; measured
+v, a, s Speed, longitudinal acceleration, lap 
+distance
+m/s, m/s², m; observed/derived
+m, ρ, CdA, Crr, θ Mass, air density, drag area, rolling estimated/published/assumed
+F1 2026 ERS • Research team handbook • Internal working draft
+coefficient, road grade
+P_w Signed wheel traction power demand W; derived
+P_ICE, P_K ICE and MGU-K mechanical power 
+contributions
+W; latent
+p_d, p_r Nonnegative electrical discharge and 
+recharge powers
+W; latent
+E, E_ref Usable electrical energy state and 
+arbitrary reference offset
+J; latent
+η_d, η_r Discharge and recovery efficiencies unitless; uncertain
+z_k Observed telemetry feature vector measured + derived
+r_φ(z) Learned residual / deployment proxy W; model output
+3 | Physics: equations to implement
+3.1 Longitudinal balance
+aₖ ≈ (vₖ₊₁ − vₖ₋₁) / (tₖ₊₁ − tₖ₋₁)
+F_req = m a + ½ ρ CdA v² + m g Crr cos(θ) + m g sin(θ)
+P_w = F_req v
+Sign convention: positive P_w means propulsion, negative P_w means net braking at the wheels. Grade is usually 
+omitted initially only if the circuit elevation is unknown; the omission must be logged. Aero CdA is a lumped 
+effective value that can change with active-aero mode, wind and car setup. Acceleration requires smoothing and 
+should not be computed naively from noisy irregular samples.
+3.2 Split of wheel power
+P_w ≈ η_drv (P_ICE + P_K) − P_brake,friction  [propulsion/braking abstraction]
+P_ICE and P_K cannot generally be separated from speed/throttle/RPM alone. Throttle is a driver request, not a 
+calibrated ICE power sensor. In braking, regenerative braking and friction braking also cannot be uniquely 
+separated without extra signals or assumptions. Hence the model must output a feasible family/range, not a falsely 
+precise unique reconstruction.
+3.3 Energy-store dynamics
+Eₖ₊₁ = Eₖ − (p_d,ₖ / η_d) Δtₖ + η_r p_r,ₖ Δtₖ + wₖ
+0 ≤ Eₖ ≤ E_window ;  p_d,ₖ ≥ 0 ; p_r,ₖ ≥ 0
+Here p_d and p_r are defined at the chosen electrical/mechanical interface and must remain consistent with 
+efficiencies; choose one interface in code and document it. E_window is the permitted usable energy swing, NOT 
+necessarily total battery capacity. State of charge in percent is not identifiable without an independently justified 
+full-capacity and offset mapping.
+3.4 Regulatory constraints and implementation
+The FIA 2026 technical rule set contains a 350 kW MGU-K electrical power ceiling and a maximum 4 MJ energy-
+store SoC swing in the February 2026 technical issue; energy-management limits and modes have subsequently 
+been amended. The project must parameterize the applicable limits by regulation issue, event, session, mode and 
+lap rather than hard-code one recharge number. The FIA announced further 2026 energy-management revisions 
+in April. Confirm the current Section C issue and any event-specific appendices before reporting a compliant result 
+[R1–R3].
+0 ≤ p_d,ₖ ≤ P_d,max(vₖ, mode, session, event)
+F1 2026 ERS • Research team handbook • Internal working draft
+0 ≤ p_r,ₖ ≤ P_r,max(vₖ, mode, session, event)
+Σₖ∈lap p_r,ₖ Δtₖ ≤ E_recovery,max(lap, session, event)
+Also encode mode-dependent speed/power restrictions where specified. These are constraints on the chosen 
+power-interface variables only after unit/interface conversion. Record a unit test for every regulatory inequality.
+4 | What is observable, assumed, and fundamentally ambiguous?
+Class Examples Treatment
+Public telemetry Speed, RPM, gear, throttle, brake, distance, 
+lap timing
+Read directly; note missing channels and 
+time alignment
+Derived Acceleration, wheel power, braking 
+windows, segment features
+Compute with smoothing and uncertainty
+Regulation Electrical power limits, SoC window, 
+recovery ceilings
+Versioned source, event-specific overrides
+Literature/assumed Mass, CdA, Crr, efficiencies, ICE power 
+envelopes
+Ranges + sensitivity; do not present as 
+measurements
+Latent Electrical split, energy offset, exact ICE 
+map, regen fraction
+Infer only conditionally; quantify non-
+uniqueness
+Reference Published ERS trace or labelled 
+deployment indication
+Check provenance, semantics, resolution, 
+synchronization
+Structural issue: with P_w approximately known and both P_ICE and P_K unknown, infinitely many pairs can 
+produce the same wheel-power trace. Likewise integrating estimated electrical power determines E(t) only up to 
+initial E(0). A learned model does not remove this information deficit. Report relative energy change, feasible 
+envelopes, or conditional estimates unless independent reference data anchors the state.
+5 | Chosen mathematical estimator and chosen ML model
+5.1 Baseline A — constrained physics-only energy-envelope estimator
+For each time step, bound feasible electric deployment/recovery from wheel demand, conservative ICE power 
+envelopes, braking opportunities and regulations. Propagate lower/upper feasible energy trajectories over 
+plausible E(0) and efficiency ranges. Use constrained least squares (SciPy) to select a smooth representative 
+trajectory; preserve the envelope as the primary uncertainty statement.
+min₍p_d,p_r,E₀₎ Σₖ [λ₁(Δpₖ)² + λ₂(p_d,ₖ p_r,ₖ) + λ₃ slackₖ²]
+Subject to energy dynamics, observed demand compatibility and FIA constraints. The product term is a soft 
+penalty discouraging simultaneous charge/discharge; an exact mixed-mode or complementarity formulation is an 
+optional refinement. A single smooth optimum is a regularized choice, not proof of uniqueness.
+5.2 Baseline B — supervised ML proxy (when labels exist)
+Choose HistGradientBoostingRegressor (scikit-learn) to predict a labelled ERS power proxy or energy increment 
+from telemetry features. If no trustworthy labels exist, do NOT call it supervised ERS training. Synthetic physics-
+generated labels are useful for pipeline tests but only measure recovery of the simulator’s assumptions.
+pA_ML,ₖ = f_φ(v, a, RPM, gear, throttle, brake, s, segment, history)
+Use time-lagged features and grouped splits by session/lap; avoid random splitting of adjacent samples. A 
+regression output is projected onto physical constraints before energy integration. If available labels describe 
+display graphics rather than physical electrical power, train/evaluate only against that display quantity.
+F1 2026 ERS • Research team handbook • Internal working draft
+5.3 Proposed primary hybrid — physics + learned residual + constrained smoother
+Chosen model: gradient-boosted residual predictor + constrained energy-state smoothing. This is feasible within 
+six weeks, interpretable, and easier to debug than an LSTM. The ML model predicts a correction to a rule-based 
+electrical power proxy, NOT an unconstrained absolute SoC.
+pA_raw,ₖ = p_base(zₖ; θ) + r_φ(zₖ, zₖ₋₁, …)
+pA_feasible = Project_C2026(pA_raw) ; EA ₖ₊₁ = EA ₖ − Δt · pA_feasible / η  [signed convention]
+For implementation use a single signed bus-power q: q>0 discharge, q<0 recharge; E_next = E  Δt[max(q,0)/η_d  − −
+η_r max( q,0)]. Project the predicted q sequence jointly onto constraints using constrained optimization rather −
+than independent clipping if lap-level energy limits couple time steps. If no real labels are available by Week 3, the 
+primary deliverable becomes the physics-only feasible estimator; the ML module remains an explicitly 
+unvalidated exploratory model.
+5.4 Why not EKF as the main algorithm?
+An EKF is useful only if the state has an informative measurement relationship; with energy absent from observed 
+telemetry, a battery-only state whose measurement function does not depend on E is unobservable. Implement an 
+EKF only after defining a defensible measurement proxy or reference trace. A constrained smoother/envelope 
+method is a safer first implementation. Optional comparison: EKF with an independently observed energy proxy.
+5.5 Training and validation
+ Feature set: speed, smoothed acceleration, throttle, brake, gear, RPM, distance fraction, previous 1–3 samples, 
+corner/straight category; tyre data is optional metadata, not a core feature.
+ Target priority: synchronized real electrical energy/power trace > documented ERS display proxy > no 
+supervised target. Never treat inferred labels as independent ground truth.
+ Split by entire sessions or circuits. Fit preprocessing, imputation and model on training data only; keep at least 
+one 2026 session held out where possible.
+ Compare A: physics-only, B: ML-only (only with labels), C: hybrid; also compare trivial constant/zero-power 
+proxy where appropriate.
+ Metrics: MAE/RMSE for real references; constraint violation count, conservation residual, sensitivity to E(0), 
+parameter intervals, across-lap consistency for unlabeled data.
+ Leakage checks: no future telemetry in a causal deployment model; for offline smoothing explicitly state that 
+future samples are used.
+6 | Six-week timeline: 3–4 h per person per week
+Standard weekly budget: 2 h individual technical work + 0.75 h paired integration/review + 0.75 h common 
+meeting, tests or paper = 3.5 h/person (14 team-hours/week; 84 total). Work is scoped to one 2026 reference 
+session/lap before generalization.
+W1 | Specification and source audit
+P1 · physics P2 · data P3 · estimator/ML P4 · validation/paper
+Derive force/power 
+equations + sign convention
+Inventory 2026 channels; first 
+lap loaded
+Write identifiability 
+hypotheses; choose estimator 
+baselines
+Create FIA revision ledger + 
+reference-data shortlist
+ALL FOUR: Shared 1-page model diagram, data dictionary, assumptions register.
+F1 2026 ERS • Research team handbook • Internal working draft
+W2 | Runnable physics pipeline
+P1 · physics P2 · data P3 · estimator/ML P4 · validation/paper
+Code vehicle.py and 
+parameter bounds
+Code load/clean/align; plot 
+v,a,P
+Code energy dynamics + 
+constraint skeleton
+Document source-to-parameter 
+mapping and tests
+ALL FOUR: Single-lap reproducible physics notebook + 3 sanity tests.
+W3 | Identifiability and ML feasibility gate
+P1 · physics P2 · data P3 · estimator/ML P4 · validation/paper
+Sensitivity sweep for 
+m,CdA,efficiency
+Prepare grouped lap/session 
+splits; missing-data report
+Test multiple feasible electrical 
+splits; ML feature/label audit
+Verify independent reference 
+availability + synchronization
+ALL FOUR: Go/no-go on supervised ML; 2-page identifiability memo.
+W4 | Estimator v1
+P1 · physics P2 · data P3 · estimator/ML P4 · validation/paper
+Review demand consistency; 
+constraints
+Provide estimator-ready 2026 
+sample dataset
+Implement constrained 
+smoother; residual model 
+ONLY if labels
+Build validation harness, 
+metrics and trace comparison
+ALL FOUR: End-to-end estimator v1 + uncertainty band.
+W5 | Validation and robustness
+P1 · physics P2 · data P3 · estimator/ML P4 · validation/paper
+Stress tests: aero, efficiency, 
+initial energy
+Holdout 2026 laps; historical 
+robustness separately
+Run ablations 
+physics/ML/hybrid where valid
+Plot failure cases, error table, 
+trace provenance
+ALL FOUR: Estimator v2 + honest limitations and figures.
+W6 | Freeze, paper, stretch decision
+P1 · physics P2 · data P3 · estimator/ML P4 · validation/paper
+Write math/assumptions; 
+review methods
+Write data section and 
+reproducibility
+Write 
+estimator/identifiability/results
+Integrate IEEE draft, citations, 
+figures, discussion
+ALL FOUR: Runnable repository + IEEE-format draft + B/C decision.
+7 | Personal learning syllabi: Maths + AI/ML
+Person Mathematics to explore AI/ML / computing to explore Mini exercise
+P1 Newtonian longitudinal 
+dynamics; power vs energy; 
+aero drag; efficiencies; 
+uncertainty propagation; 
+sensitivity derivatives
+Numerical 
+differentiation/filtering; SciPy 
+least_squares; parameter 
+fitting; residual analysis
+Compare P_w with/without 
+drag and uncertainty bands
+P2 Sampling theory; 
+interpolation; derivatives; 
+distance-time transformation; 
+measurement error; train/test 
+independence
+FastF1/Pandas pipelines; signal 
+smoothing; feature 
+engineering; group cross-
+validation; leakage detection
+Plot speed, acceleration and 
+brake zones on two laps
+P3 Discrete state-space models; 
+observability rank; 
+identifiability vs observability; 
+constrained optimization; 
+regularization
+Gradient boosting regression; 
+residual learning; loss 
+functions; calibration; 
+ablations; EKF fundamentals
+Show two distinct ERS traces 
+consistent with one speed trace
+P4 Energy conservation; 
+inequalities/feasible sets; 
+uncertainty intervals; 
+MAE/RMSE; hypothesis testing 
+Validation design; domain 
+shift; bootstrapping by lap; 
+error slicing; reproducibility; 
+IEEE figure/table practice
+Build a validation sheet with 
+sources and failure-case plots
+F1 2026 ERS • Research team handbook • Internal working draft
+basics
+8 | Shared learning topics (everyone, mandatory)
+ Maths: units (W, J, MJ), discrete integration, state-space x_next=f(x,u), energy conservation, constraints, initial-
+condition ambiguity, uncertainty.
+ AI/ML: supervised vs unsupervised, what a label means, train/validation/test splits by group, leakage, gradient 
+boosting, physics-informed residuals, baselines and ablations.
+ Research: distinguishing assumptions from observations, documenting negative findings, verifying regulation 
+issue and references, reproducing every plot.
+9 | Starting base: Day 1 checklist and repository
+Create the repo below. Choose one representative 2026 lap with accessible public telemetry. Each person spends 
+30–45 minutes checking the same first notebook before dividing into tasks.
+f1-ers-2026/  README.md  requirements.txt  config/regulations.yaml  data/raw/  data/processed/  
+notebooks/01_first_lap.ipynb  src/data.py  src/vehicle.py  src/energy.py  src/estimator.py  src/validation.py  tests/  
+paper/  sources/source_ledger.csv  results/
+ Install Python, numpy, pandas, scipy, scikit-learn, matplotlib, fastf1, jupyter, pytest. Pin versions after first 
+successful run.
+ Extract telemetry speed/RPM/gear/throttle/brake and timing/distance; verify channel availability on the 
+chosen session, units, monotonic timestamps and gaps.
+ Plot v(t), a(t), P_w(t), brake(t), throttle(t); compare integrated distance against lap distance; annotate missing-
+data regions.
+ Set provisional physical parameter ranges in a YAML config, not as facts; record source, version, units and 
+uncertainty for each.
+ Build two synthetic ERS power schedules that both satisfy the same observed wheel-power trace by changing 
+the assumed ICE contribution. Use this to demonstrate non-identifiability.
+ Create tests: energy stays within usable window; no negative Δt; zero electric power implies constant E; sign 
+convention for recovery; lap-level regulatory budgets.
+10 | Week-3 and Week-6 decision gates
+Gate Pass condition If not met
+W3: labels Independent, synchronized, documented 
+ERS reference exists
+Do physics-constrained envelopes; do not 
+claim trained supervised SoC model
+W4: functioning model Reproducible pipeline, bounded energy, 
+unit tests pass
+Reduce to one lap, simplify assumptions, 
+fix sign/unit errors
+W5: validated B Reference comparison OR explicit 
+constraint/sensitivity validation with 
+honest claims
+Call it feasibility/conditional estimator; not 
+validated true SoC
+W6: stretch C B reproducible, paper draft stable, spare 
+time  6 team-hours≥
+Skip optimization; discuss deployment as 
+future work
+11 | IEEE paper writing plan
+Use the official IEEE conference template for the submission venue; this handbook is NOT the paper template. 
+Target a technically honest draft, not a predetermined positive result.
+Section Owner Evidence needed
+Abstract / Introduction P4 + all Problem, 2026 relevance, scope and claims
+F1 2026 ERS • Research team handbook • Internal working draft
+Related work / regulatory background P4 + P1 Real bibliographic citations; issue/date of 
+regulations
+Data / preprocessing P2 Session identifiers, channels, exclusions, 
+split policy
+Vehicle / energy model P1 Equations, units, parameter ranges, 
+constraints
+Identifiability / estimator / ML P3 Non-uniqueness proof, objective, 
+hyperparameters
+Experiments / results P3 + P4 Baselines, held-out figures, uncertainty, 
+failures
+Discussion / hybrid vehicle transfer All four Which principles transfer; which F1 
+constraints do not
+Reproducibility / conclusion P2 + P4 Code versions, limits, honest takeaways
+Potential paper title: “Physics-Constrained Estimation of Latent ERS Energy States from Public 2026 Formula One 
+Telemetry: An Identifiability and Validation Study.” Change “validation” to “feasibility” if independent reference 
+labels are unavailable.
+12 | Commercial hybrid-vehicle connection
+Transferable: energy conservation, regenerative-braking constraints, constrained state estimation, uncertainty-
+aware control and data/physics hybrid models. Not directly transferable: F1-specific power ceilings, lap budgets, 
+racing duty cycles, aero assumptions and race objectives. Road vehicles often have battery current/voltage, 
+temperature and BMS measurements; these improve observability and change the estimator design. In Week 6, 
+discuss this distinction; do not claim experimental road-car validation.
+13 | Risk register and scope control
+Risk Probability / impact Mitigation
+No public ground-truth ERS labels High / high Treat identifiability + feasible energy 
+envelope as core result; no fictitious 
+supervised targets
+FIA limits change during 2026 High / high Versioned config and source ledger; check 
+current issue for each experiment
+ICE/ERS split unidentifiable High / high Show multiple feasible trajectories; 
+conditional bounds, not unique SoC
+Acceleration and aero model error High / medium Smoothing, sensitivity intervals, holdout 
+tracks
+Too little time for ML + paper Medium / high Week-3 gate; freeze features Week 4; 
+paper written throughout
+Model outputs mistaken for measured 
+truth
+Medium / high Every figure labelled estimated / simulated 
+/ observed
+14 | Source ledger / reading starting points
+The project abstract supplied by the team motivates telemetry-based ERS estimation and notes limited battery-
+state availability; it is a proposal, not empirical validation [P0]. The following external sources are starting points, 
+not a completed systematic literature review.
+[R1] FIA, 2026 F1 Regulations, Section C (Technical), issue 16, 27 Feb 2026: 
+https://www.fia.com/system/files/documents/fia_2026_f1_regulations_-_section_c_technical_-_iss_16_-_2026-02-
+27.pdf
+[R2] FIA, 2026 regulation documents and latest issue index (check issue 20 / current): 
+https://www.fia.com/regulation/category/2182
+F1 2026 ERS • Research team handbook • Internal working draft
+[R3] FIA, “Refinements to the 2026 FIA Formula 1 regulations agreed by all stakeholders,” 20 Apr 2026: 
+https://www.fia.com/news/refinements-2026-fia-formula-1-regulations-agreed-all-stakeholders
+[R4] FastF1 documentation: https://docs.fastf1.dev/
+[R5] scikit-learn, HistGradientBoostingRegressor documentation: 
+https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.HistGradientBoostingRegressor.html
+[P0] Team-provided project abstract and proposal (internal draft, Oct 2026).
+Citation practice: cite exact regulation article and issue next to every numerical limit; cite each data 
+source/session; replace generic related-work placeholders with real papers before submission. Do not use the 
+provisional literature-review table as published evidence.
+15 | Definition of done (check at the end of Week 6)
+  One-command reproduction for at least one 2026 lap, with versioned input and config.☐
+  Equations and units agree with code; physical/regulatory constraint tests pass.☐
+  At least two physically plausible latent ERS trajectories illustrate identifiability limitations.☐
+  Physics-only estimate with uncertainty; ML/hybrid results only if legitimate labels exist.☐
+  Validation is clearly classified as independent-reference, proxy-reference, or constraint-only.☐
+  At least three publication-ready figures, one comparison table, and an IEEE-format paper draft.☐
+  Every team member can explain the model, the ML role, and why exact SoC may be unknowable.☐

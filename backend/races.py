@@ -1,8 +1,9 @@
 """Validated local race registry with bounded in-memory dataset caching."""
 from functools import lru_cache
 from .data import ROOT, Dataset
+from .hybrid import TRACKS
 
-RACES = {'australian-grand-prix':'Australian Grand Prix','austrian-grand-prix':'Austrian Grand Prix','italian-grand-prix':'Italian Grand Prix'}
+RACES = {key:' '.join(word.title() for word in key.split('-')) for key in TRACKS}
 
 
 def race_path(circuit_id):

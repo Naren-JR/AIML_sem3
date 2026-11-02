@@ -1,0 +1,100 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:35+00:00",
+  "event_name": "Australian Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-03-08T03:08:08.000000000",
+        "last_utc": "2026-03-08T05:33:37.000000000",
+        "utc_dates": [
+          "2026-03-08"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Australian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6661,
+      "sha256": "711ca6953295b85a6681f6e0127d1de8a3f91e763394826aa3ba91f7c7f423c0"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 21480,
+      "sha256": "e9999b44ea7086d1f0103e2f3d243b41dede4658a29bd4eadf10d48d8395a9f7"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Australian Grand Prix/Race/cor.json",
+      "kind": "cor",
+      "folder_label": "Race",
+      "bytes": 10303,
+      "sha256": "dc1ef6f0e3118cb775be23b907fa6597e3666ceebe36627d251deda827f761ac"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 13783,
+      "sha256": "e0761c43b2f3591524bf4d4e07b694841d81196ff0cd4eca1850343086b7f79f"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 21480,
+      "sha256": "e9999b44ea7086d1f0103e2f3d243b41dede4658a29bd4eadf10d48d8395a9f7"
+    },
+    {
+      "file": "raw/sessions/Australian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6661,
+      "sha256": "711ca6953295b85a6681f6e0127d1de8a3f91e763394826aa3ba91f7c7f423c0"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Australian Grand Prix/Race/weather.json",
+      "output_file": "processed/australian-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/australian-grand-prix/sessions/race/weather.json",
+      "row_count": 148,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Australian Grand Prix/Race/rcm.json",
+      "output_file": "processed/australian-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/australian-grand-prix/sessions/race/race_control.json",
+      "row_count": 167,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

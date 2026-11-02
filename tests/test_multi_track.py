@@ -7,9 +7,9 @@ from fastapi.testclient import TestClient
 from backend.api import create_app
 
 
-def test_three_complete_original_races():
+def test_five_complete_original_races():
     races=available_races()
-    assert len(races)==3
+    assert len(races)==5
     for r in races:
         d=load_race(r['id'])
         assert len(d.laps)==len(d.manifest['laps'])
@@ -44,7 +44,7 @@ def test_cross_track_is_disjoint_and_temporal_split_is_purged(tmp_path,monkeypat
 
 def test_selected_track_api_and_validation_errors(dataset):
     with TestClient(create_app(dataset)) as client:
-        assert len(client.get('/api/ml/tracks').json()['tracks'])==3
+        assert len(client.get('/api/ml/tracks').json()['tracks'])==5
         q={'circuit_id':'italian-grand-prix'}
         info=client.get('/api/dataset',params=q).json()
         assert info['event']=='Italian Grand Prix'

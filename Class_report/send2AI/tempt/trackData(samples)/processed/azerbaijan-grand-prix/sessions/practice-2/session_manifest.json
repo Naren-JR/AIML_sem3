@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:37+00:00",
+  "event_name": "Azerbaijan Grand Prix",
+  "raw_folder_session": "Practice 2",
+  "resolved_session": "Practice 2",
+  "session_resolution": {
+    "raw_folder_session": "Practice 2",
+    "raw_folder_canonical": "Practice 2",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-09-24T12:00:00.000000000",
+        "last_utc": "2026-09-24T13:15:58.000000000",
+        "utc_dates": [
+          "2026-09-24"
+        ]
+      }
+    },
+    "resolved_session": "Practice 2",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 6,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3857,
+      "sha256": "1d631615a284138d14eb956b201c2c716cd533ee6b5128308d15b79178a8c2c7"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 10653,
+      "sha256": "e7aad406448ebc770257d1bad08f05fecf0f93d9676436ed1da2d379c274cd9d"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 25398,
+      "sha256": "d76cc8dac394c8fcc6d9a7fefe769d04861b363b7a50b64755393663c5eb9604"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 10653,
+      "sha256": "e7aad406448ebc770257d1bad08f05fecf0f93d9676436ed1da2d379c274cd9d"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3857,
+      "sha256": "1d631615a284138d14eb956b201c2c716cd533ee6b5128308d15b79178a8c2c7"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 85,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 86,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

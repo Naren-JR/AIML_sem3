@@ -1,6 +1,6 @@
-# Three-track recorded-race workflow
+# Merged multi-track recorded-race workflow
 
-Branch: circuit_add. Ready races: 2026 Australian GP (58 laps, 37,569 samples), Austrian GP (71 laps, 39,416 samples), Italian GP (53 laps, 36,453 samples). All are Kimi Antonelli / ANT / GP Race. This is recorded analysis, not a live timing feed.
+Merged into `readings` from `circuit_add`. Original imported races: 2026 Australian GP (58 laps, 37,569 samples), Austrian GP (71 laps, 39,416 samples), Italian GP (53 laps, 36,453 samples). Britain (52 laps, 39,370 samples) and Belgium (44 laps, 38,283 samples) from `readings` are also available in the shared race registry. All are Kimi Antonelli / ANT / GP Race. This is recorded analysis, not a live timing feed.
 
 ## Install and run
 
@@ -8,14 +8,16 @@ From the root (dependencies already installed in this workspace):
 
     .\.venv\Scripts\python -m scripts.dev
 
-Open http://127.0.0.1:5173. Choose one of the three races in RECORDED GP RACE. Lap options, map, readouts, plots, state estimates and optimization context use that race. The source JSON mode channels are retained only in raw archives, never used to infer active aero. Static Australian reference panels appear only on Australia; other races use their own recorded x/y trace for position selection.
+Open http://127.0.0.1:5173. Choose a recorded race in the TRACK selector. The five imported races use their own telemetry; other catalogue entries open static references. Lap options, map, readouts, plots, state estimates and optimization context use that race. The source JSON mode channels are retained only in raw archives, never used to infer active aero. Static Australian reference panels appear only on Australia; other races use their own recorded x/y trace for position selection.
 
 In ML validation & predictions, choose:
 
 1. Earlier laps → later laps: select a training track. The first floor(70% of original lap IDs) train the classifier, one full lap is purged, and remaining laps are tested. No random sample splitting or test-set tuning occurs.
 2. Cross-track generalization: choose different source and target tracks. All eligible source-track samples train the classifier; all eligible target-track samples are test-only. No target-track fitting, calibration or normalization occurs. Baseline predictions always use the most frequent source-training label.
 
-All nine combinations were computed and are stored locally. Selecting a mode/pair loads its matching result immediately; Train & evaluate computes it again. Results include accuracy, balanced accuracy, macro precision/recall/F1, weighted F1, per-class counts, confusion matrices, source/target dataset fingerprints and every held-out prediction. The chart/table lap selector refers to the test dataset, independent of the main dashboard's lap control. Scores evaluate operational labels from throttle/brake, not electrical ERS truth. Those two label channels are excluded from classifier features. No real-world generalization claim follows from only three circuits and one driver.
+The original nine Australia/Austria/Italy combinations were computed on circuit_add. Source changes can invalidate these saved outputs; click Train & evaluate to regenerate the selected experiment. The classifier now accepts Britain/Belgium as well; their combinations are computed on demand. Selecting a mode/pair loads its matching result immediately; Train & evaluate computes it again. Results include accuracy, balanced accuracy, macro precision/recall/F1, weighted F1, per-class counts, confusion matrices, source/target dataset fingerprints and every held-out prediction. The chart/table lap selector refers to the test dataset, independent of the main dashboard's lap control. Scores evaluate operational labels from throttle/brake, not electrical ERS truth. Those two label channels are excluded from classifier features. No broad real-world generalization claim follows from this limited circuit collection and one driver. Hybrid ERS research remains a separate acceleration-regression experiment; see [its training protocol](HYBRID_TRAINING.md).
+
+To restore all five race datasets, run `.\.venv\Scripts\python -m scripts.fetch_hybrid_data`. The older `scripts.import_races` command below restores only Australia/Austria/Italy.
 
 ## Reproduce from a fresh clone
 
@@ -37,7 +39,7 @@ The previous top-level Australian CSV remains untouched for historical reproduct
 ## API
 
 - GET /api/ml/tracks: available imported race identities.
-- GET /api/circuits: broader static reference catalogue, with three race-analysis entries.
+- GET /api/circuits: broader static reference catalogue, with five race-analysis entries when all datasets are installed.
 - GET /api/dataset?circuit_id=italian-grand-prix
 - GET /api/laps?circuit_id=italian-grand-prix
 - GET /api/telemetry/lap/2?circuit_id=italian-grand-prix
@@ -52,7 +54,7 @@ The previous top-level Australian CSV remains untouched for historical reproduct
 
 Experiment IDs incorporate mode/pair, both dataset hashes and data/ML source fingerprints; results are separate per experiment and written atomically. There is no automatic retraining on selector interaction. Training runs in a FastAPI worker thread with a bounded numerical thread pool. Existing single-process deployment/job-status limits remain. Previous single-track endpoints remain for compatibility; the new UI uses the pair-specific experiment API.
 
-## Observed results
+## Historical classification results before this merge
 
 | Training | Test | Mode | Accuracy | Macro-F1 |
 |---|---|---|---:|---:|

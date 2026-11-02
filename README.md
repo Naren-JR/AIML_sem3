@@ -1,6 +1,6 @@
 # AIML–F1 Energy Research Workstation
 
-**circuit_add update:** three complete Kimi GP Race datasets—Australia, Austria and Italy—are downloaded and ready locally. Select a race at the top of the dashboard. The ML tab supports both earlier-lap/later-lap evaluation and disjoint cross-track generalization, with all nine combinations precomputed. See [multi-track setup, provenance, APIs and results](docs/MULTI_TRACK.md). On a fresh clone, run the pinned importer before starting; data and results remain Git-ignored.
+Merged `circuit_add` into `readings`: the dashboard supports the five imported Kimi race datasets, the ML validation tab retains temporal and cross-track classification experiments, and Hybrid ERS research retains the expanded dynamics regression. Tracks without imported telemetry open static references. See [multi-track APIs](docs/MULTI_TRACK.md), [circuit references](docs/CIRCUIT_SELECTION.md) and [hybrid training](docs/HYBRID_TRAINING.md). Raw data and generated results remain Git-ignored.
 
 On the readings branch, **ML validation & predictions** adds a trained operating-state classifier with held-out accuracy, precision/recall/F1, a confusion matrix, baseline comparison and per-lap predictions. Install updated requirements, restart the API, then open `/ml-validation`. Click Train & evaluate or run `.\.venv\Scripts\python -m scripts.validate_ml`. See [evaluation protocol and external sources](docs/ML_VALIDATION.md). These scores do not validate hidden ERS state.
 
@@ -8,7 +8,11 @@ GitHub privacy: supplied datasets, imported references, internal PDFs, reports a
 
 Working local pipeline for Kimi Antonelli's supplied 2026 Australian GP Race telemetry: continuous conditional ERS estimation, constrained gradient-based deployment experiments, FastAPI and a React engineering dashboard.
 
-**Research scenario, not measured battery SoC.** Initial state is imposed at 100% of a configurable usable window at Lap 1, t=0. Energy never resets between laps. No trained ML or lap-time improvement is claimed. Regulatory event compliance and physical battery capacity remain unverified. Read [model equations and limitations](docs/MODEL.md).
+**Research scenario, not measured battery SoC.** Initial state is imposed at 100% of a configurable usable window at Lap 1, t=0. Energy never resets between laps. The original ERS/optimizer remains physics-based; the separate hybrid experiment adds trained dynamics. No lap-time improvement is claimed. Regulatory event compliance and physical battery capacity remain unverified. Read [model equations and limitations](docs/MODEL.md).
+
+## Hybrid ML experiment on readings
+
+The **Hybrid ERS research** tab (`/hybrid`) trains an acceleration regressor using TracingInsights Australia, Austria, Italy and Britain telemetry and tests on an entirely held-out Belgium dataset (278 recorded laps across five circuits). Predicted dynamics feed a conditional physics energy calculation. These are real learned motion predictions, not measured battery SoC predictions. The test-track selector lets you rotate which of the five tracks is held out. Restore datasets with `.\.venv\Scripts\python -m scripts.fetch_hybrid_data`; train with `.\.venv\Scripts\python -m scripts.train_hybrid`. See [exact training target, split, assumptions and commands](docs/HYBRID_TRAINING.md).
 
 ## Run locally (Windows PowerShell)
 
@@ -45,12 +49,12 @@ Open http://127.0.0.1:5173. The Python API must be running. Vite proxies /api to
 - Deployment Optimization runs only when requested. Select lap, iterations and smoothness, then Run optimization. Inspect convergence, constraints, baseline comparison, saved runs and JSON export.
 - Methodology & Validation exposes parameters, provenance, missing context, equations and constraint-only validation.
 
-58 laps are inferred from relative-distance wraps because original lap IDs were discarded upstream. Only the race enters the runtime. Source fields are preserved; numeric gaps remain null. The map is the recorded lap trajectory in unverified source coordinate units, not an invented circuit layout.
+Imported races retain original lap IDs and session clocks. The legacy Australian CSV fallback infers laps from relative-distance wraps. Only race sessions enter the runtime. Source fields are preserved; numeric gaps remain null. The map is the recorded lap trajectory in unverified source coordinate units, not an invented circuit layout.
 
 ## Tests, production build, and experiments
 
 ```powershell
-.\.venv\Scripts\python -m pytest -q
+.\.venv\Scripts\python -m pytest tests -q
 .\.venv\Scripts\python -m scripts.audit
 .\.venv\Scripts\python -m scripts.reproduce --lap 2
 cd frontend
