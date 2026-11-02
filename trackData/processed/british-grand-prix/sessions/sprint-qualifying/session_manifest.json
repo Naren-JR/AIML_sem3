@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:39+00:00",
+  "event_name": "British Grand Prix",
+  "raw_folder_session": "Sprint Qualifying",
+  "resolved_session": "Sprint Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Sprint Qualifying",
+    "raw_folder_canonical": "Sprint Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-03T15:30:00.000000000",
+        "last_utc": "2026-07-03T16:34:05.000000000",
+        "utc_dates": [
+          "2026-07-03"
+        ]
+      }
+    },
+    "resolved_session": "Sprint Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 3,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 2728,
+      "sha256": "2990a939d214062085d5ee8e03502a77204f866244bdaa2c04836d689e1c324e"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 7547,
+      "sha256": "fb7e0ebc576bab8adb3c7da5c99b1bafe6e8470de78045bfc654fcf169118df4"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 24084,
+      "sha256": "35b934653d219780896f7f92e1d567b48b07eb2d1f769d43f1f978a2aa2b4075"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 7547,
+      "sha256": "fb7e0ebc576bab8adb3c7da5c99b1bafe6e8470de78045bfc654fcf169118df4"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 2728,
+      "sha256": "2990a939d214062085d5ee8e03502a77204f866244bdaa2c04836d689e1c324e"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Sprint Qualifying",
+      "resolved_session": "Sprint Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint-qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/British Grand Prix/Sprint Qualifying/weather.json",
+      "output_file": "processed/british-grand-prix/sessions/sprint-qualifying/weather.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/sprint-qualifying/weather.json",
+      "row_count": 60,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Sprint Qualifying",
+      "resolved_session": "Sprint Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint-qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/British Grand Prix/Sprint Qualifying/rcm.json",
+      "output_file": "processed/british-grand-prix/sessions/sprint-qualifying/race_control.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/sprint-qualifying/race_control.json",
+      "row_count": 58,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

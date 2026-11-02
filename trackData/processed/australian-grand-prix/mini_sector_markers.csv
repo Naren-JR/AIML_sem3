@@ -1,0 +1,23 @@
+marker_number,source_track_point_index,x_raw,y_raw,source_file,source_folder_label
+1,19,-2844.0,232.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+2,28,-3519.0,902.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+3,62,-4138.0,3121.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+4,89,-5946.0,4969.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+5,113,-7154.0,6727.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+6,139,-6399.0,7381.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+7,176,-5947.0,9247.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+8,197,-4994.0,10546.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+9,217,-3403.0,11323.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+10,244,-1552.0,11474.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+11,268,510.0,10567.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+12,299,1097.0,7512.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+13,330,298.0,4186.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+14,357,1832.0,1484.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+15,377,3948.0,860.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+16,407,5947.0,-697.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+17,455,7503.0,-4763.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+18,496,5294.0,-5560.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+19,522,4062.0,-4244.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+20,562,2780.0,-4357.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+21,575,1895.0,-4294.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race
+22,617,-1189.0,-1336.0,raw/sessions/Australian Grand Prix/Race/corners.json,Race

@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:43+00:00",
+  "event_name": "Miami Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-05-03T16:20:01.000000000",
+        "last_utc": "2026-05-03T18:55:35.000000000",
+        "utc_dates": [
+          "2026-05-03"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Miami Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7523,
+      "sha256": "575e77ed7ec450a9e327fc8e2f3806ff7015c968474968d68c6cb131af842fb1"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 23678,
+      "sha256": "ce0d6ce64748d5f78d998a77352ea01e28829b06bc1b77a3556f38f2d43cbe86"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 22334,
+      "sha256": "2254614c7af4e063d1b678d99dff5ad61c322f62f76e55cd339626f8d8d7e9ed"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 23678,
+      "sha256": "ce0d6ce64748d5f78d998a77352ea01e28829b06bc1b77a3556f38f2d43cbe86"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7523,
+      "sha256": "575e77ed7ec450a9e327fc8e2f3806ff7015c968474968d68c6cb131af842fb1"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Miami Grand Prix/Race/weather.json",
+      "output_file": "processed/miami-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/miami-grand-prix/sessions/race/weather.json",
+      "row_count": 168,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Miami Grand Prix/Race/rcm.json",
+      "output_file": "processed/miami-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/miami-grand-prix/sessions/race/race_control.json",
+      "row_count": 176,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

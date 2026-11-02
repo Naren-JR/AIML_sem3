@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:42+00:00",
+  "event_name": "Italian Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-09-06T12:19:26.000000000",
+        "last_utc": "2026-09-06T14:56:06.000000000",
+        "utc_dates": [
+          "2026-09-06"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Italian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7923,
+      "sha256": "a17d045a10255772a531725f913e86c459abffb6c24cb27d834a91bbe93a09be"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 19512,
+      "sha256": "fa7e78d3ff342f6062b3bcb6658713d0aa29f0bc51d987e21ea5e1d5b6005457"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 14131,
+      "sha256": "1cb51ea06530476f19056abc64fa41cff453d77f12276e5b676a4099ecd002e2"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 19512,
+      "sha256": "fa7e78d3ff342f6062b3bcb6658713d0aa29f0bc51d987e21ea5e1d5b6005457"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7923,
+      "sha256": "a17d045a10255772a531725f913e86c459abffb6c24cb27d834a91bbe93a09be"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Italian Grand Prix/Race/weather.json",
+      "output_file": "processed/italian-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/italian-grand-prix/sessions/race/weather.json",
+      "row_count": 176,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Italian Grand Prix/Race/rcm.json",
+      "output_file": "processed/italian-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/italian-grand-prix/sessions/race/race_control.json",
+      "row_count": 154,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,868 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:44+00:00",
+  "event_name": "Miami Grand Prix",
+  "event_slug": "miami-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 22334,
+      "sha256": "2254614c7af4e063d1b678d99dff5ad61c322f62f76e55cd339626f8d8d7e9ed",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 757,
+          "geometry_fingerprint": "6383aeb4e7528232",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Miami Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 757,
+          "geometry_fingerprint": "6383aeb4e7528232",
+          "reason": null
+        },
+        {
+          "folder_label": "Sprint",
+          "file": "raw/sessions/Miami Grand Prix/Sprint/corners.json",
+          "result": "valid_geometry",
+          "point_count": 757,
+          "geometry_fingerprint": "6383aeb4e7528232",
+          "reason": null
+        },
+        {
+          "folder_label": "Sprint Qualifying",
+          "file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 757,
+          "geometry_fingerprint": "6383aeb4e7528232",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Miami Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 757,
+          "geometry_fingerprint": "6383aeb4e7528232",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 22334,
+      "sha256": "2254614c7af4e063d1b678d99dff5ad61c322f62f76e55cd339626f8d8d7e9ed",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Miami Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Sprint",
+          "file": "raw/sessions/Miami Grand Prix/Sprint/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Sprint Qualifying",
+          "file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Miami Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 22334,
+      "sha256": "2254614c7af4e063d1b678d99dff5ad61c322f62f76e55cd339626f8d8d7e9ed",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 22334,
+      "sha256": "2254614c7af4e063d1b678d99dff5ad61c322f62f76e55cd339626f8d8d7e9ed",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 22334,
+      "sha256": "2254614c7af4e063d1b678d99dff5ad61c322f62f76e55cd339626f8d8d7e9ed",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/miami-international-autodrome.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 275,
+      "sha256": "a7d721a777ab96bdfb3815fa330e5df145553c0e115d986a9ad2aa30c60ceaaa"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "6383aeb4e7528232": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Sprint/corners.json",
+          "Sprint Qualifying/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 14.142,
+              "Sprint/corners.json": 32.371,
+              "Sprint Qualifying/corners.json": 24.258,
+              "Practice 1/corners.json": 16.906
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 13.056,
+              "Sprint/corners.json": 5.734,
+              "Sprint Qualifying/corners.json": 2.302,
+              "Practice 1/corners.json": 6.725
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 14.348,
+              "Sprint/corners.json": 6.301,
+              "Sprint Qualifying/corners.json": 2.53,
+              "Practice 1/corners.json": 7.391
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 29.463,
+              "Sprint/corners.json": 32.371,
+              "Sprint Qualifying/corners.json": 25.551,
+              "Practice 1/corners.json": 21.243
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 22.132,
+              "Sprint/corners.json": 22.648,
+              "Sprint Qualifying/corners.json": 23.068,
+              "Practice 1/corners.json": 31.587
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [
+      "2022"
+    ],
+    "status": "historical_source_year_requires_compatibility_check",
+    "reference_lap": {
+      "layout_year": 2022,
+      "layout_race_date": "2022-05-08",
+      "layout_meeting_name": "Miami Grand Prix",
+      "reference_lap_session_label": "FP1",
+      "reference_lap_session_canonical": "Practice 1",
+      "reference_lap_driver_number": "1",
+      "reference_lap_number": 2,
+      "reference_lap_start_date": "2022-05-06T18:33:28.137000",
+      "scope": "Historical lap the layout was traced from. It says nothing about which session any weather or race-control file belongs to and is never used to relabel session data."
+    },
+    "metadata_candidates": [
+      {
+        "source_file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+        "CircuitKey": 151,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Miami",
+        "Location": "Miami",
+        "CountryName": "United States",
+        "CountryKey": 19,
+        "CountryIocCode": "USA",
+        "LayoutYear": 2022,
+        "LayoutRound": 5,
+        "LayoutRaceDate": "2022-05-08",
+        "LayoutMeetingKey": 1110,
+        "LayoutMeetingName": "Miami Grand Prix",
+        "LayoutMeetingOfficialName": "FORMULA 1 CRYPTO.COM MIAMI GRAND PRIX 2022",
+        "LayoutLapDriverNumber": "1",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "FP1",
+        "LayoutLapTime": 96.099,
+        "LayoutLapStartDate": "2022-05-06T18:33:28.137000",
+        "LayoutLapStartSessionTime": 1107.962,
+        "LayoutLapSessionStartTime": 900.019,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 2.0,
+        "rotation": null,
+        "PitLossNormal": 20.27,
+        "PitLossSC": 12.84,
+        "PitLossVSC": 14.66
+      }
+    ],
+    "conflicting_metadata": {},
+    "note": "The selected reference is tagged with a pre-2026 layout year. Do not assume it is an exact 2026 reference until layout compatibility is checked."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": true,
+    "mapping_filename": "miami.svg",
+    "svg": {
+      "path": "raw/images/svg/miami.svg",
+      "exists": true
+    },
+    "webp": {
+      "path": "raw/images/webp/miami.webp",
+      "exists": true
+    },
+    "status": "assets_found",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": "processed/miami-grand-prix/straight_mode_map_review.png",
+    "candidate_count": 3,
+    "zone_like_candidate_count": 3,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP pixels (origin top-left) and normalized image ratios only",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "visual_candidates_need_review",
+    "source_image_webp": "raw/images/webp/miami.webp",
+    "source_image_svg": "raw/images/svg/miami.svg",
+    "image_width_px": 1252,
+    "image_height_px": 704,
+    "svg_description": "Created with imagetracer.js version 1.2.6",
+    "svg_semantic_text_elements": 0,
+    "image_method": "red-hue connected-component segmentation on WebP pixels; SVG retained as source/provenance",
+    "raw_red_pixel_count": 22914,
+    "all_candidates_unverified": true,
+    "svg_semantics_note": "SVG is an ImageTracer-rendered vector trace with no <text> elements; text/zone identity is not encoded as semantic SVG labels.",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 757,
+    "status": "extracted_source_coordinates_unscaled",
+    "scope": "event_level",
+    "source_file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+        "result": "valid_geometry",
+        "point_count": 757,
+        "geometry_fingerprint": "6383aeb4e7528232",
+        "reason": null
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Miami Grand Prix/Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 757,
+        "geometry_fingerprint": "6383aeb4e7528232",
+        "reason": null
+      },
+      {
+        "folder_label": "Sprint",
+        "file": "raw/sessions/Miami Grand Prix/Sprint/corners.json",
+        "result": "valid_geometry",
+        "point_count": 757,
+        "geometry_fingerprint": "6383aeb4e7528232",
+        "reason": null
+      },
+      {
+        "folder_label": "Sprint Qualifying",
+        "file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 757,
+        "geometry_fingerprint": "6383aeb4e7528232",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Miami Grand Prix/Practice 1/corners.json",
+        "result": "valid_geometry",
+        "point_count": 757,
+        "geometry_fingerprint": "6383aeb4e7528232",
+        "reason": null
+      }
+    ],
+    "warnings": [],
+    "quality_checks": {
+      "all_coordinates_finite": true,
+      "consecutive_duplicate_points": 0,
+      "closed_loop_endpoint_distance_raw_units": 36.89173349139343,
+      "distance_units_verified": false,
+      "track_length_verified": false
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 19,
+    "source_file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Miami Grand Prix/Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Sprint",
+        "file": "raw/sessions/Miami Grand Prix/Sprint/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Sprint Qualifying",
+        "file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Miami Grand Prix/Practice 1/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      }
+    ],
+    "status": "extracted"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 9,
+    "source_file": "raw/sections/miami-international-autodrome.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 9,
+    "source_file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "status": "extracted",
+    "unpaired_source_arrays": {
+      "Section": [
+        "Low",
+        "Low",
+        "Straight",
+        "Medium",
+        "Medium",
+        "Medium",
+        "Medium",
+        "Medium",
+        "Straight",
+        "Straight",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Straight",
+        "Straight"
+      ]
+    },
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 19,
+    "status": "extracted"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 20,
+    "status": "extracted"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 3,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": "Race",
+      "primary_session_verification": "unverified_session",
+      "primary_session_raw_folder": "Race",
+      "available_sessions": [
+        {
+          "resolved_session": "Race",
+          "raw_folder_session": "Race",
+          "session_verification": "unverified_session",
+          "weather_rows": 168,
+          "output_file": "processed/miami-grand-prix/sessions/race/weather.csv"
+        },
+        {
+          "resolved_session": "Qualifying",
+          "raw_folder_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 81,
+          "output_file": "processed/miami-grand-prix/sessions/qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Sprint",
+          "raw_folder_session": "Sprint",
+          "session_verification": "unverified_session",
+          "weather_rows": 80,
+          "output_file": "processed/miami-grand-prix/sessions/sprint/weather.csv"
+        },
+        {
+          "resolved_session": "Sprint Qualifying",
+          "raw_folder_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 59,
+          "output_file": "processed/miami-grand-prix/sessions/sprint-qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 1",
+          "raw_folder_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "weather_rows": 100,
+          "output_file": "processed/miami-grand-prix/sessions/practice-1/weather.csv"
+        }
+      ]
+    },
+    "session_resolutions": {
+      "Race": {
+        "raw_folder_session": "Race",
+        "raw_folder_canonical": "Race",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-03T16:20:01.000000000",
+            "last_utc": "2026-05-03T18:55:35.000000000",
+            "utc_dates": [
+              "2026-05-03"
+            ]
+          }
+        },
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Qualifying": {
+        "raw_folder_session": "Qualifying",
+        "raw_folder_canonical": "Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-02T19:56:11.000000000",
+            "last_utc": "2026-05-02T21:16:12.000000000",
+            "utc_dates": [
+              "2026-05-02"
+            ]
+          }
+        },
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Sprint": {
+        "raw_folder_session": "Sprint",
+        "raw_folder_canonical": "Sprint",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-02T15:30:01.000000000",
+            "last_utc": "2026-05-02T16:44:21.000000000",
+            "utc_dates": [
+              "2026-05-02"
+            ]
+          }
+        },
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Sprint Qualifying": {
+        "raw_folder_session": "Sprint Qualifying",
+        "raw_folder_canonical": "Sprint Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-01T20:30:00.000000000",
+            "last_utc": "2026-05-01T21:24:07.000000000",
+            "utc_dates": [
+              "2026-05-01"
+            ]
+          }
+        },
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 1": {
+        "raw_folder_session": "Practice 1",
+        "raw_folder_canonical": "Practice 1",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-01T16:00:10.000000000",
+            "last_utc": "2026-05-01T17:42:05.000000000",
+            "utc_dates": [
+              "2026-05-01"
+            ]
+          }
+        },
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      }
+    },
+    "provenance_warnings": [],
+    "exports": [
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Miami Grand Prix/Race/rcm.json",
+        "output_file": "processed/miami-grand-prix/sessions/race/race_control.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/race/race_control.json",
+        "row_count": 176,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Miami Grand Prix/Race/weather.json",
+        "output_file": "processed/miami-grand-prix/sessions/race/weather.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/race/weather.json",
+        "row_count": 168,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Miami Grand Prix/Qualifying/rcm.json",
+        "output_file": "processed/miami-grand-prix/sessions/qualifying/race_control.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/qualifying/race_control.json",
+        "row_count": 60,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Miami Grand Prix/Qualifying/weather.json",
+        "output_file": "processed/miami-grand-prix/sessions/qualifying/weather.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/qualifying/weather.json",
+        "row_count": 81,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint",
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Miami Grand Prix/Sprint/rcm.json",
+        "output_file": "processed/miami-grand-prix/sessions/sprint/race_control.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/sprint/race_control.json",
+        "row_count": 82,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint",
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Miami Grand Prix/Sprint/weather.json",
+        "output_file": "processed/miami-grand-prix/sessions/sprint/weather.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/sprint/weather.json",
+        "row_count": 80,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint Qualifying",
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint-qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/rcm.json",
+        "output_file": "processed/miami-grand-prix/sessions/sprint-qualifying/race_control.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/sprint-qualifying/race_control.json",
+        "row_count": 43,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint Qualifying",
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint-qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/weather.json",
+        "output_file": "processed/miami-grand-prix/sessions/sprint-qualifying/weather.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/sprint-qualifying/weather.json",
+        "row_count": 59,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Miami Grand Prix/Practice 1/rcm.json",
+        "output_file": "processed/miami-grand-prix/sessions/practice-1/race_control.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/practice-1/race_control.json",
+        "row_count": 54,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Miami Grand Prix/Practice 1/weather.json",
+        "output_file": "processed/miami-grand-prix/sessions/practice-1/weather.csv",
+        "json_output_file": "processed/miami-grand-prix/sessions/practice-1/weather.json",
+        "row_count": 100,
+        "status": "exported"
+      }
+    ]
+  },
+  "source_inventory": [
+    {
+      "file": "raw/sessions/Miami Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 22334,
+      "sha256": "2254614c7af4e063d1b678d99dff5ad61c322f62f76e55cd339626f8d8d7e9ed"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 23678,
+      "sha256": "ce0d6ce64748d5f78d998a77352ea01e28829b06bc1b77a3556f38f2d43cbe86"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7523,
+      "sha256": "575e77ed7ec450a9e327fc8e2f3806ff7015c968474968d68c6cb131af842fb1"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 22335,
+      "sha256": "2934aa9a75b9d8ae842c1d5a75d03d143f3c7bc0ac68efc51907088af10f501d"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 8486,
+      "sha256": "3980548002ef554b272242879395158a7d377a4a049a024b2b1fd95d7cb3186e"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3681,
+      "sha256": "92619e990d50703067f4e61b850694f7a48f77fa874593ee10aee572707c5822"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Sprint/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint",
+      "bytes": 22334,
+      "sha256": "cbeb18b6a69c0aae0f2bddb9eb6591257f4a81f030af2abac721b4ca37419df0"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 10207,
+      "sha256": "164ab92de069da75b8eb17964dca11514e1d97faca8059bd98c3289783eaa7ee"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3628,
+      "sha256": "967e35518b2b4c9598a5e6660d1372d4eeb094a1689d7baf26745136464eb17c"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 22318,
+      "sha256": "50cea7362f7b57489d4d15a8c1b7361df9f237f07886ccf521a38afe2d59a689"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 6413,
+      "sha256": "4c84726f6ba95f8d6305bceabd78e23f4db211582c6c7dafed55a7cf3732e7f7"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 2680,
+      "sha256": "d0e1f9e8b7d2f3ab58f24e418c3d6327b4565e9d25e1d3ea8d472821911f80c8"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 22320,
+      "sha256": "95b40b8dec06ec7ae76a450756f9488ae65b046fe7a1f839f7be75009a3b1cb1"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 7879,
+      "sha256": "0e8efb137a54d3f87d07d530853919380d456c432358396b7ec2ed905473f934"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 4522,
+      "sha256": "3db95167a17b114fc1c47eac37c30f3a34318a27953b9bced227b89517821baf"
+    }
+  ],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "Layout array 'Section' has 19 values versus 9 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+      "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+      "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.371); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 13.056; end_distance_source: max |delta| 14.348); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.371); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 31.587); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}

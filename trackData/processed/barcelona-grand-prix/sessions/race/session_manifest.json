@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:37+00:00",
+  "event_name": "Barcelona Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-06-14T10:06:19.000000000",
+        "last_utc": "2026-06-14T14:36:32.000000000",
+        "utc_dates": [
+          "2026-06-14"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6725,
+      "sha256": "f0598e05cc57089ef107891ff11b99315c184c4f0758007e480e9339a18cc6d8"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 23970,
+      "sha256": "2a0cc2750650405919b2e477b788ca719959e64852f8601ed9e1b7072e78d7f4"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 11641,
+      "sha256": "45921fd4bce0232c6b749be331aed899c1ec4cd87c920f5c257530dc047ed548"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 23970,
+      "sha256": "2a0cc2750650405919b2e477b788ca719959e64852f8601ed9e1b7072e78d7f4"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6725,
+      "sha256": "f0598e05cc57089ef107891ff11b99315c184c4f0758007e480e9339a18cc6d8"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Barcelona Grand Prix/Race/weather.json",
+      "output_file": "processed/barcelona-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/barcelona-grand-prix/sessions/race/weather.json",
+      "row_count": 150,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Barcelona Grand Prix/Race/rcm.json",
+      "output_file": "processed/barcelona-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/barcelona-grand-prix/sessions/race/race_control.json",
+      "row_count": 178,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

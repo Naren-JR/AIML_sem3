@@ -1,0 +1,868 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:45+00:00",
+  "event_name": "Singapore Grand Prix",
+  "event_slug": "singapore-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 16796,
+      "sha256": "b501e93ede0b1afe13de66cb85979318ecdd1fc43d6a8ccddfaba7149c5e6f77",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 544,
+          "geometry_fingerprint": "0bb4414bc131ebdc",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Singapore Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 544,
+          "geometry_fingerprint": "0bb4414bc131ebdc",
+          "reason": null
+        },
+        {
+          "folder_label": "Sprint",
+          "file": "raw/sessions/Singapore Grand Prix/Sprint/corners.json",
+          "result": "valid_geometry",
+          "point_count": 544,
+          "geometry_fingerprint": "0bb4414bc131ebdc",
+          "reason": null
+        },
+        {
+          "folder_label": "Sprint Qualifying",
+          "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 544,
+          "geometry_fingerprint": "0bb4414bc131ebdc",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Singapore Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 544,
+          "geometry_fingerprint": "0bb4414bc131ebdc",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16796,
+      "sha256": "b501e93ede0b1afe13de66cb85979318ecdd1fc43d6a8ccddfaba7149c5e6f77",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Singapore Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Sprint",
+          "file": "raw/sessions/Singapore Grand Prix/Sprint/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Sprint Qualifying",
+          "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Singapore Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 16796,
+      "sha256": "b501e93ede0b1afe13de66cb85979318ecdd1fc43d6a8ccddfaba7149c5e6f77",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 16796,
+      "sha256": "b501e93ede0b1afe13de66cb85979318ecdd1fc43d6a8ccddfaba7149c5e6f77",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 16796,
+      "sha256": "b501e93ede0b1afe13de66cb85979318ecdd1fc43d6a8ccddfaba7149c5e6f77",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/marina-bay-street-circuit.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 475,
+      "sha256": "dbcdc80df24ba7a0b6b2c931c561204c8f6836eac8d486075978d5c216e58a38"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "0bb4414bc131ebdc": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Sprint/corners.json",
+          "Sprint Qualifying/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 37.281,
+              "Sprint/corners.json": 23.449,
+              "Sprint Qualifying/corners.json": 28.899,
+              "Practice 1/corners.json": 22.065
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 15.765,
+              "Sprint/corners.json": 18.68,
+              "Sprint Qualifying/corners.json": 16.127,
+              "Practice 1/corners.json": 3.815
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 16.261,
+              "Sprint/corners.json": 19.267,
+              "Sprint Qualifying/corners.json": 16.634,
+              "Practice 1/corners.json": 3.935
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 4858.449,
+              "Sprint/corners.json": 30.332,
+              "Sprint Qualifying/corners.json": 33.79,
+              "Practice 1/corners.json": 24.773
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 31.958,
+              "Sprint/corners.json": 30.001,
+              "Sprint Qualifying/corners.json": 40.651,
+              "Practice 1/corners.json": 24.773
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [
+      "2023"
+    ],
+    "status": "historical_source_year_requires_compatibility_check",
+    "reference_lap": {
+      "layout_year": 2023,
+      "layout_race_date": "2023-09-17",
+      "layout_meeting_name": "Singapore Grand Prix",
+      "reference_lap_session_label": "HSTT",
+      "reference_lap_session_canonical": null,
+      "reference_lap_driver_number": "242",
+      "reference_lap_number": 2,
+      "reference_lap_start_date": "2023-09-14T11:30:18.031000",
+      "scope": "Historical lap the layout was traced from. It says nothing about which session any weather or race-control file belongs to and is never used to relabel session data."
+    },
+    "metadata_candidates": [
+      {
+        "source_file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+        "CircuitKey": 61,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Singapore",
+        "Location": "Singapore",
+        "CountryName": "Singapore",
+        "CountryKey": 157,
+        "CountryIocCode": "SGP",
+        "LayoutYear": 2023,
+        "LayoutRound": 16,
+        "LayoutRaceDate": "2023-09-17",
+        "LayoutMeetingKey": 1219,
+        "LayoutMeetingName": "Singapore Grand Prix",
+        "LayoutMeetingOfficialName": null,
+        "LayoutLapDriverNumber": "242",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "HSTT",
+        "LayoutLapTime": 144.142,
+        "LayoutLapStartDate": "2023-09-14T11:30:18.031000",
+        "LayoutLapStartSessionTime": 2153.021,
+        "LayoutLapSessionStartTime": 900.247,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 335.0,
+        "rotation": null,
+        "PitLossNormal": 27.6,
+        "PitLossSC": 17.49,
+        "PitLossVSC": 19.97
+      }
+    ],
+    "conflicting_metadata": {},
+    "note": "The selected reference is tagged with a pre-2026 layout year. Do not assume it is an exact 2026 reference until layout compatibility is checked."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": true,
+    "mapping_filename": "marina_bay.svg",
+    "svg": {
+      "path": "raw/images/svg/marina_bay.svg",
+      "exists": true
+    },
+    "webp": {
+      "path": "raw/images/webp/marina_bay.webp",
+      "exists": true
+    },
+    "status": "assets_found",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": "processed/singapore-grand-prix/straight_mode_map_review.png",
+    "candidate_count": 5,
+    "zone_like_candidate_count": 5,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP pixels (origin top-left) and normalized image ratios only",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "visual_candidates_need_review",
+    "source_image_webp": "raw/images/webp/marina_bay.webp",
+    "source_image_svg": "raw/images/svg/marina_bay.svg",
+    "image_width_px": 1252,
+    "image_height_px": 704,
+    "svg_description": null,
+    "svg_semantic_text_elements": 0,
+    "image_method": "red-hue connected-component segmentation on WebP pixels; SVG retained as source/provenance",
+    "raw_red_pixel_count": 16169,
+    "all_candidates_unverified": true,
+    "svg_semantics_note": "SVG contains no <text> elements; zone identity is not encoded as semantic SVG labels, so WebP segmentation is the only visual evidence.",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 544,
+    "status": "extracted_source_coordinates_unscaled",
+    "scope": "event_level",
+    "source_file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+        "result": "valid_geometry",
+        "point_count": 544,
+        "geometry_fingerprint": "0bb4414bc131ebdc",
+        "reason": null
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Singapore Grand Prix/Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 544,
+        "geometry_fingerprint": "0bb4414bc131ebdc",
+        "reason": null
+      },
+      {
+        "folder_label": "Sprint",
+        "file": "raw/sessions/Singapore Grand Prix/Sprint/corners.json",
+        "result": "valid_geometry",
+        "point_count": 544,
+        "geometry_fingerprint": "0bb4414bc131ebdc",
+        "reason": null
+      },
+      {
+        "folder_label": "Sprint Qualifying",
+        "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 544,
+        "geometry_fingerprint": "0bb4414bc131ebdc",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Singapore Grand Prix/Practice 1/corners.json",
+        "result": "valid_geometry",
+        "point_count": 544,
+        "geometry_fingerprint": "0bb4414bc131ebdc",
+        "reason": null
+      }
+    ],
+    "warnings": [],
+    "quality_checks": {
+      "all_coordinates_finite": true,
+      "consecutive_duplicate_points": 0,
+      "closed_loop_endpoint_distance_raw_units": 196.6214637317096,
+      "distance_units_verified": false,
+      "track_length_verified": false
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 19,
+    "source_file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Singapore Grand Prix/Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Sprint",
+        "file": "raw/sessions/Singapore Grand Prix/Sprint/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Sprint Qualifying",
+        "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Singapore Grand Prix/Practice 1/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      }
+    ],
+    "status": "extracted"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 17,
+    "source_file": "raw/sections/marina-bay-street-circuit.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 17,
+    "source_file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "status": "extracted",
+    "unpaired_source_arrays": {
+      "Section": [
+        "Low",
+        "Low",
+        "Low",
+        "Straight",
+        "Medium",
+        "Straight",
+        "Medium",
+        "Low",
+        "Medium",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Straight",
+        "Low",
+        "Low",
+        "High",
+        "Straight"
+      ]
+    },
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 16,
+    "status": "extracted"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 16,
+    "status": "extracted"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 5,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": "Race",
+      "primary_session_verification": "unverified_session",
+      "primary_session_raw_folder": "Race",
+      "available_sessions": [
+        {
+          "resolved_session": "Race",
+          "raw_folder_session": "Race",
+          "session_verification": "unverified_session",
+          "weather_rows": 160,
+          "output_file": "processed/singapore-grand-prix/sessions/race/weather.csv"
+        },
+        {
+          "resolved_session": "Qualifying",
+          "raw_folder_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 88,
+          "output_file": "processed/singapore-grand-prix/sessions/qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Sprint",
+          "raw_folder_session": "Sprint",
+          "session_verification": "unverified_session",
+          "weather_rows": 127,
+          "output_file": "processed/singapore-grand-prix/sessions/sprint/weather.csv"
+        },
+        {
+          "resolved_session": "Sprint Qualifying",
+          "raw_folder_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 98,
+          "output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 1",
+          "raw_folder_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "weather_rows": 83,
+          "output_file": "processed/singapore-grand-prix/sessions/practice-1/weather.csv"
+        }
+      ]
+    },
+    "session_resolutions": {
+      "Race": {
+        "raw_folder_session": "Race",
+        "raw_folder_canonical": "Race",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-10-11T11:11:21.000000000",
+            "last_utc": "2026-10-11T13:48:13.000000000",
+            "utc_dates": [
+              "2026-10-11"
+            ]
+          }
+        },
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Qualifying": {
+        "raw_folder_session": "Qualifying",
+        "raw_folder_canonical": "Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-10-10T13:17:58.000000000",
+            "last_utc": "2026-10-10T14:36:08.000000000",
+            "utc_dates": [
+              "2026-10-10"
+            ]
+          }
+        },
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Sprint": {
+        "raw_folder_session": "Sprint",
+        "raw_folder_canonical": "Sprint",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-10-10T08:30:00.000000000",
+            "last_utc": "2026-10-10T10:28:12.000000000",
+            "utc_dates": [
+              "2026-10-10"
+            ]
+          }
+        },
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Sprint Qualifying": {
+        "raw_folder_session": "Sprint Qualifying",
+        "raw_folder_canonical": "Sprint Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-10-09T12:30:00.000000000",
+            "last_utc": "2026-10-09T13:40:17.000000000",
+            "utc_dates": [
+              "2026-10-09"
+            ]
+          }
+        },
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 1": {
+        "raw_folder_session": "Practice 1",
+        "raw_folder_canonical": "Practice 1",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-10-09T08:16:58.000000000",
+            "last_utc": "2026-10-09T09:43:12.000000000",
+            "utc_dates": [
+              "2026-10-09"
+            ]
+          }
+        },
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      }
+    },
+    "provenance_warnings": [],
+    "exports": [
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Singapore Grand Prix/Race/rcm.json",
+        "output_file": "processed/singapore-grand-prix/sessions/race/race_control.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/race/race_control.json",
+        "row_count": 153,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Singapore Grand Prix/Race/weather.json",
+        "output_file": "processed/singapore-grand-prix/sessions/race/weather.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/race/weather.json",
+        "row_count": 160,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Singapore Grand Prix/Qualifying/rcm.json",
+        "output_file": "processed/singapore-grand-prix/sessions/qualifying/race_control.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/qualifying/race_control.json",
+        "row_count": 58,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Singapore Grand Prix/Qualifying/weather.json",
+        "output_file": "processed/singapore-grand-prix/sessions/qualifying/weather.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/qualifying/weather.json",
+        "row_count": 88,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint",
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Singapore Grand Prix/Sprint/rcm.json",
+        "output_file": "processed/singapore-grand-prix/sessions/sprint/race_control.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/sprint/race_control.json",
+        "row_count": 157,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint",
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Singapore Grand Prix/Sprint/weather.json",
+        "output_file": "processed/singapore-grand-prix/sessions/sprint/weather.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/sprint/weather.json",
+        "row_count": 127,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint Qualifying",
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint-qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/rcm.json",
+        "output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/race_control.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/race_control.json",
+        "row_count": 67,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint Qualifying",
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint-qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/weather.json",
+        "output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/weather.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/weather.json",
+        "row_count": 98,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Singapore Grand Prix/Practice 1/rcm.json",
+        "output_file": "processed/singapore-grand-prix/sessions/practice-1/race_control.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/practice-1/race_control.json",
+        "row_count": 70,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Singapore Grand Prix/Practice 1/weather.json",
+        "output_file": "processed/singapore-grand-prix/sessions/practice-1/weather.csv",
+        "json_output_file": "processed/singapore-grand-prix/sessions/practice-1/weather.json",
+        "row_count": 83,
+        "status": "exported"
+      }
+    ]
+  },
+  "source_inventory": [
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16796,
+      "sha256": "b501e93ede0b1afe13de66cb85979318ecdd1fc43d6a8ccddfaba7149c5e6f77"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 20435,
+      "sha256": "0a8cd7625571b4e8d3b279aa9ee576fe6fefdaaeb4557f792097a7cee493afc3"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7221,
+      "sha256": "27aed6065250a918bec194ac9cffdde4bdfaa49f543db040c7647edee591be56"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 16805,
+      "sha256": "1890dc340b0338d576da97dec27eda8041107823e34c839b971b555cb5fb28df"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 8184,
+      "sha256": "9aecd765b72ef7579066db7fd588108791977880af8b3fd4b7d3f95eb8f62f01"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3993,
+      "sha256": "57ffa30bb2e8aaeb5dd30dfd4106d2d7d2e0c7ee957d404d3b51413441f0ccd0"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint",
+      "bytes": 16795,
+      "sha256": "bf65a6c422b83c560a64fcce08c5f551bf267ab822bf6e3a86d6b185014bb55a"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 18773,
+      "sha256": "9ea3925d074f0fe4271fb0bab8601c78ec87079875af341bfe5814162ce4e821"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 5729,
+      "sha256": "4b8a2974d1731b006b4cfe7f5fd27e24e8ae92875a465adcd10c20a6245716f6"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 16800,
+      "sha256": "865823b6308caa8fb4558d06101808793668a76eeaf8824278f8f50f471ad2ca"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 9002,
+      "sha256": "998affd19067abd65e8627a96607eade7a23eb3e2f890453f26ce7e807b4799e"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 4438,
+      "sha256": "4cc5c7e8a13c8ce129d031e928f2dae108a108b624a17c5040174369174c5f71"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 16798,
+      "sha256": "d660ba148e6d9643ffb4927efe56c229fb495eb9550846b1f6c41c3c42caff0c"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 8901,
+      "sha256": "50954ab5ebfef0487b4b00f8d9b26a784d169dc36be500da4618eb2ba78f7794"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3769,
+      "sha256": "11e66da3345340fcf6b62aad14a800a607f8ecdcc0c0ada964e18d5fbb0db50f"
+    }
+  ],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "Layout array 'Section' has 19 values versus 17 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+      "Selected reference metadata is tagged layout year ['2023']; current-season layout compatibility remains unverified.",
+      "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.281); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 18.68; end_distance_source: max |delta| 19.267); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4858.449); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 40.651); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}

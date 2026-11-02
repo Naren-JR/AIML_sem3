@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:46+00:00",
+  "event_name": "United States Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-10-25T19:20:01.000000000",
+        "last_utc": "2026-10-25T21:43:10.000000000",
+        "utc_dates": [
+          "2026-10-25"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/United States Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7171,
+      "sha256": "7dca5d102c9ae60a9e268e5e2ed4fa6bdac1ab169fff1b2eec8cb68ac36d8c05"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 22088,
+      "sha256": "1e7868f2f2c0dc8337dcb9ecd25f60b88876cf67da863cb4eff4b4bd91949f67"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/United States Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16681,
+      "sha256": "92a8fddd031cea19240578315c35523e2df972749b504325dce64f6e82304659"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 22088,
+      "sha256": "1e7868f2f2c0dc8337dcb9ecd25f60b88876cf67da863cb4eff4b4bd91949f67"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7171,
+      "sha256": "7dca5d102c9ae60a9e268e5e2ed4fa6bdac1ab169fff1b2eec8cb68ac36d8c05"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/United States Grand Prix/Race/weather.json",
+      "output_file": "processed/united-states-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/race/weather.json",
+      "row_count": 159,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/United States Grand Prix/Race/rcm.json",
+      "output_file": "processed/united-states-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/race/race_control.json",
+      "row_count": 171,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

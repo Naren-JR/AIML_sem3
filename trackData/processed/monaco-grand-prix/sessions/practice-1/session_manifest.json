@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:44+00:00",
+  "event_name": "Monaco Grand Prix",
+  "raw_folder_session": "Practice 1",
+  "resolved_session": "Practice 1",
+  "session_resolution": {
+    "raw_folder_session": "Practice 1",
+    "raw_folder_canonical": "Practice 1",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-06-05T11:30:00.000000000",
+        "last_utc": "2026-06-05T12:45:13.000000000",
+        "utc_dates": [
+          "2026-06-05"
+        ]
+      }
+    },
+    "resolved_session": "Practice 1",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 7,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3621,
+      "sha256": "fd78686cbfe9ec155011cae8f1f5145da82e153e469ee5ec00548d6b199fca3a"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 17111,
+      "sha256": "b6babc6536e3002334642c2cde306b5b68325bcc965394c7bf3008464868bb4a"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 21384,
+      "sha256": "74f811f52ad92d85b1a09b0773e5eb5cfb63b8e9cd452c434f1a190ffa37a399"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 17111,
+      "sha256": "b6babc6536e3002334642c2cde306b5b68325bcc965394c7bf3008464868bb4a"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3621,
+      "sha256": "fd78686cbfe9ec155011cae8f1f5145da82e153e469ee5ec00548d6b199fca3a"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Monaco Grand Prix/Practice 1/weather.json",
+      "output_file": "processed/monaco-grand-prix/sessions/practice-1/weather.csv",
+      "json_output_file": "processed/monaco-grand-prix/sessions/practice-1/weather.json",
+      "row_count": 80,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Monaco Grand Prix/Practice 1/rcm.json",
+      "output_file": "processed/monaco-grand-prix/sessions/practice-1/race_control.csv",
+      "json_output_file": "processed/monaco-grand-prix/sessions/practice-1/race_control.json",
+      "row_count": 124,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

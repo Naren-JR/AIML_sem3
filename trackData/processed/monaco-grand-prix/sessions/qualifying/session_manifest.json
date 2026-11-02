@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:44+00:00",
+  "event_name": "Monaco Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-06-06T13:46:46.000000000",
+        "last_utc": "2026-06-06T15:20:20.000000000",
+        "utc_dates": [
+          "2026-06-06"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3783,
+      "sha256": "d60a00f98bb7e7240781f5e5437897d35c02a3601a473583798f72e81b70664d"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 9298,
+      "sha256": "d9a478eecbc65ff2ed3952e992059d03a79446a8dfe4ceb5aefda4de0bc47d29"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 21390,
+      "sha256": "d4db96ea0fd1292a3f0716d5480fafcfb0b3bb35f1554f82642de527aaea9e55"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 9298,
+      "sha256": "d9a478eecbc65ff2ed3952e992059d03a79446a8dfe4ceb5aefda4de0bc47d29"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3783,
+      "sha256": "d60a00f98bb7e7240781f5e5437897d35c02a3601a473583798f72e81b70664d"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Monaco Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/monaco-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/monaco-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 84,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Monaco Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/monaco-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/monaco-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 65,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

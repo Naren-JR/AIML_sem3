@@ -1,0 +1,863 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:40+00:00",
+  "event_name": "Canadian Grand Prix",
+  "event_slug": "canadian-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 17903,
+      "sha256": "d103e05bdb153843e823f7e53a5d2eded10749ac7bdb4dcd00cb0526ebd1cc13",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 614,
+          "geometry_fingerprint": "30b987afd3d7eacc",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Canadian Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 614,
+          "geometry_fingerprint": "30b987afd3d7eacc",
+          "reason": null
+        },
+        {
+          "folder_label": "Sprint",
+          "file": "raw/sessions/Canadian Grand Prix/Sprint/corners.json",
+          "result": "valid_geometry",
+          "point_count": 614,
+          "geometry_fingerprint": "30b987afd3d7eacc",
+          "reason": null
+        },
+        {
+          "folder_label": "Sprint Qualifying",
+          "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 614,
+          "geometry_fingerprint": "30b987afd3d7eacc",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Canadian Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 614,
+          "geometry_fingerprint": "30b987afd3d7eacc",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 17903,
+      "sha256": "d103e05bdb153843e823f7e53a5d2eded10749ac7bdb4dcd00cb0526ebd1cc13",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Canadian Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        },
+        {
+          "folder_label": "Sprint",
+          "file": "raw/sessions/Canadian Grand Prix/Sprint/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        },
+        {
+          "folder_label": "Sprint Qualifying",
+          "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Canadian Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 17903,
+      "sha256": "d103e05bdb153843e823f7e53a5d2eded10749ac7bdb4dcd00cb0526ebd1cc13",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 17903,
+      "sha256": "d103e05bdb153843e823f7e53a5d2eded10749ac7bdb4dcd00cb0526ebd1cc13",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 17903,
+      "sha256": "d103e05bdb153843e823f7e53a5d2eded10749ac7bdb4dcd00cb0526ebd1cc13",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/canada.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 399,
+      "sha256": "1acda488212d8b11526f5b19cee0867fd06feb585a44e4a52f2e58080231bde1"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "30b987afd3d7eacc": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Sprint/corners.json",
+          "Sprint Qualifying/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 31.364,
+              "Sprint/corners.json": 31.741,
+              "Sprint Qualifying/corners.json": 23.88,
+              "Practice 1/corners.json": 39.172
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 27.278,
+              "Sprint/corners.json": 29.713,
+              "Sprint Qualifying/corners.json": 23.224,
+              "Practice 1/corners.json": 32.935
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 29.573,
+              "Sprint/corners.json": 32.213,
+              "Sprint Qualifying/corners.json": 25.178,
+              "Practice 1/corners.json": 35.706
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 4315.807,
+              "Sprint/corners.json": 4301.359,
+              "Sprint Qualifying/corners.json": 4302.964,
+              "Practice 1/corners.json": 4307.037
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 4315.807,
+              "Sprint/corners.json": 4301.359,
+              "Sprint Qualifying/corners.json": 4302.964,
+              "Practice 1/corners.json": 4307.037
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [
+      "2022"
+    ],
+    "status": "historical_source_year_requires_compatibility_check",
+    "reference_lap": {
+      "layout_year": 2022,
+      "layout_race_date": "2022-06-19",
+      "layout_meeting_name": "Canadian Grand Prix",
+      "reference_lap_session_label": "FP1",
+      "reference_lap_session_canonical": "Practice 1",
+      "reference_lap_driver_number": "1",
+      "reference_lap_number": 2,
+      "reference_lap_start_date": "2022-06-17T18:02:20.584000",
+      "scope": "Historical lap the layout was traced from. It says nothing about which session any weather or race-control file belongs to and is never used to relabel session data."
+    },
+    "metadata_candidates": [
+      {
+        "source_file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+        "CircuitKey": 23,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Montreal",
+        "Location": "Montréal",
+        "CountryName": "Canada",
+        "CountryKey": 46,
+        "CountryIocCode": "CAN",
+        "LayoutYear": 2022,
+        "LayoutRound": 9,
+        "LayoutRaceDate": "2022-06-19",
+        "LayoutMeetingKey": 1113,
+        "LayoutMeetingName": "Canadian Grand Prix",
+        "LayoutMeetingOfficialName": "FORMULA 1 AWS GRAND PRIX DU CANADA 2022",
+        "LayoutLapDriverNumber": "1",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "FP1",
+        "LayoutLapTime": 77.991,
+        "LayoutLapStartDate": "2022-06-17T18:02:20.584000",
+        "LayoutLapStartSessionTime": 1038.973,
+        "LayoutLapSessionStartTime": 898.525,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 62.0,
+        "rotation": null,
+        "PitLossNormal": 20.12,
+        "PitLossSC": 12.75,
+        "PitLossVSC": 14.56
+      }
+    ],
+    "conflicting_metadata": {},
+    "note": "The selected reference is tagged with a pre-2026 layout year. Do not assume it is an exact 2026 reference until layout compatibility is checked."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": true,
+    "mapping_filename": "villeneuve.svg",
+    "svg": {
+      "path": "raw/images/svg/villeneuve.svg",
+      "exists": true
+    },
+    "webp": {
+      "path": "raw/images/webp/villeneuve.webp",
+      "exists": true
+    },
+    "status": "assets_found",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": "processed/canadian-grand-prix/straight_mode_map_review.png",
+    "candidate_count": 3,
+    "zone_like_candidate_count": 3,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP pixels (origin top-left) and normalized image ratios only",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "visual_candidates_need_review",
+    "source_image_webp": "raw/images/webp/villeneuve.webp",
+    "source_image_svg": "raw/images/svg/villeneuve.svg",
+    "image_width_px": 1252,
+    "image_height_px": 704,
+    "svg_description": "Created with imagetracer.js version 1.2.6",
+    "svg_semantic_text_elements": 0,
+    "image_method": "red-hue connected-component segmentation on WebP pixels; SVG retained as source/provenance",
+    "raw_red_pixel_count": 15475,
+    "all_candidates_unverified": true,
+    "svg_semantics_note": "SVG is an ImageTracer-rendered vector trace with no <text> elements; text/zone identity is not encoded as semantic SVG labels.",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 614,
+    "status": "extracted_source_coordinates_unscaled",
+    "scope": "event_level",
+    "source_file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+        "result": "valid_geometry",
+        "point_count": 614,
+        "geometry_fingerprint": "30b987afd3d7eacc",
+        "reason": null
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Canadian Grand Prix/Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 614,
+        "geometry_fingerprint": "30b987afd3d7eacc",
+        "reason": null
+      },
+      {
+        "folder_label": "Sprint",
+        "file": "raw/sessions/Canadian Grand Prix/Sprint/corners.json",
+        "result": "valid_geometry",
+        "point_count": 614,
+        "geometry_fingerprint": "30b987afd3d7eacc",
+        "reason": null
+      },
+      {
+        "folder_label": "Sprint Qualifying",
+        "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 614,
+        "geometry_fingerprint": "30b987afd3d7eacc",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Canadian Grand Prix/Practice 1/corners.json",
+        "result": "valid_geometry",
+        "point_count": 614,
+        "geometry_fingerprint": "30b987afd3d7eacc",
+        "reason": null
+      }
+    ],
+    "warnings": [],
+    "quality_checks": {
+      "all_coordinates_finite": true,
+      "consecutive_duplicate_points": 0,
+      "closed_loop_endpoint_distance_raw_units": 105.92922165295089,
+      "distance_units_verified": false,
+      "track_length_verified": false
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 14,
+    "source_file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Canadian Grand Prix/Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      },
+      {
+        "folder_label": "Sprint",
+        "file": "raw/sessions/Canadian Grand Prix/Sprint/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      },
+      {
+        "folder_label": "Sprint Qualifying",
+        "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Canadian Grand Prix/Practice 1/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      }
+    ],
+    "status": "extracted"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 13,
+    "source_file": "raw/sections/canada.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 13,
+    "source_file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "status": "extracted",
+    "unpaired_source_arrays": {
+      "Section": [
+        "Low",
+        "Low",
+        "Medium",
+        "Medium",
+        "Straight",
+        "Low",
+        "Low",
+        "Medium",
+        "Medium",
+        "Low",
+        "Low",
+        "Straight",
+        "Medium",
+        "Medium"
+      ]
+    },
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 15,
+    "status": "extracted"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 15,
+    "status": "extracted"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 3,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": "Race",
+      "primary_session_verification": "unverified_session",
+      "primary_session_raw_folder": "Race",
+      "available_sessions": [
+        {
+          "resolved_session": "Race",
+          "raw_folder_session": "Race",
+          "session_verification": "unverified_session",
+          "weather_rows": 160,
+          "output_file": "processed/canadian-grand-prix/sessions/race/weather.csv"
+        },
+        {
+          "resolved_session": "Qualifying",
+          "raw_folder_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 79,
+          "output_file": "processed/canadian-grand-prix/sessions/qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Sprint",
+          "raw_folder_session": "Sprint",
+          "session_verification": "unverified_session",
+          "weather_rows": 78,
+          "output_file": "processed/canadian-grand-prix/sessions/sprint/weather.csv"
+        },
+        {
+          "resolved_session": "Sprint Qualifying",
+          "raw_folder_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 81,
+          "output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 1",
+          "raw_folder_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "weather_rows": 102,
+          "output_file": "processed/canadian-grand-prix/sessions/practice-1/weather.csv"
+        }
+      ]
+    },
+    "session_resolutions": {
+      "Race": {
+        "raw_folder_session": "Race",
+        "raw_folder_canonical": "Race",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-24T19:08:32.000000000",
+            "last_utc": "2026-05-24T21:47:14.000000000",
+            "utc_dates": [
+              "2026-05-24"
+            ]
+          }
+        },
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Qualifying": {
+        "raw_folder_session": "Qualifying",
+        "raw_folder_canonical": "Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-23T20:00:00.000000000",
+            "last_utc": "2026-05-23T21:06:07.000000000",
+            "utc_dates": [
+              "2026-05-23"
+            ]
+          }
+        },
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Sprint": {
+        "raw_folder_session": "Sprint",
+        "raw_folder_canonical": "Sprint",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-23T15:30:01.000000000",
+            "last_utc": "2026-05-23T16:36:50.000000000",
+            "utc_dates": [
+              "2026-05-23"
+            ]
+          }
+        },
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Sprint Qualifying": {
+        "raw_folder_session": "Sprint Qualifying",
+        "raw_folder_canonical": "Sprint Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-22T20:30:00.000000000",
+            "last_utc": "2026-05-22T21:55:08.000000000",
+            "utc_dates": [
+              "2026-05-22"
+            ]
+          }
+        },
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 1": {
+        "raw_folder_session": "Practice 1",
+        "raw_folder_canonical": "Practice 1",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-05-22T16:29:39.000000000",
+            "last_utc": "2026-05-22T18:05:16.000000000",
+            "utc_dates": [
+              "2026-05-22"
+            ]
+          }
+        },
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      }
+    },
+    "provenance_warnings": [],
+    "exports": [
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Canadian Grand Prix/Race/rcm.json",
+        "output_file": "processed/canadian-grand-prix/sessions/race/race_control.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/race/race_control.json",
+        "row_count": 286,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Canadian Grand Prix/Race/weather.json",
+        "output_file": "processed/canadian-grand-prix/sessions/race/weather.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/race/weather.json",
+        "row_count": 160,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Canadian Grand Prix/Qualifying/rcm.json",
+        "output_file": "processed/canadian-grand-prix/sessions/qualifying/race_control.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/qualifying/race_control.json",
+        "row_count": 54,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Canadian Grand Prix/Qualifying/weather.json",
+        "output_file": "processed/canadian-grand-prix/sessions/qualifying/weather.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/qualifying/weather.json",
+        "row_count": 79,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint",
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Canadian Grand Prix/Sprint/rcm.json",
+        "output_file": "processed/canadian-grand-prix/sessions/sprint/race_control.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/sprint/race_control.json",
+        "row_count": 69,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint",
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Canadian Grand Prix/Sprint/weather.json",
+        "output_file": "processed/canadian-grand-prix/sessions/sprint/weather.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/sprint/weather.json",
+        "row_count": 78,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint Qualifying",
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint-qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/rcm.json",
+        "output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/race_control.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/race_control.json",
+        "row_count": 57,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint Qualifying",
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint-qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/weather.json",
+        "output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/weather.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/weather.json",
+        "row_count": 81,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Canadian Grand Prix/Practice 1/rcm.json",
+        "output_file": "processed/canadian-grand-prix/sessions/practice-1/race_control.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/practice-1/race_control.json",
+        "row_count": 98,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Canadian Grand Prix/Practice 1/weather.json",
+        "output_file": "processed/canadian-grand-prix/sessions/practice-1/weather.csv",
+        "json_output_file": "processed/canadian-grand-prix/sessions/practice-1/weather.json",
+        "row_count": 102,
+        "status": "exported"
+      }
+    ]
+  },
+  "source_inventory": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 17903,
+      "sha256": "d103e05bdb153843e823f7e53a5d2eded10749ac7bdb4dcd00cb0526ebd1cc13"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 39173,
+      "sha256": "d118b9232e648e571af0d47379b3ec53cbeb9528c59caf271607822d7f21fb76"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7230,
+      "sha256": "4fc117d69f296d542a40d2efaf6d1d10bd94828ef7ec1bf9d83cda407b8bbaea"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 17906,
+      "sha256": "4d2955f92b39060cef862209668bd3dd82bb34b660a06427d8bc2e17fbee6f45"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 9242,
+      "sha256": "fab0c4582f5dd439d127b9ee47c64996686d062c7bcd2e8de1a3fc1f2dd0dc33"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3579,
+      "sha256": "618001c7b55c3126d1d20ec6b6fe3b676ebe8df4a127bc26e4bba12de8d73d1a"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint",
+      "bytes": 17905,
+      "sha256": "3936d0bce0ddb1bfb0ab62b315145f71f242561f16b15ba589ae8fb75b0b1575"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 9783,
+      "sha256": "54632423a5552b9ae4fb24c3da52ffd3ac487829480aba80a0c89fe75c677fd3"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3534,
+      "sha256": "88e0e8ec3336ae043e951812f0e02080f629387de69705d14991533e90c7cdb0"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 17907,
+      "sha256": "ddb807c0fed305d21653ecfc9d47a40d3cb9d2567b1f5418f8aa6ce4a2d666af"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 8866,
+      "sha256": "d39d89cfb93b5367a933d2f44d568f43c0ba7a480178087a5c221e985311f383"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 3666,
+      "sha256": "662ba73bd160b4015b188dbe77e6a1a49062ca250dbe99ce84324a8e6dd2d01f"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 17909,
+      "sha256": "f2c34a6d1c69b2f9e62bab743ac7c45437686de1a232381c7e0c341a6df1ef32"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 12267,
+      "sha256": "134d5f33d229134a9e4f6b35a8aa2a7c613d2e5e198f16b0c710ae58438197d0"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 4622,
+      "sha256": "4c6211448b558cf7e1206f2af08422bbfc59803daa5d006f14cc810b38aece3e"
+    }
+  ],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "Layout array 'Section' has 14 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+      "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+      "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 39.172); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 32.935; end_distance_source: max |delta| 35.706); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4315.807); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 4315.807); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}

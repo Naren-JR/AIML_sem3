@@ -1,0 +1,899 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:44+00:00",
+  "event_name": "Monaco Grand Prix",
+  "event_slug": "monaco-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 20378,
+      "sha256": "d82f6c6da8263dc8d8d7f2a840293cd5d9b27ad275c2bf4acd138e9cb63afa79",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 683,
+          "geometry_fingerprint": "99cc164f08d4cc0e",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 683,
+          "geometry_fingerprint": "99cc164f08d4cc0e",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Monaco Grand Prix/Practice 3/corners.json",
+          "result": "valid_geometry",
+          "point_count": 683,
+          "geometry_fingerprint": "99cc164f08d4cc0e",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Monaco Grand Prix/Practice 2/corners.json",
+          "result": "valid_geometry",
+          "point_count": 683,
+          "geometry_fingerprint": "99cc164f08d4cc0e",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Monaco Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 683,
+          "geometry_fingerprint": "99cc164f08d4cc0e",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 20378,
+      "sha256": "d82f6c6da8263dc8d8d7f2a840293cd5d9b27ad275c2bf4acd138e9cb63afa79",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Monaco Grand Prix/Practice 3/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Monaco Grand Prix/Practice 2/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Monaco Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 20378,
+      "sha256": "d82f6c6da8263dc8d8d7f2a840293cd5d9b27ad275c2bf4acd138e9cb63afa79",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 20378,
+      "sha256": "d82f6c6da8263dc8d8d7f2a840293cd5d9b27ad275c2bf4acd138e9cb63afa79",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Qualifying",
+      "bytes": 21390,
+      "sha256": "d4db96ea0fd1292a3f0716d5480fafcfb0b3bb35f1554f82642de527aaea9e55",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/circuit-de-monaco.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 390,
+      "sha256": "160909652ea28a9a3c5b91fc08c0a1ec59d367fb1cd762469b8838751dd4c8a8"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "99cc164f08d4cc0e": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Practice 3/corners.json",
+          "Practice 2/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 19.362,
+              "Practice 3/corners.json": 14.919,
+              "Practice 2/corners.json": 24.344,
+              "Practice 1/corners.json": 18.483
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 3,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Practice 3/corners.json": 15.194,
+              "Practice 2/corners.json": 14.995,
+              "Practice 1/corners.json": 19.209
+            },
+            "end_distance_source": {
+              "Practice 3/corners.json": 16.51,
+              "Practice 2/corners.json": 16.294,
+              "Practice 1/corners.json": 20.872
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Qualifying/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 27.56,
+              "Practice 3/corners.json": 13.279,
+              "Practice 2/corners.json": 27.306,
+              "Practice 1/corners.json": 16.635
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 22.449,
+              "Practice 3/corners.json": 18.085,
+              "Practice 2/corners.json": 20.206,
+              "Practice 1/corners.json": 20.724
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [
+      "2022"
+    ],
+    "status": "historical_source_year_requires_compatibility_check",
+    "reference_lap": {
+      "layout_year": 2022,
+      "layout_race_date": "2022-05-29",
+      "layout_meeting_name": "Monaco Grand Prix",
+      "reference_lap_session_label": "FP1",
+      "reference_lap_session_canonical": "Practice 1",
+      "reference_lap_driver_number": "1",
+      "reference_lap_number": 2,
+      "reference_lap_start_date": "2022-05-27T12:01:33.973000",
+      "scope": "Historical lap the layout was traced from. It says nothing about which session any weather or race-control file belongs to and is never used to relabel session data."
+    },
+    "metadata_candidates": [
+      {
+        "source_file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+        "CircuitKey": 22,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Monte Carlo",
+        "Location": "Monaco",
+        "CountryName": "Monaco",
+        "CountryKey": 114,
+        "CountryIocCode": "MON",
+        "LayoutYear": 2022,
+        "LayoutRound": 7,
+        "LayoutRaceDate": "2022-05-29",
+        "LayoutMeetingKey": 1112,
+        "LayoutMeetingName": "Monaco Grand Prix",
+        "LayoutMeetingOfficialName": "FORMULA 1 GRAND PRIX DE MONACO 2022",
+        "LayoutLapDriverNumber": "1",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "FP1",
+        "LayoutLapTime": 90.304,
+        "LayoutLapStartDate": "2022-05-27T12:01:33.973000",
+        "LayoutLapStartSessionTime": 993.039,
+        "LayoutLapSessionStartTime": 899.17,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 315.0,
+        "rotation": null,
+        "PitLossNormal": 18.94,
+        "PitLossSC": 12.0,
+        "PitLossVSC": 13.7
+      },
+      {
+        "source_file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+        "CircuitKey": 22,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Monte Carlo",
+        "Location": "Monaco",
+        "CountryName": "Monaco",
+        "CountryKey": 114,
+        "CountryIocCode": "MON",
+        "LayoutYear": 2022,
+        "LayoutRound": 7,
+        "LayoutRaceDate": "2022-05-29",
+        "LayoutMeetingKey": 1112,
+        "LayoutMeetingName": "Monaco Grand Prix",
+        "LayoutMeetingOfficialName": "FORMULA 1 GRAND PRIX DE MONACO 2022",
+        "LayoutLapDriverNumber": "1",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "FP1",
+        "LayoutLapTime": 90.304,
+        "LayoutLapStartDate": "2022-05-27T12:01:33.973000",
+        "LayoutLapStartSessionTime": 993.039,
+        "LayoutLapSessionStartTime": 899.17,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 315.0,
+        "rotation": null,
+        "PitLossNormal": 18.94,
+        "PitLossSC": 12.0,
+        "PitLossVSC": 13.7
+      }
+    ],
+    "conflicting_metadata": {},
+    "note": "The selected reference is tagged with a pre-2026 layout year. Do not assume it is an exact 2026 reference until layout compatibility is checked."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": true,
+    "mapping_filename": "monaco.svg",
+    "svg": {
+      "path": "raw/images/svg/monaco.svg",
+      "exists": true
+    },
+    "webp": {
+      "path": "raw/images/webp/monaco.webp",
+      "exists": true
+    },
+    "status": "assets_found",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": null,
+    "candidate_count": 0,
+    "zone_like_candidate_count": 0,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP pixels (origin top-left) and normalized image ratios only",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "red_pixels_found_no_qualifying_regions",
+    "source_image_webp": "raw/images/webp/monaco.webp",
+    "source_image_svg": "raw/images/svg/monaco.svg",
+    "image_width_px": 1252,
+    "image_height_px": 704,
+    "svg_description": "Created with imagetracer.js version 1.2.6",
+    "svg_semantic_text_elements": 0,
+    "image_method": "red-hue connected-component segmentation on WebP pixels; SVG retained as source/provenance",
+    "raw_red_pixel_count": 6,
+    "all_candidates_unverified": true,
+    "svg_semantics_note": "SVG is an ImageTracer-rendered vector trace with no <text> elements; text/zone identity is not encoded as semantic SVG labels.",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 683,
+    "status": "extracted_source_coordinates_unscaled",
+    "scope": "event_level",
+    "source_file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+        "result": "valid_geometry",
+        "point_count": 683,
+        "geometry_fingerprint": "99cc164f08d4cc0e",
+        "reason": null
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 683,
+        "geometry_fingerprint": "99cc164f08d4cc0e",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 3",
+        "file": "raw/sessions/Monaco Grand Prix/Practice 3/corners.json",
+        "result": "valid_geometry",
+        "point_count": 683,
+        "geometry_fingerprint": "99cc164f08d4cc0e",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 2",
+        "file": "raw/sessions/Monaco Grand Prix/Practice 2/corners.json",
+        "result": "valid_geometry",
+        "point_count": 683,
+        "geometry_fingerprint": "99cc164f08d4cc0e",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Monaco Grand Prix/Practice 1/corners.json",
+        "result": "valid_geometry",
+        "point_count": 683,
+        "geometry_fingerprint": "99cc164f08d4cc0e",
+        "reason": null
+      }
+    ],
+    "warnings": [],
+    "quality_checks": {
+      "all_coordinates_finite": true,
+      "consecutive_duplicate_points": 0,
+      "closed_loop_endpoint_distance_raw_units": 17.029386365926403,
+      "distance_units_verified": false,
+      "track_length_verified": false
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 19,
+    "source_file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Practice 3",
+        "file": "raw/sessions/Monaco Grand Prix/Practice 3/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Practice 2",
+        "file": "raw/sessions/Monaco Grand Prix/Practice 2/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Monaco Grand Prix/Practice 1/corners.json",
+        "result": "corner_records",
+        "row_count": 19
+      }
+    ],
+    "status": "extracted"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 13,
+    "source_file": "raw/sections/circuit-de-monaco.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 13,
+    "source_file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+    "source_folder_label": "Qualifying",
+    "status": "extracted",
+    "unpaired_source_arrays": {
+      "Section": [
+        "Low",
+        "Straight",
+        "Medium",
+        "Medium",
+        "Low",
+        "Low",
+        "Low",
+        "Low",
+        "Straight",
+        "Low",
+        "Low",
+        "High",
+        "Straight",
+        "Straight",
+        "Medium",
+        "Medium",
+        "Medium",
+        "Low",
+        "Low"
+      ]
+    },
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 19,
+    "status": "extracted"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 19,
+    "status": "extracted"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 0,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": "Race",
+      "primary_session_verification": "unverified_session",
+      "primary_session_raw_folder": "Race",
+      "available_sessions": [
+        {
+          "resolved_session": "Race",
+          "raw_folder_session": "Race",
+          "session_verification": "unverified_session",
+          "weather_rows": 208,
+          "output_file": "processed/monaco-grand-prix/sessions/race/weather.csv"
+        },
+        {
+          "resolved_session": "Qualifying",
+          "raw_folder_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 84,
+          "output_file": "processed/monaco-grand-prix/sessions/qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 3",
+          "raw_folder_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "weather_rows": 79,
+          "output_file": "processed/monaco-grand-prix/sessions/practice-3/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 2",
+          "raw_folder_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "weather_rows": 80,
+          "output_file": "processed/monaco-grand-prix/sessions/practice-2/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 1",
+          "raw_folder_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "weather_rows": 80,
+          "output_file": "processed/monaco-grand-prix/sessions/practice-1/weather.csv"
+        }
+      ]
+    },
+    "session_resolutions": {
+      "Race": {
+        "raw_folder_session": "Race",
+        "raw_folder_canonical": "Race",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-07T12:20:01.000000000",
+            "last_utc": "2026-06-07T15:35:58.000000000",
+            "utc_dates": [
+              "2026-06-07"
+            ]
+          }
+        },
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Qualifying": {
+        "raw_folder_session": "Qualifying",
+        "raw_folder_canonical": "Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-06T13:46:46.000000000",
+            "last_utc": "2026-06-06T15:20:20.000000000",
+            "utc_dates": [
+              "2026-06-06"
+            ]
+          }
+        },
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 3": {
+        "raw_folder_session": "Practice 3",
+        "raw_folder_canonical": "Practice 3",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-06T10:30:00.000000000",
+            "last_utc": "2026-06-06T11:32:37.000000000",
+            "utc_dates": [
+              "2026-06-06"
+            ]
+          }
+        },
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 2": {
+        "raw_folder_session": "Practice 2",
+        "raw_folder_canonical": "Practice 2",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-05T14:50:16.000000000",
+            "last_utc": "2026-06-05T16:14:40.000000000",
+            "utc_dates": [
+              "2026-06-05"
+            ]
+          }
+        },
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 1": {
+        "raw_folder_session": "Practice 1",
+        "raw_folder_canonical": "Practice 1",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-05T11:30:00.000000000",
+            "last_utc": "2026-06-05T12:45:13.000000000",
+            "utc_dates": [
+              "2026-06-05"
+            ]
+          }
+        },
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      }
+    },
+    "provenance_warnings": [],
+    "exports": [
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Monaco Grand Prix/Race/rcm.json",
+        "output_file": "processed/monaco-grand-prix/sessions/race/race_control.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/race/race_control.json",
+        "row_count": 265,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Monaco Grand Prix/Race/weather.json",
+        "output_file": "processed/monaco-grand-prix/sessions/race/weather.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/race/weather.json",
+        "row_count": 208,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Monaco Grand Prix/Qualifying/rcm.json",
+        "output_file": "processed/monaco-grand-prix/sessions/qualifying/race_control.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/qualifying/race_control.json",
+        "row_count": 65,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Monaco Grand Prix/Qualifying/weather.json",
+        "output_file": "processed/monaco-grand-prix/sessions/qualifying/weather.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/qualifying/weather.json",
+        "row_count": 84,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 3",
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-3",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Monaco Grand Prix/Practice 3/rcm.json",
+        "output_file": "processed/monaco-grand-prix/sessions/practice-3/race_control.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/practice-3/race_control.json",
+        "row_count": 69,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 3",
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-3",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Monaco Grand Prix/Practice 3/weather.json",
+        "output_file": "processed/monaco-grand-prix/sessions/practice-3/weather.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/practice-3/weather.json",
+        "row_count": 79,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 2",
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-2",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Monaco Grand Prix/Practice 2/rcm.json",
+        "output_file": "processed/monaco-grand-prix/sessions/practice-2/race_control.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/practice-2/race_control.json",
+        "row_count": 108,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 2",
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-2",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Monaco Grand Prix/Practice 2/weather.json",
+        "output_file": "processed/monaco-grand-prix/sessions/practice-2/weather.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/practice-2/weather.json",
+        "row_count": 80,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Monaco Grand Prix/Practice 1/rcm.json",
+        "output_file": "processed/monaco-grand-prix/sessions/practice-1/race_control.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/practice-1/race_control.json",
+        "row_count": 124,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Monaco Grand Prix/Practice 1/weather.json",
+        "output_file": "processed/monaco-grand-prix/sessions/practice-1/weather.csv",
+        "json_output_file": "processed/monaco-grand-prix/sessions/practice-1/weather.json",
+        "row_count": 80,
+        "status": "exported"
+      }
+    ]
+  },
+  "source_inventory": [
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 20378,
+      "sha256": "d82f6c6da8263dc8d8d7f2a840293cd5d9b27ad275c2bf4acd138e9cb63afa79"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 37337,
+      "sha256": "cbca9c985c4dd19aca624d12b6b87711a81fcc68848e9b4e126b5fec00e807cf"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 9338,
+      "sha256": "2325f71dfab1b46ee3c46cb9d526f3480f0ba4bf05b666a1eee59254d8b11a9c"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 21390,
+      "sha256": "d4db96ea0fd1292a3f0716d5480fafcfb0b3bb35f1554f82642de527aaea9e55"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 9298,
+      "sha256": "d9a478eecbc65ff2ed3952e992059d03a79446a8dfe4ceb5aefda4de0bc47d29"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3783,
+      "sha256": "d60a00f98bb7e7240781f5e5437897d35c02a3601a473583798f72e81b70664d"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 3/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 3",
+      "bytes": 21382,
+      "sha256": "d402cb607c1fbba0d738baaceb3abff6d71271fec90d1a13dd203bc21ac6ef34"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 9982,
+      "sha256": "f8b8f6da3929da0d83a337565038b8502c5ee06c18000323c137d6fdb844c449"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3577,
+      "sha256": "89448eda49305b9b26660d8a4cc376da4dc19bdf9a7b1a760f3ade37f8e94876"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 21386,
+      "sha256": "ec98c46d70ec1e21c5d1b685d729190fa839868d4bb6296456322b55273945b8"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 15614,
+      "sha256": "fb636a3cb2861605cd744786af2f5b3d145d2d0b2698499ffcf1f7f1e93dbb1e"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3617,
+      "sha256": "7e88a6c989246a8dd41c6177621546926b8d6a69f04ce96100786f22ffc8e4e8"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 21384,
+      "sha256": "74f811f52ad92d85b1a09b0773e5eb5cfb63b8e9cd452c434f1a190ffa37a399"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 17111,
+      "sha256": "b6babc6536e3002334642c2cde306b5b68325bcc965394c7bf3008464868bb4a"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3621,
+      "sha256": "fd78686cbfe9ec155011cae8f1f5145da82e153e469ee5ec00548d6b199fca3a"
+    }
+  ],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "Layout array 'Section' has 19 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+      "No sufficiently large red image regions were extracted; this does not prove the circuit has no 2026 Straight Mode zones.",
+      "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+      "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 24.344); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Qualifying/corners.json) and 3 other source file(s) (start_distance_source: max |delta| 19.209; end_distance_source: max |delta| 20.872); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 27.56); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 22.449); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}

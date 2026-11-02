@@ -1,0 +1,66 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:43+00:00",
+  "event_name": "Mexico City Grand Prix",
+  "event_slug": "mexico-city-grand-prix",
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": null,
+    "corner_source": null,
+    "marshal_light_source": null,
+    "marshal_sector_source": null,
+    "layout_section_source": null,
+    "section_percentage_source": {
+      "file": "raw/sections/autodrome-hermanos-rodriguez.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 273,
+      "sha256": "814ab7849eeec0ab99012ee0fb1de61aa15acfbdbb057f5d67f41d00e49d939f"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 0,
+      "geometry_files_by_version": {},
+      "families": {}
+    }
+  },
+  "straight_mode_zone_source": null,
+  "image_map_source": {
+    "file": "raw/images/eventMap.json",
+    "kind": "event_map",
+    "folder_label": null,
+    "bytes": 792,
+    "sha256": "9d55bb03e415b4b1dfe0a0d3f5ead5a3696126dc98782906be74773f556e88d2"
+  },
+  "session_resolutions": {},
+  "session_source_inventory": [],
+  "session_exports": [],
+  "outputs": [
+    "master_track.json",
+    "source_manifest.json",
+    "track_geometry.csv",
+    "corners.csv",
+    "sections.csv",
+    "layout_section_metadata.csv",
+    "marshal_lights.csv",
+    "marshal_sectors.csv",
+    "mini_sector_markers.csv",
+    "active_aero_zones.csv",
+    "straight_mode_map_annotations.csv",
+    "straight_mode_map_review.png",
+    "sessions/<resolved-session-slug>/{weather,race_control}.{csv,json}",
+    "sessions/<resolved-session-slug>/session_manifest.json"
+  ],
+  "exclusions": [
+    "Bahrain Grand Prix",
+    "Chinese Grand Prix",
+    "Japanese Grand Prix",
+    "Spanish Grand Prix"
+  ],
+  "warnings": [
+    "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files).",
+    "No eventMap.json entry exists for this event; image links are omitted rather than guessed.",
+    "No valid geometry. Checked: no raw session directory matching 'Mexico City Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/autodrome-hermanos-rodriguez.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+  ]
+}

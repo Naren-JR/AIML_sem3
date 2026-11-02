@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:36+00:00",
+  "event_name": "Austrian Grand Prix",
+  "raw_folder_session": "Practice 3",
+  "resolved_session": "Practice 3",
+  "session_resolution": {
+    "raw_folder_session": "Practice 3",
+    "raw_folder_canonical": "Practice 3",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-06-27T10:15:52.000000000",
+        "last_utc": "2026-06-27T11:36:02.000000000",
+        "utc_dates": [
+          "2026-06-27"
+        ]
+      }
+    },
+    "resolved_session": "Practice 3",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 5,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3579,
+      "sha256": "8fe29b69581c21f38431d129306335bb67c1917fd94ca7d79d8464aff0505c96"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 2962,
+      "sha256": "0ba170ca7574ae756501de0dc2b2392d556635e181bcd2f779c5eeaa0126cc13"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 3/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 3",
+      "bytes": 16381,
+      "sha256": "69df9e3294a60b9ee8ccb3f4bfe94f3c08d5d4cf8fbb29d88c6fe91b83552001"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 2962,
+      "sha256": "0ba170ca7574ae756501de0dc2b2392d556635e181bcd2f779c5eeaa0126cc13"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3579,
+      "sha256": "8fe29b69581c21f38431d129306335bb67c1917fd94ca7d79d8464aff0505c96"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 3",
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-3",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Austrian Grand Prix/Practice 3/weather.json",
+      "output_file": "processed/austrian-grand-prix/sessions/practice-3/weather.csv",
+      "json_output_file": "processed/austrian-grand-prix/sessions/practice-3/weather.json",
+      "row_count": 81,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 3",
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-3",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Austrian Grand Prix/Practice 3/rcm.json",
+      "output_file": "processed/austrian-grand-prix/sessions/practice-3/race_control.csv",
+      "json_output_file": "processed/austrian-grand-prix/sessions/practice-3/race_control.json",
+      "row_count": 20,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

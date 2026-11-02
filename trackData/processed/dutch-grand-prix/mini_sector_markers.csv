@@ -1,0 +1,24 @@
+marker_number,source_track_point_index,x_raw,y_raw,source_file,source_folder_label
+1,22,1226.0,5568.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+2,41,1616.0,6596.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+3,83,2065.0,5483.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+4,105,1800.0,3979.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+5,131,773.0,3221.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+6,170,1718.0,2777.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+7,204,4115.0,2867.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+8,238,6854.0,3628.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+9,245,7477.0,3621.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+10,274,8615.0,2156.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+11,307,7299.0,104.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+12,333,5718.0,467.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+13,369,6309.0,1412.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+14,391,7438.0,1831.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+15,414,6840.0,2561.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+16,460,3403.0,2054.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+17,482,2142.0,1547.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+18,526,1243.0,1145.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+19,559,1601.0,-951.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+20,595,-121.0,-1455.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+21,625,-715.0,618.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+22,646,-46.0,2353.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race
+23,663,472.0,3685.0,raw/sessions/Dutch Grand Prix/Race/corners.json,Race

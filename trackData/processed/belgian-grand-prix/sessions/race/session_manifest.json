@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:38+00:00",
+  "event_name": "Belgian Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-19T12:20:00.000000000",
+        "last_utc": "2026-07-19T14:31:31.000000000",
+        "utc_dates": [
+          "2026-07-19"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6427,
+      "sha256": "75dd9ca77ecb813d1414a11ac7715cac7a4468c22911c5e35e2a799f548be26e"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 18308,
+      "sha256": "8fe619bdf8c8e1af6d5534a29030ba2b306a2e4cb2537277513df9715af7e371"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 19234,
+      "sha256": "455cf2ecf11c5908ae372cf6e88569ff58907dd7a7bedd9ab5fcb456bb876900"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 18308,
+      "sha256": "8fe619bdf8c8e1af6d5534a29030ba2b306a2e4cb2537277513df9715af7e371"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6427,
+      "sha256": "75dd9ca77ecb813d1414a11ac7715cac7a4468c22911c5e35e2a799f548be26e"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Belgian Grand Prix/Race/weather.json",
+      "output_file": "processed/belgian-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/race/weather.json",
+      "row_count": 146,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Belgian Grand Prix/Race/rcm.json",
+      "output_file": "processed/belgian-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/race/race_control.json",
+      "row_count": 149,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

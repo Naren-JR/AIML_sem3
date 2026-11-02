@@ -1,0 +1,863 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:37+00:00",
+  "event_name": "Barcelona Grand Prix",
+  "event_slug": "barcelona-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 11641,
+      "sha256": "45921fd4bce0232c6b749be331aed899c1ec4cd87c920f5c257530dc047ed548",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 442,
+          "geometry_fingerprint": "ec8a5c32d84df342",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Barcelona Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 442,
+          "geometry_fingerprint": "ec8a5c32d84df342",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Barcelona Grand Prix/Practice 3/corners.json",
+          "result": "valid_geometry",
+          "point_count": 442,
+          "geometry_fingerprint": "ec8a5c32d84df342",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Barcelona Grand Prix/Practice 2/corners.json",
+          "result": "valid_geometry",
+          "point_count": 442,
+          "geometry_fingerprint": "ec8a5c32d84df342",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Barcelona Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 442,
+          "geometry_fingerprint": "ec8a5c32d84df342",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 11641,
+      "sha256": "45921fd4bce0232c6b749be331aed899c1ec4cd87c920f5c257530dc047ed548",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Barcelona Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Barcelona Grand Prix/Practice 3/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Barcelona Grand Prix/Practice 2/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Barcelona Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 14
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 11641,
+      "sha256": "45921fd4bce0232c6b749be331aed899c1ec4cd87c920f5c257530dc047ed548",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 11641,
+      "sha256": "45921fd4bce0232c6b749be331aed899c1ec4cd87c920f5c257530dc047ed548",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 11641,
+      "sha256": "45921fd4bce0232c6b749be331aed899c1ec4cd87c920f5c257530dc047ed548",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/circuit-de-barcelona-catalunya.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 492,
+      "sha256": "ed4274dd1d2861e3c7dc2ddadf2e7d008840d654e31d6722faca05d3c1883046"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "ec8a5c32d84df342": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Practice 3/corners.json",
+          "Practice 2/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 22.886,
+              "Practice 3/corners.json": 19.052,
+              "Practice 2/corners.json": 33.147,
+              "Practice 1/corners.json": 19.177
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 16.413,
+              "Practice 3/corners.json": 0.073,
+              "Practice 2/corners.json": 12.839,
+              "Practice 1/corners.json": 3.173
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 17.088,
+              "Practice 3/corners.json": 0.076,
+              "Practice 2/corners.json": 13.367,
+              "Practice 1/corners.json": 3.304
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 28.377,
+              "Practice 3/corners.json": 26.243,
+              "Practice 2/corners.json": 37.705,
+              "Practice 1/corners.json": 33.091
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 23.925,
+              "Practice 3/corners.json": 19.63,
+              "Practice 2/corners.json": 32.663,
+              "Practice 1/corners.json": 18.049
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [
+      "2023"
+    ],
+    "status": "historical_source_year_requires_compatibility_check",
+    "reference_lap": {
+      "layout_year": 2023,
+      "layout_race_date": "2023-06-04",
+      "layout_meeting_name": "Spanish Grand Prix",
+      "reference_lap_session_label": "HSTT",
+      "reference_lap_session_canonical": null,
+      "reference_lap_driver_number": "241",
+      "reference_lap_number": 2,
+      "reference_lap_start_date": "2023-06-01T12:42:14.174000",
+      "scope": "Historical lap the layout was traced from. It says nothing about which session any weather or race-control file belongs to and is never used to relabel session data."
+    },
+    "metadata_candidates": [
+      {
+        "source_file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+        "CircuitKey": 15,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Catalunya",
+        "Location": "Barcelona",
+        "CountryName": "Spain",
+        "CountryKey": 1,
+        "CountryIocCode": "ESP",
+        "LayoutYear": 2023,
+        "LayoutRound": 8,
+        "LayoutRaceDate": "2023-06-04",
+        "LayoutMeetingKey": 1111,
+        "LayoutMeetingName": "Spanish Grand Prix",
+        "LayoutMeetingOfficialName": "FORMULA 1 PIRELLI GRAN PREMIO DE ESPAÑA 2022",
+        "LayoutLapDriverNumber": "241",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "HSTT",
+        "LayoutLapTime": 114.551,
+        "LayoutLapStartDate": "2023-06-01T12:42:14.174000",
+        "LayoutLapStartSessionTime": 1068.478,
+        "LayoutLapSessionStartTime": 900.099,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 303.0,
+        "rotation": null,
+        "PitLossNormal": 23.17,
+        "PitLossSC": 14.68,
+        "PitLossVSC": 16.76
+      }
+    ],
+    "conflicting_metadata": {},
+    "note": "The selected reference is tagged with a pre-2026 layout year. Do not assume it is an exact 2026 reference until layout compatibility is checked."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": true,
+    "mapping_filename": "catalunya.svg",
+    "svg": {
+      "path": "raw/images/svg/catalunya.svg",
+      "exists": true
+    },
+    "webp": {
+      "path": "raw/images/webp/catalunya.webp",
+      "exists": true
+    },
+    "status": "assets_found",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": "processed/barcelona-grand-prix/straight_mode_map_review.png",
+    "candidate_count": 4,
+    "zone_like_candidate_count": 4,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP pixels (origin top-left) and normalized image ratios only",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "visual_candidates_need_review",
+    "source_image_webp": "raw/images/webp/catalunya.webp",
+    "source_image_svg": "raw/images/svg/catalunya.svg",
+    "image_width_px": 1252,
+    "image_height_px": 704,
+    "svg_description": "Created with imagetracer.js version 1.2.6",
+    "svg_semantic_text_elements": 0,
+    "image_method": "red-hue connected-component segmentation on WebP pixels; SVG retained as source/provenance",
+    "raw_red_pixel_count": 18134,
+    "all_candidates_unverified": true,
+    "svg_semantics_note": "SVG is an ImageTracer-rendered vector trace with no <text> elements; text/zone identity is not encoded as semantic SVG labels.",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 442,
+    "status": "extracted_source_coordinates_unscaled",
+    "scope": "event_level",
+    "source_file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+        "result": "valid_geometry",
+        "point_count": 442,
+        "geometry_fingerprint": "ec8a5c32d84df342",
+        "reason": null
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Barcelona Grand Prix/Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 442,
+        "geometry_fingerprint": "ec8a5c32d84df342",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 3",
+        "file": "raw/sessions/Barcelona Grand Prix/Practice 3/corners.json",
+        "result": "valid_geometry",
+        "point_count": 442,
+        "geometry_fingerprint": "ec8a5c32d84df342",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 2",
+        "file": "raw/sessions/Barcelona Grand Prix/Practice 2/corners.json",
+        "result": "valid_geometry",
+        "point_count": 442,
+        "geometry_fingerprint": "ec8a5c32d84df342",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Barcelona Grand Prix/Practice 1/corners.json",
+        "result": "valid_geometry",
+        "point_count": 442,
+        "geometry_fingerprint": "ec8a5c32d84df342",
+        "reason": null
+      }
+    ],
+    "warnings": [],
+    "quality_checks": {
+      "all_coordinates_finite": true,
+      "consecutive_duplicate_points": 0,
+      "closed_loop_endpoint_distance_raw_units": 117.34564329364768,
+      "distance_units_verified": false,
+      "track_length_verified": false
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 14,
+    "source_file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Barcelona Grand Prix/Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      },
+      {
+        "folder_label": "Practice 3",
+        "file": "raw/sessions/Barcelona Grand Prix/Practice 3/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      },
+      {
+        "folder_label": "Practice 2",
+        "file": "raw/sessions/Barcelona Grand Prix/Practice 2/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Barcelona Grand Prix/Practice 1/corners.json",
+        "result": "corner_records",
+        "row_count": 14
+      }
+    ],
+    "status": "extracted"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 16,
+    "source_file": "raw/sections/circuit-de-barcelona-catalunya.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 16,
+    "source_file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "status": "extracted",
+    "unpaired_source_arrays": {
+      "Section": [
+        "Medium",
+        "Medium",
+        "Straight",
+        "Medium",
+        "Low",
+        "Straight",
+        "Medium",
+        "Straight",
+        "High",
+        "Low",
+        "Medium",
+        "Medium",
+        "Straight",
+        "High"
+      ]
+    },
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 16,
+    "status": "extracted"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 16,
+    "status": "extracted"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 4,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": "Race",
+      "primary_session_verification": "unverified_session",
+      "primary_session_raw_folder": "Race",
+      "available_sessions": [
+        {
+          "resolved_session": "Race",
+          "raw_folder_session": "Race",
+          "session_verification": "unverified_session",
+          "weather_rows": 150,
+          "output_file": "processed/barcelona-grand-prix/sessions/race/weather.csv"
+        },
+        {
+          "resolved_session": "Qualifying",
+          "raw_folder_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 88,
+          "output_file": "processed/barcelona-grand-prix/sessions/qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 3",
+          "raw_folder_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "weather_rows": 81,
+          "output_file": "processed/barcelona-grand-prix/sessions/practice-3/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 2",
+          "raw_folder_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "weather_rows": 85,
+          "output_file": "processed/barcelona-grand-prix/sessions/practice-2/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 1",
+          "raw_folder_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "weather_rows": 84,
+          "output_file": "processed/barcelona-grand-prix/sessions/practice-1/weather.csv"
+        }
+      ]
+    },
+    "session_resolutions": {
+      "Race": {
+        "raw_folder_session": "Race",
+        "raw_folder_canonical": "Race",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-14T10:06:19.000000000",
+            "last_utc": "2026-06-14T14:36:32.000000000",
+            "utc_dates": [
+              "2026-06-14"
+            ]
+          }
+        },
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Qualifying": {
+        "raw_folder_session": "Qualifying",
+        "raw_folder_canonical": "Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-13T14:00:00.000000000",
+            "last_utc": "2026-06-13T15:17:07.000000000",
+            "utc_dates": [
+              "2026-06-13"
+            ]
+          }
+        },
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 3": {
+        "raw_folder_session": "Practice 3",
+        "raw_folder_canonical": "Practice 3",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-13T10:16:41.000000000",
+            "last_utc": "2026-06-13T11:39:16.000000000",
+            "utc_dates": [
+              "2026-06-13"
+            ]
+          }
+        },
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 2": {
+        "raw_folder_session": "Practice 2",
+        "raw_folder_canonical": "Practice 2",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-12T14:53:51.000000000",
+            "last_utc": "2026-06-12T16:30:42.000000000",
+            "utc_dates": [
+              "2026-06-12"
+            ]
+          }
+        },
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 1": {
+        "raw_folder_session": "Practice 1",
+        "raw_folder_canonical": "Practice 1",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-12T11:17:16.000000000",
+            "last_utc": "2026-06-12T12:46:01.000000000",
+            "utc_dates": [
+              "2026-06-12"
+            ]
+          }
+        },
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      }
+    },
+    "provenance_warnings": [],
+    "exports": [
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Race/rcm.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/race/race_control.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/race/race_control.json",
+        "row_count": 178,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Race/weather.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/race/weather.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/race/weather.json",
+        "row_count": 150,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Qualifying/rcm.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/qualifying/race_control.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/qualifying/race_control.json",
+        "row_count": 42,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Qualifying/weather.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/qualifying/weather.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/qualifying/weather.json",
+        "row_count": 88,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 3",
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-3",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Practice 3/rcm.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/practice-3/race_control.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/practice-3/race_control.json",
+        "row_count": 40,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 3",
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-3",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Practice 3/weather.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/practice-3/weather.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/practice-3/weather.json",
+        "row_count": 81,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 2",
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-2",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Practice 2/rcm.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/practice-2/race_control.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/practice-2/race_control.json",
+        "row_count": 50,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 2",
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-2",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Practice 2/weather.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/practice-2/weather.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/practice-2/weather.json",
+        "row_count": 85,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Practice 1/rcm.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/practice-1/race_control.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/practice-1/race_control.json",
+        "row_count": 23,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Barcelona Grand Prix/Practice 1/weather.json",
+        "output_file": "processed/barcelona-grand-prix/sessions/practice-1/weather.csv",
+        "json_output_file": "processed/barcelona-grand-prix/sessions/practice-1/weather.json",
+        "row_count": 84,
+        "status": "exported"
+      }
+    ]
+  },
+  "source_inventory": [
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 11641,
+      "sha256": "45921fd4bce0232c6b749be331aed899c1ec4cd87c920f5c257530dc047ed548"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 23970,
+      "sha256": "2a0cc2750650405919b2e477b788ca719959e64852f8601ed9e1b7072e78d7f4"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6725,
+      "sha256": "f0598e05cc57089ef107891ff11b99315c184c4f0758007e480e9339a18cc6d8"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 11635,
+      "sha256": "62d5a26ec53be74d040c94dfc8b9747e2628ae9b6286b8767131c12a17ef9ecb"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 5960,
+      "sha256": "18478bd39758d71e164aff9878c140e0603c5c4960551da39785212b5a8093f6"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3973,
+      "sha256": "527080519ac2af38a2cfa193508e5b2f8f4a4fca39d325fa571a14b826003674"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 3/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 3",
+      "bytes": 11641,
+      "sha256": "0371d1ad0dc358de6df26437863f9f359b5a41610e04a7a0b6d2a8678b205b72"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 5228,
+      "sha256": "a748f32481cd2169d7a69e7ebabc3128a49b735d123f09351085366459c90c87"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3660,
+      "sha256": "0a88b1d259cdea94d4e3aed808f54051de5edc0833c999aa61d695f00ebd071d"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 11636,
+      "sha256": "950de588e7b5bd94befc5bedb39e5e6f65752839330f97d8d18471c5041aa594"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 6332,
+      "sha256": "cfa0a38a6f61ad893d22fbf061df6de1f09d8d3cb75554eb9aa86eb2dfa2c101"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3836,
+      "sha256": "5e157cb6e21a5636e6250a02e5fc47d24961b957737f397fd658aa9c5c790f71"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 11641,
+      "sha256": "b29d085e13844d95da8b7b61f6eff7bcf289b51984b8cfbe73795d78db39a7b7"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 3014,
+      "sha256": "bea44f5ee1351f20440307a163b0eb729ed0892d9cb25dedfcbad528b7945b0a"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3798,
+      "sha256": "39f27c1cf287b1b618d84cc2e03f443ad5b7b39f3f2cc4916de38dd026620125"
+    }
+  ],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "Layout array 'Section' has 14 values versus 16 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+      "Selected reference metadata is tagged layout year ['2023']; current-season layout compatibility remains unverified.",
+      "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 33.147); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 16.413; end_distance_source: max |delta| 17.088); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 37.705); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 32.663); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:37+00:00",
+  "event_name": "Azerbaijan Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-09-26T10:11:25.000000000",
+        "last_utc": "2026-09-26T13:11:57.000000000",
+        "utc_dates": [
+          "2026-09-26"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7499,
+      "sha256": "50ab084c2c96c2439fa112b68724dff80d13e514222dc2a187bfc879441061a4"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 17290,
+      "sha256": "f984b866d8439813bae36403bbaf6ddebc3f82152eda9d38b319319e456e67ce"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 25407,
+      "sha256": "5c40ea910df77e80b7cc77a517383e8dad8d5d98b92f3abdc5ab216d7582a896"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 17290,
+      "sha256": "f984b866d8439813bae36403bbaf6ddebc3f82152eda9d38b319319e456e67ce"
+    },
+    {
+      "file": "raw/sessions/Azerbaijan Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7499,
+      "sha256": "50ab084c2c96c2439fa112b68724dff80d13e514222dc2a187bfc879441061a4"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Race/weather.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/race/weather.json",
+      "row_count": 168,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Azerbaijan Grand Prix/Race/rcm.json",
+      "output_file": "processed/azerbaijan-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/azerbaijan-grand-prix/sessions/race/race_control.json",
+      "row_count": 139,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

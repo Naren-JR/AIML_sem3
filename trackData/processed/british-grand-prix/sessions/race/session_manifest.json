@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:39+00:00",
+  "event_name": "British Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-05T13:20:01.000000000",
+        "last_utc": "2026-07-05T15:41:57.000000000",
+        "utc_dates": [
+          "2026-07-05"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/British Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7035,
+      "sha256": "e7d69699c4aeeebf7a6966690b3ecd464e3c4526d30b23acbd0765dcb81f72c3"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 32088,
+      "sha256": "e5141f18eeb51ee340ff9b15d2bd6635d0fe019711a34fd62c016ac658a8bc3e"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/British Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 24090,
+      "sha256": "714a154fde4c762ed85ab2073775a2472e60572387d527db09b82de1c90742b8"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 32088,
+      "sha256": "e5141f18eeb51ee340ff9b15d2bd6635d0fe019711a34fd62c016ac658a8bc3e"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7035,
+      "sha256": "e7d69699c4aeeebf7a6966690b3ecd464e3c4526d30b23acbd0765dcb81f72c3"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/British Grand Prix/Race/weather.json",
+      "output_file": "processed/british-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/race/weather.json",
+      "row_count": 156,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/British Grand Prix/Race/rcm.json",
+      "output_file": "processed/british-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/race/race_control.json",
+      "row_count": 248,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,12 @@
+section_index,section_label,start_percent,end_percent,source_file,source_format,source_fields_json
+0,Straight,0.0,13.06,raw/sections/monza.json,array_tuple_label_start_end,"[""Straight"",0.0,13.06]"
+1,Low,13.06,19.14,raw/sections/monza.json,array_tuple_label_start_end,"[""Low"",13.06,19.14]"
+2,Straight,19.14,34.18,raw/sections/monza.json,array_tuple_label_start_end,"[""Straight"",19.14,34.18]"
+3,Low,34.18,39.12,raw/sections/monza.json,array_tuple_label_start_end,"[""Low"",34.18,39.12]"
+4,Straight,39.12,42.06,raw/sections/monza.json,array_tuple_label_start_end,"[""Straight"",39.12,42.06]"
+5,High,42.06,52.95,raw/sections/monza.json,array_tuple_label_start_end,"[""High"",42.06,52.95]"
+6,Straight,52.95,65.52,raw/sections/monza.json,array_tuple_label_start_end,"[""Straight"",52.95,65.52]"
+7,High,65.52,73.81,raw/sections/monza.json,array_tuple_label_start_end,"[""High"",65.52,73.81]"
+8,Straight,73.81,86.41,raw/sections/monza.json,array_tuple_label_start_end,"[""Straight"",73.81,86.41]"
+9,High,86.41,93.78,raw/sections/monza.json,array_tuple_label_start_end,"[""High"",86.41,93.78]"
+10,Straight,93.78,100.0,raw/sections/monza.json,array_tuple_label_start_end,"[""Straight"",93.78,100.0]"

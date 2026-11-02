@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:40+00:00",
+  "event_name": "Canadian Grand Prix",
+  "raw_folder_session": "Practice 1",
+  "resolved_session": "Practice 1",
+  "session_resolution": {
+    "raw_folder_session": "Practice 1",
+    "raw_folder_canonical": "Practice 1",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-05-22T16:29:39.000000000",
+        "last_utc": "2026-05-22T18:05:16.000000000",
+        "utc_dates": [
+          "2026-05-22"
+        ]
+      }
+    },
+    "resolved_session": "Practice 1",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 7,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 4622,
+      "sha256": "4c6211448b558cf7e1206f2af08422bbfc59803daa5d006f14cc810b38aece3e"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 12267,
+      "sha256": "134d5f33d229134a9e4f6b35a8aa2a7c613d2e5e198f16b0c710ae58438197d0"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 17909,
+      "sha256": "f2c34a6d1c69b2f9e62bab743ac7c45437686de1a232381c7e0c341a6df1ef32"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 12267,
+      "sha256": "134d5f33d229134a9e4f6b35a8aa2a7c613d2e5e198f16b0c710ae58438197d0"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 4622,
+      "sha256": "4c6211448b558cf7e1206f2af08422bbfc59803daa5d006f14cc810b38aece3e"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Canadian Grand Prix/Practice 1/weather.json",
+      "output_file": "processed/canadian-grand-prix/sessions/practice-1/weather.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/practice-1/weather.json",
+      "row_count": 102,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Canadian Grand Prix/Practice 1/rcm.json",
+      "output_file": "processed/canadian-grand-prix/sessions/practice-1/race_control.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/practice-1/race_control.json",
+      "row_count": 98,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

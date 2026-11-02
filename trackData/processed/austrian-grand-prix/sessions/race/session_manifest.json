@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:36+00:00",
+  "event_name": "Austrian Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-06-28T12:20:00.000000000",
+        "last_utc": "2026-06-28T14:31:42.000000000",
+        "utc_dates": [
+          "2026-06-28"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6525,
+      "sha256": "896ea9489cbe6cd48b5b716dd8a4dcababf6ab82ef64d2222bf1a3b3fcf0fad2"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 28730,
+      "sha256": "c71e892399b4afe59850ac570d1c945c56c99041ccaf9163b5aa831b94c3d3b3"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16386,
+      "sha256": "152c3653edc35ec051ae67ee5400400f20c2a885bd958f36a1c334174c2ad567"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 28730,
+      "sha256": "c71e892399b4afe59850ac570d1c945c56c99041ccaf9163b5aa831b94c3d3b3"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6525,
+      "sha256": "896ea9489cbe6cd48b5b716dd8a4dcababf6ab82ef64d2222bf1a3b3fcf0fad2"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Austrian Grand Prix/Race/weather.json",
+      "output_file": "processed/austrian-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/austrian-grand-prix/sessions/race/weather.json",
+      "row_count": 149,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Austrian Grand Prix/Race/rcm.json",
+      "output_file": "processed/austrian-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/austrian-grand-prix/sessions/race/race_control.json",
+      "row_count": 211,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

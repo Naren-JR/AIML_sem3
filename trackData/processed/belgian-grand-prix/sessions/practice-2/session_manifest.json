@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:38+00:00",
+  "event_name": "Belgian Grand Prix",
+  "raw_folder_session": "Practice 2",
+  "resolved_session": "Practice 2",
+  "session_resolution": {
+    "raw_folder_session": "Practice 2",
+    "raw_folder_canonical": "Practice 2",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-17T14:49:30.000000000",
+        "last_utc": "2026-07-17T16:30:00.000000000",
+        "utc_dates": [
+          "2026-07-17"
+        ]
+      }
+    },
+    "resolved_session": "Practice 2",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 6,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3662,
+      "sha256": "5dc88bdad9607042d306fa077b586d316d39d7cc89a6522dc7cd96b9d0b6dfb3"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 10028,
+      "sha256": "f13923ad614fe7d552d632fac2f46b7bb452128fa5266463fe2f93cbf4e46af8"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 19235,
+      "sha256": "f739fc025afb399d0f4184c30e758da77ec75aa95dcc5c9602ac69288fe3ab84"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 10028,
+      "sha256": "f13923ad614fe7d552d632fac2f46b7bb452128fa5266463fe2f93cbf4e46af8"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3662,
+      "sha256": "5dc88bdad9607042d306fa077b586d316d39d7cc89a6522dc7cd96b9d0b6dfb3"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Belgian Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/belgian-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 83,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Belgian Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/belgian-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 83,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

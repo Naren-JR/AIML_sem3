@@ -1,0 +1,867 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:39+00:00",
+  "event_name": "British Grand Prix",
+  "event_slug": "british-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/British Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 24090,
+      "sha256": "714a154fde4c762ed85ab2073775a2472e60572387d527db09b82de1c90742b8",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/British Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 916,
+          "geometry_fingerprint": "0fba7ec3ee294f0b",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/British Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 916,
+          "geometry_fingerprint": "0fba7ec3ee294f0b",
+          "reason": null
+        },
+        {
+          "folder_label": "Sprint",
+          "file": "raw/sessions/British Grand Prix/Sprint/corners.json",
+          "result": "valid_geometry",
+          "point_count": 916,
+          "geometry_fingerprint": "0fba7ec3ee294f0b",
+          "reason": null
+        },
+        {
+          "folder_label": "Sprint Qualifying",
+          "file": "raw/sessions/British Grand Prix/Sprint Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 916,
+          "geometry_fingerprint": "0fba7ec3ee294f0b",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/British Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 916,
+          "geometry_fingerprint": "0fba7ec3ee294f0b",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/British Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 24090,
+      "sha256": "714a154fde4c762ed85ab2073775a2472e60572387d527db09b82de1c90742b8",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/British Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 18
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/British Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 18
+        },
+        {
+          "folder_label": "Sprint",
+          "file": "raw/sessions/British Grand Prix/Sprint/corners.json",
+          "result": "corner_records",
+          "row_count": 18
+        },
+        {
+          "folder_label": "Sprint Qualifying",
+          "file": "raw/sessions/British Grand Prix/Sprint Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 18
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/British Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 18
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/British Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 24090,
+      "sha256": "714a154fde4c762ed85ab2073775a2472e60572387d527db09b82de1c90742b8",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/British Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 24090,
+      "sha256": "714a154fde4c762ed85ab2073775a2472e60572387d527db09b82de1c90742b8",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/British Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 24090,
+      "sha256": "714a154fde4c762ed85ab2073775a2472e60572387d527db09b82de1c90742b8",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/silverstone.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 395,
+      "sha256": "47fcaba1cc25b7fb84c06dbf201dbd81a96217225c9d130bc816e4fbf98978b8"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "0fba7ec3ee294f0b": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Sprint/corners.json",
+          "Sprint Qualifying/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 50.233,
+              "Sprint/corners.json": 19.1,
+              "Sprint Qualifying/corners.json": 33.778,
+              "Practice 1/corners.json": 13.12
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 6.026,
+              "Sprint/corners.json": 1.965,
+              "Sprint Qualifying/corners.json": 19.458,
+              "Practice 1/corners.json": 24.09
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 6.188,
+              "Sprint/corners.json": 2.018,
+              "Sprint Qualifying/corners.json": 19.979,
+              "Practice 1/corners.json": 24.736
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 5811.217,
+              "Sprint/corners.json": 15.265,
+              "Sprint Qualifying/corners.json": 5816.569,
+              "Practice 1/corners.json": 5826.079
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 21.036,
+              "Sprint/corners.json": 16.184,
+              "Sprint Qualifying/corners.json": 21.797,
+              "Practice 1/corners.json": 23.496
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [
+      "2022"
+    ],
+    "status": "historical_source_year_requires_compatibility_check",
+    "reference_lap": {
+      "layout_year": 2022,
+      "layout_race_date": "2022-07-03",
+      "layout_meeting_name": "British Grand Prix",
+      "reference_lap_session_label": "FP1",
+      "reference_lap_session_canonical": "Practice 1",
+      "reference_lap_driver_number": "5",
+      "reference_lap_number": 2,
+      "reference_lap_start_date": "2022-07-01T12:12:26.332000",
+      "scope": "Historical lap the layout was traced from. It says nothing about which session any weather or race-control file belongs to and is never used to relabel session data."
+    },
+    "metadata_candidates": [
+      {
+        "source_file": "raw/sessions/British Grand Prix/Race/corners.json",
+        "CircuitKey": 2,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Silverstone",
+        "Location": "Silverstone",
+        "CountryName": "Great Britain",
+        "CountryKey": 2,
+        "CountryIocCode": "GBR",
+        "LayoutYear": 2022,
+        "LayoutRound": 10,
+        "LayoutRaceDate": "2022-07-03",
+        "LayoutMeetingKey": 1114,
+        "LayoutMeetingName": "British Grand Prix",
+        "LayoutMeetingOfficialName": "FORMULA 1 LENOVO BRITISH GRAND PRIX 2022",
+        "LayoutLapDriverNumber": "5",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "FP1",
+        "LayoutLapTime": 119.168,
+        "LayoutLapStartDate": "2022-07-01T12:12:26.332000",
+        "LayoutLapStartSessionTime": 1646.324,
+        "LayoutLapSessionStartTime": 900.065,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 92.0,
+        "rotation": null,
+        "PitLossNormal": 20.93,
+        "PitLossSC": 13.26,
+        "PitLossVSC": 15.14
+      }
+    ],
+    "conflicting_metadata": {},
+    "note": "The selected reference is tagged with a pre-2026 layout year. Do not assume it is an exact 2026 reference until layout compatibility is checked."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": true,
+    "mapping_filename": "silverstone.svg",
+    "svg": {
+      "path": "raw/images/svg/silverstone.svg",
+      "exists": true
+    },
+    "webp": {
+      "path": "raw/images/webp/silverstone.webp",
+      "exists": true
+    },
+    "status": "assets_found",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": "processed/british-grand-prix/straight_mode_map_review.png",
+    "candidate_count": 4,
+    "zone_like_candidate_count": 4,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP pixels (origin top-left) and normalized image ratios only",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "visual_candidates_need_review",
+    "source_image_webp": "raw/images/webp/silverstone.webp",
+    "source_image_svg": "raw/images/svg/silverstone.svg",
+    "image_width_px": 1252,
+    "image_height_px": 704,
+    "svg_description": null,
+    "svg_semantic_text_elements": 0,
+    "image_method": "red-hue connected-component segmentation on WebP pixels; SVG retained as source/provenance",
+    "raw_red_pixel_count": 14669,
+    "all_candidates_unverified": true,
+    "svg_semantics_note": "SVG contains no <text> elements; zone identity is not encoded as semantic SVG labels, so WebP segmentation is the only visual evidence.",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 916,
+    "status": "extracted_source_coordinates_unscaled",
+    "scope": "event_level",
+    "source_file": "raw/sessions/British Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/British Grand Prix/Race/corners.json",
+        "result": "valid_geometry",
+        "point_count": 916,
+        "geometry_fingerprint": "0fba7ec3ee294f0b",
+        "reason": null
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/British Grand Prix/Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 916,
+        "geometry_fingerprint": "0fba7ec3ee294f0b",
+        "reason": null
+      },
+      {
+        "folder_label": "Sprint",
+        "file": "raw/sessions/British Grand Prix/Sprint/corners.json",
+        "result": "valid_geometry",
+        "point_count": 916,
+        "geometry_fingerprint": "0fba7ec3ee294f0b",
+        "reason": null
+      },
+      {
+        "folder_label": "Sprint Qualifying",
+        "file": "raw/sessions/British Grand Prix/Sprint Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 916,
+        "geometry_fingerprint": "0fba7ec3ee294f0b",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/British Grand Prix/Practice 1/corners.json",
+        "result": "valid_geometry",
+        "point_count": 916,
+        "geometry_fingerprint": "0fba7ec3ee294f0b",
+        "reason": null
+      }
+    ],
+    "warnings": [],
+    "quality_checks": {
+      "all_coordinates_finite": true,
+      "consecutive_duplicate_points": 0,
+      "closed_loop_endpoint_distance_raw_units": 83.00602387778854,
+      "distance_units_verified": false,
+      "track_length_verified": false
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 18,
+    "source_file": "raw/sessions/British Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/British Grand Prix/Race/corners.json",
+        "result": "corner_records",
+        "row_count": 18
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/British Grand Prix/Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 18
+      },
+      {
+        "folder_label": "Sprint",
+        "file": "raw/sessions/British Grand Prix/Sprint/corners.json",
+        "result": "corner_records",
+        "row_count": 18
+      },
+      {
+        "folder_label": "Sprint Qualifying",
+        "file": "raw/sessions/British Grand Prix/Sprint Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 18
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/British Grand Prix/Practice 1/corners.json",
+        "result": "corner_records",
+        "row_count": 18
+      }
+    ],
+    "status": "extracted"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 13,
+    "source_file": "raw/sections/silverstone.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 13,
+    "source_file": "raw/sessions/British Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "status": "extracted",
+    "unpaired_source_arrays": {
+      "Section": [
+        "Straight",
+        "Straight",
+        "Low",
+        "Low",
+        "Straight",
+        "Low",
+        "Low",
+        "Straight",
+        "High",
+        "High",
+        "High",
+        "High",
+        "High",
+        "High",
+        "High",
+        "Low",
+        "Low",
+        "Straight"
+      ]
+    },
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 17,
+    "status": "extracted"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 16,
+    "status": "extracted"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 4,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": "Race",
+      "primary_session_verification": "unverified_session",
+      "primary_session_raw_folder": "Race",
+      "available_sessions": [
+        {
+          "resolved_session": "Race",
+          "raw_folder_session": "Race",
+          "session_verification": "unverified_session",
+          "weather_rows": 156,
+          "output_file": "processed/british-grand-prix/sessions/race/weather.csv"
+        },
+        {
+          "resolved_session": "Qualifying",
+          "raw_folder_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 84,
+          "output_file": "processed/british-grand-prix/sessions/qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Sprint",
+          "raw_folder_session": "Sprint",
+          "session_verification": "unverified_session",
+          "weather_rows": 79,
+          "output_file": "processed/british-grand-prix/sessions/sprint/weather.csv"
+        },
+        {
+          "resolved_session": "Sprint Qualifying",
+          "raw_folder_session": "Sprint Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 60,
+          "output_file": "processed/british-grand-prix/sessions/sprint-qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 1",
+          "raw_folder_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "weather_rows": 84,
+          "output_file": "processed/british-grand-prix/sessions/practice-1/weather.csv"
+        }
+      ]
+    },
+    "session_resolutions": {
+      "Race": {
+        "raw_folder_session": "Race",
+        "raw_folder_canonical": "Race",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-07-05T13:20:01.000000000",
+            "last_utc": "2026-07-05T15:41:57.000000000",
+            "utc_dates": [
+              "2026-07-05"
+            ]
+          }
+        },
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Qualifying": {
+        "raw_folder_session": "Qualifying",
+        "raw_folder_canonical": "Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-07-04T15:00:00.000000000",
+            "last_utc": "2026-07-04T16:20:40.000000000",
+            "utc_dates": [
+              "2026-07-04"
+            ]
+          }
+        },
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Sprint": {
+        "raw_folder_session": "Sprint",
+        "raw_folder_canonical": "Sprint",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-07-04T10:26:24.000000000",
+            "last_utc": "2026-07-04T11:47:07.000000000",
+            "utc_dates": [
+              "2026-07-04"
+            ]
+          }
+        },
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Sprint Qualifying": {
+        "raw_folder_session": "Sprint Qualifying",
+        "raw_folder_canonical": "Sprint Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-07-03T15:30:00.000000000",
+            "last_utc": "2026-07-03T16:34:05.000000000",
+            "utc_dates": [
+              "2026-07-03"
+            ]
+          }
+        },
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 1": {
+        "raw_folder_session": "Practice 1",
+        "raw_folder_canonical": "Practice 1",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-07-03T11:16:56.000000000",
+            "last_utc": "2026-07-03T12:41:39.000000000",
+            "utc_dates": [
+              "2026-07-03"
+            ]
+          }
+        },
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      }
+    },
+    "provenance_warnings": [],
+    "exports": [
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/British Grand Prix/Race/rcm.json",
+        "output_file": "processed/british-grand-prix/sessions/race/race_control.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/race/race_control.json",
+        "row_count": 248,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/British Grand Prix/Race/weather.json",
+        "output_file": "processed/british-grand-prix/sessions/race/weather.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/race/weather.json",
+        "row_count": 156,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/British Grand Prix/Qualifying/rcm.json",
+        "output_file": "processed/british-grand-prix/sessions/qualifying/race_control.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/qualifying/race_control.json",
+        "row_count": 64,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/British Grand Prix/Qualifying/weather.json",
+        "output_file": "processed/british-grand-prix/sessions/qualifying/weather.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/qualifying/weather.json",
+        "row_count": 84,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint",
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/British Grand Prix/Sprint/rcm.json",
+        "output_file": "processed/british-grand-prix/sessions/sprint/race_control.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/sprint/race_control.json",
+        "row_count": 95,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint",
+        "resolved_session": "Sprint",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/British Grand Prix/Sprint/weather.json",
+        "output_file": "processed/british-grand-prix/sessions/sprint/weather.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/sprint/weather.json",
+        "row_count": 79,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint Qualifying",
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint-qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/British Grand Prix/Sprint Qualifying/rcm.json",
+        "output_file": "processed/british-grand-prix/sessions/sprint-qualifying/race_control.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/sprint-qualifying/race_control.json",
+        "row_count": 58,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Sprint Qualifying",
+        "resolved_session": "Sprint Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "sprint-qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/British Grand Prix/Sprint Qualifying/weather.json",
+        "output_file": "processed/british-grand-prix/sessions/sprint-qualifying/weather.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/sprint-qualifying/weather.json",
+        "row_count": 60,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/British Grand Prix/Practice 1/rcm.json",
+        "output_file": "processed/british-grand-prix/sessions/practice-1/race_control.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/practice-1/race_control.json",
+        "row_count": 34,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/British Grand Prix/Practice 1/weather.json",
+        "output_file": "processed/british-grand-prix/sessions/practice-1/weather.csv",
+        "json_output_file": "processed/british-grand-prix/sessions/practice-1/weather.json",
+        "row_count": 84,
+        "status": "exported"
+      }
+    ]
+  },
+  "source_inventory": [
+    {
+      "file": "raw/sessions/British Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 24090,
+      "sha256": "714a154fde4c762ed85ab2073775a2472e60572387d527db09b82de1c90742b8"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 32088,
+      "sha256": "e5141f18eeb51ee340ff9b15d2bd6635d0fe019711a34fd62c016ac658a8bc3e"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7035,
+      "sha256": "e7d69699c4aeeebf7a6966690b3ecd464e3c4526d30b23acbd0765dcb81f72c3"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 24086,
+      "sha256": "8bab5b0e407a26f0848ff70eb4edbb3d673c73fed88489d119927127fa713e24"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 8461,
+      "sha256": "646240863b984b299915ddc40c8856e25af8ddc67260bfc5e5f1a4ccbf298268"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3811,
+      "sha256": "3eeaff5a8e711eec7cfa9243d039dbc6df030c369a1d2b755aa955cafadf77c6"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint",
+      "bytes": 24093,
+      "sha256": "bfc0a1c72505d2aa2fbc73f23552937700b4b18485fe860b49420f865e3346c1"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 11531,
+      "sha256": "2a7855ae1be7148ff91f94f6508e46ba943f179f74cf1e0327464e15a67be479"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3581,
+      "sha256": "2e01ce0055ac089434ac94f8395260f16eb8b2efa0e881e89617a6bda202c486"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 24084,
+      "sha256": "35b934653d219780896f7f92e1d567b48b07eb2d1f769d43f1f978a2aa2b4075"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 7547,
+      "sha256": "fb7e0ebc576bab8adb3c7da5c99b1bafe6e8470de78045bfc654fcf169118df4"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 2728,
+      "sha256": "2990a939d214062085d5ee8e03502a77204f866244bdaa2c04836d689e1c324e"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 24088,
+      "sha256": "5bc1de8d850bc1c30113257c9b1bb35b2b4d353c9ced28f7822e0a74f5896002"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 5229,
+      "sha256": "e96ac4c062aeaa4c7553409f2d03a66b070ac7d9c64996babf935593df216dc6"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3811,
+      "sha256": "1ec1b305c73247adb48889dce7c1bf4eca9b3276549c993094017d79d8eff4a6"
+    }
+  ],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "Layout array 'Section' has 18 values versus 13 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+      "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+      "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 50.233); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 24.09; end_distance_source: max |delta| 24.736); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 5826.079); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 23.496); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}

@@ -1,0 +1,10 @@
+section_index,section_label,start_percent,end_percent,source_file,source_format,source_fields_json
+0,Straight,0.0,4.13,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Straight"",0.0,4.13]"
+1,Low,4.13,10.52,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Low"",4.13,10.52]"
+2,Straight,10.52,18.83,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Straight"",10.52,18.83]"
+3,Medium,18.83,31.63,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Medium"",18.83,31.63]"
+4,Straight,31.63,53.76,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Straight"",31.63,53.76]"
+5,Low,53.76,66.52,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Low"",53.76,66.52]"
+6,Straight,66.52,85.57,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Straight"",66.52,85.57]"
+7,Low,85.57,90.99,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Low"",85.57,90.99]"
+8,Straight,90.99,100.0,raw/sections/miami-international-autodrome.json,array_tuple_label_start_end,"[""Straight"",90.99,100.0]"

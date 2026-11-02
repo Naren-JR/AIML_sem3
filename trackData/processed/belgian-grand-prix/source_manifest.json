@@ -1,0 +1,580 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:38+00:00",
+  "event_name": "Belgian Grand Prix",
+  "event_slug": "belgian-grand-prix",
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 19234,
+      "sha256": "455cf2ecf11c5908ae372cf6e88569ff58907dd7a7bedd9ab5fcb456bb876900",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 1005,
+          "geometry_fingerprint": "1b03e2ed3c3e5d87",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Belgian Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 1005,
+          "geometry_fingerprint": "1b03e2ed3c3e5d87",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Belgian Grand Prix/Practice 3/corners.json",
+          "result": "valid_geometry",
+          "point_count": 1005,
+          "geometry_fingerprint": "1b03e2ed3c3e5d87",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Belgian Grand Prix/Practice 2/corners.json",
+          "result": "valid_geometry",
+          "point_count": 1005,
+          "geometry_fingerprint": "1b03e2ed3c3e5d87",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Belgian Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 1005,
+          "geometry_fingerprint": "1b03e2ed3c3e5d87",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 19234,
+      "sha256": "455cf2ecf11c5908ae372cf6e88569ff58907dd7a7bedd9ab5fcb456bb876900",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Belgian Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Belgian Grand Prix/Practice 3/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Belgian Grand Prix/Practice 2/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Belgian Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 19
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 19234,
+      "sha256": "455cf2ecf11c5908ae372cf6e88569ff58907dd7a7bedd9ab5fcb456bb876900",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 19234,
+      "sha256": "455cf2ecf11c5908ae372cf6e88569ff58907dd7a7bedd9ab5fcb456bb876900",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 19234,
+      "sha256": "455cf2ecf11c5908ae372cf6e88569ff58907dd7a7bedd9ab5fcb456bb876900",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/circuit-de-spa-francorchamps.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 449,
+      "sha256": "aadf21003b5b14a7087b2559f553f1a677dd91b2a5e3fe287bb155cb7165b729"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "1b03e2ed3c3e5d87": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Practice 3/corners.json",
+          "Practice 2/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 30.677,
+              "Practice 3/corners.json": 32.804,
+              "Practice 2/corners.json": 32.171,
+              "Practice 1/corners.json": 44.013
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 24.107,
+              "Practice 3/corners.json": 18.462,
+              "Practice 2/corners.json": 22.77,
+              "Practice 1/corners.json": 31.447
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 24.306,
+              "Practice 3/corners.json": 18.615,
+              "Practice 2/corners.json": 22.958,
+              "Practice 1/corners.json": 31.707
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 34.476,
+              "Practice 3/corners.json": 25.753,
+              "Practice 2/corners.json": 37.855,
+              "Practice 1/corners.json": 39.761
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 36.849,
+              "Practice 3/corners.json": 22.793,
+              "Practice 2/corners.json": 32.544,
+              "Practice 1/corners.json": 44.394
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "straight_mode_zone_source": null,
+  "image_map_source": {
+    "file": "raw/images/eventMap.json",
+    "kind": "event_map",
+    "folder_label": null,
+    "bytes": 792,
+    "sha256": "9d55bb03e415b4b1dfe0a0d3f5ead5a3696126dc98782906be74773f556e88d2"
+  },
+  "session_resolutions": {
+    "Race": {
+      "raw_folder_session": "Race",
+      "raw_folder_canonical": "Race",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-07-19T12:20:00.000000000",
+          "last_utc": "2026-07-19T14:31:31.000000000",
+          "utc_dates": [
+            "2026-07-19"
+          ]
+        }
+      },
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Qualifying": {
+      "raw_folder_session": "Qualifying",
+      "raw_folder_canonical": "Qualifying",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-07-18T14:00:00.000000000",
+          "last_utc": "2026-07-18T15:18:47.000000000",
+          "utc_dates": [
+            "2026-07-18"
+          ]
+        }
+      },
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 3": {
+      "raw_folder_session": "Practice 3",
+      "raw_folder_canonical": "Practice 3",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-07-18T10:30:00.000000000",
+          "last_utc": "2026-07-18T11:44:28.000000000",
+          "utc_dates": [
+            "2026-07-18"
+          ]
+        }
+      },
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 2": {
+      "raw_folder_session": "Practice 2",
+      "raw_folder_canonical": "Practice 2",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-07-17T14:49:30.000000000",
+          "last_utc": "2026-07-17T16:30:00.000000000",
+          "utc_dates": [
+            "2026-07-17"
+          ]
+        }
+      },
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    },
+    "Practice 1": {
+      "raw_folder_session": "Practice 1",
+      "raw_folder_canonical": "Practice 1",
+      "payload_session_fields": [],
+      "timestamp_evidence": {
+        "rcm": {
+          "first_utc": "2026-07-17T11:29:36.000000000",
+          "last_utc": "2026-07-17T12:47:25.000000000",
+          "utc_dates": [
+            "2026-07-17"
+          ]
+        }
+      },
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+    }
+  },
+  "session_source_inventory": [
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 19234,
+      "sha256": "455cf2ecf11c5908ae372cf6e88569ff58907dd7a7bedd9ab5fcb456bb876900"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 18308,
+      "sha256": "8fe619bdf8c8e1af6d5534a29030ba2b306a2e4cb2537277513df9715af7e371"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6427,
+      "sha256": "75dd9ca77ecb813d1414a11ac7715cac7a4468c22911c5e35e2a799f548be26e"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 19230,
+      "sha256": "1b499e7535fa35992534690ae515ac7145cf25ecc1ace55f7141dfa4f520b14d"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 6585,
+      "sha256": "f3af9c120f4ca49c18e176fe82ade9440a6ccc70ae4ff58a3373ad0934187343"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3900,
+      "sha256": "5117e0b01b30cf37f9af3915138c8b98be70bac0650f1a4d6d8e344e0447f555"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 3/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 3",
+      "bytes": 19234,
+      "sha256": "32c7d2f358b9ad2e4d00b6f716081ab126c6def8ae97b05b63c9613ca76c10a9"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 10651,
+      "sha256": "2c4b065a3e553c8f5e070bf4c19275b6229c2ab4ffaf9feb3edef4ac9cb75ffe"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3755,
+      "sha256": "e100908b04b5be90b0da5810711905ff509b003596d2008c345e140692b6558a"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 19235,
+      "sha256": "f739fc025afb399d0f4184c30e758da77ec75aa95dcc5c9602ac69288fe3ab84"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 10028,
+      "sha256": "f13923ad614fe7d552d632fac2f46b7bb452128fa5266463fe2f93cbf4e46af8"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3662,
+      "sha256": "5dc88bdad9607042d306fa077b586d316d39d7cc89a6522dc7cd96b9d0b6dfb3"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 19243,
+      "sha256": "d099c1eb12229ca1c45db34fd38f7256d584f80a0bb32fdf5bb8230bbcf5e557"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 11294,
+      "sha256": "c2d0c9568564702abe933fa9af5006e164c578e423e9cdc252aca433207f6b8a"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3583,
+      "sha256": "2b2b1b4d65b98237830af947cacd41c35c601048f4ad0e16f114325fc6d7b611"
+    }
+  ],
+  "session_exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Belgian Grand Prix/Race/rcm.json",
+      "output_file": "processed/belgian-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/race/race_control.json",
+      "row_count": 149,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Belgian Grand Prix/Race/weather.json",
+      "output_file": "processed/belgian-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/race/weather.json",
+      "row_count": 146,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Belgian Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/belgian-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 57,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Belgian Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/belgian-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 88,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 3",
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-3",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Belgian Grand Prix/Practice 3/rcm.json",
+      "output_file": "processed/belgian-grand-prix/sessions/practice-3/race_control.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/practice-3/race_control.json",
+      "row_count": 80,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 3",
+      "resolved_session": "Practice 3",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-3",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Belgian Grand Prix/Practice 3/weather.json",
+      "output_file": "processed/belgian-grand-prix/sessions/practice-3/weather.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/practice-3/weather.json",
+      "row_count": 85,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Belgian Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/belgian-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 83,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Belgian Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/belgian-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 83,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Belgian Grand Prix/Practice 1/rcm.json",
+      "output_file": "processed/belgian-grand-prix/sessions/practice-1/race_control.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/practice-1/race_control.json",
+      "row_count": 85,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Belgian Grand Prix/Practice 1/weather.json",
+      "output_file": "processed/belgian-grand-prix/sessions/practice-1/weather.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/practice-1/weather.json",
+      "row_count": 81,
+      "status": "exported"
+    }
+  ],
+  "outputs": [
+    "master_track.json",
+    "source_manifest.json",
+    "track_geometry.csv",
+    "corners.csv",
+    "sections.csv",
+    "layout_section_metadata.csv",
+    "marshal_lights.csv",
+    "marshal_sectors.csv",
+    "mini_sector_markers.csv",
+    "active_aero_zones.csv",
+    "straight_mode_map_annotations.csv",
+    "straight_mode_map_review.png",
+    "sessions/<resolved-session-slug>/{weather,race_control}.{csv,json}",
+    "sessions/<resolved-session-slug>/session_manifest.json"
+  ],
+  "exclusions": [
+    "Bahrain Grand Prix",
+    "Chinese Grand Prix",
+    "Japanese Grand Prix",
+    "Spanish Grand Prix"
+  ],
+  "warnings": [
+    "Layout array 'Section' has 19 values versus 15 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+    "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified.",
+    "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 44.013); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 31.447; end_distance_source: max |delta| 31.707); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 39.761); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+    "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 44.394); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:39+00:00",
+  "event_name": "British Grand Prix",
+  "raw_folder_session": "Practice 1",
+  "resolved_session": "Practice 1",
+  "session_resolution": {
+    "raw_folder_session": "Practice 1",
+    "raw_folder_canonical": "Practice 1",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-03T11:16:56.000000000",
+        "last_utc": "2026-07-03T12:41:39.000000000",
+        "utc_dates": [
+          "2026-07-03"
+        ]
+      }
+    },
+    "resolved_session": "Practice 1",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 7,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/British Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3811,
+      "sha256": "1ec1b305c73247adb48889dce7c1bf4eca9b3276549c993094017d79d8eff4a6"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 5229,
+      "sha256": "e96ac4c062aeaa4c7553409f2d03a66b070ac7d9c64996babf935593df216dc6"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/British Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 24088,
+      "sha256": "5bc1de8d850bc1c30113257c9b1bb35b2b4d353c9ced28f7822e0a74f5896002"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 5229,
+      "sha256": "e96ac4c062aeaa4c7553409f2d03a66b070ac7d9c64996babf935593df216dc6"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3811,
+      "sha256": "1ec1b305c73247adb48889dce7c1bf4eca9b3276549c993094017d79d8eff4a6"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/British Grand Prix/Practice 1/weather.json",
+      "output_file": "processed/british-grand-prix/sessions/practice-1/weather.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/practice-1/weather.json",
+      "row_count": 84,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/British Grand Prix/Practice 1/rcm.json",
+      "output_file": "processed/british-grand-prix/sessions/practice-1/race_control.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/practice-1/race_control.json",
+      "row_count": 34,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

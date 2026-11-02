@@ -38,13 +38,6 @@ service-account*.json
 /*.pdf
 /frontend_unzipped/
 /frontend.zip
-/dataPreprocess/rawData/
-/dataPreprocess/processedData/
-/dataPreprocess/reports/
-/trackData/raw/
-/trackData/processed/
-/trackData/reports/
-/trackData/circuitMap.json
 /reports/
 /results/
 /docs/F1_2026_ERS_Team_Handbook.txt

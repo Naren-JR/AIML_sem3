@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:45+00:00",
+  "event_name": "Singapore Grand Prix",
+  "raw_folder_session": "Practice 1",
+  "resolved_session": "Practice 1",
+  "session_resolution": {
+    "raw_folder_session": "Practice 1",
+    "raw_folder_canonical": "Practice 1",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-10-09T08:16:58.000000000",
+        "last_utc": "2026-10-09T09:43:12.000000000",
+        "utc_dates": [
+          "2026-10-09"
+        ]
+      }
+    },
+    "resolved_session": "Practice 1",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 7,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3769,
+      "sha256": "11e66da3345340fcf6b62aad14a800a607f8ecdcc0c0ada964e18d5fbb0db50f"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 8901,
+      "sha256": "50954ab5ebfef0487b4b00f8d9b26a784d169dc36be500da4618eb2ba78f7794"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 16798,
+      "sha256": "d660ba148e6d9643ffb4927efe56c229fb495eb9550846b1f6c41c3c42caff0c"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 8901,
+      "sha256": "50954ab5ebfef0487b4b00f8d9b26a784d169dc36be500da4618eb2ba78f7794"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3769,
+      "sha256": "11e66da3345340fcf6b62aad14a800a607f8ecdcc0c0ada964e18d5fbb0db50f"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Singapore Grand Prix/Practice 1/weather.json",
+      "output_file": "processed/singapore-grand-prix/sessions/practice-1/weather.csv",
+      "json_output_file": "processed/singapore-grand-prix/sessions/practice-1/weather.json",
+      "row_count": 83,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Singapore Grand Prix/Practice 1/rcm.json",
+      "output_file": "processed/singapore-grand-prix/sessions/practice-1/race_control.csv",
+      "json_output_file": "processed/singapore-grand-prix/sessions/practice-1/race_control.json",
+      "row_count": 70,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

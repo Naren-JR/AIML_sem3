@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:40+00:00",
+  "event_name": "Canadian Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-05-24T19:08:32.000000000",
+        "last_utc": "2026-05-24T21:47:14.000000000",
+        "utc_dates": [
+          "2026-05-24"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7230,
+      "sha256": "4fc117d69f296d542a40d2efaf6d1d10bd94828ef7ec1bf9d83cda407b8bbaea"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 39173,
+      "sha256": "d118b9232e648e571af0d47379b3ec53cbeb9528c59caf271607822d7f21fb76"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 17903,
+      "sha256": "d103e05bdb153843e823f7e53a5d2eded10749ac7bdb4dcd00cb0526ebd1cc13"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 39173,
+      "sha256": "d118b9232e648e571af0d47379b3ec53cbeb9528c59caf271607822d7f21fb76"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7230,
+      "sha256": "4fc117d69f296d542a40d2efaf6d1d10bd94828ef7ec1bf9d83cda407b8bbaea"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Canadian Grand Prix/Race/weather.json",
+      "output_file": "processed/canadian-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/race/weather.json",
+      "row_count": 160,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Canadian Grand Prix/Race/rcm.json",
+      "output_file": "processed/canadian-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/race/race_control.json",
+      "row_count": 286,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

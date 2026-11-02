@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:37+00:00",
+  "event_name": "Barcelona Grand Prix",
+  "raw_folder_session": "Practice 2",
+  "resolved_session": "Practice 2",
+  "session_resolution": {
+    "raw_folder_session": "Practice 2",
+    "raw_folder_canonical": "Practice 2",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-06-12T14:53:51.000000000",
+        "last_utc": "2026-06-12T16:30:42.000000000",
+        "utc_dates": [
+          "2026-06-12"
+        ]
+      }
+    },
+    "resolved_session": "Practice 2",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 6,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3836,
+      "sha256": "5e157cb6e21a5636e6250a02e5fc47d24961b957737f397fd658aa9c5c790f71"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 6332,
+      "sha256": "cfa0a38a6f61ad893d22fbf061df6de1f09d8d3cb75554eb9aa86eb2dfa2c101"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 11636,
+      "sha256": "950de588e7b5bd94befc5bedb39e5e6f65752839330f97d8d18471c5041aa594"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 6332,
+      "sha256": "cfa0a38a6f61ad893d22fbf061df6de1f09d8d3cb75554eb9aa86eb2dfa2c101"
+    },
+    {
+      "file": "raw/sessions/Barcelona Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3836,
+      "sha256": "5e157cb6e21a5636e6250a02e5fc47d24961b957737f397fd658aa9c5c790f71"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Barcelona Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/barcelona-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/barcelona-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 85,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Barcelona Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/barcelona-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/barcelona-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 50,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:39+00:00",
+  "event_name": "British Grand Prix",
+  "raw_folder_session": "Sprint",
+  "resolved_session": "Sprint",
+  "session_resolution": {
+    "raw_folder_session": "Sprint",
+    "raw_folder_canonical": "Sprint",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-04T10:26:24.000000000",
+        "last_utc": "2026-07-04T11:47:07.000000000",
+        "utc_dates": [
+          "2026-07-04"
+        ]
+      }
+    },
+    "resolved_session": "Sprint",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 2,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3581,
+      "sha256": "2e01ce0055ac089434ac94f8395260f16eb8b2efa0e881e89617a6bda202c486"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 11531,
+      "sha256": "2a7855ae1be7148ff91f94f6508e46ba943f179f74cf1e0327464e15a67be479"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint",
+      "bytes": 24093,
+      "sha256": "bfc0a1c72505d2aa2fbc73f23552937700b4b18485fe860b49420f865e3346c1"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 11531,
+      "sha256": "2a7855ae1be7148ff91f94f6508e46ba943f179f74cf1e0327464e15a67be479"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3581,
+      "sha256": "2e01ce0055ac089434ac94f8395260f16eb8b2efa0e881e89617a6bda202c486"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Sprint",
+      "resolved_session": "Sprint",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/British Grand Prix/Sprint/weather.json",
+      "output_file": "processed/british-grand-prix/sessions/sprint/weather.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/sprint/weather.json",
+      "row_count": 79,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Sprint",
+      "resolved_session": "Sprint",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/British Grand Prix/Sprint/rcm.json",
+      "output_file": "processed/british-grand-prix/sessions/sprint/race_control.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/sprint/race_control.json",
+      "row_count": 95,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

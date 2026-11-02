@@ -1,0 +1,12 @@
+section_index,section_label,start_percent,end_percent,source_file,source_format,source_fields_json
+0,Straight,0.0,7.28,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Straight"",0.0,7.28]"
+1,Medium,7.28,12.5,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Medium"",7.28,12.5]"
+2,Straight,12.5,28.5,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Straight"",12.5,28.5]"
+3,Low,28.5,34.55,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Low"",28.5,34.55]"
+4,Straight,34.55,47.53,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Straight"",34.55,47.53]"
+5,Low,47.53,53.78,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Low"",47.53,53.78]"
+6,Straight,53.78,60.03,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Straight"",53.78,60.03]"
+7,High,60.03,72.12,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""High"",60.03,72.12]"
+8,Straight,72.12,84.82,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Straight"",72.12,84.82]"
+9,High,84.82,93.82,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""High"",84.82,93.82]"
+10,Straight,93.82,100.0,raw/sections/red-bull-ring.json,array_tuple_label_start_end,"[""Straight"",93.82,100.0]"

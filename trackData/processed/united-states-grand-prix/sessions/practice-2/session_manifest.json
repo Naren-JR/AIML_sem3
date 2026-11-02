@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:46+00:00",
+  "event_name": "United States Grand Prix",
+  "raw_folder_session": "Practice 2",
+  "resolved_session": "Practice 2",
+  "session_resolution": {
+    "raw_folder_session": "Practice 2",
+    "raw_folder_canonical": "Practice 2",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-10-23T20:46:15.000000000",
+        "last_utc": "2026-10-23T22:11:14.000000000",
+        "utc_dates": [
+          "2026-10-23"
+        ]
+      }
+    },
+    "resolved_session": "Practice 2",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 6,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3772,
+      "sha256": "0fef4ff5494605367c61123547ce601ca15d89e8d5cd77e0a05e5713e9c64821"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 22087,
+      "sha256": "584dc152553b4870bc80ca066200595b838a61ad005fbb712990fc21753cc8de"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 16686,
+      "sha256": "fd9ebe4c4a4a06c0c7910fc5bf96ca66dae12f5bb0a3d60f69354358b9c8ce5f"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 22087,
+      "sha256": "584dc152553b4870bc80ca066200595b838a61ad005fbb712990fc21753cc8de"
+    },
+    {
+      "file": "raw/sessions/United States Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3772,
+      "sha256": "0fef4ff5494605367c61123547ce601ca15d89e8d5cd77e0a05e5713e9c64821"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/United States Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/united-states-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 85,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/United States Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/united-states-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/united-states-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 139,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

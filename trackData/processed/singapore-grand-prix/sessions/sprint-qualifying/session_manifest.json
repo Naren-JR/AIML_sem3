@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:45+00:00",
+  "event_name": "Singapore Grand Prix",
+  "raw_folder_session": "Sprint Qualifying",
+  "resolved_session": "Sprint Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Sprint Qualifying",
+    "raw_folder_canonical": "Sprint Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-10-09T12:30:00.000000000",
+        "last_utc": "2026-10-09T13:40:17.000000000",
+        "utc_dates": [
+          "2026-10-09"
+        ]
+      }
+    },
+    "resolved_session": "Sprint Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 3,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 4438,
+      "sha256": "4cc5c7e8a13c8ce129d031e928f2dae108a108b624a17c5040174369174c5f71"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 9002,
+      "sha256": "998affd19067abd65e8627a96607eade7a23eb3e2f890453f26ce7e807b4799e"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 16800,
+      "sha256": "865823b6308caa8fb4558d06101808793668a76eeaf8824278f8f50f471ad2ca"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 9002,
+      "sha256": "998affd19067abd65e8627a96607eade7a23eb3e2f890453f26ce7e807b4799e"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 4438,
+      "sha256": "4cc5c7e8a13c8ce129d031e928f2dae108a108b624a17c5040174369174c5f71"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Sprint Qualifying",
+      "resolved_session": "Sprint Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint-qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/weather.json",
+      "output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/weather.csv",
+      "json_output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/weather.json",
+      "row_count": 98,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Sprint Qualifying",
+      "resolved_session": "Sprint Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint-qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Singapore Grand Prix/Sprint Qualifying/rcm.json",
+      "output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/race_control.csv",
+      "json_output_file": "processed/singapore-grand-prix/sessions/sprint-qualifying/race_control.json",
+      "row_count": 67,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

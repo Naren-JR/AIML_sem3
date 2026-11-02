@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:41+00:00",
+  "event_name": "Dutch Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-08-23T12:12:06.000000000",
+        "last_utc": "2026-08-23T15:28:48.000000000",
+        "utc_dates": [
+          "2026-08-23"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 8447,
+      "sha256": "1258e2850fd57e6662d1402414676a0fd96012506f2f3f44079d1b4df2853df1"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 41334,
+      "sha256": "bdc015096c464bf07af97174ccc746f8c037c516235f19fc687a6195b417f164"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 13613,
+      "sha256": "e6c7de2e01cc3b2834f19a1243ed24284a57365f8f90bf828915f2bd3e1be653"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 41334,
+      "sha256": "bdc015096c464bf07af97174ccc746f8c037c516235f19fc687a6195b417f164"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 8447,
+      "sha256": "1258e2850fd57e6662d1402414676a0fd96012506f2f3f44079d1b4df2853df1"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Dutch Grand Prix/Race/weather.json",
+      "output_file": "processed/dutch-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/dutch-grand-prix/sessions/race/weather.json",
+      "row_count": 191,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Dutch Grand Prix/Race/rcm.json",
+      "output_file": "processed/dutch-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/dutch-grand-prix/sessions/race/race_control.json",
+      "row_count": 329,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

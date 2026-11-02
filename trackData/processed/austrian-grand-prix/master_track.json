@@ -1,0 +1,860 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:36+00:00",
+  "event_name": "Austrian Grand Prix",
+  "event_slug": "austrian-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 16386,
+      "sha256": "152c3653edc35ec051ae67ee5400400f20c2a885bd958f36a1c334174c2ad567",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 539,
+          "geometry_fingerprint": "6e04003f64878039",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Austrian Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 539,
+          "geometry_fingerprint": "6e04003f64878039",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Austrian Grand Prix/Practice 3/corners.json",
+          "result": "valid_geometry",
+          "point_count": 539,
+          "geometry_fingerprint": "6e04003f64878039",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Austrian Grand Prix/Practice 2/corners.json",
+          "result": "valid_geometry",
+          "point_count": 539,
+          "geometry_fingerprint": "6e04003f64878039",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Austrian Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 539,
+          "geometry_fingerprint": "6e04003f64878039",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16386,
+      "sha256": "152c3653edc35ec051ae67ee5400400f20c2a885bd958f36a1c334174c2ad567",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 10
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Austrian Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 10
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Austrian Grand Prix/Practice 3/corners.json",
+          "result": "corner_records",
+          "row_count": 10
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Austrian Grand Prix/Practice 2/corners.json",
+          "result": "corner_records",
+          "row_count": 10
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Austrian Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 10
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 16386,
+      "sha256": "152c3653edc35ec051ae67ee5400400f20c2a885bd958f36a1c334174c2ad567",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 16386,
+      "sha256": "152c3653edc35ec051ae67ee5400400f20c2a885bd958f36a1c334174c2ad567",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 16386,
+      "sha256": "152c3653edc35ec051ae67ee5400400f20c2a885bd958f36a1c334174c2ad567",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/red-bull-ring.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 334,
+      "sha256": "e7b735a77c600b2ee1e8cf1fb94b612466ae5ef1e0c8fa0ca3c5f78d9f4b238c"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "6e04003f64878039": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Practice 3/corners.json",
+          "Practice 2/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 189.706,
+              "Practice 3/corners.json": 187.031,
+              "Practice 2/corners.json": 196.644,
+              "Practice 1/corners.json": 184.938
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 5.059,
+              "Practice 3/corners.json": 11.649,
+              "Practice 2/corners.json": 4.491,
+              "Practice 1/corners.json": 2.227
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 5.393,
+              "Practice 3/corners.json": 12.416,
+              "Practice 2/corners.json": 4.787,
+              "Practice 1/corners.json": 2.374
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 191.411,
+              "Practice 3/corners.json": 185.025,
+              "Practice 2/corners.json": 182.824,
+              "Practice 1/corners.json": 184.118
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 193.822,
+              "Practice 3/corners.json": 183.842,
+              "Practice 2/corners.json": 183.115,
+              "Practice 1/corners.json": 197.69
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [
+      "2022"
+    ],
+    "status": "historical_source_year_requires_compatibility_check",
+    "reference_lap": {
+      "layout_year": 2022,
+      "layout_race_date": "2022-07-10",
+      "layout_meeting_name": "Austrian Grand Prix",
+      "reference_lap_session_label": "FP1",
+      "reference_lap_session_canonical": "Practice 1",
+      "reference_lap_driver_number": "1",
+      "reference_lap_number": 2,
+      "reference_lap_start_date": "2022-07-08T11:31:58.862000",
+      "scope": "Historical lap the layout was traced from. It says nothing about which session any weather or race-control file belongs to and is never used to relabel session data."
+    },
+    "metadata_candidates": [
+      {
+        "source_file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+        "CircuitKey": 19,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Spielberg",
+        "Location": "Spielberg",
+        "CountryName": "Austria",
+        "CountryKey": 17,
+        "CountryIocCode": "AUT",
+        "LayoutYear": 2022,
+        "LayoutRound": 11,
+        "LayoutRaceDate": "2022-07-10",
+        "LayoutMeetingKey": 1115,
+        "LayoutMeetingName": "Austrian Grand Prix",
+        "LayoutMeetingOfficialName": "FORMULA 1 ROLEX GROSSER PREIS VON ÖSTERREICH 2022",
+        "LayoutLapDriverNumber": "1",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "FP1",
+        "LayoutLapTime": 68.656,
+        "LayoutLapStartDate": "2022-07-08T11:31:58.862000",
+        "LayoutLapStartSessionTime": 1018.847,
+        "LayoutLapSessionStartTime": 900.084,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 1.0,
+        "rotation": null,
+        "PitLossNormal": 21.26,
+        "PitLossSC": 13.47,
+        "PitLossVSC": 15.38
+      }
+    ],
+    "conflicting_metadata": {},
+    "note": "The selected reference is tagged with a pre-2026 layout year. Do not assume it is an exact 2026 reference until layout compatibility is checked."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": true,
+    "mapping_filename": "red_bull_ring.svg",
+    "svg": {
+      "path": "raw/images/svg/red_bull_ring.svg",
+      "exists": true
+    },
+    "webp": {
+      "path": "raw/images/webp/red_bull_ring.webp",
+      "exists": true
+    },
+    "status": "assets_found",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": "processed/austrian-grand-prix/straight_mode_map_review.png",
+    "candidate_count": 4,
+    "zone_like_candidate_count": 4,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP pixels (origin top-left) and normalized image ratios only",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "visual_candidates_need_review",
+    "source_image_webp": "raw/images/webp/red_bull_ring.webp",
+    "source_image_svg": "raw/images/svg/red_bull_ring.svg",
+    "image_width_px": 1252,
+    "image_height_px": 704,
+    "svg_description": "Created with imagetracer.js version 1.2.6",
+    "svg_semantic_text_elements": 0,
+    "image_method": "red-hue connected-component segmentation on WebP pixels; SVG retained as source/provenance",
+    "raw_red_pixel_count": 21161,
+    "all_candidates_unverified": true,
+    "svg_semantics_note": "SVG is an ImageTracer-rendered vector trace with no <text> elements; text/zone identity is not encoded as semantic SVG labels.",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 539,
+    "status": "extracted_source_coordinates_unscaled",
+    "scope": "event_level",
+    "source_file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+        "result": "valid_geometry",
+        "point_count": 539,
+        "geometry_fingerprint": "6e04003f64878039",
+        "reason": null
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Austrian Grand Prix/Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 539,
+        "geometry_fingerprint": "6e04003f64878039",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 3",
+        "file": "raw/sessions/Austrian Grand Prix/Practice 3/corners.json",
+        "result": "valid_geometry",
+        "point_count": 539,
+        "geometry_fingerprint": "6e04003f64878039",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 2",
+        "file": "raw/sessions/Austrian Grand Prix/Practice 2/corners.json",
+        "result": "valid_geometry",
+        "point_count": 539,
+        "geometry_fingerprint": "6e04003f64878039",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Austrian Grand Prix/Practice 1/corners.json",
+        "result": "valid_geometry",
+        "point_count": 539,
+        "geometry_fingerprint": "6e04003f64878039",
+        "reason": null
+      }
+    ],
+    "warnings": [],
+    "quality_checks": {
+      "all_coordinates_finite": true,
+      "consecutive_duplicate_points": 1,
+      "closed_loop_endpoint_distance_raw_units": 17.26267650163207,
+      "distance_units_verified": false,
+      "track_length_verified": false
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 10,
+    "source_file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+        "result": "corner_records",
+        "row_count": 10
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Austrian Grand Prix/Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 10
+      },
+      {
+        "folder_label": "Practice 3",
+        "file": "raw/sessions/Austrian Grand Prix/Practice 3/corners.json",
+        "result": "corner_records",
+        "row_count": 10
+      },
+      {
+        "folder_label": "Practice 2",
+        "file": "raw/sessions/Austrian Grand Prix/Practice 2/corners.json",
+        "result": "corner_records",
+        "row_count": 10
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Austrian Grand Prix/Practice 1/corners.json",
+        "result": "corner_records",
+        "row_count": 10
+      }
+    ],
+    "status": "extracted"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 11,
+    "source_file": "raw/sections/red-bull-ring.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 11,
+    "source_file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "status": "extracted",
+    "unpaired_source_arrays": {
+      "Section": [
+        "Straight",
+        "Straight",
+        "Straight",
+        "Straight",
+        "Low",
+        "Straight",
+        "High",
+        "High",
+        "Straight",
+        "High"
+      ]
+    },
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 16,
+    "status": "extracted"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 16,
+    "status": "extracted"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 4,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": "Race",
+      "primary_session_verification": "unverified_session",
+      "primary_session_raw_folder": "Race",
+      "available_sessions": [
+        {
+          "resolved_session": "Race",
+          "raw_folder_session": "Race",
+          "session_verification": "unverified_session",
+          "weather_rows": 149,
+          "output_file": "processed/austrian-grand-prix/sessions/race/weather.csv"
+        },
+        {
+          "resolved_session": "Qualifying",
+          "raw_folder_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 80,
+          "output_file": "processed/austrian-grand-prix/sessions/qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 3",
+          "raw_folder_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "weather_rows": 81,
+          "output_file": "processed/austrian-grand-prix/sessions/practice-3/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 2",
+          "raw_folder_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "weather_rows": 81,
+          "output_file": "processed/austrian-grand-prix/sessions/practice-2/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 1",
+          "raw_folder_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "weather_rows": 77,
+          "output_file": "processed/austrian-grand-prix/sessions/practice-1/weather.csv"
+        }
+      ]
+    },
+    "session_resolutions": {
+      "Race": {
+        "raw_folder_session": "Race",
+        "raw_folder_canonical": "Race",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-28T12:20:00.000000000",
+            "last_utc": "2026-06-28T14:31:42.000000000",
+            "utc_dates": [
+              "2026-06-28"
+            ]
+          }
+        },
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Qualifying": {
+        "raw_folder_session": "Qualifying",
+        "raw_folder_canonical": "Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-27T13:47:01.000000000",
+            "last_utc": "2026-06-27T15:16:39.000000000",
+            "utc_dates": [
+              "2026-06-27"
+            ]
+          }
+        },
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 3": {
+        "raw_folder_session": "Practice 3",
+        "raw_folder_canonical": "Practice 3",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-27T10:15:52.000000000",
+            "last_utc": "2026-06-27T11:36:02.000000000",
+            "utc_dates": [
+              "2026-06-27"
+            ]
+          }
+        },
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 2": {
+        "raw_folder_session": "Practice 2",
+        "raw_folder_canonical": "Practice 2",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-26T15:00:00.000000000",
+            "last_utc": "2026-06-26T16:12:38.000000000",
+            "utc_dates": [
+              "2026-06-26"
+            ]
+          }
+        },
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 1": {
+        "raw_folder_session": "Practice 1",
+        "raw_folder_canonical": "Practice 1",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-06-26T11:30:00.000000000",
+            "last_utc": "2026-06-26T12:36:02.000000000",
+            "utc_dates": [
+              "2026-06-26"
+            ]
+          }
+        },
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      }
+    },
+    "provenance_warnings": [],
+    "exports": [
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Austrian Grand Prix/Race/rcm.json",
+        "output_file": "processed/austrian-grand-prix/sessions/race/race_control.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/race/race_control.json",
+        "row_count": 211,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Austrian Grand Prix/Race/weather.json",
+        "output_file": "processed/austrian-grand-prix/sessions/race/weather.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/race/weather.json",
+        "row_count": 149,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Austrian Grand Prix/Qualifying/rcm.json",
+        "output_file": "processed/austrian-grand-prix/sessions/qualifying/race_control.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/qualifying/race_control.json",
+        "row_count": 49,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Austrian Grand Prix/Qualifying/weather.json",
+        "output_file": "processed/austrian-grand-prix/sessions/qualifying/weather.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/qualifying/weather.json",
+        "row_count": 80,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 3",
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-3",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Austrian Grand Prix/Practice 3/rcm.json",
+        "output_file": "processed/austrian-grand-prix/sessions/practice-3/race_control.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/practice-3/race_control.json",
+        "row_count": 20,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 3",
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-3",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Austrian Grand Prix/Practice 3/weather.json",
+        "output_file": "processed/austrian-grand-prix/sessions/practice-3/weather.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/practice-3/weather.json",
+        "row_count": 81,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 2",
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-2",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Austrian Grand Prix/Practice 2/rcm.json",
+        "output_file": "processed/austrian-grand-prix/sessions/practice-2/race_control.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/practice-2/race_control.json",
+        "row_count": 51,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 2",
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-2",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Austrian Grand Prix/Practice 2/weather.json",
+        "output_file": "processed/austrian-grand-prix/sessions/practice-2/weather.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/practice-2/weather.json",
+        "row_count": 81,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Austrian Grand Prix/Practice 1/rcm.json",
+        "output_file": "processed/austrian-grand-prix/sessions/practice-1/race_control.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/practice-1/race_control.json",
+        "row_count": 53,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Austrian Grand Prix/Practice 1/weather.json",
+        "output_file": "processed/austrian-grand-prix/sessions/practice-1/weather.csv",
+        "json_output_file": "processed/austrian-grand-prix/sessions/practice-1/weather.json",
+        "row_count": 77,
+        "status": "exported"
+      }
+    ]
+  },
+  "source_inventory": [
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16386,
+      "sha256": "152c3653edc35ec051ae67ee5400400f20c2a885bd958f36a1c334174c2ad567"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 28730,
+      "sha256": "c71e892399b4afe59850ac570d1c945c56c99041ccaf9163b5aa831b94c3d3b3"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6525,
+      "sha256": "896ea9489cbe6cd48b5b716dd8a4dcababf6ab82ef64d2222bf1a3b3fcf0fad2"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 16382,
+      "sha256": "897062d7e34c2d815fb1af1f3d328ee93d64bf2ba9baef41c7f997b5d676adbe"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 7147,
+      "sha256": "8c8e070d1fe81db417a1d6a8400976a0ef5ed8e206269b472fbdc727e44ffe5f"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3517,
+      "sha256": "e960b5d311db270f3f6d06288ade378f683ca27039bb89060f37eae4bc0a4c6a"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 3/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 3",
+      "bytes": 16381,
+      "sha256": "69df9e3294a60b9ee8ccb3f4bfe94f3c08d5d4cf8fbb29d88c6fe91b83552001"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 2962,
+      "sha256": "0ba170ca7574ae756501de0dc2b2392d556635e181bcd2f779c5eeaa0126cc13"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3579,
+      "sha256": "8fe29b69581c21f38431d129306335bb67c1917fd94ca7d79d8464aff0505c96"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 16384,
+      "sha256": "e548015ea76ccfcdbfa5738d4eebdb007d492ac70bb67fb834477f977101a72d"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 6579,
+      "sha256": "a664879050c86839738dc40365646305055545ea3e6364d8888725eb915c8bcd"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3547,
+      "sha256": "3eeecd2c4bd7dd31ccc9b630263bdcd50a0e1662244278e70bddd7cce1293fca"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 16374,
+      "sha256": "4158a6a832c9020f3ae9d230d25b58d516ba607838d3ffcd27181c8e7a51562a"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 6852,
+      "sha256": "3a926f686930866f96d98ed878561f13311f98d953c96030be096536295bc513"
+    },
+    {
+      "file": "raw/sessions/Austrian Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3377,
+      "sha256": "7ca3b158103db9f3b525b3888a21371175d7b8187ae5c8bde6ab056bfb737055"
+    }
+  ],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "Geometry contains 1 consecutive duplicate coordinate pairs; retained as source data.",
+      "Layout array 'Section' has 10 values versus 11 section records (SectionType/percent arrays); preserved raw and not paired by index.",
+      "Selected reference metadata is tagged layout year ['2022']; current-season layout compatibility remains unverified.",
+      "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 196.644); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 11.649; end_distance_source: max |delta| 12.416); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 191.411); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 197.69); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}

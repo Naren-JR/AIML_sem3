@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:40+00:00",
+  "event_name": "Canadian Grand Prix",
+  "raw_folder_session": "Sprint",
+  "resolved_session": "Sprint",
+  "session_resolution": {
+    "raw_folder_session": "Sprint",
+    "raw_folder_canonical": "Sprint",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-05-23T15:30:01.000000000",
+        "last_utc": "2026-05-23T16:36:50.000000000",
+        "utc_dates": [
+          "2026-05-23"
+        ]
+      }
+    },
+    "resolved_session": "Sprint",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 2,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3534,
+      "sha256": "88e0e8ec3336ae043e951812f0e02080f629387de69705d14991533e90c7cdb0"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 9783,
+      "sha256": "54632423a5552b9ae4fb24c3da52ffd3ac487829480aba80a0c89fe75c677fd3"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint",
+      "bytes": 17905,
+      "sha256": "3936d0bce0ddb1bfb0ab62b315145f71f242561f16b15ba589ae8fb75b0b1575"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 9783,
+      "sha256": "54632423a5552b9ae4fb24c3da52ffd3ac487829480aba80a0c89fe75c677fd3"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3534,
+      "sha256": "88e0e8ec3336ae043e951812f0e02080f629387de69705d14991533e90c7cdb0"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Sprint",
+      "resolved_session": "Sprint",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Canadian Grand Prix/Sprint/weather.json",
+      "output_file": "processed/canadian-grand-prix/sessions/sprint/weather.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/sprint/weather.json",
+      "row_count": 78,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Sprint",
+      "resolved_session": "Sprint",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Canadian Grand Prix/Sprint/rcm.json",
+      "output_file": "processed/canadian-grand-prix/sessions/sprint/race_control.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/sprint/race_control.json",
+      "row_count": 69,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

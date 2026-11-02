@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:44+00:00",
+  "event_name": "Monaco Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-06-07T12:20:01.000000000",
+        "last_utc": "2026-06-07T15:35:58.000000000",
+        "utc_dates": [
+          "2026-06-07"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 9338,
+      "sha256": "2325f71dfab1b46ee3c46cb9d526f3480f0ba4bf05b666a1eee59254d8b11a9c"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 37337,
+      "sha256": "cbca9c985c4dd19aca624d12b6b87711a81fcc68848e9b4e126b5fec00e807cf"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 20378,
+      "sha256": "d82f6c6da8263dc8d8d7f2a840293cd5d9b27ad275c2bf4acd138e9cb63afa79"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 37337,
+      "sha256": "cbca9c985c4dd19aca624d12b6b87711a81fcc68848e9b4e126b5fec00e807cf"
+    },
+    {
+      "file": "raw/sessions/Monaco Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 9338,
+      "sha256": "2325f71dfab1b46ee3c46cb9d526f3480f0ba4bf05b666a1eee59254d8b11a9c"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Monaco Grand Prix/Race/weather.json",
+      "output_file": "processed/monaco-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/monaco-grand-prix/sessions/race/weather.json",
+      "row_count": 208,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Monaco Grand Prix/Race/rcm.json",
+      "output_file": "processed/monaco-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/monaco-grand-prix/sessions/race/race_control.json",
+      "row_count": 265,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

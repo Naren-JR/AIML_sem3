@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:40+00:00",
+  "event_name": "Canadian Grand Prix",
+  "raw_folder_session": "Sprint Qualifying",
+  "resolved_session": "Sprint Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Sprint Qualifying",
+    "raw_folder_canonical": "Sprint Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-05-22T20:30:00.000000000",
+        "last_utc": "2026-05-22T21:55:08.000000000",
+        "utc_dates": [
+          "2026-05-22"
+        ]
+      }
+    },
+    "resolved_session": "Sprint Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 3,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 3666,
+      "sha256": "662ba73bd160b4015b188dbe77e6a1a49062ca250dbe99ce84324a8e6dd2d01f"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 8866,
+      "sha256": "d39d89cfb93b5367a933d2f44d568f43c0ba7a480178087a5c221e985311f383"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 17907,
+      "sha256": "ddb807c0fed305d21653ecfc9d47a40d3cb9d2567b1f5418f8aa6ce4a2d666af"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 8866,
+      "sha256": "d39d89cfb93b5367a933d2f44d568f43c0ba7a480178087a5c221e985311f383"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 3666,
+      "sha256": "662ba73bd160b4015b188dbe77e6a1a49062ca250dbe99ce84324a8e6dd2d01f"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Sprint Qualifying",
+      "resolved_session": "Sprint Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint-qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/weather.json",
+      "output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/weather.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/weather.json",
+      "row_count": 81,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Sprint Qualifying",
+      "resolved_session": "Sprint Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint-qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Canadian Grand Prix/Sprint Qualifying/rcm.json",
+      "output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/race_control.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/sprint-qualifying/race_control.json",
+      "row_count": 57,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

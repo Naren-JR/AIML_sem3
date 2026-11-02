@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:45+00:00",
+  "event_name": "Singapore Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-10-11T11:11:21.000000000",
+        "last_utc": "2026-10-11T13:48:13.000000000",
+        "utc_dates": [
+          "2026-10-11"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7221,
+      "sha256": "27aed6065250a918bec194ac9cffdde4bdfaa49f543db040c7647edee591be56"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 20435,
+      "sha256": "0a8cd7625571b4e8d3b279aa9ee576fe6fefdaaeb4557f792097a7cee493afc3"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 16796,
+      "sha256": "b501e93ede0b1afe13de66cb85979318ecdd1fc43d6a8ccddfaba7149c5e6f77"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 20435,
+      "sha256": "0a8cd7625571b4e8d3b279aa9ee576fe6fefdaaeb4557f792097a7cee493afc3"
+    },
+    {
+      "file": "raw/sessions/Singapore Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7221,
+      "sha256": "27aed6065250a918bec194ac9cffdde4bdfaa49f543db040c7647edee591be56"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Singapore Grand Prix/Race/weather.json",
+      "output_file": "processed/singapore-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/singapore-grand-prix/sessions/race/weather.json",
+      "row_count": 160,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Singapore Grand Prix/Race/rcm.json",
+      "output_file": "processed/singapore-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/singapore-grand-prix/sessions/race/race_control.json",
+      "row_count": 153,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

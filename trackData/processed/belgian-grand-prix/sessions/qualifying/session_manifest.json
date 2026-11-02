@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:38+00:00",
+  "event_name": "Belgian Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-18T14:00:00.000000000",
+        "last_utc": "2026-07-18T15:18:47.000000000",
+        "utc_dates": [
+          "2026-07-18"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3900,
+      "sha256": "5117e0b01b30cf37f9af3915138c8b98be70bac0650f1a4d6d8e344e0447f555"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 6585,
+      "sha256": "f3af9c120f4ca49c18e176fe82ade9440a6ccc70ae4ff58a3373ad0934187343"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 19230,
+      "sha256": "1b499e7535fa35992534690ae515ac7145cf25ecc1ace55f7141dfa4f520b14d"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 6585,
+      "sha256": "f3af9c120f4ca49c18e176fe82ade9440a6ccc70ae4ff58a3373ad0934187343"
+    },
+    {
+      "file": "raw/sessions/Belgian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3900,
+      "sha256": "5117e0b01b30cf37f9af3915138c8b98be70bac0650f1a4d6d8e344e0447f555"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Belgian Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/belgian-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 88,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Belgian Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/belgian-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/belgian-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 57,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

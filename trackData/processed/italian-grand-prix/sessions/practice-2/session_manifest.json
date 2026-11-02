@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:43+00:00",
+  "event_name": "Italian Grand Prix",
+  "raw_folder_session": "Practice 2",
+  "resolved_session": "Practice 2",
+  "session_resolution": {
+    "raw_folder_session": "Practice 2",
+    "raw_folder_canonical": "Practice 2",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-09-04T13:48:53.000000000",
+        "last_utc": "2026-09-04T15:10:46.000000000",
+        "utc_dates": [
+          "2026-09-04"
+        ]
+      }
+    },
+    "resolved_session": "Practice 2",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 6,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3670,
+      "sha256": "f9980f5ac3ff697a78ab1cbac4ef41baa1b3775b7ede78166c441248db927271"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 4647,
+      "sha256": "35135ce911bac1e96b9cc1f77356c10f43ee5f03dcb8aae2ffb37317b535738e"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 14139,
+      "sha256": "2fadd98f91885caf26abf183e4ff2233374b4b9ca0433f0100a9c59c8e977f8b"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 4647,
+      "sha256": "35135ce911bac1e96b9cc1f77356c10f43ee5f03dcb8aae2ffb37317b535738e"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3670,
+      "sha256": "f9980f5ac3ff697a78ab1cbac4ef41baa1b3775b7ede78166c441248db927271"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Italian Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/italian-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/italian-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 83,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Italian Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/italian-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/italian-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 33,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

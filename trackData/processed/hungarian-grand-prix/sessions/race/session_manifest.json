@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:42+00:00",
+  "event_name": "Hungarian Grand Prix",
+  "raw_folder_session": "Race",
+  "resolved_session": "Race",
+  "session_resolution": {
+    "raw_folder_session": "Race",
+    "raw_folder_canonical": "Race",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-26T12:20:00.000000000",
+        "last_utc": "2026-07-26T14:45:40.000000000",
+        "utc_dates": [
+          "2026-07-26"
+        ]
+      }
+    },
+    "resolved_session": "Race",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 0,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6916,
+      "sha256": "b6e4006e016bca6a39f9cd063b4d35429a7078f43544f2a8a65169024a14e6d7"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 11256,
+      "sha256": "9c6a544eb3a81ef4169ec958aa1ed125351768b303b1e69540cc4b8bc3fe1172"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 14373,
+      "sha256": "feacadf61bbda89c0f6a190215a9127e6135cfbf877084ae5699ff89c30be34e"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 11256,
+      "sha256": "9c6a544eb3a81ef4169ec958aa1ed125351768b303b1e69540cc4b8bc3fe1172"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 6916,
+      "sha256": "b6e4006e016bca6a39f9cd063b4d35429a7078f43544f2a8a65169024a14e6d7"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Hungarian Grand Prix/Race/weather.json",
+      "output_file": "processed/hungarian-grand-prix/sessions/race/weather.csv",
+      "json_output_file": "processed/hungarian-grand-prix/sessions/race/weather.json",
+      "row_count": 157,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Race",
+      "resolved_session": "Race",
+      "session_verification": "unverified_session",
+      "session_slug": "race",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Hungarian Grand Prix/Race/rcm.json",
+      "output_file": "processed/hungarian-grand-prix/sessions/race/race_control.csv",
+      "json_output_file": "processed/hungarian-grand-prix/sessions/race/race_control.json",
+      "row_count": 80,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

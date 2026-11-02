@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:43+00:00",
+  "event_name": "Miami Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-05-02T19:56:11.000000000",
+        "last_utc": "2026-05-02T21:16:12.000000000",
+        "utc_dates": [
+          "2026-05-02"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Miami Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3681,
+      "sha256": "92619e990d50703067f4e61b850694f7a48f77fa874593ee10aee572707c5822"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 8486,
+      "sha256": "3980548002ef554b272242879395158a7d377a4a049a024b2b1fd95d7cb3186e"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Miami Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 22335,
+      "sha256": "2934aa9a75b9d8ae842c1d5a75d03d143f3c7bc0ac68efc51907088af10f501d"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 8486,
+      "sha256": "3980548002ef554b272242879395158a7d377a4a049a024b2b1fd95d7cb3186e"
+    },
+    {
+      "file": "raw/sessions/Miami Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3681,
+      "sha256": "92619e990d50703067f4e61b850694f7a48f77fa874593ee10aee572707c5822"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Miami Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/miami-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/miami-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 81,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Miami Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/miami-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/miami-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 60,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

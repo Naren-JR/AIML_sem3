@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:39+00:00",
+  "event_name": "British Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-04T15:00:00.000000000",
+        "last_utc": "2026-07-04T16:20:40.000000000",
+        "utc_dates": [
+          "2026-07-04"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/British Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3811,
+      "sha256": "3eeaff5a8e711eec7cfa9243d039dbc6df030c369a1d2b755aa955cafadf77c6"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 8461,
+      "sha256": "646240863b984b299915ddc40c8856e25af8ddc67260bfc5e5f1a4ccbf298268"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/British Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 24086,
+      "sha256": "8bab5b0e407a26f0848ff70eb4edbb3d673c73fed88489d119927127fa713e24"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 8461,
+      "sha256": "646240863b984b299915ddc40c8856e25af8ddc67260bfc5e5f1a4ccbf298268"
+    },
+    {
+      "file": "raw/sessions/British Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3811,
+      "sha256": "3eeaff5a8e711eec7cfa9243d039dbc6df030c369a1d2b755aa955cafadf77c6"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/British Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/british-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 84,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/British Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/british-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/british-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 64,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

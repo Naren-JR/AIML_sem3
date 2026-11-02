@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:42+00:00",
+  "event_name": "Hungarian Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-25T14:00:00.000000000",
+        "last_utc": "2026-07-25T15:09:43.000000000",
+        "utc_dates": [
+          "2026-07-25"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3372,
+      "sha256": "1b027404ed38b7c73d3874ef0fdc402f226f944adfc45d5f46bb5479f0e87bd3"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 6250,
+      "sha256": "0fd7e1956e695136fbfc29758556f79fdaf0102037cad624c19bb563d372408c"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 14398,
+      "sha256": "5243c0d3762a4f28bbb9c082cf5b5894fb8724a6656852b016a7ffa4d54eaf8d"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 6250,
+      "sha256": "0fd7e1956e695136fbfc29758556f79fdaf0102037cad624c19bb563d372408c"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3372,
+      "sha256": "1b027404ed38b7c73d3874ef0fdc402f226f944adfc45d5f46bb5479f0e87bd3"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Hungarian Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/hungarian-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/hungarian-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 76,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Hungarian Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/hungarian-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/hungarian-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 42,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

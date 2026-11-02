@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:41+00:00",
+  "event_name": "Dutch Grand Prix",
+  "raw_folder_session": "Sprint",
+  "resolved_session": "Sprint",
+  "session_resolution": {
+    "raw_folder_session": "Sprint",
+    "raw_folder_canonical": "Sprint",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-08-22T09:30:01.000000000",
+        "last_utc": "2026-08-22T10:46:57.000000000",
+        "utc_dates": [
+          "2026-08-22"
+        ]
+      }
+    },
+    "resolved_session": "Sprint",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 2,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3548,
+      "sha256": "d8ef0414a8c95ee63565a94ad34a893a22f048246ea4b07fa4ed98308d7d93ba"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 8320,
+      "sha256": "3053bc8226085705effb3794f1b732fd5dfe63d0b763f484858b0bd5a592781a"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint",
+      "bytes": 13583,
+      "sha256": "c3824b6c050255603668961ed86ff96f3c7ad5c14c48e085b8165a5ab691d4fe"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint",
+      "bytes": 8320,
+      "sha256": "3053bc8226085705effb3794f1b732fd5dfe63d0b763f484858b0bd5a592781a"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint",
+      "bytes": 3548,
+      "sha256": "d8ef0414a8c95ee63565a94ad34a893a22f048246ea4b07fa4ed98308d7d93ba"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Sprint",
+      "resolved_session": "Sprint",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Dutch Grand Prix/Sprint/weather.json",
+      "output_file": "processed/dutch-grand-prix/sessions/sprint/weather.csv",
+      "json_output_file": "processed/dutch-grand-prix/sessions/sprint/weather.json",
+      "row_count": 80,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Sprint",
+      "resolved_session": "Sprint",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Dutch Grand Prix/Sprint/rcm.json",
+      "output_file": "processed/dutch-grand-prix/sessions/sprint/race_control.csv",
+      "json_output_file": "processed/dutch-grand-prix/sessions/sprint/race_control.json",
+      "row_count": 63,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

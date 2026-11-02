@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:43+00:00",
+  "event_name": "Italian Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-09-05T13:50:42.000000000",
+        "last_utc": "2026-09-05T15:04:02.000000000",
+        "utc_dates": [
+          "2026-09-05"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Italian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3397,
+      "sha256": "10f2796aea8aa4883e2f2a2f7b2300fd227d1ece050f335135d52000da23a0bd"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 6573,
+      "sha256": "2d891bec42f5472dcd150890c23d51aae9b011b0b908f3270ee92c82b80c7bd0"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Italian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 14136,
+      "sha256": "e647ace069bdb08f8bb769b9e5220b3d69a0cc6fbbc41db8b7ce9df563fb72f4"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 6573,
+      "sha256": "2d891bec42f5472dcd150890c23d51aae9b011b0b908f3270ee92c82b80c7bd0"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3397,
+      "sha256": "10f2796aea8aa4883e2f2a2f7b2300fd227d1ece050f335135d52000da23a0bd"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Italian Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/italian-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/italian-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 77,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Italian Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/italian-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/italian-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 47,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

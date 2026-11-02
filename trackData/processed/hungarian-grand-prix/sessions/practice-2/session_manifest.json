@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:42+00:00",
+  "event_name": "Hungarian Grand Prix",
+  "raw_folder_session": "Practice 2",
+  "resolved_session": "Practice 2",
+  "session_resolution": {
+    "raw_folder_session": "Practice 2",
+    "raw_folder_canonical": "Practice 2",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-07-24T15:00:00.000000000",
+        "last_utc": "2026-07-24T16:10:12.000000000",
+        "utc_dates": [
+          "2026-07-24"
+        ]
+      }
+    },
+    "resolved_session": "Practice 2",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 6,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3622,
+      "sha256": "d40ec8290c434dc857265a0c9a63c7fd49204440ea1ded1573fd3e12eea1dfea"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 9605,
+      "sha256": "cd696481b77ccfa11d38e38514cd564bc8bdac6d02738d8a9fb51878fdd27080"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 14376,
+      "sha256": "d8b426c72ba099e5cc9c1b8e4ed2bd9a8a869e03f8bd035bc8d90a61f467ca1c"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 9605,
+      "sha256": "cd696481b77ccfa11d38e38514cd564bc8bdac6d02738d8a9fb51878fdd27080"
+    },
+    {
+      "file": "raw/sessions/Hungarian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3622,
+      "sha256": "d40ec8290c434dc857265a0c9a63c7fd49204440ea1ded1573fd3e12eea1dfea"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Hungarian Grand Prix/Practice 2/weather.json",
+      "output_file": "processed/hungarian-grand-prix/sessions/practice-2/weather.csv",
+      "json_output_file": "processed/hungarian-grand-prix/sessions/practice-2/weather.json",
+      "row_count": 82,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 2",
+      "resolved_session": "Practice 2",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-2",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Hungarian Grand Prix/Practice 2/rcm.json",
+      "output_file": "processed/hungarian-grand-prix/sessions/practice-2/race_control.csv",
+      "json_output_file": "processed/hungarian-grand-prix/sessions/practice-2/race_control.json",
+      "row_count": 68,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

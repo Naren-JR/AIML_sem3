@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:40+00:00",
+  "event_name": "Canadian Grand Prix",
+  "raw_folder_session": "Qualifying",
+  "resolved_session": "Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Qualifying",
+    "raw_folder_canonical": "Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-05-23T20:00:00.000000000",
+        "last_utc": "2026-05-23T21:06:07.000000000",
+        "utc_dates": [
+          "2026-05-23"
+        ]
+      }
+    },
+    "resolved_session": "Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 1,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3579,
+      "sha256": "618001c7b55c3126d1d20ec6b6fe3b676ebe8df4a127bc26e4bba12de8d73d1a"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 9242,
+      "sha256": "fab0c4582f5dd439d127b9ee47c64996686d062c7bcd2e8de1a3fc1f2dd0dc33"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 17906,
+      "sha256": "4d2955f92b39060cef862209668bd3dd82bb34b660a06427d8bc2e17fbee6f45"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 9242,
+      "sha256": "fab0c4582f5dd439d127b9ee47c64996686d062c7bcd2e8de1a3fc1f2dd0dc33"
+    },
+    {
+      "file": "raw/sessions/Canadian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3579,
+      "sha256": "618001c7b55c3126d1d20ec6b6fe3b676ebe8df4a127bc26e4bba12de8d73d1a"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Canadian Grand Prix/Qualifying/weather.json",
+      "output_file": "processed/canadian-grand-prix/sessions/qualifying/weather.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/qualifying/weather.json",
+      "row_count": 79,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Qualifying",
+      "resolved_session": "Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Canadian Grand Prix/Qualifying/rcm.json",
+      "output_file": "processed/canadian-grand-prix/sessions/qualifying/race_control.csv",
+      "json_output_file": "processed/canadian-grand-prix/sessions/qualifying/race_control.json",
+      "row_count": 54,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

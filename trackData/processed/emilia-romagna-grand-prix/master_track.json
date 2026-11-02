@@ -1,0 +1,171 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:41+00:00",
+  "event_name": "Emilia Romagna Grand Prix",
+  "event_slug": "emilia-romagna-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": null,
+    "corner_source": null,
+    "marshal_light_source": null,
+    "marshal_sector_source": null,
+    "layout_section_source": null,
+    "section_percentage_source": {
+      "file": "raw/sections/emilia.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 432,
+      "sha256": "801dd315d3d1395b8cf1e73dfb06d90090f948bdafb635b6cea707ad8433dc83"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 0,
+      "geometry_files_by_version": {},
+      "families": {}
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [],
+    "status": "requires_verification",
+    "reference_lap": null,
+    "metadata_candidates": [],
+    "conflicting_metadata": {},
+    "note": "Source layout metadata is preserved but does not by itself prove that coordinates match the intended current-season layout."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": false,
+    "mapping_filename": null,
+    "svg": {
+      "path": null,
+      "exists": false
+    },
+    "webp": {
+      "path": null,
+      "exists": false
+    },
+    "status": "no_event_map_entry",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": null,
+    "candidate_count": 0,
+    "zone_like_candidate_count": 0,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP image pixels; origin at top-left",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "webp_asset_unavailable",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 0,
+    "status": "unavailable_no_valid_source",
+    "scope": "event_level",
+    "source_file": null,
+    "source_folder_label": null,
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [],
+    "warnings": [
+      "No valid geometry. Checked: no raw session directory matching 'Emilia Romagna Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/emilia.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+    ],
+    "evidence": {
+      "raw_session_directory": null,
+      "raw_session_directory_found": false,
+      "session_folders_found": [],
+      "circuit_map_session_file_entries": 0,
+      "section_file": "raw/sections/emilia.json"
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 0,
+    "source_file": null,
+    "source_folder_label": null,
+    "files_checked": [],
+    "status": "not_available"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 14,
+    "source_file": "raw/sections/emilia.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 0,
+    "source_file": null,
+    "source_folder_label": null,
+    "status": "not_available",
+    "unpaired_source_arrays": {},
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 0,
+    "status": "not_available"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 0,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": null,
+      "primary_session_verification": null,
+      "primary_session_raw_folder": null,
+      "available_sessions": []
+    },
+    "session_resolutions": {},
+    "provenance_warnings": [],
+    "exports": []
+  },
+  "source_inventory": [],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "No corner records available from any source file for this event (no raw session folders were found; circuitMap.json lists 0 fetched session files).",
+      "No eventMap.json entry exists for this event; image links are omitted rather than guessed.",
+      "No valid geometry. Checked: no raw session directory matching 'Emilia Romagna Grand Prix' under raw/sessions; corners.json/cor.json files examined: 0; circuitMap.json session_files entries for this event: 0; section file: raw/sections/emilia.json (section percentages only, no coordinates). Geometry is not reconstructed from SVG/WebP images and no other circuit is substituted."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:41+00:00",
+  "event_name": "Dutch Grand Prix",
+  "raw_folder_session": "Sprint Qualifying",
+  "resolved_session": "Sprint Qualifying",
+  "session_resolution": {
+    "raw_folder_session": "Sprint Qualifying",
+    "raw_folder_canonical": "Sprint Qualifying",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-08-21T14:30:00.000000000",
+        "last_utc": "2026-08-21T15:20:10.000000000",
+        "utc_dates": [
+          "2026-08-21"
+        ]
+      }
+    },
+    "resolved_session": "Sprint Qualifying",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 3,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 2758,
+      "sha256": "22f27210c256926c4a4d7e193d31f589ff56abaa2a4d9377306056e8246f7c44"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 7934,
+      "sha256": "743f100e4c39140bb787a2f189ba3d1bb3789634580b963a602b24010ff8dfe2"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 13588,
+      "sha256": "9a97f02ef08d19ea80986b8133febce5e66a048d8f8d768619086e38d2e3bf6a"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 7934,
+      "sha256": "743f100e4c39140bb787a2f189ba3d1bb3789634580b963a602b24010ff8dfe2"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Sprint Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Sprint Qualifying",
+      "bytes": 2758,
+      "sha256": "22f27210c256926c4a4d7e193d31f589ff56abaa2a4d9377306056e8246f7c44"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Sprint Qualifying",
+      "resolved_session": "Sprint Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint-qualifying",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Dutch Grand Prix/Sprint Qualifying/weather.json",
+      "output_file": "processed/dutch-grand-prix/sessions/sprint-qualifying/weather.csv",
+      "json_output_file": "processed/dutch-grand-prix/sessions/sprint-qualifying/weather.json",
+      "row_count": 62,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Sprint Qualifying",
+      "resolved_session": "Sprint Qualifying",
+      "session_verification": "unverified_session",
+      "session_slug": "sprint-qualifying",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Dutch Grand Prix/Sprint Qualifying/rcm.json",
+      "output_file": "processed/dutch-grand-prix/sessions/sprint-qualifying/race_control.csv",
+      "json_output_file": "processed/dutch-grand-prix/sessions/sprint-qualifying/race_control.json",
+      "row_count": 56,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

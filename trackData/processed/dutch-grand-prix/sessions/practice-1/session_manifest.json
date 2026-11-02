@@ -1,0 +1,93 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:41+00:00",
+  "event_name": "Dutch Grand Prix",
+  "raw_folder_session": "Practice 1",
+  "resolved_session": "Practice 1",
+  "session_resolution": {
+    "raw_folder_session": "Practice 1",
+    "raw_folder_canonical": "Practice 1",
+    "payload_session_fields": [],
+    "timestamp_evidence": {
+      "rcm": {
+        "first_utc": "2026-08-21T10:17:49.000000000",
+        "last_utc": "2026-08-21T11:42:01.000000000",
+        "utc_dates": [
+          "2026-08-21"
+        ]
+      }
+    },
+    "resolved_session": "Practice 1",
+    "session_verification": "unverified_session",
+    "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+  },
+  "priority_rank": 7,
+  "static_references_included": false,
+  "static_reference_note": "Geometry, corners and sections are event-level references in ../../master_track.json, not part of this session.",
+  "source_files": [
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3630,
+      "sha256": "16120cb4ccd7c2d4aa773136f9400fc5321d41c313b5395f32bac011b04fcb83"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 8227,
+      "sha256": "139b844f76efc7184d470cf8b728f27cb0bd57a3f4f5dc4c02cf6e0661f7ffb9"
+    }
+  ],
+  "json_source_inventory": [
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 13586,
+      "sha256": "903936ed538ac00aa652ca5f79eb0b94ad5211b887cab8881e97bc0508662af6"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 8227,
+      "sha256": "139b844f76efc7184d470cf8b728f27cb0bd57a3f4f5dc4c02cf6e0661f7ffb9"
+    },
+    {
+      "file": "raw/sessions/Dutch Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3630,
+      "sha256": "16120cb4ccd7c2d4aa773136f9400fc5321d41c313b5395f32bac011b04fcb83"
+    }
+  ],
+  "exports": [
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "weather",
+      "source_file": "raw/sessions/Dutch Grand Prix/Practice 1/weather.json",
+      "output_file": "processed/dutch-grand-prix/sessions/practice-1/weather.csv",
+      "json_output_file": "processed/dutch-grand-prix/sessions/practice-1/weather.json",
+      "row_count": 82,
+      "status": "exported"
+    },
+    {
+      "raw_folder_session": "Practice 1",
+      "resolved_session": "Practice 1",
+      "session_verification": "unverified_session",
+      "session_slug": "practice-1",
+      "data_kind": "race_control",
+      "source_file": "raw/sessions/Dutch Grand Prix/Practice 1/rcm.json",
+      "output_file": "processed/dutch-grand-prix/sessions/practice-1/race_control.csv",
+      "json_output_file": "processed/dutch-grand-prix/sessions/practice-1/race_control.json",
+      "row_count": 66,
+      "status": "exported"
+    }
+  ],
+  "warnings": []
+}

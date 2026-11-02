@@ -1,0 +1,9 @@
+section_index,section_label,start_percent,end_percent,source_file,source_format,source_fields_json
+0,Straight,0.0,2.61,raw/sections/baku-city-circuit.json,array_tuple_label_start_end,"[""Straight"",0.0,2.61]"
+1,Low,2.61,12.83,raw/sections/baku-city-circuit.json,array_tuple_label_start_end,"[""Low"",2.61,12.83]"
+2,Straight,12.83,22.86,raw/sections/baku-city-circuit.json,array_tuple_label_start_end,"[""Straight"",12.83,22.86]"
+3,Low,22.86,50.31,raw/sections/baku-city-circuit.json,array_tuple_label_start_end,"[""Low"",22.86,50.31]"
+4,Straight,50.31,60.06,raw/sections/baku-city-circuit.json,array_tuple_label_start_end,"[""Straight"",50.31,60.06]"
+5,Low,60.06,65.55,raw/sections/baku-city-circuit.json,array_tuple_label_start_end,"[""Low"",60.06,65.55]"
+6,Medium,65.55,70.42,raw/sections/baku-city-circuit.json,array_tuple_label_start_end,"[""Medium"",65.55,70.42]"
+7,Straight,70.42,100.0,raw/sections/baku-city-circuit.json,array_tuple_label_start_end,"[""Straight"",70.42,100.0]"

@@ -1,0 +1,859 @@
+{
+  "schema_version": "4.0",
+  "generated_at_utc": "2026-10-31T17:06:43+00:00",
+  "event_name": "Italian Grand Prix",
+  "event_slug": "italian-grand-prix",
+  "source_manifest_file": "source_manifest.json",
+  "source_map": {
+    "file": "circuitMap.json",
+    "repository": "https://github.com/TracingInsights/2026",
+    "branch": "main"
+  },
+  "static_reference": {
+    "scope": "event_level",
+    "note": "Track geometry, corners, markers, layout sections, section percentages and map images are common to the event. Source folder names are provenance only.",
+    "selection_rule": "Each family is selected independently from the first source file that yields valid records, searching folders Race > Qualifying > Sprint > Practice 3 > 2 > 1.",
+    "geometry_source": {
+      "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+      "kind": "geometry",
+      "folder_label": "Race",
+      "bytes": 14131,
+      "sha256": "1cb51ea06530476f19056abc64fa41cff453d77f12276e5b676a4099ecd002e2",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+          "result": "valid_geometry",
+          "point_count": 752,
+          "geometry_fingerprint": "a82199b670e9bd15",
+          "reason": null
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Italian Grand Prix/Qualifying/corners.json",
+          "result": "valid_geometry",
+          "point_count": 752,
+          "geometry_fingerprint": "a82199b670e9bd15",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Italian Grand Prix/Practice 3/corners.json",
+          "result": "valid_geometry",
+          "point_count": 752,
+          "geometry_fingerprint": "a82199b670e9bd15",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Italian Grand Prix/Practice 2/corners.json",
+          "result": "valid_geometry",
+          "point_count": 752,
+          "geometry_fingerprint": "a82199b670e9bd15",
+          "reason": null
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Italian Grand Prix/Practice 1/corners.json",
+          "result": "valid_geometry",
+          "point_count": 752,
+          "geometry_fingerprint": "a82199b670e9bd15",
+          "reason": null
+        }
+      ]
+    },
+    "corner_source": {
+      "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 14131,
+      "sha256": "1cb51ea06530476f19056abc64fa41cff453d77f12276e5b676a4099ecd002e2",
+      "files_checked": [
+        {
+          "folder_label": "Race",
+          "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+          "result": "corner_records",
+          "row_count": 11
+        },
+        {
+          "folder_label": "Qualifying",
+          "file": "raw/sessions/Italian Grand Prix/Qualifying/corners.json",
+          "result": "corner_records",
+          "row_count": 11
+        },
+        {
+          "folder_label": "Practice 3",
+          "file": "raw/sessions/Italian Grand Prix/Practice 3/corners.json",
+          "result": "corner_records",
+          "row_count": 11
+        },
+        {
+          "folder_label": "Practice 2",
+          "file": "raw/sessions/Italian Grand Prix/Practice 2/corners.json",
+          "result": "corner_records",
+          "row_count": 11
+        },
+        {
+          "folder_label": "Practice 1",
+          "file": "raw/sessions/Italian Grand Prix/Practice 1/corners.json",
+          "result": "corner_records",
+          "row_count": 11
+        }
+      ]
+    },
+    "marshal_light_source": {
+      "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+      "kind": "marshal_lights",
+      "folder_label": "Race",
+      "bytes": 14131,
+      "sha256": "1cb51ea06530476f19056abc64fa41cff453d77f12276e5b676a4099ecd002e2",
+      "files_checked": []
+    },
+    "marshal_sector_source": {
+      "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+      "kind": "marshal_sectors",
+      "folder_label": "Race",
+      "bytes": 14131,
+      "sha256": "1cb51ea06530476f19056abc64fa41cff453d77f12276e5b676a4099ecd002e2",
+      "files_checked": []
+    },
+    "layout_section_source": {
+      "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+      "kind": "layout_sections",
+      "folder_label": "Race",
+      "bytes": 14131,
+      "sha256": "1cb51ea06530476f19056abc64fa41cff453d77f12276e5b676a4099ecd002e2",
+      "files_checked": []
+    },
+    "section_percentage_source": {
+      "file": "raw/sections/monza.json",
+      "kind": "section_reference",
+      "folder_label": null,
+      "bytes": 336,
+      "sha256": "04471ae13beed5309292c42eed95e5043565d27196c13ddefa210cb8a4430715"
+    },
+    "cross_folder_consistency": {
+      "geometry_distinct_versions": 1,
+      "geometry_files_by_version": {
+        "a82199b670e9bd15": [
+          "Race/corners.json",
+          "Qualifying/corners.json",
+          "Practice 3/corners.json",
+          "Practice 2/corners.json",
+          "Practice 1/corners.json"
+        ]
+      },
+      "families": {
+        "corners": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 116.801,
+              "Practice 3/corners.json": 15.517,
+              "Practice 2/corners.json": 24.624,
+              "Practice 1/corners.json": 22.08
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "corner_number",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "layout_section_metadata": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "start_distance_source": {
+              "Qualifying/corners.json": 108.316,
+              "Practice 3/corners.json": 0.921,
+              "Practice 2/corners.json": 4.462,
+              "Practice 1/corners.json": 10.294
+            },
+            "end_distance_source": {
+              "Qualifying/corners.json": 115.5,
+              "Practice 3/corners.json": 0.983,
+              "Practice 2/corners.json": 4.757,
+              "Practice 1/corners.json": 10.976
+            }
+          },
+          "fields_identical": [
+            "end_percent",
+            "section_type",
+            "start_percent"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_lights": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 118.525,
+              "Practice 3/corners.json": 25.276,
+              "Practice 2/corners.json": 28.274,
+              "Practice 1/corners.json": 41.553
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        },
+        "marshal_sectors": {
+          "files_compared": 4,
+          "not_comparable_files": [],
+          "fields_differing_max_abs_diff": {
+            "distance_source": {
+              "Qualifying/corners.json": 124.155,
+              "Practice 3/corners.json": 24.456,
+              "Practice 2/corners.json": 31.685,
+              "Practice 1/corners.json": 31.67
+            }
+          },
+          "fields_identical": [
+            "angle_deg_source",
+            "mv_distance_source",
+            "x_raw",
+            "y_raw"
+          ],
+          "selected_source": "Race/corners.json"
+        }
+      }
+    }
+  },
+  "layout_identity": {
+    "layout_year_source_values": [
+      "2021"
+    ],
+    "status": "historical_source_year_requires_compatibility_check",
+    "reference_lap": {
+      "layout_year": 2021,
+      "layout_race_date": "2021-09-12",
+      "layout_meeting_name": "Italian Grand Prix",
+      "reference_lap_session_label": "FP1",
+      "reference_lap_session_canonical": "Practice 1",
+      "reference_lap_driver_number": "3",
+      "reference_lap_number": 2,
+      "reference_lap_start_date": "2021-09-10T12:32:32.752000",
+      "scope": "Historical lap the layout was traced from. It says nothing about which session any weather or race-control file belongs to and is never used to relabel session data."
+    },
+    "metadata_candidates": [
+      {
+        "source_file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+        "CircuitKey": 39,
+        "CircuitId": null,
+        "CircuitID": null,
+        "CircuitName": "Monza",
+        "Location": "Monza",
+        "CountryName": "Italy",
+        "CountryKey": 13,
+        "CountryIocCode": "ITA",
+        "LayoutYear": 2021,
+        "LayoutRound": 14,
+        "LayoutRaceDate": "2021-09-12",
+        "LayoutMeetingKey": 1076,
+        "LayoutMeetingName": "Italian Grand Prix",
+        "LayoutMeetingOfficialName": null,
+        "LayoutLapDriverNumber": "3",
+        "LayoutLapNumber": 2,
+        "LayoutLapSession": "FP1",
+        "LayoutLapTime": 85.995,
+        "LayoutLapStartDate": "2021-09-10T12:32:32.752000",
+        "LayoutLapStartSessionTime": 1023.005,
+        "LayoutLapSessionStartTime": 870.359,
+        "TrackLength": null,
+        "TrackLengthKm": null,
+        "Length": null,
+        "Rotation": 95.0,
+        "rotation": null,
+        "PitLossNormal": 25.43,
+        "PitLossSC": 16.11,
+        "PitLossVSC": 18.4
+      }
+    ],
+    "conflicting_metadata": {},
+    "note": "The selected reference is tagged with a pre-2026 layout year. Do not assume it is an exact 2026 reference until layout compatibility is checked."
+  },
+  "images": {
+    "event_map_file": "raw/images/eventMap.json",
+    "mapped": true,
+    "mapping_filename": "monza.svg",
+    "svg": {
+      "path": "raw/images/svg/monza.svg",
+      "exists": true
+    },
+    "webp": {
+      "path": "raw/images/webp/monza.webp",
+      "exists": true
+    },
+    "status": "assets_found",
+    "note": "Image assets are retained for display. WebP red annotation components may be exported as image-space candidates only; no track-distance or corner anchor is inferred."
+  },
+  "straight_mode_map_annotations": {
+    "file": "straight_mode_map_annotations.csv",
+    "preview_file": "processed/italian-grand-prix/straight_mode_map_review.png",
+    "candidate_count": 5,
+    "zone_like_candidate_count": 5,
+    "compact_annotation_count": 0,
+    "coordinate_space": "source WebP pixels (origin top-left) and normalized image ratios only",
+    "telemetry_aligned": false,
+    "activation_offsets_extracted": false,
+    "status": "visual_candidates_need_review",
+    "source_image_webp": "raw/images/webp/monza.webp",
+    "source_image_svg": "raw/images/svg/monza.svg",
+    "image_width_px": 1252,
+    "image_height_px": 704,
+    "svg_description": null,
+    "svg_semantic_text_elements": 0,
+    "image_method": "red-hue connected-component segmentation on WebP pixels; SVG retained as source/provenance",
+    "raw_red_pixel_count": 21336,
+    "all_candidates_unverified": true,
+    "svg_semantics_note": "SVG contains no <text> elements; zone identity is not encoded as semantic SVG labels, so WebP segmentation is the only visual evidence.",
+    "manual_review_required": true,
+    "not_valid_for_physics_until_anchor_alignment": true
+  },
+  "geometry": {
+    "file": "track_geometry.csv",
+    "point_count": 752,
+    "status": "extracted_source_coordinates_unscaled",
+    "scope": "event_level",
+    "source_file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "coordinate_reference": "source-local; x/y axes, origin, direction and coordinate transform not verified",
+    "units": "unknown; raw source units retained without scaling",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+        "result": "valid_geometry",
+        "point_count": 752,
+        "geometry_fingerprint": "a82199b670e9bd15",
+        "reason": null
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Italian Grand Prix/Qualifying/corners.json",
+        "result": "valid_geometry",
+        "point_count": 752,
+        "geometry_fingerprint": "a82199b670e9bd15",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 3",
+        "file": "raw/sessions/Italian Grand Prix/Practice 3/corners.json",
+        "result": "valid_geometry",
+        "point_count": 752,
+        "geometry_fingerprint": "a82199b670e9bd15",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 2",
+        "file": "raw/sessions/Italian Grand Prix/Practice 2/corners.json",
+        "result": "valid_geometry",
+        "point_count": 752,
+        "geometry_fingerprint": "a82199b670e9bd15",
+        "reason": null
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Italian Grand Prix/Practice 1/corners.json",
+        "result": "valid_geometry",
+        "point_count": 752,
+        "geometry_fingerprint": "a82199b670e9bd15",
+        "reason": null
+      }
+    ],
+    "warnings": [],
+    "quality_checks": {
+      "all_coordinates_finite": true,
+      "consecutive_duplicate_points": 0,
+      "closed_loop_endpoint_distance_raw_units": 0.0,
+      "distance_units_verified": false,
+      "track_length_verified": false
+    }
+  },
+  "corners": {
+    "file": "corners.csv",
+    "scope": "event_level",
+    "row_count": 11,
+    "source_file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "files_checked": [
+      {
+        "folder_label": "Race",
+        "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+        "result": "corner_records",
+        "row_count": 11
+      },
+      {
+        "folder_label": "Qualifying",
+        "file": "raw/sessions/Italian Grand Prix/Qualifying/corners.json",
+        "result": "corner_records",
+        "row_count": 11
+      },
+      {
+        "folder_label": "Practice 3",
+        "file": "raw/sessions/Italian Grand Prix/Practice 3/corners.json",
+        "result": "corner_records",
+        "row_count": 11
+      },
+      {
+        "folder_label": "Practice 2",
+        "file": "raw/sessions/Italian Grand Prix/Practice 2/corners.json",
+        "result": "corner_records",
+        "row_count": 11
+      },
+      {
+        "folder_label": "Practice 1",
+        "file": "raw/sessions/Italian Grand Prix/Practice 1/corners.json",
+        "result": "corner_records",
+        "row_count": 11
+      }
+    ],
+    "status": "extracted"
+  },
+  "sections": {
+    "file": "sections.csv",
+    "scope": "event_level",
+    "row_count": 11,
+    "source_file": "raw/sections/monza.json",
+    "status": "extracted",
+    "validation": []
+  },
+  "layout_section_metadata": {
+    "file": "layout_section_metadata.csv",
+    "scope": "event_level",
+    "row_count": 11,
+    "source_file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+    "source_folder_label": "Race",
+    "status": "extracted",
+    "unpaired_source_arrays": {
+      "Section": [
+        "Low",
+        "Low",
+        "Straight",
+        "Low",
+        "Low",
+        "High",
+        "High",
+        "High",
+        "High",
+        "High",
+        "High"
+      ]
+    },
+    "note": "Only arrays sharing one length are paired. Arrays of a different length (e.g. 'Section') are preserved raw and are not matched to section rows by index."
+  },
+  "marshal_lights": {
+    "file": "marshal_lights.csv",
+    "row_count": 17,
+    "status": "extracted"
+  },
+  "marshal_sectors": {
+    "file": "marshal_sectors.csv",
+    "row_count": 17,
+    "status": "extracted"
+  },
+  "mini_sector_markers": {
+    "file": "mini_sector_markers.csv",
+    "row_count": 25,
+    "status": "extracted"
+  },
+  "active_aero_zones": {
+    "file": "active_aero_zones.csv",
+    "mode": "Straight Mode",
+    "row_count": 0,
+    "source_file": null,
+    "status": "not_provided",
+    "distance_semantics": "Only structured source offsets paired with a corner anchor belong here. Absolute lap distances are not calculated by this processor.",
+    "items": [],
+    "map_annotation_candidates_file": "straight_mode_map_annotations.csv",
+    "map_annotation_candidate_count": 5,
+    "map_annotation_note": "Separate visual evidence; image coordinates are not activation offsets and are not telemetry-aligned."
+  },
+  "session_data": {
+    "scope": "session_level",
+    "session_model_inputs": {
+      "precedence": "Race, then Qualifying, then Sprint, then Practice 3/2/1. Lower-priority sessions are retained, not discarded.",
+      "primary_session_for_weather": "Race",
+      "primary_session_verification": "unverified_session",
+      "primary_session_raw_folder": "Race",
+      "available_sessions": [
+        {
+          "resolved_session": "Race",
+          "raw_folder_session": "Race",
+          "session_verification": "unverified_session",
+          "weather_rows": 176,
+          "output_file": "processed/italian-grand-prix/sessions/race/weather.csv"
+        },
+        {
+          "resolved_session": "Qualifying",
+          "raw_folder_session": "Qualifying",
+          "session_verification": "unverified_session",
+          "weather_rows": 77,
+          "output_file": "processed/italian-grand-prix/sessions/qualifying/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 3",
+          "raw_folder_session": "Practice 3",
+          "session_verification": "unverified_session",
+          "weather_rows": 80,
+          "output_file": "processed/italian-grand-prix/sessions/practice-3/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 2",
+          "raw_folder_session": "Practice 2",
+          "session_verification": "unverified_session",
+          "weather_rows": 83,
+          "output_file": "processed/italian-grand-prix/sessions/practice-2/weather.csv"
+        },
+        {
+          "resolved_session": "Practice 1",
+          "raw_folder_session": "Practice 1",
+          "session_verification": "unverified_session",
+          "weather_rows": 80,
+          "output_file": "processed/italian-grand-prix/sessions/practice-1/weather.csv"
+        }
+      ]
+    },
+    "session_resolutions": {
+      "Race": {
+        "raw_folder_session": "Race",
+        "raw_folder_canonical": "Race",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-09-06T12:19:26.000000000",
+            "last_utc": "2026-09-06T14:56:06.000000000",
+            "utc_dates": [
+              "2026-09-06"
+            ]
+          }
+        },
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Qualifying": {
+        "raw_folder_session": "Qualifying",
+        "raw_folder_canonical": "Qualifying",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-09-05T13:50:42.000000000",
+            "last_utc": "2026-09-05T15:04:02.000000000",
+            "utc_dates": [
+              "2026-09-05"
+            ]
+          }
+        },
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 3": {
+        "raw_folder_session": "Practice 3",
+        "raw_folder_canonical": "Practice 3",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-09-05T10:30:00.000000000",
+            "last_utc": "2026-09-05T11:43:08.000000000",
+            "utc_dates": [
+              "2026-09-05"
+            ]
+          }
+        },
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 2": {
+        "raw_folder_session": "Practice 2",
+        "raw_folder_canonical": "Practice 2",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-09-04T13:48:53.000000000",
+            "last_utc": "2026-09-04T15:10:46.000000000",
+            "utc_dates": [
+              "2026-09-04"
+            ]
+          }
+        },
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      },
+      "Practice 1": {
+        "raw_folder_session": "Practice 1",
+        "raw_folder_canonical": "Practice 1",
+        "payload_session_fields": [],
+        "timestamp_evidence": {
+          "rcm": {
+            "first_utc": "2026-09-04T10:20:56.000000000",
+            "last_utc": "2026-09-04T11:38:22.000000000",
+            "utc_dates": [
+              "2026-09-04"
+            ]
+          }
+        },
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "resolution": "raw folder label retained; weather/race-control payloads carry no session field"
+      }
+    },
+    "provenance_warnings": [],
+    "exports": [
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Italian Grand Prix/Race/rcm.json",
+        "output_file": "processed/italian-grand-prix/sessions/race/race_control.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/race/race_control.json",
+        "row_count": 154,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Race",
+        "resolved_session": "Race",
+        "session_verification": "unverified_session",
+        "session_slug": "race",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Italian Grand Prix/Race/weather.json",
+        "output_file": "processed/italian-grand-prix/sessions/race/weather.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/race/weather.json",
+        "row_count": 176,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Italian Grand Prix/Qualifying/rcm.json",
+        "output_file": "processed/italian-grand-prix/sessions/qualifying/race_control.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/qualifying/race_control.json",
+        "row_count": 47,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Qualifying",
+        "resolved_session": "Qualifying",
+        "session_verification": "unverified_session",
+        "session_slug": "qualifying",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Italian Grand Prix/Qualifying/weather.json",
+        "output_file": "processed/italian-grand-prix/sessions/qualifying/weather.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/qualifying/weather.json",
+        "row_count": 77,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 3",
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-3",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Italian Grand Prix/Practice 3/rcm.json",
+        "output_file": "processed/italian-grand-prix/sessions/practice-3/race_control.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/practice-3/race_control.json",
+        "row_count": 66,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 3",
+        "resolved_session": "Practice 3",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-3",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Italian Grand Prix/Practice 3/weather.json",
+        "output_file": "processed/italian-grand-prix/sessions/practice-3/weather.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/practice-3/weather.json",
+        "row_count": 80,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 2",
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-2",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Italian Grand Prix/Practice 2/rcm.json",
+        "output_file": "processed/italian-grand-prix/sessions/practice-2/race_control.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/practice-2/race_control.json",
+        "row_count": 33,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 2",
+        "resolved_session": "Practice 2",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-2",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Italian Grand Prix/Practice 2/weather.json",
+        "output_file": "processed/italian-grand-prix/sessions/practice-2/weather.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/practice-2/weather.json",
+        "row_count": 83,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "race_control",
+        "source_file": "raw/sessions/Italian Grand Prix/Practice 1/rcm.json",
+        "output_file": "processed/italian-grand-prix/sessions/practice-1/race_control.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/practice-1/race_control.json",
+        "row_count": 69,
+        "status": "exported"
+      },
+      {
+        "raw_folder_session": "Practice 1",
+        "resolved_session": "Practice 1",
+        "session_verification": "unverified_session",
+        "session_slug": "practice-1",
+        "data_kind": "weather",
+        "source_file": "raw/sessions/Italian Grand Prix/Practice 1/weather.json",
+        "output_file": "processed/italian-grand-prix/sessions/practice-1/weather.csv",
+        "json_output_file": "processed/italian-grand-prix/sessions/practice-1/weather.json",
+        "row_count": 80,
+        "status": "exported"
+      }
+    ]
+  },
+  "source_inventory": [
+    {
+      "file": "raw/sessions/Italian Grand Prix/Race/corners.json",
+      "kind": "corners",
+      "folder_label": "Race",
+      "bytes": 14131,
+      "sha256": "1cb51ea06530476f19056abc64fa41cff453d77f12276e5b676a4099ecd002e2"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Race/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Race",
+      "bytes": 19512,
+      "sha256": "fa7e78d3ff342f6062b3bcb6658713d0aa29f0bc51d987e21ea5e1d5b6005457"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Race/weather.json",
+      "kind": "weather",
+      "folder_label": "Race",
+      "bytes": 7923,
+      "sha256": "a17d045a10255772a531725f913e86c459abffb6c24cb27d834a91bbe93a09be"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Qualifying/corners.json",
+      "kind": "corners",
+      "folder_label": "Qualifying",
+      "bytes": 14136,
+      "sha256": "e647ace069bdb08f8bb769b9e5220b3d69a0cc6fbbc41db8b7ce9df563fb72f4"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Qualifying/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Qualifying",
+      "bytes": 6573,
+      "sha256": "2d891bec42f5472dcd150890c23d51aae9b011b0b908f3270ee92c82b80c7bd0"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Qualifying/weather.json",
+      "kind": "weather",
+      "folder_label": "Qualifying",
+      "bytes": 3397,
+      "sha256": "10f2796aea8aa4883e2f2a2f7b2300fd227d1ece050f335135d52000da23a0bd"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 3/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 3",
+      "bytes": 14129,
+      "sha256": "95ef3856a2972f9de6448dc2209e298cb3c5c0422183a9b9ca089a5fe046c908"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 3/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 3",
+      "bytes": 9870,
+      "sha256": "09ceb6f7994494103321110f0782c5aef5b3461e34dab27e05be5eaf52399213"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 3/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 3",
+      "bytes": 3546,
+      "sha256": "6b2b50830ae5b5a80475c113c8420b5f048e13a1a10d9208f277f8c8cdb13f2f"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 2/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 2",
+      "bytes": 14139,
+      "sha256": "2fadd98f91885caf26abf183e4ff2233374b4b9ca0433f0100a9c59c8e977f8b"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 2/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 2",
+      "bytes": 4647,
+      "sha256": "35135ce911bac1e96b9cc1f77356c10f43ee5f03dcb8aae2ffb37317b535738e"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 2/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 2",
+      "bytes": 3670,
+      "sha256": "f9980f5ac3ff697a78ab1cbac4ef41baa1b3775b7ede78166c441248db927271"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 1/corners.json",
+      "kind": "corners",
+      "folder_label": "Practice 1",
+      "bytes": 14132,
+      "sha256": "86bf13b5d80103014ad90349186b0a19f250255a3652bb97ea62c5be45251427"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 1/rcm.json",
+      "kind": "rcm",
+      "folder_label": "Practice 1",
+      "bytes": 9294,
+      "sha256": "505cf40f3dfbbbabe616aa786139720bd004c955987ca042214d4ec59f535c3d"
+    },
+    {
+      "file": "raw/sessions/Italian Grand Prix/Practice 1/weather.json",
+      "kind": "weather",
+      "folder_label": "Practice 1",
+      "bytes": 3539,
+      "sha256": "8bae8487e61e89233993b56bd6d65509a25deb6d79c40e034b9e39932c8cb0fb"
+    }
+  ],
+  "validation": {
+    "status": "warnings",
+    "warnings": [
+      "Selected reference metadata is tagged layout year ['2021']; current-season layout compatibility remains unverified.",
+      "corners: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 116.801); identical fields: ['angle_deg_source', 'corner_number', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "layout_section_metadata: field(s) ['end_distance_source', 'start_distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (start_distance_source: max |delta| 108.316; end_distance_source: max |delta| 115.5); identical fields: ['end_percent', 'section_type', 'start_percent']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_lights: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 118.525); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed.",
+      "marshal_sectors: field(s) ['distance_source'] differ between the selected source (Race/corners.json) and 4 other source file(s) (distance_source: max |delta| 124.155); identical fields: ['angle_deg_source', 'mv_distance_source', 'x_raw', 'y_raw']. Values that vary by source file are not event-level; do not use them as lap-distance anchors until the intended reference lap is confirmed."
+    ],
+    "coordinate_units_verified": false,
+    "layout_compatible_with_2026_verified": false,
+    "telemetry_alignment_performed": false,
+    "weather_sensitivity_model_performed": false
+  }
+}
