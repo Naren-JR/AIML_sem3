@@ -1,0 +1,21 @@
+{
+  "energy_window_mj": 4.0,
+  "max_deployment_kw": 350.0,
+  "max_recovery_kw": 350.0,
+  "recovery_budget_mj_per_lap": null,
+  "deployment_budget_mj_per_lap": null,
+  "eta_discharge": 0.95,
+  "eta_recovery": 0.8,
+  "mass_kg": 800.0,
+  "air_density_kg_m3": 1.2,
+  "drag_area_m2": 1.0,
+  "rolling_coefficient": 0.015,
+  "electric_share": 0.3,
+  "regen_fraction": 0.35,
+  "max_gap_s": 0.5,
+  "regulation_status": "provisional_research_scenario_not_event_compliance",
+  "regulation_source": "Supplied handbook section 3.4 cites FIA Section C issue 16 (27 Feb 2026): 350 kW and 4 MJ swing. Event applicability and interface conversion unverified. No lap budget invented.",
+  "parameter_provenance": "Mass, aero, rolling resistance, efficiencies, electric share and regen fraction are illustrative configurable assumptions, not measurements. Window is not total battery capacity.",
+  "reserve_fraction": 0.2,
+  "deployment_taper_fraction": 0.4
+}
