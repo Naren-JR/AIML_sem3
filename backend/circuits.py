@@ -1,6 +1,7 @@
 """Explicit event identities, local availability, and dated participation evidence."""
 import csv
 from .data import ROOT
+from .races import available_races
 
 # No excluded Bahrain/Chinese/Japanese/Spanish event; Barcelona is a separate event.
 EVENTS = [
@@ -48,7 +49,7 @@ def catalog():
         if folder and (folder/'track_geometry.csv').exists():
             with (folder/'track_geometry.csv').open(encoding='utf-8-sig',newline='') as f:
                 geometry=sum(1 for _ in csv.DictReader(f))
-        telemetry=key=='australian-grand-prix' and (ROOT/'dataPreprocess/rawData/australiar.csv').exists()
+        telemetry=key in {r['id'] for r in available_races()} or (key=='australian-grand-prix' and (ROOT/'dataPreprocess/rawData/australiar.csv').exists())
         rows.append({'id':key,'event':event,'name':name,'participation_years':[2025,2026] if current else [2025],
                      'participation_source':SOURCE_2026 if current else SOURCE_2025,'verified_on':'2026-11-02',
                      'race_telemetry_available':telemetry,'telemetry_year':2026 if telemetry else None,

@@ -1,5 +1,7 @@
 # FastAPI contract
 
+Multi-track API extension: telemetry, ERS, dataset/laps, track and model-status endpoints accept circuit_id (default Australian GP). Optimization bodies also accept circuit_id. The ML UI now uses GET /api/ml/tracks and GET/POST /api/ml/experiments[/run] with mode, train_track and test_track. See MULTI_TRACK.md for the complete contract, provenance, chronology and evaluation safeguards.
+
 ML experiment endpoints: GET /api/ml/validation returns saved results or not_run/stale; POST /api/ml/validation/run trains a fixed operating-state classifier on earlier laps and evaluates later held-out laps, returning metrics and predictions. It runs synchronously in FastAPI's worker thread and persists JSON; it does not trigger on lap selection. See ML_VALIDATION.md for label definitions, leakage safeguards and limitations.
 
 Additional source-evidence endpoints: GET /api/track-reference returns the imported static Australian geometry and attached quality metadata; GET /api/track-report returns all historical processing warnings and unverified image candidates; GET /api/track-report/review-sheet serves the supplied PNG. These endpoints do not certify telemetry alignment or mode activation. See REPORT_RECONCILIATION.md for evidence boundaries.

@@ -1,5 +1,7 @@
 # AIML–F1 Energy Research Workstation
 
+**circuit_add update:** three complete Kimi GP Race datasets—Australia, Austria and Italy—are downloaded and ready locally. Select a race at the top of the dashboard. The ML tab supports both earlier-lap/later-lap evaluation and disjoint cross-track generalization, with all nine combinations precomputed. See [multi-track setup, provenance, APIs and results](docs/MULTI_TRACK.md). On a fresh clone, run the pinned importer before starting; data and results remain Git-ignored.
+
 On the readings branch, **ML validation & predictions** adds a trained operating-state classifier with held-out accuracy, precision/recall/F1, a confusion matrix, baseline comparison and per-lap predictions. Install updated requirements, restart the API, then open `/ml-validation`. Click Train & evaluate or run `.\.venv\Scripts\python -m scripts.validate_ml`. See [evaluation protocol and external sources](docs/ML_VALIDATION.md). These scores do not validate hidden ERS state.
 
 GitHub privacy: supplied datasets, imported references, internal PDFs, reports and results are intentionally ignored and remain local. A fresh clone needs the race CSV restored before running. Run `.\.venv\Scripts\python -m scripts.check_publication` before committing, and read [GitHub privacy/setup notes](docs/GITHUB_PRIVACY.md).
