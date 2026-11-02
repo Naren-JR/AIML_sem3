@@ -4,13 +4,17 @@ import hashlib
 import json
 from .data import ROOT, number
 from .track_quality import track_quality
+from .circuits import definition, reference_folder
 
 
-def load_reference():
-    candidates = sorted((ROOT / 'frontend_unzipped').glob('*/australian-grand-prix/master_track.json'))
-    if not candidates:
-        return {'available': False, 'reason': 'Australian static reference not installed'}
-    master_path = candidates[0]
+def load_reference(circuit_id='australian-grand-prix'):
+    entry = definition(circuit_id)
+    if entry is None:
+        raise ValueError('Unknown or excluded circuit')
+    folder = reference_folder(circuit_id)
+    if folder is None:
+        return {'available': False, 'reason': 'Static reference not installed'}
+    master_path = folder / 'master_track.json'
     folder = master_path.parent
     master = json.loads(master_path.read_text(encoding='utf-8-sig'))
     def rows(name):
@@ -27,7 +31,8 @@ def load_reference():
         sections.append({'category': value[0], 'start_percent': value[1], 'end_percent': value[2]})
     corners = [{'number': row.get('Number'), 'x': number(row.get('X')), 'y': number(row.get('Y')),
                 'source_distance': number(row.get('Distance'))} for row in rows('corners.csv')]
-    quality = track_quality('Australian Grand Prix')
+    event = master.get('event_or_circuit_label', entry[1])
+    quality = track_quality(event)
     selected_session = next(iter(quality.get('event_summaries', [])), {}).get('geometry_source_folder_label')
     imported_source = str(master.get('geometry', {}).get('canonical_source', ''))
     version_conflict = (f'Imported geometry source is {imported_source}; processing report selects {selected_session}. Source versions require reconciliation.'
@@ -40,7 +45,7 @@ def load_reference():
     for point in geometry:
         if not display_geometry or point != display_geometry[-1]:
             display_geometry.append(point)
-    return {'available': True, 'event': 'Australian Grand Prix', 'geometry': display_geometry,
+    return {'available': True, 'event': event, 'geometry': display_geometry,
             'source_geometry_point_count': len(geometry),
             'corners': corners, 'sections': sections,
             'telemetry_aligned': False, 'click_selection_enabled': False,

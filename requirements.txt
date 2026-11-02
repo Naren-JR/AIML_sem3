@@ -5,3 +5,4 @@ pandas==2.3.3
 scipy==1.16.3
 pytest==8.4.2
 httpx==0.28.1
+scikit-learn==1.7.2

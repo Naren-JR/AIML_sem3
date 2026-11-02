@@ -1,5 +1,7 @@
 # AIML–F1 Energy Research Workstation
 
+On the readings branch, **ML validation & predictions** adds a trained operating-state classifier with held-out accuracy, precision/recall/F1, a confusion matrix, baseline comparison and per-lap predictions. Install updated requirements, restart the API, then open `/ml-validation`. Click Train & evaluate or run `.\.venv\Scripts\python -m scripts.validate_ml`. See [evaluation protocol and external sources](docs/ML_VALIDATION.md). These scores do not validate hidden ERS state.
+
 GitHub privacy: supplied datasets, imported references, internal PDFs, reports and results are intentionally ignored and remain local. A fresh clone needs the race CSV restored before running. Run `.\.venv\Scripts\python -m scripts.check_publication` before committing, and read [GitHub privacy/setup notes](docs/GITHUB_PRIVACY.md).
 
 Working local pipeline for Kimi Antonelli's supplied 2026 Australian GP Race telemetry: continuous conditional ERS estimation, constrained gradient-based deployment experiments, FastAPI and a React engineering dashboard.
