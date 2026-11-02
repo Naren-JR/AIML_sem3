@@ -18,11 +18,15 @@ from .ml_validation import saved_validation, run_validation
 from .circuits import catalog, definition
 from . import hybrid
 
+from .races import load_race, available_races
+from .ml_experiments import experiment, experiment_status, GUARD as ML_GUARD
+
 RESULTS = Path(os.getenv('AIML_RESULTS_DIR', str(ROOT / 'results/optimization')))
 
 
 class RunRequest(BaseModel):
     model_config = ConfigDict(extra='forbid', allow_inf_nan=False)
+    circuit_id: str = 'australian-grand-prix'
     lap: int = Field(ge=1)
     max_iterations: int = Field(default=150, ge=1, le=1000)
     tolerance: float = Field(default=1e-8, ge=1e-12, le=.01)
@@ -34,11 +38,19 @@ class HybridRequest(BaseModel):
     model_config = ConfigDict(extra='forbid')
     test_track: str = hybrid.DEFAULT_TEST
 
+class MLRequest(BaseModel):
+    model_config = ConfigDict(extra='forbid')
+    mode: str = 'within_track'
+    train_track: str
+    test_track: str
+
 
 def create_app(dataset=None):
     state = {'dataset': dataset, 'model': None, 'error': None,
              'optimization': {'status': 'idle', 'run_id': None}}
     lock = Lock()
+    race_models = {}
+    model_lock = Lock()
 
     @asynccontextmanager
     async def lifespan(app):
@@ -53,13 +65,22 @@ def create_app(dataset=None):
     app.add_middleware(CORSMiddleware, allow_origins=os.getenv('AIML_CORS_ORIGINS', 'http://localhost:5173,http://127.0.0.1:5173').split(','),
                        allow_methods=['GET', 'POST'], allow_headers=['Content-Type'])
 
-    def ready():
+    def ready(circuit_id='australian-grand-prix'):
+        if circuit_id != 'australian-grand-prix':
+            try:
+                with model_lock:
+                    if circuit_id not in race_models:
+                        d = load_race(circuit_id)
+                        race_models[circuit_id] = (d, Model(d))
+                    return race_models[circuit_id]
+            except (ValueError, OSError) as e:
+                raise HTTPException(404, str(e)) from e
         if state['error'] or state['model'] is None:
             raise HTTPException(503, state['error'] or 'Model is loading')
         return state['dataset'], state['model']
 
-    def get_lap(lap):
-        d, m = ready()
+    def get_lap(lap, circuit_id='australian-grand-prix'):
+        d, m = ready(circuit_id)
         try:
             return d.lap(lap), m
         except KeyError as e:
@@ -70,8 +91,8 @@ def create_app(dataset=None):
         return {'status': 'degraded' if state['error'] else 'ok', 'error': state['error']}
 
     @app.get('/api/dataset')
-    def dataset_info():
-        return ready()[0].metadata()
+    def dataset_info(circuit_id: str = 'australian-grand-prix'):
+        return ready(circuit_id)[0].metadata()
 
     @app.get('/api/circuits')
     def circuits():
@@ -90,18 +111,18 @@ def create_app(dataset=None):
         return {'circuit':entry,'reference':reference,'section_percentages':sections}
 
     @app.get('/api/laps')
-    def laps():
-        return ready()[0].laps
+    def laps(circuit_id: str = 'australian-grand-prix'):
+        return ready(circuit_id)[0].laps
 
     @app.get('/api/telemetry/lap/{lap_number}')
-    def telemetry_lap(lap_number: int):
-        rows, _ = get_lap(lap_number)
+    def telemetry_lap(lap_number: int, circuit_id: str = 'australian-grand-prix'):
+        rows, _ = get_lap(lap_number, circuit_id)
         return {'lap': lap_number, 'samples': rows}
 
     @app.get('/api/telemetry/point')
     @app.get('/api/ers/point')
-    def point(lap: int = Query(ge=1), distance: float = Query(ge=0, allow_inf_nan=False)):
-        d, m = ready()
+    def point(lap: int = Query(ge=1), distance: float = Query(ge=0, allow_inf_nan=False), circuit_id: str = 'australian-grand-prix'):
+        d, m = ready(circuit_id)
         try:
             s = d.point(lap, distance)
             return {'telemetry': s, 'estimated': m.by_id[s['sample_id']],
@@ -112,13 +133,35 @@ def create_app(dataset=None):
             raise HTTPException(422, str(e)) from e
 
     @app.get('/api/ers/lap/{lap_number}')
-    def ers_lap(lap_number: int):
-        rows, m = get_lap(lap_number)
+    def ers_lap(lap_number: int, circuit_id: str = 'australian-grand-prix'):
+        rows, m = get_lap(lap_number, circuit_id)
         return {'lap': lap_number, 'samples': [m.by_id[s['sample_id']] for s in rows]}
 
     @app.get('/api/model/status')
-    def model_status():
-        return ready()[1].status
+    def model_status(circuit_id: str = 'australian-grand-prix'):
+        return ready(circuit_id)[1].status
+
+    @app.get('/api/ml/tracks')
+    def ml_tracks():
+        return {'tracks': available_races()}
+
+    @app.get('/api/ml/experiments')
+    def ml_experiment_status(mode: str, train_track: str, test_track: str):
+        try:
+            return experiment_status(mode, train_track, test_track)
+        except (ValueError, OSError) as e:
+            raise HTTPException(422, str(e)) from e
+
+    @app.post('/api/ml/experiments/run')
+    def ml_experiment_run(request: MLRequest):
+        if not ML_GUARD.acquire(blocking=False):
+            raise HTTPException(409, 'An ML experiment is running')
+        try:
+            return experiment(**request.model_dump())
+        except (ValueError, OSError) as e:
+            raise HTTPException(422, str(e)) from e
+        finally:
+            ML_GUARD.release()
 
     @app.get('/api/hybrid/tracks')
     def hybrid_tracks():
@@ -174,8 +217,8 @@ def create_app(dataset=None):
         return {'markdown': (ROOT / 'docs/MODEL.md').read_text(encoding='utf-8'), 'parameters': asdict(ready()[1].parameters)}
 
     @app.get('/api/track/{lap_number}')
-    def track(lap_number: int):
-        rows, _ = get_lap(lap_number)
+    def track(lap_number: int, circuit_id: str = 'australian-grand-prix'):
+        rows, _ = get_lap(lap_number, circuit_id)
         points = [{'sample_id': s['sample_id'], 'distance_m': s['recorded']['distance'],
                    'x': s['recorded'].get('x'), 'y': s['recorded'].get('y')} for s in rows
                   if all(s['recorded'].get(k) is not None for k in ('x', 'y', 'distance'))]
@@ -214,8 +257,10 @@ def create_app(dataset=None):
 
     def execute(payload):
         try:
-            d, m = ready()
+            circuit_id = payload.pop('circuit_id', 'australian-grand-prix')
+            d, m = ready(circuit_id)
             result = optimize(d, m, **payload)
+            result['circuit_id'] = circuit_id
             RESULTS.mkdir(parents=True, exist_ok=True)
             path = RESULTS / (result['run_id'] + '.json')
             temporary = path.with_suffix('.tmp')
@@ -229,7 +274,7 @@ def create_app(dataset=None):
 
     @app.post('/api/optimization/run', status_code=202)
     def run(request: RunRequest, tasks: BackgroundTasks):
-        get_lap(request.lap)
+        get_lap(request.lap, request.circuit_id)
         with lock:
             if state['optimization']['status'] == 'running':
                 raise HTTPException(409, 'An optimization is already running')
@@ -238,11 +283,13 @@ def create_app(dataset=None):
         return {'status': 'running'}
 
     @app.get('/api/optimization/results')
-    def results():
+    def results(circuit_id: str | None = None):
         output = []
         for path in sorted(RESULTS.glob('*.json'), key=lambda p: p.stat().st_mtime, reverse=True):
             try:
                 r = json.loads(path.read_text(encoding='utf-8'))
+                if circuit_id and r.get('metadata',{}).get('dataset_sha256') != ready(circuit_id)[0].sha256:
+                    continue
                 output.append({k: v for k, v in r.items() if k not in ('strategy', 'history')})
             except (OSError, ValueError):
                 continue

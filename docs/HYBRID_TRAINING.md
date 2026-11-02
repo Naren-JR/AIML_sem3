@@ -14,7 +14,7 @@ Source: [TracingInsights/2026](https://github.com/TracingInsights/2026), pinned 
 | Britain | 52 | 39,370 | Training |
 | Belgium | 44 | 38,283 | Entirely held-out test |
 
-Files: `dataPreprocess/rawData/2026/<circuit>/telemetry.csv`, `manifest.json`, and original per-lap JSON under `source/`. Manifests retain the commit, source files and checksums. This pipeline uses recorded lap IDs, unlike the legacy single-race adapter's inferred lap numbering. Large data/results remain Git-ignored; a fresh clone needs these datasets restored.
+Files: `dataPreprocess/rawData/2026/<circuit>/telemetry.csv`, `manifest.json`, and original per-lap JSON under `source/`. Manifests retain the commit, source files and checksums. The merged race adapter uses recorded lap IDs when available; only the legacy CSV fallback infers lap numbering. Large data/results remain Git-ignored; a fresh clone needs these datasets restored.
 
 This is **longitudinal acceleration regression**, using scikit-learn HistGradientBoostingRegressor: 150 iterations, learning rate 0.08, 15 leaf nodes, seed 42, no early stopping. The target is the observed speed change divided by elapsed time, in m/s². It is not battery charge, electrical power, an energy deployment mode, or an optimal control label.
 
@@ -58,7 +58,7 @@ From the repository root in PowerShell, restore/download datasets first if neede
 .\.venv\Scripts\python -m scripts.dev
 ```
 
-Open `http://127.0.0.1:5173/hybrid`. Select the unseen test circuit, then click **Train on other circuits & test unseen track**. All other downloaded circuits are training data (four with the complete collection). Inspect acceleration MAE/RMSE/R², next-speed errors, baselines and lap charts. The circuit selector on this page is independent of the legacy static circuit catalogue.
+Open `http://127.0.0.1:5173/hybrid`. Select the unseen test circuit, then click **Train on other circuits & test unseen track**. All other downloaded circuits are training data (four with the complete collection). Inspect acceleration MAE/RMSE/R², next-speed errors, baselines and lap charts. The held-out selector on this page is independent of the main dashboard circuit selection. All five datasets are also available through the merged race dashboard and classification experiments.
 
 Choose a different holdout or explicit training subset from the CLI:
 

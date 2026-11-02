@@ -24,13 +24,14 @@ def target(recorded):
     return 1 if throttle <= 5 else 2 if throttle < 95 else 3
 
 
-def run_validation(dataset):
+def run_validation(dataset, test_dataset=None, persist=True):
     from sklearn.ensemble import HistGradientBoostingClassifier
     from sklearn.dummy import DummyClassifier
     from sklearn.metrics import accuracy_score, balanced_accuracy_score, classification_report, confusion_matrix
     import sklearn
     samples, x, y = [], [], []
-    for s in dataset.samples:
+    combined = dataset.samples + (test_dataset.samples if test_dataset is not None else [])
+    for s in combined:
         r = s['recorded']
         label = target(r)
         values = [r.get('speed'), r.get('rpm'), r.get('gear'), s['calculated']['acceleration_mps2']]
@@ -45,10 +46,20 @@ def run_validation(dataset):
     train_laps, purge_laps, test_laps = laps[:cut], laps[cut:cut+1], laps[cut+1:]
     train = np.array([s['lap'] in train_laps for s in samples])
     test = np.array([s['lap'] in test_laps for s in samples])
+    if test_dataset is not None:
+        # Training/test membership is by independent dataset, never lap-number equality.
+        boundary = sum(1 for s in dataset.samples if target(s['recorded']) is not None and all(v is not None and np.isfinite(v) for v in [s['recorded'].get('speed'),s['recorded'].get('rpm'),s['recorded'].get('gear'),s['calculated']['acceleration_mps2']]))
+        train = np.arange(len(samples)) < boundary
+        test = ~train
+        train_laps = sorted({s['lap'] for s in dataset.samples})
+        test_laps = sorted({s['lap'] for s in test_dataset.samples})
+        purge_laps = []
     model = HistGradientBoostingClassifier(max_iter=100, max_leaf_nodes=15, learning_rate=.1,
                                            early_stopping=False, random_state=42)
-    model.fit(x[train], y[train])
-    predictions = model.predict(x[test])
+    from threadpoolctl import threadpool_limits
+    with threadpool_limits(limits=2):
+        model.fit(x[train], y[train])
+        predictions = model.predict(x[test])
     baseline = DummyClassifier(strategy='most_frequent').fit(x[train], y[train]).predict(x[test])
     def metrics(pred):
         report = classification_report(y[test], pred, labels=list(range(4)), target_names=CLASSES, output_dict=True, zero_division=0)
@@ -63,9 +74,12 @@ def run_validation(dataset):
               'classes': CLASSES, 'features': FEATURES, 'excluded_features': ['throttle', 'brake', 'distance', 'lap', 'estimated ERS outputs'],
               'split': {'train_laps': train_laps, 'purged_laps': purge_laps, 'test_laps': test_laps,
                         'train_samples': int(train.sum()), 'test_samples': int(test.sum()),
-                        'excluded_or_purged_samples': len(dataset.samples)-int(train.sum())-int(test.sum())},
+                        'excluded_or_purged_samples': len(combined)-int(train.sum())-int(test.sum())},
+              'evaluation_mode': 'cross_track' if test_dataset is not None else 'within_track',
+              'train_event': dataset.metadata()['event'], 'test_event': (test_dataset or dataset).metadata()['event'],
+              'model_parameters': model.get_params(),
               'model': 'HistGradientBoostingClassifier', 'seed': 42, 'sklearn_version': sklearn.__version__,
-              'dataset_sha256': dataset.sha256, 'source_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+              'dataset_sha256': dataset.sha256, 'test_dataset_sha256': (test_dataset or dataset).sha256, 'source_sha256': hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
               'metrics': metrics(predictions), 'baseline': metrics(baseline),
               'sources': SOURCES, 'source_review_date': '2026-11-02',
               'limitations': ['Single driver, circuit and session; no independent-session generalization established.',
@@ -75,6 +89,11 @@ def run_validation(dataset):
               'predictions': [{'sample_id': s['sample_id'], 'lap': s['lap'], 'distance_m': s['recorded']['distance'],
                                'observed_class': CLASSES[int(actual)], 'predicted_class': CLASSES[int(pred)]}
                               for s, actual, pred in zip(selected, y[test], predictions)]}
+    if test_dataset is not None:
+        result['limitations'][0] = 'Cross-track evaluation on a single driver and season; no claim of generalization to every circuit.'
+        result['limitations'][1] = 'All eligible target-track laps are test-only; no target-track fitting or hyperparameter tuning. Samples within a race remain correlated.'
+    if not persist:
+        return result
     RESULT.parent.mkdir(exist_ok=True)
     temp = RESULT.with_suffix('.tmp'); temp.write_text(json.dumps(result, indent=2, allow_nan=False), encoding='utf-8'); temp.replace(RESULT)
     return result

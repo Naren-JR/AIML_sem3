@@ -1,6 +1,6 @@
 # AIML–F1 Energy Research Workstation
 
-On circuit_add, the TRACK selector offers 20 locally referenced circuits with official Kimi race-participation sources. Only Albert Park has local driver race telemetry; other selections open clearly labelled static references and section tables without reusing Australian model readings. See [circuit catalogue and availability](docs/CIRCUIT_SELECTION.md).
+Merged `circuit_add` into `readings`: the dashboard supports the five imported Kimi race datasets, the ML validation tab retains temporal and cross-track classification experiments, and Hybrid ERS research retains the expanded dynamics regression. Tracks without imported telemetry open static references. See [multi-track APIs](docs/MULTI_TRACK.md), [circuit references](docs/CIRCUIT_SELECTION.md) and [hybrid training](docs/HYBRID_TRAINING.md). Raw data and generated results remain Git-ignored.
 
 On the readings branch, **ML validation & predictions** adds a trained operating-state classifier with held-out accuracy, precision/recall/F1, a confusion matrix, baseline comparison and per-lap predictions. Install updated requirements, restart the API, then open `/ml-validation`. Click Train & evaluate or run `.\.venv\Scripts\python -m scripts.validate_ml`. See [evaluation protocol and external sources](docs/ML_VALIDATION.md). These scores do not validate hidden ERS state.
 
@@ -49,7 +49,7 @@ Open http://127.0.0.1:5173. The Python API must be running. Vite proxies /api to
 - Deployment Optimization runs only when requested. Select lap, iterations and smoothness, then Run optimization. Inspect convergence, constraints, baseline comparison, saved runs and JSON export.
 - Methodology & Validation exposes parameters, provenance, missing context, equations and constraint-only validation.
 
-58 laps are inferred from relative-distance wraps because original lap IDs were discarded upstream. Only the race enters the runtime. Source fields are preserved; numeric gaps remain null. The map is the recorded lap trajectory in unverified source coordinate units, not an invented circuit layout.
+Imported races retain original lap IDs and session clocks. The legacy Australian CSV fallback infers laps from relative-distance wraps. Only race sessions enter the runtime. Source fields are preserved; numeric gaps remain null. The map is the recorded lap trajectory in unverified source coordinate units, not an invented circuit layout.
 
 ## Tests, production build, and experiments
 

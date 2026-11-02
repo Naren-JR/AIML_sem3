@@ -4,19 +4,21 @@ import {MemoryRouter} from 'react-router-dom'
 import {App} from './App'
 import {nearestSample} from './selection'
 import {SampleSchema} from './contracts'
+import {setActiveCircuit} from './contracts'
 
 vi.mock('./Chart',()=>({Chart:({title,cursor,onSelect}:any)=><button aria-label={title} data-cursor={cursor} onClick={()=>onSelect?.(100)}>{title}</button>}))
 vi.mock('./Circuit',()=>({Circuit:({sampleId,onSelect}:any)=><button aria-label="Circuit sample" data-sample={sampleId} onClick={()=>onSelect(100)}>map</button>}))
-afterEach(()=>{cleanup();vi.unstubAllGlobals()})
+afterEach(()=>{cleanup();vi.unstubAllGlobals();setActiveCircuit('australian-grand-prix')})
 const samples=[0,100].map((distance,i)=>({sample_id:i,lap:1,recorded:{time:i*.2,distance,speed:i?200:null,rpm:10000,gear:5,throttle:50,brake:0},source_fields:{speed:i?'200':''},calculated:{speed_mps:i?200/3.6:null,acceleration_mps2:i?1:null},quality_flags:[]}))
 const ers=samples.map((s,i)=>({sample_id:i,lap:1,time_s:i*.2,distance_m:s.recorded.distance,dt_s:i*.2,soc_pct:100-i,remaining_energy_mj:4-i*.04,deployment_kw:i?10:null,recovery_kw:i?0:null,cumulative_deployed_mj:0,cumulative_recovered_mj:0,cumulative_losses_mj:0,scenario_soc_min_pct:95,scenario_soc_max_pct:100,unknown_duration_s:0,valid_interval:true}))
 const data:any={
+  '/ml/tracks':{tracks:[{id:'australian-grand-prix',event:'Australia',year:2026},{id:'italian-grand-prix',event:'Italy',year:2026}]},
   '/dataset':{driver:'Kimi Antonelli',session:'GP Race',event:'Australian Grand Prix',year:2026,samples:2,laps:1,sha256:'abc',units:{speed:'km/h'},quality:{invalid_timestamps:0,duplicate_timestamps:0,large_gaps:0,missing:{}},provenance:'Supplied',missing_context:[]},
   '/laps':[{lap:1,samples:2,start_time_s:0,end_time_s:.2,max_distance_m:100,numbering:'inferred'}],
   '/model/status':{status:'ready',kind:'physics',parameters:{},validation:'constraint-only',uncertainty:'scenario',max_conservation_residual_mj:0,unknown_duration_s:0,final_soc_pct:99},
   '/telemetry/lap/1':{samples},'/ers/lap/1':{samples:ers},'/track/1':{points:samples.map(s=>({sample_id:s.sample_id,distance_m:s.recorded.distance,x:s.sample_id,y:0})),click_selection_enabled:true,mapping:'same-row',geometry_source:'recorded',external_reference_status:'absent'}
 }
-function setup(){vi.stubGlobal('fetch',vi.fn(async(url:string)=>({ok:true,json:async()=>data[url.replace('/api','')]})));render(<MemoryRouter><App/></MemoryRouter>)}
+function setup(){data['/circuits']={circuits:[circuitFixture('australian-grand-prix','Albert Park'),circuitFixture('italian-grand-prix','Monza'),circuitFixture('monaco-grand-prix','Monaco')]};vi.stubGlobal('fetch',vi.fn(async(url:string)=>({ok:true,json:async()=>data[url.replace('/api','').split('?')[0]]})));render(<MemoryRouter><App/></MemoryRouter>)}
 describe('one selection state',()=>{
   it('synchronizes map, slider, chart cursors and readouts',async()=>{
     setup();await screen.findByRole('button',{name:'Circuit sample'})
@@ -43,16 +45,24 @@ describe('one selection state',()=>{
   })
 })
 
-const circuitFixture=(id:string,name:string)=>({id,event:name,name,participation_years:[2025],participation_source:'https://www.formula1.com/',verified_on:'2026-11-02',race_telemetry_available:id==='australian-grand-prix',geometry_points:0})
+const circuitFixture=(id:string,name:string)=>({id,event:name,name,participation_years:[2025],participation_source:'https://www.formula1.com/',verified_on:'2026-11-02',race_telemetry_available:['australian-grand-prix','italian-grand-prix'].includes(id),geometry_points:0})
 it('clears Australian readings on a reference-only track and restores them on return',async()=>{
- data['/circuits']={circuits:[circuitFixture('australian-grand-prix','Albert Park'),circuitFixture('italian-grand-prix','Monza')]}
- data['/circuits/italian-grand-prix']={circuit:circuitFixture('italian-grand-prix','Monza'),reference:{available:true,geometry:[]},section_percentages:[['Straight',0,100]]}
+ data['/circuits']={circuits:[circuitFixture('australian-grand-prix','Albert Park'),circuitFixture('monaco-grand-prix','Monaco')]}
+ data['/circuits/monaco-grand-prix']={circuit:circuitFixture('monaco-grand-prix','Monaco'),reference:{available:true,geometry:[]},section_percentages:[['Straight',0,100]]}
  setup();await screen.findByRole('slider');
- fireEvent.change(screen.getByRole('combobox',{name:'Track'}),{target:{value:'italian-grand-prix'}})
- await screen.findByRole('heading',{name:'Monza'});
+ fireEvent.change(screen.getByRole('combobox',{name:'Track'}),{target:{value:'monaco-grand-prix'}})
+ await screen.findByRole('heading',{name:'Monaco'});
  expect(screen.queryByRole('slider')).not.toBeInTheDocument();
  expect(screen.queryByRole('button',{name:'Vehicle speed'})).not.toBeInTheDocument();
  expect(screen.getByText(/No local GP Race telemetry/)).toBeInTheDocument();
  fireEvent.change(screen.getByRole('combobox',{name:'Track'}),{target:{value:'australian-grand-prix'}})
  await screen.findByRole('slider');
+})
+
+it('changes API circuit context and removes stale race samples',async()=>{
+ setup();await screen.findByRole('slider');
+ fireEvent.change(screen.getByRole('combobox',{name:'Track'}),{target:{value:'italian-grand-prix'}})
+ await screen.findByRole('slider');
+ expect(fetch).toHaveBeenCalledWith('/api/dataset?circuit_id=italian-grand-prix',undefined)
+ expect(fetch).toHaveBeenCalledWith('/api/telemetry/lap/1?circuit_id=italian-grand-prix',undefined)
 })

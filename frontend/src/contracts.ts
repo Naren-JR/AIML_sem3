@@ -10,7 +10,10 @@ export const RunSchema=z.object({run_id:z.string(),status:z.string(),metadata:z.
 export type Sample=z.infer<typeof SampleSchema>
 export type ERS=z.infer<typeof ERSSchema>
 export type Run=z.infer<typeof RunSchema>
+let activeCircuit='australian-grand-prix'
+export function setActiveCircuit(id:string){activeCircuit=id}
 export async function api<T>(path:string,schema:z.ZodType<T>,options?:RequestInit):Promise<T>{
+  if(/^\/(dataset|laps|model\/status|telemetry\/|ers\/|track\/)/.test(path))path+=`${path.includes('?')?'&':'?'}circuit_id=${encodeURIComponent(activeCircuit)}`
   const response=await fetch(`${import.meta.env.VITE_API_BASE_URL ?? ''}/api${path}`,options)
   const body=await response.json()
   if(!response.ok)throw new Error(typeof body.detail==='string'?body.detail:JSON.stringify(body.detail??body))

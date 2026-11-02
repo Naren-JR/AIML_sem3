@@ -6,7 +6,9 @@ import pytest
 def test_local_catalog_availability_and_scope():
     rows=catalog()
     assert len(rows)==20 and len({r['id'] for r in rows})==20
-    assert [r['id'] for r in rows if r['race_telemetry_available']]==['australian-grand-prix']
+    assert {r['id'] for r in rows if r['race_telemetry_available']}=={
+        'australian-grand-prix','austrian-grand-prix','italian-grand-prix',
+        'british-grand-prix','belgian-grand-prix'}
     assert all(r['participation_source'].startswith('https://www.formula1.com/') for r in rows)
     assert definition('japanese-grand-prix') is None
     assert definition('spanish-grand-prix') is None

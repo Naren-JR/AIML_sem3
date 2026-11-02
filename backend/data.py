@@ -3,10 +3,13 @@ from pathlib import Path
 import csv
 import hashlib
 import math
+import json
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
-RACE = ROOT / 'dataPreprocess/rawData/australiar.csv'
+RACE = ROOT / 'dataPreprocess/rawData/2026/australian-grand-prix/telemetry.csv'
+if not RACE.exists():
+    RACE = ROOT / 'dataPreprocess/rawData/australiar.csv'
 UNITS = {'time': 's (session cumulative)', 'distance': 'm (lap local)',
          'rel_distance': 'fraction', 'speed': 'km/h', 'rpm': 'rpm', 'gear': 'integer',
          'throttle': '%', 'brake': 'binary', 'x': 'source units (unverified)',
@@ -27,6 +30,10 @@ class Dataset:
     def __init__(self, path=RACE):
         self.path = Path(path)
         self.sha256 = hashlib.sha256(self.path.read_bytes()).hexdigest()
+        manifest_path = self.path.with_name('manifest.json')
+        self.manifest = json.loads(manifest_path.read_text(encoding='utf-8')) if manifest_path.exists() else None
+        if self.manifest and self.manifest['telemetry_sha256'] != self.sha256:
+            raise ValueError('Imported telemetry checksum does not match manifest')
         with self.path.open(encoding='utf-8-sig', newline='') as f:
             reader = csv.DictReader(f)
             fields = reader.fieldnames or []
@@ -48,7 +55,12 @@ class Dataset:
             for k, v in recorded.items():
                 self.quality['missing'][k] += v is None
             rel, t = recorded['rel_distance'], recorded['time']
-            if previous_rel is not None and rel is not None and previous_rel > .75 and rel < .25:
+            if 'lap_number' in fields:
+                original = recorded['lap_number']
+                if original is None or original != int(original) or int(original) not in (lap, lap+1) or (index==0 and original!=1):
+                    raise ValueError('Invalid or missing original lap sequence')
+                lap = int(original)
+            elif previous_rel is not None and rel is not None and previous_rel > .75 and rel < .25:
                 lap += 1
             if rel is not None:
                 previous_rel = rel
@@ -95,7 +107,7 @@ class Dataset:
         self.laps = [{'lap': k, 'samples': len(v), 'start_time_s': v[0]['recorded']['time'],
                       'end_time_s': v[-1]['recorded']['time'],
                       'max_distance_m': max((s['recorded']['distance'] for s in v if s['recorded']['distance'] is not None), default=0),
-                      'numbering': 'inferred from rel_distance wrap; original lap IDs unavailable'}
+                      'numbering': 'original source lap_number' if 'lap_number' in fields else 'inferred from rel_distance wrap; original lap IDs unavailable'}
                      for k, v in self.by_lap.items()]
         diagnostics = []
         for summary in self.laps:
@@ -130,7 +142,7 @@ class Dataset:
         return min(samples, key=lambda s: abs(s['recorded']['distance'] - distance))
 
     def metadata(self):
-        return {'driver': 'Kimi Antonelli', 'session': 'GP Race', 'event': 'Australian Grand Prix',
+        metadata = {'driver': 'Kimi Antonelli', 'session': 'GP Race', 'event': 'Australian Grand Prix',
                 'year': 2026, 'source': str(self.path.relative_to(ROOT)) if self.path.is_relative_to(ROOT) else self.path.name,
                 'sha256': self.sha256, 'samples': len(self.samples), 'laps': len(self.laps),
                 'fields': self.fields, 'units': UNITS, 'quality': self.quality,
@@ -139,3 +151,10 @@ class Dataset:
                 'excluded_events': ['Bahrain', 'China', 'Japan', 'Spain'],
                 'lap_numbering': 'inferred; 57 relative-distance wraps, no source lap identifiers',
                 'missing_context': ['battery current/voltage', 'electrical power', 'ICE map', 'Straight Mode activation', 'pit/flag metadata', 'source commit']}
+        if self.manifest:
+            metadata.update(event=self.manifest['event'], circuit_id=self.manifest['circuit_id'],
+                            provenance=f"TracingInsights/2026, commit {self.manifest['commit']}; original JSON retained locally",
+                            lap_numbering='Original source lap IDs; original session-clock gaps retained',
+                            manifest=self.manifest)
+            metadata['missing_context'] = ['battery current/voltage', 'electrical power', 'ICE map', 'Straight Mode activation']
+        return metadata
